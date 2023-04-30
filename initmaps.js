@@ -7,7 +7,7 @@ function initMaps() {
     var collectionMap = new google.maps.Map(document.getElementById("collect-map"), {
         zoom: 14,
         center: {
-            lat: location.lat,
+            lat: location.lat + 0.001,
             lng: location.lng
         },
         zoomControl: false,
