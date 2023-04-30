@@ -5,9 +5,9 @@ function initMaps() {
     };
     // Initialize collection map
     var collectionMap = new google.maps.Map(document.getElementById("collect-map"), {
-        zoom: 13,
+        zoom: 5,
         center: {
-            lat: location.lat,
+            lat: location.lat + 0.002,
             lng: location.lng
         },
         zoomControl: false,
