@@ -31,9 +31,9 @@ function initMaps() {
     });
     // Initialize delivery map
     var deliveryMap = new google.maps.Map(document.getElementById("delivery-map"), {
-        zoom: 13,
+        zoom: 14,
         center: {
-            lat: location.lat + 0.002,
+            lat: location.lat + 0.0005,
             lng: location.lng
         },
         zoomControl: false,
@@ -45,7 +45,7 @@ function initMaps() {
         url: "https://uploads-ssl.webflow.com/5fda6f586fdb5a2f2cc5696a/644e3162042fcbca24f5b1dc_delivery-map-marker.svg",
         size: new google.maps.Size(119, 57),
         origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(59.5, 57),
+        anchor: new google.maps.Point(59.5, 50),
     };
     var deliveryMarker = new google.maps.Marker({
         position: {
