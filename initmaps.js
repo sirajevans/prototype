@@ -5,7 +5,7 @@ function initMaps() {
     };
     // Initialize collection map
     var collectionMap = new google.maps.Map(document.getElementById("collect-map"), {
-        zoom: 18,
+        zoom: 14,
         center: {
             lat: location.lat + 0.002,
             lng: location.lng
@@ -24,7 +24,7 @@ function initMaps() {
     var collectionMarker = new google.maps.Marker({
         position: {
             lat: -33.937473,
-            lng: 18.433243
+            lng: 18.43324
         },
         map: collectionMap,
         icon: collectionIcon,
