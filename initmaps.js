@@ -42,7 +42,7 @@ function initMaps() {
         mapId: "2f3a9c93fc40c85d",
     });
     var deliveryIcon = {
-        url: "https://uploads-ssl.webflow.com/5fda6f586fdb5a2f2cc5696a/6441bf0be71df4b02a66e5e4_delivery-map-marker.svg",
+        url: "https://uploads-ssl.webflow.com/5fda6f586fdb5a2f2cc5696a/644e3162042fcbca24f5b1dc_delivery-map-marker.svg",
         size: new google.maps.Size(119, 57),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(59.5, 57),
