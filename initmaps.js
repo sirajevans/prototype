@@ -49,8 +49,8 @@ function initMaps() {
     };
     var deliveryMarker = new google.maps.Marker({
         position: {
-            lat: -33.933254,
-            lng: 18.408523
+            lat: -33.937473,
+            lng: 18.433243
         },
         map: deliveryMap,
         icon: deliveryIcon,
