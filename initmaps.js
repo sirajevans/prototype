@@ -1,7 +1,7 @@
 function initMaps() {
     var location = {
-        lat: -33.933254,
-        lng: 18.408523
+        lat: -33.937473,
+        lng: 18.433243
     };
     // Initialize collection map
     var collectionMap = new google.maps.Map(document.getElementById("collect-map"), {
@@ -23,8 +23,8 @@ function initMaps() {
     };
     var collectionMarker = new google.maps.Marker({
         position: {
-            lat: -33.933254,
-            lng: 18.408523
+            lat: -33.937473,
+            lng: 18.433243
         },
         map: collectionMap,
         icon: collectionIcon,
