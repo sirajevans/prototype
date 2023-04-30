@@ -19,7 +19,7 @@ function initMaps() {
         url: "https://uploads-ssl.webflow.com/5fda6f586fdb5a2f2cc5696a/6441bf0b713a6c2d670bb132_collection-map-marker.svg",
         size: new google.maps.Size(129, 57),
         origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(64.5, 80),
+        anchor: new google.maps.Point(64.5, 50),
     };
     var collectionMarker = new google.maps.Marker({
         position: {
