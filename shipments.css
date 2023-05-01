@@ -1,0 +1,126 @@
+.text-sm-fallback, .carrier-logo-fallback {
+		background-size: 600px 44px !important;
+    background: rgb(91,97,110,.05);
+    background-image: linear-gradient(90deg,rgb(91,97,110,.05) 0,rgb(91,97,110,0) 25%,rgb(91,97,110,.1) 50%,rgb(91,97,110,0) 75%,rgb(91,97,110,.05)100%);
+    background-repeat: no-repeat;
+    animation-name: shimmer-fallback;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes shimmer-fallback {
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+      background-position: 600px 0;
+  }
+}
+
+/* spinner loader animation */
+  .s-loader, .btn-p-spinner {
+    -webkit-animation-name: spin;
+    -moz-animation-name: spin;
+    -ms-animation-name: spin;
+    animation-name: spin;
+    -webkit-animation-duration: 600ms;
+    -moz-animation-duration: 600ms;
+    -ms-animation-duration: 600ms;
+    animation-duration: 600ms;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  @-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+  }
+  @-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .truncate {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .truncate-width-100 {
+    width: calc(100%);
+  }
+  .carrier-col {
+    width: calc(100% - 60px);
+  }
+  .listing-badge-tooltip {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .1s linear, visibility 0s .1s linear, transform .1s cubic-bezier(.77, 0, .175, 1);
+  }
+  .listing-badge:hover ~ .listing-badge-tooltip,
+  .text-sm-grey.label-critical-error:hover ~ .listing-badge-tooltip {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    transition: opacity .08s 0.2s linear, visibility 0s 0.2s linear, transform .08s 0.2s cubic-bezier(.77, 0, .175, .08);
+  }
+  .table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-btn {
+    opacity: 1;
+    z-index: 2;
+  }
+  .table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-context-btn {
+    opacity: 1;
+    z-index: 2;
+  }
+  .table-row:hover > .table-cell-waybill-col {
+    background-color: #f7f7fc;
+  }
+  .table-row:hover > .table-cell.action-btn-container {
+    background-image: -webkit-gradient(linear,left top,right top,color-stop(80%,hsla(0,0%,100%,0)),color-stop(85%,#f7f7fc));
+    background-image: linear-gradient(90deg,hsla(0,0%,100%,0) 80%,#f7f7fc 85%);
+  }
+
+  select {
+  	-moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    height: 100%;
+    padding: 0px 24px 0px 9px;
+    background-image: url('https://uploads-ssl.webflow.com/5fda6f586fdb5a2f2cc5696a/62d3ffb47fcc9cc7e4974216_more-actions-icon.svg');
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    border-radius: 8px;
+  }
+  
+  .items-per-page {
+    background-position: 40px 50%;
+  }
+  
+  .purchase-modal-card-select {
+    background-position: 65px 50%;
+  }
