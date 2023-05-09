@@ -291,3 +291,12 @@ $("#filter_btn").on("click", function () {
         $("#filter_side_modal").addClass("side-modal-active");
     }, 1);
 });
+
+// toggle accordions
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    header.parentElement.classList.toggle('active');
+  });
+});
