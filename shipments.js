@@ -293,8 +293,8 @@ $("#filter_btn").on("click", function () {
 });
 
 // toggle accordions
-$('.accordion').on('click', function () {
-    $(this).toggleClass('open');
+$('.accordion-header').on('click', function () {
+    $(this).find('.accordion').toggleClass('open');
     $(this).find('.accordion-arrow').toggleClass('active');
     $(this).find('.accordion-body').toggleClass('active');
 });
