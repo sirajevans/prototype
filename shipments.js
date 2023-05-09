@@ -213,6 +213,17 @@ $(".close-modal-btn, .center-modal-container").on("click", function (e) {
     }
 });
 
+// hide all modals
+$(".side-modal-container").on("click", function (e) {
+    if (e.target == this) {
+        $(".side-modal-container").removeClass("side-modal-container-active");
+        $(".side-modal").removeClass("side-modal-active");
+        setTimeout(() => {
+            $(".side-modal-container").css("display", "none");
+        }, 120);
+    }
+});
+
 // ship date context menu
 $(document).ready(() => {
     $(".ship-date-btn").on("click", function (e) {
