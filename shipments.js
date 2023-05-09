@@ -314,7 +314,8 @@ $(document).ready(function() {
     });
 
     // Add event listener to child checkboxes
-    childCheckboxes.on('change', function() {
+    childCheckboxes.on('change', function(event) {
+      event.stopPropagation(); // Stop event propagation
       if (this.checked) {
         // Check if all child checkboxes are checked
         const allChecked = childCheckboxes.toArray().every(function(checkbox) {
