@@ -293,10 +293,6 @@ $("#filter_btn").on("click", function () {
 });
 
 // toggle accordions
-const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-accordionHeaders.forEach(header => {
-  header.addEventListener('click', () => {
-    header.parentElement.classList.toggle('active');
-  });
+$('.accordion').on('click', function () {
+    $(this).find('.accordion-body').toggleClass('open');
 });
