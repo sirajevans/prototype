@@ -303,7 +303,7 @@ $('.accordion').on('click', function () {
 $(document).ready(function() {
     const parentCheckbox = $('#parent-checkbox input[type="checkbox"]');
     const childCheckboxes = $('#parent-checkbox .checkbox-li input[type="checkbox"]');
-
+  
     // Add event listener to parent checkbox
     parentCheckbox.on('change', function() {
       if (this.checked) {
@@ -312,7 +312,7 @@ $(document).ready(function() {
         childCheckboxes.prop('checked', false);
       }
     });
-
+  
     // Add event listener to child checkboxes
     childCheckboxes.on('change', function(event) {
       event.stopPropagation(); // Stop event propagation
@@ -322,10 +322,11 @@ $(document).ready(function() {
           return checkbox.checked;
         });
         if (allChecked) {
-          parentCheckbox.prop('checked', true);
+          parentCheckbox.prop('checked', true).change(); // Trigger change event on parent checkbox
         }
       } else {
-        parentCheckbox.prop('checked', false);
+        parentCheckbox.prop('checked', false).change(); // Trigger change event on parent checkbox
       }
     });
   });
+  
