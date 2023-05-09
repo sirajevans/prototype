@@ -298,3 +298,33 @@ $('.accordion').on('click', function () {
     $(this).find('.accordion-arrow').toggleClass('active');
     $(this).find('.accordion-body').toggleClass('active');
 });
+
+// nested checkboxes
+$(document).ready(function() {
+    const parentCheckbox = $('#parent-checkbox input[type="checkbox"]');
+    const childCheckboxes = $('#parent-checkbox .checkbox-li input[type="checkbox"]');
+
+    // Add event listener to parent checkbox
+    parentCheckbox.on('change', function() {
+      if (this.checked) {
+        childCheckboxes.prop('checked', true);
+      } else {
+        childCheckboxes.prop('checked', false);
+      }
+    });
+
+    // Add event listener to child checkboxes
+    childCheckboxes.on('change', function() {
+      if (this.checked) {
+        // Check if all child checkboxes are checked
+        const allChecked = childCheckboxes.toArray().every(function(checkbox) {
+          return checkbox.checked;
+        });
+        if (allChecked) {
+          parentCheckbox.prop('checked', true);
+        }
+      } else {
+        parentCheckbox.prop('checked', false);
+      }
+    });
+  });
