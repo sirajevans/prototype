@@ -294,13 +294,8 @@ $("#filter_btn").on("click", function () {
 
 // toggle accordions on accordion-header click
 $('.accordion-header').on('click', function () {
-    // $(this).parent().toggleClass('open');
-    // $(this).find('.accordion-arrow').toggleClass('active');
-    // $(this).siblings('.accordion-body').toggleClass('active');
-
-    $('.accordion-body').css('opacity', 0);
-    $('.accordion').addClass('open');
-    const height = $('.accordion-body').height() + 'px';
-    accordion.height(height);
+    $(this).parent().toggleClass('open');
+    $(this).find('.accordion-arrow').toggleClass('active');
+    $(this).siblings('.accordion-body').toggleClass('active');
 });
 
