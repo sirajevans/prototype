@@ -299,3 +299,8 @@ $('.accordion-header').on('click', function () {
     $(this).siblings('.accordion-body').toggleClass('active');
 });
 
+// side menu shadow
+$(".side-modal-body").scroll(function () {
+    var scroll = $(this).scrollTop();
+    $(".side-modal-header").toggleClass("side-modal-header-active", scroll > 0);
+});
