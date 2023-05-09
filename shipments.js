@@ -294,7 +294,18 @@ $("#filter_btn").on("click", function () {
 
 // toggle accordions on accordion-header click
 $('.accordion-header').on('click', function () {
-    $(this).parent().toggleClass('open');
-    $(this).find('.accordion-arrow').toggleClass('active');
-    $(this).siblings('.accordion-body').toggleClass('active');
+    // $(this).parent().toggleClass('open');
+    // $(this).find('.accordion-arrow').toggleClass('active');
+    // $(this).siblings('.accordion-body').toggleClass('active');
+    const accordion = $('.accordion');
+    const accordionBody = $('.accordion-body');
+
+    // calculate content height and set as accordion height
+    accordionBody.css('opacity', 0);
+    accordion.addClass('open');
+    const height = accordionBody.height() + 'px';
+    accordion.removeClass('open');
+    accordionBody.css('opacity', 1);
+    accordion.height(height);
 });
+
