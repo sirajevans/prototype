@@ -293,7 +293,17 @@ $("#filter_btn").on("click", function () {
 });
 
 // toggle accordions
-$('.accordion').on('click', function () {
+$('.accordion').on('click', function() {
     $(this).toggleClass('active');
-    $(this).find('.accordion-body').toggleClass('open');
-});
+    const accordionBody = $(this).find('.accordion-body');
+    if (accordionBody.hasClass('open')) {
+      accordionBody.animate({height: 0}, 300, function() {
+        $(this).removeClass('open');
+      });
+    } else {
+      const height = accordionBody.height();
+      accordionBody.animate({height: height}, 300, function() {
+        $(this).addClass('open').css('height', '');
+      });
+    }
+  });
