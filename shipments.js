@@ -296,5 +296,5 @@ $("#filter_btn").on("click", function () {
 $('.accordion').on('click', function () {
     $(this).toggleClass('active');
     $(this).find('.accordion-arrow').toggleClass('active');
-    $(this).find('accordion-body').toggleClass('open');
+    $(this).find('.accordion-body').toggleClass('open');
 });
