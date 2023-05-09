@@ -203,12 +203,12 @@ $("#delete_shipment_btn").on("click", () => {
 });
 
 // hide all modals
-$(".close-modal-btn, .center-modal-container").on("click", function (e) {
+$(".close-modal-btn, .center-modal-container, .side-modal-container").on("click", function (e) {
     if (e.target == this) {
-        $(".center-modal-container").removeClass("center-modal-container-active");
-        $(".center-modal").removeClass("center-modal-active");
+        $(".center-modal-container, side-modal-container").removeClass("center-modal-container-active, side-modal-container-active");
+        $(".center-modal, side-modal").removeClass("center-modal-active, side-modal-active");
         setTimeout(() => {
-            $(".center-modal-container").css("display", "none");
+            $(".center-modal-container, side-modal-container").css("display", "none");
         }, 120);
     }
 });
