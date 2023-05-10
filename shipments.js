@@ -292,6 +292,10 @@ $(document).ready(() => {
         var suggestion = $(this).data("id");
         shipmentSearch.focus();
         shipmentSearch.val(suggestion);
+        searchSuggestions.removeClass("active");
+        setTimeout(() => {
+            searchSuggestions.css("display", "none");
+        }, 150);
     });
 });
 
