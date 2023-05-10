@@ -274,7 +274,7 @@ $(document).ready(() => {
         }, 100);
     });
 
-    shipmentSearch.on("input", () => {
+    shipmentSearch.on("keydown", () => {
         if (shipmentSearch.val().trim() === "") {
             searchSuggestions.css("display", "block");
             setTimeout(() => {
