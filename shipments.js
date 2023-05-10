@@ -254,7 +254,6 @@ $(document).ready(() => {
 });
 
 $(document).ready(() => {
-
     const shipmentSearch = $("#shipment-search");
     let searchSuggestions = $(".listing-search-suggestions");
     let suggestionItem = $(".listing-search-li");
@@ -278,8 +277,14 @@ $(document).ready(() => {
     shipmentSearch.on("input", () => {
         if (shipmentSearch.val().trim() === "") {
             searchSuggestions.css("display", "block");
+            setTimeout(() => {
+                searchSuggestions.addClass("active");
+            }, 1);
         } else {
-            searchSuggestions.css("display", "none");
+            searchSuggestions.removeClass("active");
+            setTimeout(() => {
+                searchSuggestions.css("display", "none");
+            }, 150);
         }
     });
 
