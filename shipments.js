@@ -253,7 +253,6 @@ $(document).ready(() => {
     });
 });
 
-// show search suggestions
 $(document).ready(() => {
 
     const shipmentSearch = $("#shipment-search");
@@ -276,12 +275,21 @@ $(document).ready(() => {
         }, 100);
     });
 
+    shipmentSearch.on("input", () => {
+        if (shipmentSearch.val().trim() === "") {
+            searchSuggestions.css("display", "block");
+        } else {
+            searchSuggestions.css("display", "none");
+        }
+    });
+
     suggestionItem.on("click", function () {
         var suggestion = $(this).data("id");
         shipmentSearch.focus();
         shipmentSearch.val(suggestion);
     });
 });
+
 
 // filter side modal
 $("#filter_btn").on("click", function () {
