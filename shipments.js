@@ -279,7 +279,7 @@ $(document).ready(() => {
             searchSuggestions.css("display", "block");
             setTimeout(() => {
                 searchSuggestions.addClass("active");
-            }, 50);
+            }, 10);
         } else {
             searchSuggestions.removeClass("active");
             setTimeout(() => {
