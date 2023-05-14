@@ -202,6 +202,15 @@ $("#delete_shipment_btn").on("click", () => {
     }, 1);
 });
 
+// trigger export shipment modal
+$("#export_shipment_btn").on("click", () => {
+    $("#export_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#export_modal_container").addClass("center-modal-container-active");
+        $("#export_center_modal").addClass("center-modal-active");
+    }, 1);
+});
+
 // hide all modals
 $(".close-modal-btn, .center-modal-container").on("click", function (e) {
     if (e.target == this) {
