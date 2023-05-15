@@ -330,3 +330,12 @@ $(".side-modal-body").scroll(function () {
     var scroll = $(this).scrollTop();
     $(".side-modal-header").toggleClass("side-modal-header-active", scroll > 0);
 });
+
+// export btn loader
+const downloadExportLoader = (e) => {
+    if (e.target !== this) {
+        $("#download_export_btn").addClass("btn-p-loading");
+        $("#download_export_loader").addClass("btn-p-loader-active");
+    }
+};
+$("#download_export_btn").on("click", downloadExportLoader);
