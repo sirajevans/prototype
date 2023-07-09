@@ -4,7 +4,7 @@ function initMaps() {
         lng: 18.433243
     };
     // Initialize collection map
-    var collectionMap = new google.maps.Map(document.getElementById("collect-map"), {
+    var shipAddressMap = new google.maps.Map(document.getElementById("ship-address-map"), {
         zoom: 14,
         center: {
             lat: location.lat + 0.0005,
@@ -21,12 +21,12 @@ function initMaps() {
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(64.5, 50),
     };
-    var collectionMarker = new google.maps.Marker({
+    var shipAddressMarker = new google.maps.Marker({
         position: {
             lat: -33.937473,
             lng: 18.43324
         },
-        map: collectionMap,
+        map: shipAddressMap,
         icon: collectionIcon,
     });
 }
