@@ -199,3 +199,12 @@ function hideAllCenterModal(e) {
     }
 }
 $(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
+
+// purchase label center modal
+$("#fulfill_btn").on("click", function() {
+    $("#purchase_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#purchase_modal_container").addClass("center-modal-container-active");
+        $("#purchase_center_modal").addClass("center-modal-active");
+    }, 1);
+});
