@@ -115,3 +115,49 @@ function openSideMenu() {
     document.getElementById("overlay").style.opacity = "0%";
       setTimeout(() => {  document.getElementById("overlay").style.zIndex = "-1"; }, 10); /* Delay zIndex so opacity changes to 0 before zindex is set to -1 */
   }
+
+  $(document).ready(() => {
+    const shipmentSearch = $("#shipment-search");
+    let searchSuggestions = $(".listing-search-suggestions");
+    let suggestionItem = $(".listing-search-li");
+
+    shipmentSearch.on("focus", () => {
+        searchSuggestions.css("display", "block");
+        setTimeout(() => {
+            searchSuggestions.addClass("active");
+        }, 1);
+    });
+
+    shipmentSearch.on("focusout", () => {
+        setTimeout(() => {
+            searchSuggestions.removeClass("active");
+            setTimeout(() => {
+                searchSuggestions.css("display", "none");
+            }, 150);
+        }, 100);
+    });
+
+    shipmentSearch.on("keyup", () => {
+        if (shipmentSearch.val().trim() === "") {
+            searchSuggestions.css("display", "block");
+            setTimeout(() => {
+                searchSuggestions.addClass("active");
+            }, 10);
+        } else {
+            searchSuggestions.removeClass("active");
+            setTimeout(() => {
+                searchSuggestions.css("display", "none");
+            }, 150);
+        }
+    });
+
+    suggestionItem.on("click", function () {
+        var suggestion = $(this).data("id");
+        shipmentSearch.focus();
+        shipmentSearch.val(suggestion);
+        searchSuggestions.removeClass("active");
+        setTimeout(() => {
+            searchSuggestions.css("display", "none");
+        }, 150);
+    });
+});
