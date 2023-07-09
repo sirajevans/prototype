@@ -198,3 +198,4 @@ function hideAllCenterModal(e) {
         }, 120);
     }
 }
+$(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
