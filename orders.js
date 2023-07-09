@@ -188,3 +188,13 @@ $(".close-modal-btn, .center-modal-container").on("click", function (e) {
         }, 120);
     }
 });
+
+function hideAllCenterModal(e) {
+    if (e.target == this) {
+        $(".center-modal-container").removeClass("center-modal-container-active");
+        $(".center-modal").removeClass("center-modal-active");
+        setTimeout(() => {
+            $(".center-modal-container").css("display", "none");
+        }, 120);
+    }
+}
