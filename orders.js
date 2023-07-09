@@ -161,3 +161,12 @@ function openSideMenu() {
         }, 150);
     });
 });
+
+// filter side modal
+$("#filter_btn").on("click", function () {
+    $("#filter_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#filter_modal_container").addClass("side-modal-container-active");
+        $("#filter_side_modal").addClass("side-modal-active");
+    }, 1);
+});
