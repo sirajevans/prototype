@@ -13,6 +13,7 @@ function initMaps() {
         zoomControl: false,
         streetViewControl: false,
         fullscreenControl: false,
+        disableDefaultUI: true,
         mapId: "2f3a9c93fc40c85d",
     });
     var collectionIcon = {
