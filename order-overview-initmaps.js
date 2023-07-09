@@ -1,7 +1,7 @@
 function initMaps() {
     var location = {
-        lat: -33.937473,
-        lng: 18.433243
+        lat: -33.913409,
+        lng: 18.393898
     };
     // Initialize collection map
     var shipAddressMap = new google.maps.Map(document.getElementById("ship-address-map"), {
@@ -24,8 +24,8 @@ function initMaps() {
     };
     var shipAddressMarker = new google.maps.Marker({
         position: {
-            lat: -33.937473,
-            lng: 18.43324
+            lat: -33.913409,
+            lng: 18.393898
         },
         map: shipAddressMap,
         icon: collectionIcon,
