@@ -177,3 +177,14 @@ $('.accordion-header').on('click', function () {
     $(this).find('.accordion-arrow').toggleClass('active');
     $(this).siblings('.accordion-body').toggleClass('active');
 });
+
+// hide all modals
+$(".close-modal-btn, .center-modal-container").on("click", function (e) {
+    if (e.target == this) {
+        $(".center-modal-container").removeClass("center-modal-container-active");
+        $(".center-modal").removeClass("center-modal-active");
+        setTimeout(() => {
+            $(".center-modal-container").css("display", "none");
+        }, 120);
+    }
+});
