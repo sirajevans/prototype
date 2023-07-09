@@ -95,8 +95,8 @@ $(document).ready(() => {
 });
 
 // toggle accordions on accordion-header click
-$('.parcel-accordion-header').on('click', function () {
+$('.parcels-accordion-header').on('click', function () {
     $(this).parent().toggleClass('open');
     $(this).find('.accordion-arrow').toggleClass('active');
-    $(this).siblings('.parcel-accordion-body').toggleClass('active');
+    $(this).siblings('.parcels-accordion-body').toggleClass('active');
 });
