@@ -212,62 +212,39 @@ $("#fulfill_btn").on("click", function() {
 $(document).ready(function() {
     // Loop through each fulfill counter container
     $('.fulfill-counter').each(function() {
-      // Get the minus and plus elements within the current counter container
-      var minusElement = $(this).find('.fulfill-counter-minus');
-      var plusElement = $(this).find('.fulfill-counter-plus');
+      var counter = $(this);
+      var minusElement = counter.find('.fulfill-counter-minus');
+      var plusElement = counter.find('.fulfill-counter-plus');
+      var counterBody = counter.find('.fulfil-counter-body div');
   
-      // Get the counter body element within the current counter container
-      var counterBody = $(this).find('.fulfil-counter-body div');
-  
-      // Get the maximum value for the current counter container
       var maxValue = parseInt(counterBody.text().split('/')[1].trim());
-  
-      // Set initial counter value as the maximum value
       var counterValue = maxValue;
   
-      // Update the counter display for the current counter container
-      counterBody.text(counterValue + ' / ' + maxValue);
+      updateCounterDisplay();
   
-      // Disable the plus button by default
       plusElement.addClass('disabled');
+      minusElement.on('click', decreaseCounter);
+      plusElement.on('click', increaseCounter);
   
-      // Add click event listener to the minus element
-      minusElement.on('click', function() {
-        // Decrease the counter value for the current counter container, ensuring it doesn't go below 0
+      function updateCounterDisplay() {
+        counterBody.text(counterValue + ' / ' + maxValue);
+      }
+  
+      function decreaseCounter() {
         counterValue = Math.max(counterValue - 1, 0);
+        updateCounterDisplay();
   
-        // Update the counter display for the current counter container
-        counterBody.text(counterValue + ' / ' + maxValue);
-  
-        // Check if counter value is equal to 0 and add "disabled" class to minus element
-        if (counterValue === 0) {
-          minusElement.addClass('disabled');
-        } else {
-          minusElement.removeClass('disabled');
-        }
-  
-        // Remove "disabled" class from plus element
+        minusElement.toggleClass('disabled', counterValue === 0);
         plusElement.removeClass('disabled');
-      });
+      }
   
-      // Add click event listener to the plus element
-      plusElement.on('click', function() {
-        // Increase the counter value for the current counter container, ensuring it doesn't exceed the maximum value
+      function increaseCounter() {
         counterValue = Math.min(counterValue + 1, maxValue);
+        updateCounterDisplay();
   
-        // Update the counter display for the current counter container
-        counterBody.text(counterValue + ' / ' + maxValue);
-  
-        // Check if counter value is equal to the maximum value and add "disabled" class to plus element
-        if (counterValue === maxValue) {
-          plusElement.addClass('disabled');
-        } else {
-          plusElement.removeClass('disabled');
-        }
-  
-        // Remove "disabled" class from minus element
+        plusElement.toggleClass('disabled', counterValue === maxValue);
         minusElement.removeClass('disabled');
-      });
+      }
     });
   });
   
