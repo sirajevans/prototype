@@ -222,8 +222,14 @@ $(document).ready(function() {
       // Get the maximum value for the current counter container
       var maxValue = parseInt(counterBody.text().split('/')[1].trim());
   
-      // Set initial counter value
-      var counterValue = 1;
+      // Set initial counter value as the maximum value
+      var counterValue = maxValue;
+  
+      // Update the counter display for the current counter container
+      counterBody.text(counterValue + ' / ' + maxValue);
+  
+      // Disable the plus button by default
+      plusElement.addClass('disabled');
   
       // Add click event listener to the minus element
       minusElement.on('click', function() {
