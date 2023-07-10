@@ -209,38 +209,38 @@ $("#fulfill_btn").on("click", function() {
     }, 1);
 });
 
-// Get all fulfill counter containers
-const fulfillCounters = document.querySelectorAll('.fulfill-counter');
-
-// Loop through each fulfill counter container
-fulfillCounters.forEach((counter) => {
-  // Get the minus and plus elements within the current counter container
-  const minusElement = counter.querySelector('.fulfill-counter-minus');
-  const plusElement = counter.querySelector('.fulfill-counter-plus');
-
-  // Get the counter body element within the current counter container
-  const counterBody = counter.querySelector('.fulfil-counter-body div');
-
-  // Set initial counter value and maximum value for the current counter container
-  let counterValue = 1;
-  const maxValue = 1;
-
-  // Add click event listener to the minus element
-  minusElement.addEventListener('click', () => {
-    // Decrease the counter value for the current counter container, ensuring it doesn't go below 0
-    counterValue = Math.max(counterValue - 1, 0);
-
-    // Update the counter display for the current counter container
-    counterBody.textContent = `${counterValue} / ${maxValue}`;
+$(document).ready(function() {
+    // Loop through each fulfill counter container
+    $('.fulfill-counter').each(function() {
+      // Get the minus and plus elements within the current counter container
+      var minusElement = $(this).find('.fulfill-counter-minus');
+      var plusElement = $(this).find('.fulfill-counter-plus');
+  
+      // Get the counter body element within the current counter container
+      var counterBody = $(this).find('.fulfil-counter-body div');
+  
+      // Get the maximum value for the current counter container
+      var maxValue = parseInt(counterBody.text().split('/')[1].trim());
+  
+      // Set initial counter value
+      var counterValue = 1;
+  
+      // Add click event listener to the minus element
+      minusElement.on('click', function() {
+        // Decrease the counter value for the current counter container, ensuring it doesn't go below 0
+        counterValue = Math.max(counterValue - 1, 0);
+  
+        // Update the counter display for the current counter container
+        counterBody.text(counterValue + ' / ' + maxValue);
+      });
+  
+      // Add click event listener to the plus element
+      plusElement.on('click', function() {
+        // Increase the counter value for the current counter container, ensuring it doesn't exceed the maximum value
+        counterValue = Math.min(counterValue + 1, maxValue);
+  
+        // Update the counter display for the current counter container
+        counterBody.text(counterValue + ' / ' + maxValue);
+      });
+    });
   });
-
-  // Add click event listener to the plus element
-  plusElement.addEventListener('click', () => {
-    // Increase the counter value for the current counter container, ensuring it doesn't exceed the maximum value
-    counterValue = Math.min(counterValue + 1, maxValue);
-
-    // Update the counter display for the current counter container
-    counterBody.textContent = `${counterValue} / ${maxValue}`;
-  });
-});
-
