@@ -232,6 +232,16 @@ $(document).ready(function() {
   
         // Update the counter display for the current counter container
         counterBody.text(counterValue + ' / ' + maxValue);
+  
+        // Check if counter value is equal to 0 and add "disabled" class to minus element
+        if (counterValue === 0) {
+          minusElement.addClass('disabled');
+        } else {
+          minusElement.removeClass('disabled');
+        }
+  
+        // Remove "disabled" class from plus element
+        plusElement.removeClass('disabled');
       });
   
       // Add click event listener to the plus element
@@ -241,6 +251,17 @@ $(document).ready(function() {
   
         // Update the counter display for the current counter container
         counterBody.text(counterValue + ' / ' + maxValue);
+  
+        // Check if counter value is equal to the maximum value and add "disabled" class to plus element
+        if (counterValue === maxValue) {
+          plusElement.addClass('disabled');
+        } else {
+          plusElement.removeClass('disabled');
+        }
+  
+        // Remove "disabled" class from minus element
+        minusElement.removeClass('disabled');
       });
     });
   });
+  
