@@ -45,7 +45,7 @@ function initMaps() {
         url: "https://uploads-ssl.webflow.com/5fda6f586fdb5a2f2cc5696a/64afddbbe70e909fa3bcdf2e_delivery-map-marker.svg",
         size: new google.maps.Size(119, 57),
         origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(59.5, 50),
+        anchor: new google.maps.Point(59.5, 45),
     };
     var deliveryMarker = new google.maps.Marker({
         position: {
