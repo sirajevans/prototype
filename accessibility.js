@@ -21,3 +21,12 @@ $("#add_shortcut_btn").on("click", function () {
         $("#shortcut_center_modal").addClass("center-modal-active");
     }, 1);
   });
+
+  /* Add zone template */
+$("#add_zone_btn").on("click", function () {
+    $("#zone_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#zone_modal_container").addClass("center-modal-container-active");
+        $("#zone_center_modal").addClass("center-modal-active");
+    }, 1);
+  });
