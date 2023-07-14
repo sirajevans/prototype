@@ -142,7 +142,7 @@ $('.accordion-header').on('click', function () {
 });
 
 // modal header shadow
-$("center-modal-body").scroll(function () {
+$(".center-modal-body").scroll(function () {
     var scroll = $(this).scrollTop();
     $(".center-modal-header").toggleClass("center-modal-header-active", scroll > 0);
   });
