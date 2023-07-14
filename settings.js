@@ -146,11 +146,11 @@ $("#add_driver_btn").on("click", function () {
 
 // TAGS
 // add tags modal
-$("#add_tag_btn").on("click", function () {
-    $("#tag_modal_container").css("display", "flex");
+$("#add_tags_btn").on("click", function () {
+    $("#tags_modal_container").css("display", "flex");
     setTimeout(() => {
-        $("#tag_modal_container").addClass("center-modal-container-active");
-        $("#tag_center_modal").addClass("center-modal-active");
+        $("#tags_modal_container").addClass("center-modal-container-active");
+        $("#tags_center_modal").addClass("center-modal-active");
     }, 1);
 });
 
