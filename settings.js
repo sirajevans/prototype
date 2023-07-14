@@ -1,23 +1,20 @@
 // PAYMENTS
-// Card stacking js
+// card stacking
 let cards = document.getElementsByClassName("payment-card")
-for(let i=0; i < cards.length; i++) {
+for (let i = 0; i < cards.length; i++) {
     let card = cards[i]
     let leftPositioning = i * 20
     card.style.left = `${leftPositioning}px`
 }
-// Predetermine how many cards are in the stack
+// predetermine how many cards are in the stack
 let length = cards.length
-/** Define key variables for configs etc
- *
- * let cardStackIndent = style.getPropertyValue(--card-stack-indent)
- *
- */
+/* Define key variables for configs etc
+ * let cardStackIndent = style.getPropertyValue(--card-stack-indent) */
 let cardStackIndent = 10;
 let cardStackPadding = 30;
 let defaultCardWidth = 165;
 // Dynamically set the indentation for each card in the stack 
-for (let index=0; index < length; index++){
+for (let index = 0; index < length; index++) {
     cards[index].style.left = `${index * cardStackIndent}px`;
 }
 try {
@@ -28,59 +25,55 @@ try {
     addPaymentWrapper.style.setProperty("position", "sticky");
     addPaymentWrapper.style.setProperty("left", `${cardStackWidth + cardStackPadding}px`);
     addPaymentWrapper.style.setProperty("width", `calc(100% - ${cardStackWidth + cardStackPadding - cardStackIndent}px)`);
-} catch(error) {
+} catch (error) {
     console.error("", error)
 }
 
-// Side nav modal
-function openSideMenu() {
-  $("#side-menu").css("left", "0%");
-  $("#overlay").css({ transitionTimingFunction: "ease", transitionDuration: "0ms", zIndex: "1000"
-  });
-  setTimeout(() => {
-    $("#overlay").css({ transitionDuration: "250ms", opacity: "100%"
-    });
-  }, 10);
-}
-
-function closeSideMenu() {
-  $("#side-menu").css("left", "-370px");
-  $("#overlay").css("opacity", "0%");
-  setTimeout(() => {
-    $("#overlay").css("zIndex", "-1");
-  }, 10);
-}
-
-// Add card modal
+// add card modal
 $("#add_card_btn").on("click", function () {
-  $("#add_card_modal_container").css("display", "flex");
-  setTimeout(() => {
-      $("#add_card_modal_container").addClass("center-modal-container-active");
-      $("#add_card_center_modal").addClass("center-modal-active");
-  }, 1);
+    $("#add_card_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#add_card_modal_container").addClass("center-modal-container-active");
+        $("#add_card_center_modal").addClass("center-modal-active");
+    }, 1);
 });
 
 // ACCESSIBILITY
-// Add shortcut modal
+// add shortcut modal
 $("#add_shortcut_btn").on("click", function () {
-  $("#shortcut_modal_container").css("display", "flex");
-  setTimeout(() => {
-      $("#shortcut_modal_container").addClass("center-modal-container-active");
-      $("#shortcut_center_modal").addClass("center-modal-active");
-  }, 1);
+    $("#shortcut_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#shortcut_modal_container").addClass("center-modal-container-active");
+        $("#shortcut_center_modal").addClass("center-modal-active");
+    }, 1);
 });
 
-/* Add zone template */
+/* add zone template */
 $("#add_zone_btn").on("click", function () {
-  $("#zone_modal_container").css("display", "flex");
-  setTimeout(() => {
-      $("#zone_modal_container").addClass("center-modal-container-active");
-      $("#zone_center_modal").addClass("center-modal-active");
-  }, 1);
+    $("#zone_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#zone_modal_container").addClass("center-modal-container-active");
+        $("#zone_center_modal").addClass("center-modal-active");
+    }, 1);
 });
+
+// CARRIERS
+// carrier config modal
+function showCarrierConfigModal() {
+    $("#carrier_modal_container").css("display", "flex");
+    $(".center-modal-body").scrollTop(0);
+    $("#s_modal").css("display", "flex");
+    setTimeout(() => {
+        $("#carrier_modal_container").addClass("center-modal-container-active");
+        $("#carrier_center_modal").addClass("center-modal-active");
+    }, 1);
+}
+
+// trigger modal
+$("[carrier='yango']").on("click", showCarrierConfigModal);
 
 // TEAM
-// Add team member modal
+// add team member modal
 $("#add_team_btn").on("click", function () {
     $("#team_modal_container").css("display", "flex");
     setTimeout(() => {
@@ -90,7 +83,7 @@ $("#add_team_btn").on("click", function () {
 });
 
 // FLEET
-// Add driver modal
+// add driver modal
 $("#add_driver_btn").on("click", function () {
     $("#driver_modal_container").css("display", "flex");
     setTimeout(() => {
@@ -98,3 +91,106 @@ $("#add_driver_btn").on("click", function () {
         $("#driver_center_modal").addClass("center-modal-active");
     }, 1);
 });
+
+// INTEGRATIONS
+// selector drop down menu
+const selectBtn = $("#auth_selector");
+const selectBtnText = $("#auth_type");
+const selectMenu = $(".select-menu-modal");
+const selectMenuItem = $(".select-menu-li");
+let selectMenuStatus = false;
+
+// opening and closing function
+selectBtn.on("click", () => {
+  if (!selectMenuStatus) {
+    selectMenu.removeClass("display-none");
+    setTimeout(() => {
+      selectMenu.addClass("select-menu-active");
+    }, 1);
+    selectMenuStatus = true;
+  } else {
+    selectMenu.removeClass("select-menu-active");
+    setTimeout(() => {
+      selectMenu.addClass("display-none");
+    }, 1);
+    selectMenuStatus = false;
+  }
+});
+
+// handling the select menu options
+selectMenuItem.on("click", (option) => {
+  selectBtnText.text(option.innerText);
+  $("#auth-type").val(option.innerText);
+  selectMenu.removeClass("select-menu-active");
+  setTimeout(() => {
+    selectMenu.addClass("display-none");
+  }, 150);
+  $(".auth-types").addClass("display-none");
+  $("#auth_type_" + option.getAttribute("data-type")).removeClass("display-none");
+});
+
+// close on outside click
+$(window).on("click", (e) => {
+  if (!selectBtn.is(e.target)) {
+    selectMenu.removeClass("select-menu-active");
+    setTimeout(() => {
+      selectMenu.addClass("display-none");
+    }, 150);
+    selectMenuStatus = false;
+  }
+});
+
+// webhooks js tooltip
+const trigger = $("#endpoint_test_btn");
+let tooltip = $("#endpoint_tooltip");
+
+function showBtnTooltip() {
+  tooltip.css("display", "block");
+  setTimeout(() => {
+    tooltip.addClass("btn-tooltip-active");
+  }, 1);
+}
+
+function hideBtnTooltip() {
+  tooltip.removeClass("btn-tooltip-active");
+  setTimeout(() => {
+    tooltip.css("display", "none");
+  }, 100);
+}
+
+trigger.on("mouseover", showBtnTooltip);
+trigger.on("mouseout", hideBtnTooltip);
+
+// OTHER
+// side nav modal
+function openSideMenu() {
+    $("#side-menu").css("left", "0%");
+    $("#overlay").css({
+        transitionTimingFunction: "ease", transitionDuration: "0ms", zIndex: "1000"
+    });
+    setTimeout(() => {
+        $("#overlay").css({
+            transitionDuration: "250ms", opacity: "100%"
+        });
+    }, 10);
+}
+
+function closeSideMenu() {
+    $("#side-menu").css("left", "-370px");
+    $("#overlay").css("opacity", "0%");
+    setTimeout(() => {
+        $("#overlay").css("zIndex", "-1");
+    }, 10);
+}
+
+// hide all modals
+function hideAllCenterModal(e) {
+    if (e.target == this) {
+        $(".center-modal-container").removeClass("center-modal-container-active");
+        $(".center-modal").removeClass("center-modal-active");
+        setTimeout(() => {
+            $(".center-modal-container").css("display", "none");
+        }, 120);
+    }
+}
+$(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
