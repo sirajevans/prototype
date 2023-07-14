@@ -136,9 +136,28 @@ $("#add_team_btn").on("click", function () {
 
 // toggle accordions on accordion-header click
 $('.accordion-header').on('click', function () {
-    $(this).parent().toggleClass('open');
-    $(this).find('.accordion-arrow').toggleClass('active');
-    $(this).siblings('.accordion-body').toggleClass('active');
+    var $accordionItem = $(this).parent();
+    var $accordionArrow = $(this).find('.accordion-arrow');
+    var $accordionBody = $(this).siblings('.accordion-body');
+
+    $accordionItem.toggleClass('open');
+    $accordionArrow.toggleClass('active');
+    $accordionBody.toggleClass('active');
+});
+
+$('#expand-all').on('click', function () {
+    var $allAccordions = $('.accordion-header');
+
+    $allAccordions.each(function () {
+        var $accordionItem = $(this).parent();
+        var $accordionArrow = $(this).find('.accordion-arrow');
+        var $accordionBody = $(this).siblings('.accordion-body');
+        var isOpen = $accordionItem.hasClass('open');
+
+        $accordionItem.toggleClass('open', !isOpen);
+        $accordionArrow.toggleClass('active', !isOpen);
+        $accordionBody.toggleClass('active', !isOpen);
+    });
 });
 
 // modal header shadow
