@@ -57,6 +57,9 @@ $("#add_card_btn").on("click", function () {
     }, 1);
 });
 
+// NOTIFICATIONS
+
+
 // STATUS PAGE
 function countChars(obj) {
     $("#CharCount").text(obj.value.length + "/65");
@@ -138,6 +141,16 @@ $("#add_driver_btn").on("click", function () {
     setTimeout(() => {
         $("#driver_modal_container").addClass("center-modal-container-active");
         $("#driver_center_modal").addClass("center-modal-active");
+    }, 1);
+});
+
+// TAGS
+// add tags modal
+$("#add_tag_btn").on("click", function () {
+    $("#tag_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#tag_modal_container").addClass("center-modal-container-active");
+        $("#tag_center_modal").addClass("center-modal-active");
     }, 1);
 });
 
