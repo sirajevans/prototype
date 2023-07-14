@@ -142,10 +142,19 @@ $('.accordion-header').on('click', function () {
 });
 
 // modal header shadow
-$("#add_team_member_body").scroll(function () {
+$("center-modal-body").scroll(function () {
     var scroll = $(this).scrollTop();
     $(".center-modal-header").toggleClass("center-modal-header-active", scroll > 0);
   });
+
+// btn loader
+$("#send_invite_btn").on("click", function(e) {
+    if (e.target !== this) {
+        $("#send_invite_btn").addClass("btn-p-loading");
+        $("#send_invite_loader").addClass("btn-p-loader-active");
+    }
+});
+
 
 // FLEET
 // add driver modal
