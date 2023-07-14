@@ -141,6 +141,12 @@ $('.accordion-header').on('click', function () {
     $(this).siblings('.accordion-body').toggleClass('active');
 });
 
+// modal header shadow
+$("#add_team_member_body").scroll(function () {
+    var scroll = $(this).scrollTop();
+    $(".center-modal-header").toggleClass("center-modal-header-active", scroll > 0);
+  });
+
 // FLEET
 // add driver modal
 $("#add_driver_btn").on("click", function () {
