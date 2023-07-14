@@ -1,9 +1,9 @@
 // add fleet driver center modal
 $("#add_fleet_btn").on("click", () => {
-    $("#fleet_modal_container").css("display", "flex");
+    $("#add_fleet_modal_container").css("display", "flex");
     setTimeout(function () {
-        $("#fleet_modal_container").addClass("center-modal-container-active");
-        $("#fleet_center_modal").addClass("center-modal-active");
+        $("#add_fleet_modal_container").addClass("center-modal-container-active");
+        $("#add_fleet_center_modal").addClass("center-modal-active");
     }, 1);
 });
 
