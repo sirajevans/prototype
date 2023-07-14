@@ -134,6 +134,13 @@ $("#add_team_btn").on("click", function () {
     }, 1);
 });
 
+// toggle accordions on accordion-header click
+$('.accordion-header').on('click', function () {
+    $(this).parent().toggleClass('open');
+    $(this).find('.accordion-arrow').toggleClass('active');
+    $(this).siblings('.accordion-body').toggleClass('active');
+});
+
 // FLEET
 // add driver modal
 $("#add_driver_btn").on("click", function () {
