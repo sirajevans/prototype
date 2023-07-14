@@ -1,3 +1,22 @@
+// ACCOUNT
+const togglePassword = $("#togglePass");
+const password = $("#resetPass");
+
+togglePassword.on("click", function () {
+    // toggle the type attribute
+    const type = password.attr("type") === "password" ? "text" : "password";
+    password.attr("type", type);
+
+    // toggle the icon
+    $(this).toggleClass("eye-open");
+});
+
+// prevent form submit
+const form = $("form");
+form.on("submit", function (e) {
+    e.preventDefault();
+});
+
 // PAYMENTS
 // card stacking
 let cards = document.getElementsByClassName("payment-card")
@@ -38,6 +57,36 @@ $("#add_card_btn").on("click", function () {
     }, 1);
 });
 
+// STATUS PAGE
+function countChars(obj) {
+    $("#CharCount").text(obj.value.length + "/65");
+  }
+  
+  let merchantMsgIn = $('#merchant-msg-input');
+  let merchantMsgOut = $('#merchant-msg-output');
+  
+  function updateMsg() {
+    if (merchantMsgIn.val() === "") {
+      merchantMsgOut.text("Delivery updates for your order #23910");
+    } else {
+      merchantMsgOut.text(merchantMsgIn.val());
+    }
+  }
+  
+  // Profanity filter
+  function profanityCheck() {
+    let merchantMsgValue = $('#merchant-msg-input').val();
+    let profanity = /faggot|nigga|nigger|arse|wanker|retard|dick|crap|shit|fuck|ass|penis|vagina|porn|pussy|cock|testicles|bitch|twat|cunt|slut|whore|poes|naai/;
+  
+    if (merchantMsgValue.match(profanity)) {
+      merchantMsgValue = merchantMsgValue.replace(profanity, '');
+      $('#merchant-msg-input').val(merchantMsgValue);
+    }
+  }
+  
+  merchantMsgIn.on('keyup', profanityCheck);
+  merchantMsgIn.on('keyup', updateMsg);
+  
 // ACCESSIBILITY
 // add shortcut modal
 $("#add_shortcut_btn").on("click", function () {
