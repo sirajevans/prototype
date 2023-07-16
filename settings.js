@@ -277,3 +277,30 @@ function hideAllCenterModal(e) {
     }
 }
 $(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
+
+// context menus
+$(document).ready(function () {
+    $(".context-menu-btn").on("click", function (e) {
+        const contextMenuModal = $(this).next(".context-menu-modal");
+  
+        if (e.target.closest(".context-menu-btn")) {
+            if (contextMenuModal.hasClass("active")) {
+                contextMenuModal.removeClass("active");
+                setTimeout(() => contextMenuModal.css("display", "none"), 150);
+            } else {
+                $(".context-menu-modal").removeClass("active");
+                contextMenuModal.css("display", "block");
+                setTimeout(() => contextMenuModal.addClass("active"), 1);
+            }
+        }
+    });
+  
+    $(document).on("click", function (e) {
+        const contextMenuModal = $(".context-menu-modal");
+  
+        if (!e.target.closest(".context-menu-btn")) {
+            contextMenuModal.removeClass("active");
+            setTimeout(() => contextMenuModal.css("display", "none"), 150);
+        }
+    });
+  });
