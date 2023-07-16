@@ -95,10 +95,12 @@ $(document).ready(() => {
 });
 
 // toggle accordions on accordion-header click
-$('.parcels-accordion-header').on('click', function () {
-    $(this).parent().toggleClass('open');
-    $(this).find('.accordion-arrow').toggleClass('active');
-    $(this).siblings('.parcels-accordion-body').toggleClass('active');
+$(document).ready(() => {
+    $('.parcels-accordion-header').on('click', function () {
+        $(this).parent().toggleClass('open');
+        $(this).find('.accordion-arrow').toggleClass('active');
+        $(this).siblings('.parcels-accordion-body').toggleClass('active');
+    });
 });
 
 /* Side menu animation JS */
@@ -171,12 +173,12 @@ $("#filter_btn").on("click", function () {
     }, 1);
 });
 
-// // toggle accordions on accordion-header click
-// $('.accordion-header').on('click', function () {
-//     $(this).parent().toggleClass('open');
-//     $(this).find('.accordion-arrow').toggleClass('active');
-//     $(this).siblings('.accordion-body').toggleClass('active');
-// });
+// toggle accordions on accordion-header click
+$('.accordion-header').on('click', function () {
+    $(this).parent().toggleClass('open');
+    $(this).find('.accordion-arrow').toggleClass('active');
+    $(this).siblings('.accordion-body').toggleClass('active');
+});
 
 // hide all modals
 $(".close-modal-btn, .center-modal-container").on("click", function (e) {
