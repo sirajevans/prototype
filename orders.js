@@ -179,7 +179,7 @@ $('.accordion-header').on('click', function () {
 });
 
 // hide all modals
-$(".close-modal-btn, .center-modal-container").on("click", function (e) {
+$(".close-modal-btn, .center-modal-container, .side-modal-container").on("click", function (e) {
     if (e.target == this) {
         $(".center-modal-container").removeClass("center-modal-container-active");
         $(".center-modal").removeClass("center-modal-active");
@@ -188,17 +188,6 @@ $(".close-modal-btn, .center-modal-container").on("click", function (e) {
         }, 120);
     }
 });
-
-function hideAllCenterModal(e) {
-    if (e.target == this) {
-        $(".center-modal-container").removeClass("center-modal-container-active");
-        $(".center-modal").removeClass("center-modal-active");
-        setTimeout(() => {
-            $(".center-modal-container").css("display", "none");
-        }, 120);
-    }
-}
-$(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
 
 // purchase label center modal
 $("#fulfill_btn").on("click", function() {
@@ -248,3 +237,9 @@ $(document).ready(function() {
     });
   });
   
+// action menu
+$(document).ready(function() {
+    $('.checkbox-placeholder').click(function() {
+      $('.action-menu').toggleClass('active');
+    });
+  });
