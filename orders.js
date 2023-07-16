@@ -171,12 +171,12 @@ $("#filter_btn").on("click", function () {
     }, 1);
 });
 
-// toggle accordions on accordion-header click
-$('.accordion-header').on('click', function () {
-    $(this).parent().toggleClass('open');
-    $(this).find('.accordion-arrow').toggleClass('active');
-    $(this).siblings('.accordion-body').toggleClass('active');
-});
+// // toggle accordions on accordion-header click
+// $('.accordion-header').on('click', function () {
+//     $(this).parent().toggleClass('open');
+//     $(this).find('.accordion-arrow').toggleClass('active');
+//     $(this).siblings('.accordion-body').toggleClass('active');
+// });
 
 // hide all modals
 $(".close-modal-btn, .center-modal-container").on("click", function (e) {
@@ -198,7 +198,6 @@ $(".side-modal-container").on("click", function (e) {
         }, 120);
     }
 });
-
 
 // purchase label center modal
 $("#fulfill_btn").on("click", function() {
