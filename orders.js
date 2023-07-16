@@ -95,12 +95,10 @@ $(document).ready(() => {
 });
 
 // toggle accordions on accordion-header click
-$(document).ready(() => {
-    $('.parcels-accordion-header').on('click', function () {
-        $(this).parent().toggleClass('open');
-        $(this).find('.accordion-arrow').toggleClass('active');
-        $(this).siblings('.parcels-accordion-body').toggleClass('active');
-    });
+$('.parcels-accordion-header').on('click', function () {
+    $(this).parent().toggleClass('open');
+    $(this).find('.accordion-arrow').toggleClass('active');
+    $(this).siblings('.parcels-accordion-body').toggleClass('active');
 });
 
 /* Side menu animation JS */
@@ -109,16 +107,18 @@ function openSideMenu() {
     document.getElementById("overlay").style.transitionTimingFunction = "ease";
     document.getElementById("overlay").style.transitionDuration = "0ms";
     document.getElementById("overlay").style.zIndex = "1000";
-      setTimeout(() => {  document.getElementById("overlay").style.transitionDuration = "250ms";
-    document.getElementById("overlay").style.opacity = "100%"; }, 10); /* Delay opacity to give zindex time to change from -1 - 1000 wwhile opacity is still at 0*/
-  }
-  function closeSideMenu() {
+    setTimeout(() => {
+        document.getElementById("overlay").style.transitionDuration = "250ms";
+        document.getElementById("overlay").style.opacity = "100%";
+    }, 10); /* Delay opacity to give zindex time to change from -1 - 1000 wwhile opacity is still at 0*/
+}
+function closeSideMenu() {
     document.getElementById("side-menu").style.left = "-370px";
     document.getElementById("overlay").style.opacity = "0%";
-      setTimeout(() => {  document.getElementById("overlay").style.zIndex = "-1"; }, 10); /* Delay zIndex so opacity changes to 0 before zindex is set to -1 */
-  }
+    setTimeout(() => { document.getElementById("overlay").style.zIndex = "-1"; }, 10); /* Delay zIndex so opacity changes to 0 before zindex is set to -1 */
+}
 
-  $(document).ready(() => {
+$(document).ready(() => {
     const shipmentSearch = $("#shipment-search");
     let searchSuggestions = $(".listing-search-suggestions");
     let suggestionItem = $(".listing-search-li");
@@ -202,7 +202,7 @@ $(".side-modal-container").on("click", function (e) {
 });
 
 // purchase label center modal
-$("#fulfill_btn").on("click", function() {
+$("#fulfill_btn").on("click", function () {
     $("#purchase_modal_container").css("display", "flex");
     setTimeout(() => {
         $("#purchase_modal_container").addClass("center-modal-container-active");
@@ -210,48 +210,48 @@ $("#fulfill_btn").on("click", function() {
     }, 1);
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     // Loop through each fulfill counter container
-    $('.fulfill-counter').each(function() {
-      var counter = $(this);
-      var minusElement = counter.find('.fulfill-counter-minus');
-      var plusElement = counter.find('.fulfill-counter-plus');
-      var counterBody = counter.find('.fulfil-counter-body div');
-  
-      var maxValue = parseInt(counterBody.text().split('/')[1].trim());
-      var counterValue = maxValue;
-  
-      updateCounterDisplay();
-  
-      plusElement.addClass('disabled');
-      minusElement.on('click', decreaseCounter);
-      plusElement.on('click', increaseCounter);
-  
-      function updateCounterDisplay() {
-        counterBody.text(counterValue + ' / ' + maxValue);
-      }
-  
-      function decreaseCounter() {
-        counterValue = Math.max(counterValue - 1, 0);
+    $('.fulfill-counter').each(function () {
+        var counter = $(this);
+        var minusElement = counter.find('.fulfill-counter-minus');
+        var plusElement = counter.find('.fulfill-counter-plus');
+        var counterBody = counter.find('.fulfil-counter-body div');
+
+        var maxValue = parseInt(counterBody.text().split('/')[1].trim());
+        var counterValue = maxValue;
+
         updateCounterDisplay();
-  
-        minusElement.toggleClass('disabled', counterValue === 0);
-        plusElement.removeClass('disabled');
-      }
-  
-      function increaseCounter() {
-        counterValue = Math.min(counterValue + 1, maxValue);
-        updateCounterDisplay();
-  
-        plusElement.toggleClass('disabled', counterValue === maxValue);
-        minusElement.removeClass('disabled');
-      }
+
+        plusElement.addClass('disabled');
+        minusElement.on('click', decreaseCounter);
+        plusElement.on('click', increaseCounter);
+
+        function updateCounterDisplay() {
+            counterBody.text(counterValue + ' / ' + maxValue);
+        }
+
+        function decreaseCounter() {
+            counterValue = Math.max(counterValue - 1, 0);
+            updateCounterDisplay();
+
+            minusElement.toggleClass('disabled', counterValue === 0);
+            plusElement.removeClass('disabled');
+        }
+
+        function increaseCounter() {
+            counterValue = Math.min(counterValue + 1, maxValue);
+            updateCounterDisplay();
+
+            plusElement.toggleClass('disabled', counterValue === maxValue);
+            minusElement.removeClass('disabled');
+        }
     });
-  });
-  
+});
+
 // action menu
-$(document).ready(function() {
-    $('.checkbox-placeholder').click(function() {
-      $('.action-menu').toggleClass('active');
+$(document).ready(function () {
+    $('.checkbox-placeholder').click(function () {
+        $('.action-menu').toggleClass('active');
     });
-  });
+});
