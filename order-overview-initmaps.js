@@ -290,6 +290,15 @@ $(document).ready(function () {
     });
 });
 
+// collection address modal
+$("#collection_btn").on("click", function () {
+    $("#collection_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#collection_modal_container").addClass("center-modal-container-active");
+        $("#collection_center_modal").addClass("center-modal-active");
+    }, 1);
+});
+
 // fulfilment service modal
 $("#service_btn, #view_all_rates").on("click", function () {
     $("#service_modal_container").css("display", "flex");
