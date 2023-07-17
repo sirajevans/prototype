@@ -298,3 +298,9 @@ $("#service_btn").on("click", function () {
         $("#service_center_modal").addClass("center-modal-active");
     }, 1);
 });
+
+// modal header shadow
+$(".center-modal-body").scroll(function () {
+    var scroll = $(this).scrollTop();
+    $(".center-modal-header").toggleClass("center-modal-header-active", scroll > 0);
+});
