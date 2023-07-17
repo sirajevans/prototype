@@ -289,3 +289,12 @@ $(document).ready(function () {
         $('.action-menu').toggleClass('active');
     });
 });
+
+// fulfilment service modal
+$("#service_btn").on("click", function () {
+    $("#service_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#service_modal_container").addClass("center-modal-container-active");
+        $("#service_center_modal").addClass("center-modal-active");
+    }, 1);
+});
