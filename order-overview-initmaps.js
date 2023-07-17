@@ -291,7 +291,7 @@ $(document).ready(function () {
 });
 
 // fulfilment service modal
-$("#service_btn").on("click", function () {
+$("#service_btn, #view_all_rates").on("click", function () {
     $("#service_modal_container").css("display", "flex");
     setTimeout(() => {
         $("#service_modal_container").addClass("center-modal-container-active");
