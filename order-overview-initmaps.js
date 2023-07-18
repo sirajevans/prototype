@@ -283,6 +283,15 @@ $("#edit_shipping_address_btn").on("click", function () {
     }, 1);
 });
 
+// edit parcels modal
+$("#edit_parcels_btn").on("click", function () {
+    $("#parcels_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#parcels_modal_container").addClass("center-modal-container-active");
+        $("#parcels_center_modal").addClass("center-modal-active");
+    }, 1);
+});
+
 // ---- fulfilment page
 
 // collection address modal
