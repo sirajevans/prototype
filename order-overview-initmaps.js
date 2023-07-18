@@ -274,6 +274,14 @@ $("#edit_customer_info_btn").on("click", function () {
     }, 1);
 });
 
+// edit shipping address modal
+$("#edit_shipping_address_btn").on("click", function () {
+    $("#shipping_address_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#shipping_address_modal_container").addClass("center-modal-container-active");
+        $("#shipping_address_center_modal").addClass("center-modal-active");
+    }, 1);
+});
 
 // ---- fulfilment page
 
