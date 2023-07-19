@@ -94,6 +94,34 @@ $(document).ready(() => {
     });
 });
 
+// black context menus
+$(document).ready(() => {
+    $(".context-menu-btn-b").on("click", function (e) {
+        if (e.target.closest(".context-menu-btn-b")) {
+            if ($(this).next(".context-menu-modal-b").hasClass("active")) {
+                $(this).next(".context-menu-modal-b").removeClass("active");
+                setTimeout(() => {
+                    $(this).next(".context-menu-modal-b").css("display", "none");
+                }, 150);
+            } else {
+                $(".context-menu-modal-b").removeClass("active");
+                $(this).next(".context-menu-modal-b").css("display", "block");
+                setTimeout(() => {
+                    $(this).next(".context-menu-modal-b").addClass("active");
+                }, 1);
+            };
+        }
+    });
+    $(document).on("click", function (e) {
+        if (!e.target.closest(".context-menu-btn-b")) {
+            $(".context-menu-modal-b").removeClass("active");
+            setTimeout(() => {
+                $(".context-menu-modal-b").css("display", "none");
+            }, 150);
+        }
+    });
+});
+
 // toggle accordions on accordion-header click
 $('.parcels-accordion-header').on('click', function () {
     $(this).parent().toggleClass('open');
@@ -254,4 +282,13 @@ $(document).ready(function () {
     $('.checkbox-placeholder').click(function () {
         $('.action-menu').toggleClass('active');
     });
+});
+
+// fulfilment service modal
+$("#service_btn").on("click", function () {
+    $("#service_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#service_modal_container").addClass("center-modal-container-active");
+        $("#service_center_modal").addClass("center-modal-active");
+    }, 1);
 });
