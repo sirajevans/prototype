@@ -275,11 +275,11 @@ $("#edit_notes_btn").on("click", function () {
 });
 
 // edit customer info modal
-$("#edit_customer_info_btn").on("click", function () {
-    $("#customer_info_modal_container").css("display", "flex");
+$("#edit_customer_btn").on("click", function () {
+    $("#customer_modal_container").css("display", "flex");
     setTimeout(() => {
-        $("#customer_info_modal_container").addClass("center-modal-container-active");
-        $("#customer_info_center_modal").addClass("center-modal-active");
+        $("#customer_modal_container").addClass("center-modal-container-active");
+        $("#customer_center_modal").addClass("center-modal-active");
     }, 1);
 });
 
