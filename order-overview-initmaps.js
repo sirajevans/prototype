@@ -256,6 +256,15 @@ $('.parcels-accordion-header').on('click', function () {
     $(this).siblings('.parcels-accordion-body').toggleClass('active');
 });
 
+// edit items modal
+$("#edit_items_btn").on("click", function () {
+    $("#items_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#items_modal_container").addClass("center-modal-container-active");
+        $("#items_center_modal").addClass("center-modal-active");
+    }, 1);
+});
+
 // edit notes modal
 $("#edit_notes_btn").on("click", function () {
     $("#notes_modal_container").css("display", "flex");
