@@ -63,16 +63,3 @@ openPopup("#import-popup");
 function closeImportPopup() {
 closePopup("#import-popup");
 }
-
-// Google autocomplete
-$(document).ready(function () {
-    function initAutocomplete() {
-      const input = document.getElementById('address_input');
-      const options = {
-        // types: ['geocode'], // Restrict the autocomplete results to geographical addresses
-      };
-      const autocomplete = new google.maps.places.Autocomplete(input, options);
-    }
-
-    initAutocomplete();
-  });
