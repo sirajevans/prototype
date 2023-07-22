@@ -1,109 +1,65 @@
-// show shortcut & address suggestions
-$(document).ready(() => {
-    const addressInput = $("#address_input");
-    let shortcutSuggestions = $(".shortcut-suggestions");
+// Animate an element's CSS properties
+function animateElement(element, properties, duration) {
+$(element).css("transitionTimingFunction", "ease");
+$(element).css("transitionDuration", "0ms");
+$(element).css("zIndex", "1000");
 
-    addressInput.on("focus", () => {
-        if (addressInput.val().trim() === "") {
-            shortcutSuggestions.css("display", "block");
-            setTimeout(() => {
-                shortcutSuggestions.addClass("active");
-            }, 1);
-        }
-
-        else { }
+setTimeout(function () {
+    $(element).css({
+    transitionDuration: duration,
+    ...properties,
     });
-
-    addressInput.on("input", () => {
-        if (addressInput.val().trim() === "") {
-            shortcutSuggestions.css("display", "block");
-            setTimeout(() => {
-                shortcutSuggestions.addClass("active");
-            }, 0);
-        }
-
-        else {
-            shortcutSuggestions.css("display", "none");
-        }
-    });
-
-    addressInput.on("focusout", () => {
-        setTimeout(() => {
-            shortcutSuggestions.removeClass("active");
-            setTimeout(() => {
-                shortcutSuggestions.css("display", "none");
-            }, 150);
-        }, 100);
-    });
-});
-</script >
-
-    <script>
-/* Animate toast notification */
-        function showDispatchNotification() {
-            document.getElementById("dispatch-notification").style.transitionTimingFunction = "cubic-bezier(.42,0,.58,1.19)";
-  setTimeout(() => {document.getElementById("dispatch-notification").style.transitionDuration = "255ms";
-  document.getElementById("dispatch-notification").style.bottom = "25px"; }, 0);
-	setTimeout(() => {document.getElementById("dispatch-notification").style.transitionDuration = "250ms";
-  document.getElementById("dispatch-notification").style.bottom = "-70px"; }, 3500); 
+}, 10);
 }
 
-        /* Animate slide in order popup */
-        function openAddOrderPopup() {
-            document.getElementById("add-order-popup").style.right = "0%";
-        document.getElementById("overlay").style.transitionTimingFunction = "ease";
-        document.getElementById("overlay").style.transitionDuration = "0ms";
-        document.getElementById("overlay").style.zIndex = "1000";
-	setTimeout(() => {document.getElementById("overlay").style.transitionDuration = "250ms";
-  document.getElementById("overlay").style.opacity = "100%"; }, 10); /* Delay opacity to give zindex time to change from -1 - 1000 wwhile opacity is still at 0*/
-}
-        function closeAddOrderPopup() {
-            document.getElementById("add-order-popup").style.right = "-455px";
-        document.getElementById("overlay").style.opacity = "0%";
-	setTimeout(() => {document.getElementById("overlay").style.zIndex = "-1"; }, 10); /* Delay zIndex so opacity changes to 0 before zindex is set to -1 */
+// Animate toast notification
+function showDispatchNotification() {
+animateElement("#dispatch-notification", { bottom: "25px" }, "255ms");
+setTimeout(function () {
+    animateElement("#dispatch-notification", { bottom: "-70px" }, "250ms");
+}, 3500);
 }
 
-        /* Animate slide in order popup */
-        function openSidePopup() {
-            document.getElementById("order-overview-popup").style.right = "0%";
-        document.getElementById("overlay").style.transitionTimingFunction = "ease";
-        document.getElementById("overlay").style.transitionDuration = "0ms";
-        document.getElementById("overlay").style.zIndex = "1000";
-	setTimeout(() => {document.getElementById("overlay").style.transitionDuration = "250ms";
-  document.getElementById("overlay").style.opacity = "100%"; }, 10); /* Delay opacity to give zindex time to change from -1 - 1000 wwhile opacity is still at 0*/
-}
-        function closeSidePopup() {
-            document.getElementById("order-overview-popup").style.right = "-455px";
-        document.getElementById("overlay").style.opacity = "0%";
-	setTimeout(() => {document.getElementById("overlay").style.zIndex = "-1"; }, 10); /* Delay zIndex so opacity changes to 0 before zindex is set to -1 */
+// Animate slide in popup
+function openPopup(popupId) {
+animateElement(popupId, { right: "0%" }, "250ms");
+animateElement("#overlay", { opacity: "100%" }, "250ms");
 }
 
-        /* Animate slide in import popup */
-        function openImportPopup() {
-            document.getElementById("import-popup").style.right = "0%";
-        document.getElementById("overlay").style.transitionTimingFunction = "ease";
-        document.getElementById("overlay").style.transitionDuration = "0ms";
-        document.getElementById("overlay").style.zIndex = "1000";
-	setTimeout(() => {document.getElementById("overlay").style.transitionDuration = "250ms";
-  document.getElementById("overlay").style.opacity = "100%"; }, 10); /* Delay opacity to give zindex time to change from -1 - 1000 wwhile opacity is still at 0*/
-}
-        function closeImportPopup() {
-            document.getElementById("import-popup").style.right = "-455px";
-        document.getElementById("overlay").style.opacity = "0%";
-	setTimeout(() => {document.getElementById("overlay").style.zIndex = "-1"; }, 10); /* Delay zIndex so opacity changes to 0 before zindex is set to -1 */
+// Animate slide out popup
+function closePopup(popupId) {
+animateElement(popupId, { right: "-455px" }, "250ms");
+animateElement("#overlay", { opacity: "0%" }, "250ms");
 }
 
-        /* Side menu animation JS */
-        function openSideMenu() {
-            document.getElementById("side-menu").style.left = "0%";
-        document.getElementById("overlay").style.transitionTimingFunction = "ease";
-        document.getElementById("overlay").style.transitionDuration = "0ms";
-        document.getElementById("overlay").style.zIndex = "1000";
-	setTimeout(() => {document.getElementById("overlay").style.transitionDuration = "250ms";
-  document.getElementById("overlay").style.opacity = "100%"; }, 10); /* Delay opacity to give zindex time to change from -1 - 1000 wwhile opacity is still at 0*/
+function openSideMenu() {
+openPopup("#side-menu");
 }
-        function closeSideMenu() {
-            document.getElementById("side-menu").style.left = "-370px";
-        document.getElementById("overlay").style.opacity = "0%";
-	setTimeout(() => {document.getElementById("overlay").style.zIndex = "-1"; }, 10); /* Delay zIndex so opacity changes to 0 before zindex is set to -1 */
+
+function closeSideMenu() {
+closePopup("#side-menu");
+}
+
+function openAddOrderPopup() {
+openPopup("#add-order-popup");
+}
+
+function closeAddOrderPopup() {
+closePopup("#add-order-popup");
+}
+
+function openSidePopup() {
+openPopup("#order-overview-popup");
+}
+
+function closeSidePopup() {
+closePopup("#order-overview-popup");
+}
+
+function openImportPopup() {
+openPopup("#import-popup");
+}
+
+function closeImportPopup() {
+closePopup("#import-popup");
 }
