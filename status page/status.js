@@ -72,8 +72,8 @@ var swiper = new Swiper(".swiper-container", {
   loop: false,
   autoHeight: true,
   paginationBulletRender: function (index, className) {
-    var tabsName = ["Delivery status", "Shipment info"];
-    var tabsIcon = ["delivery-status-icon", "shipment-details-icon"];
+    var tabsName = ["Status", "Customer", "Parcels"];
+    var tabsIcon = ["delivery-status-icon", "shipment-details-icon", "shipment-details-icon"];
     if (index === tabsName.length - 1) {
       return (
         '<span class="' + className + '">' + '<span class="' + tabsIcon[index] + '">' + "</span>" + tabsName[index] + "</span>" + '<div class="active-mark "></div>'
