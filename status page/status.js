@@ -72,7 +72,7 @@ var swiper = new Swiper(".swiper-container", {
   loop: false,
   autoHeight: true,
   paginationBulletRender: function (index, className) {
-    var tabsName = ["Delivery status", "Receiver details"];
+    var tabsName = ["Delivery status", "Shipment details"];
     var tabsIcon = ["delivery-status-icon", "shipment-details-icon"];
     if (index === tabsName.length - 1) {
       return (
