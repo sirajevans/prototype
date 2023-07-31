@@ -121,6 +121,15 @@ function showCarrierConfigModal() {
     }, 1);
 }
 
+// fastway modal
+$("#fastway_config_btn").on("click", function () {
+  $("#fastway_modal_container").css("display", "flex");
+  setTimeout(() => {
+      $("#fastway_modal_container").addClass("center-modal-container-active");
+      $("#fastway_center_modal").addClass("center-modal-active");
+  }, 1);
+});
+
 // trigger modal
 $("[carrier='yango']").on("click", showCarrierConfigModal);
 
