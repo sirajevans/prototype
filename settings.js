@@ -57,6 +57,15 @@ $("#add_card_btn").on("click", function () {
     }, 1);
 });
 
+// eft modal
+$("#eft_btn").on("click", function () {
+  $("#eft_modal_container").css("display", "flex");
+  setTimeout(() => {
+      $("#eft_modal_container").addClass("center-modal-container-active");
+      $("#eft_center_modal").addClass("center-modal-active");
+  }, 1);
+});
+
 // NOTIFICATIONS
 
 
@@ -121,7 +130,7 @@ function showCarrierConfigModal() {
     }, 1);
 }
 
-// fastway modal
+// fastway modal -- update this to use the trigger below and one global script for the modal.
 $("#fastway_config_btn").on("click", function () {
   $("#fastway_modal_container").css("display", "flex");
   setTimeout(() => {
