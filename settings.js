@@ -66,6 +66,15 @@ $("#eft_btn").on("click", function () {
   }, 1);
 });
 
+// card modal
+$("#card_btn").on("click", function () {
+  $("#card_modal_container").css("display", "flex");
+  setTimeout(() => {
+      $("#card_modal_container").addClass("center-modal-container-active");
+      $("#card_center_modal").addClass("center-modal-active");
+  }, 1);
+});
+
 // NOTIFICATIONS
 
 
