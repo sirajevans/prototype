@@ -34,6 +34,15 @@ $("#add_pod_btn").on("click", function () {
     }, 1);
 });
 
+// click & collect modal
+$("#click_collect_btn").on("click", function () {
+    $("#click_collect_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#click_collect_modal_container").addClass("center-modal-container-active");
+        $("#click_collect_center_modal").addClass("center-modal-active");
+    }, 1);
+});
+
 function hideAllCenterModal(e) {
     if (e.target == this) {
         $(".center-modal-container").removeClass("center-modal-container-active");
