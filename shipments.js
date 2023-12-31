@@ -343,6 +343,7 @@ $("#download_export_btn").on("click", downloadExportLoader);
 // action menu
 $(document).ready(function () {
     $('.checkbox-placeholder').click(function () {
+        $('.action-menu').css("display", "flex");
         $('.action-menu').toggleClass('active');
     });
 });
