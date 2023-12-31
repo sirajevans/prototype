@@ -339,3 +339,10 @@ const downloadExportLoader = (e) => {
     }
 };
 $("#download_export_btn").on("click", downloadExportLoader);
+
+// action menu
+$(document).ready(function () {
+    $('.checkbox-placeholder').click(function () {
+        $('.action-menu').toggleClass('active');
+    });
+});
