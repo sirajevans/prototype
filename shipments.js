@@ -346,3 +346,15 @@ $(document).ready(function () {
         $('.action-menu').toggleClass('active');
     });
 });
+
+function setParentWidth() {
+    var parent = $('.action-menu');
+    var totalWidth = parent.children().get().reduce(function (acc, child) {
+      return acc + $(child).outerWidth(true);
+    }, 0);
+  
+    parent.width(totalWidth);
+  }
+  
+  // Call the function on page load
+  setParentWidth();
