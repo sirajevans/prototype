@@ -159,29 +159,14 @@ $(document).ready(() => {
 // context menus (including purple context menu btns)
 $(document).ready(() => {
     $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
-        if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
-            var modal = $(this).next(".context-menu-modal");
-            if (modal.hasClass("active")) {
-                modal.removeClass("active");
-                setTimeout(() => {
-                    modal.css("display", "none");
-                }, 150);
-            } else {
-                $(".context-menu-modal").removeClass("active");
-                modal.css("display", "block");
-                setTimeout(() => {
-                    modal.addClass("active");
-                }, 1);
-            };
-        }
+        var modal = $(this).next(".context-menu-modal");
+        $(".context-menu-modal").not(modal).removeClass("active").hide();
+        modal.toggleClass("active").toggle();
     });
 
     $(document).on("click", function (e) {
         if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
-            $(".context-menu-modal").removeClass("active");
-            setTimeout(() => {
-                $(".context-menu-modal").css("display", "none");
-            }, 150);
+            $(".context-menu-modal").removeClass("active").hide();
         }
     });
 });
