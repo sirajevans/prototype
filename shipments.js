@@ -1,34 +1,34 @@
-// // remove loader on page load
-// $(window).on("load", () => {
-//     setTimeout(() => {
-//         $("#s_page").fadeOut(100, () => {
-//             $("#s_page").remove();
-//         });
-//     }, 800);
-// });
+// remove loader on page load
+$(window).on("load", () => {
+    setTimeout(() => {
+        $("#s_page").fadeOut(100, () => {
+            $("#s_page").remove();
+        });
+    }, 800);
+});
 
-// // key shortcuts
-// $(document).keydown(function (e) {
-//     if ($(":input").is(":focus")) {
-//         return; //abort key shortcuts
-//     } else if (e.key && e.key.toLowerCase() == "/") {
-//         e.preventDefault();
-//         document.getElementById("shipment-search").focus();
-//     } else if (e.key && e.key.toLowerCase() == "i") {
-//         showUploadCenterModal();
-//     } else if (e.key && e.key.toLowerCase() == "l") {
-//         showPurchaseCenterModal();
-//     }
-// });
+// key shortcuts
+$(document).keydown(function (e) {
+    if ($(":input").is(":focus")) {
+        return; //abort key shortcuts
+    } else if (e.key && e.key.toLowerCase() == "/") {
+        e.preventDefault();
+        document.getElementById("shipment-search").focus();
+    } else if (e.key && e.key.toLowerCase() == "i") {
+        showUploadCenterModal();
+    } else if (e.key && e.key.toLowerCase() == "l") {
+        showPurchaseCenterModal();
+    }
+});
 
-// // upload center modal
-// $("#import_btn").on("click", function () {
-//     $("#upload_modal_container").css("display", "flex");
-//     setTimeout(() => {
-//         $("#upload_modal_container").addClass("center-modal-container-active");
-//         $("#upload_center_modal").addClass("center-modal-active");
-//     }, 1);
-// });
+// upload center modal
+$("#import_btn").on("click", function () {
+    $("#upload_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#upload_modal_container").addClass("center-modal-container-active");
+        $("#upload_center_modal").addClass("center-modal-active");
+    }, 1);
+});
 
 // // edit label center modal
 // function showEditCenterModal() {
