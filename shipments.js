@@ -333,22 +333,22 @@ $(".side-modal-body").scroll(function () {
     $(".side-modal-header").toggleClass("side-modal-header-active", scroll > 0);
 });
 
-// // export btn loader
-// const downloadExportLoader = (e) => {
-//     if (e.target !== this) {
-//         $("#download_export_btn").addClass("btn-p-loading");
-//         $("#download_export_loader").addClass("btn-p-loader-active");
-//     }
-// };
-// $("#download_export_btn").on("click", downloadExportLoader);
+// export btn loader
+const downloadExportLoader = (e) => {
+    if (e.target !== this) {
+        $("#download_export_btn").addClass("btn-p-loading");
+        $("#download_export_loader").addClass("btn-p-loader-active");
+    }
+};
+$("#download_export_btn").on("click", downloadExportLoader);
 
-// // action menu
-// $(document).ready(function () {
-//     $('.checkbox-placeholder').click(function () {
-//         $('.action-menu').css("display", "flex");
-//         $('.action-menu').toggleClass('active');
-//     });
-// });
+// action menu
+$(document).ready(function () {
+    $('.checkbox-placeholder').click(function () {
+        $('.action-menu').css("display", "flex");
+        $('.action-menu').toggleClass('active');
+    });
+});
 
 // action menu width config
 function setParentWidth() {
