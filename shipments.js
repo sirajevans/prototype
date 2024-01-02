@@ -225,45 +225,45 @@ $(document).ready(() => {
 //     }
 // });
 
-// // hide all modals
-// $(".side-modal-container").on("click", function (e) {
-//     if (e.target == this) {
-//         $(".side-modal-container").removeClass("side-modal-container-active");
-//         $(".side-modal").removeClass("side-modal-active");
-//         setTimeout(() => {
-//             $(".side-modal-container").css("display", "none");
-//         }, 120);
-//     }
-// });
+// hide all modals
+$(".side-modal-container").on("click", function (e) {
+    if (e.target == this) {
+        $(".side-modal-container").removeClass("side-modal-container-active");
+        $(".side-modal").removeClass("side-modal-active");
+        setTimeout(() => {
+            $(".side-modal-container").css("display", "none");
+        }, 120);
+    }
+});
 
-// // ship date context menu
-// $(document).ready(() => {
-//     $(".ship-date-btn").on("click", function (e) {
-//         if (e.target.closest(".ship-date-btn")) {
-//             if ($(this).next(".ship-date-context-modal").hasClass("active")) {
-//                 $(this).next(".ship-date-context-modal").removeClass("active");
-//                 setTimeout(() => {
-//                     $(this).next(".ship-date-context-modal").css("display", "none");
-//                 }, 150);
-//             } else {
-//                 $(".ship-date-context-modal").removeClass("active");
-//                 $(this).next(".ship-date-context-modal").css("display", "block");
-//                 $(this).next(".ship-date-context-modal").scrollTop(0);
-//                 setTimeout(() => {
-//                     $(this).next(".ship-date-context-modal").addClass("active");
-//                 }, 1);
-//             };
-//         }
-//     });
-//     $(document).on("click", function (e) {
-//         if (!e.target.closest(".ship-date-btn")) {
-//             $(".ship-date-context-modal").removeClass("active");
-//             setTimeout(() => {
-//                 $(".ship-date-context-modal").css("display", "none");
-//             }, 150);
-//         };
-//     });
-// });
+// ship date context menu
+$(document).ready(() => {
+    $(".ship-date-btn").on("click", function (e) {
+        if (e.target.closest(".ship-date-btn")) {
+            if ($(this).next(".ship-date-context-modal").hasClass("active")) {
+                $(this).next(".ship-date-context-modal").removeClass("active");
+                setTimeout(() => {
+                    $(this).next(".ship-date-context-modal").css("display", "none");
+                }, 150);
+            } else {
+                $(".ship-date-context-modal").removeClass("active");
+                $(this).next(".ship-date-context-modal").css("display", "block");
+                $(this).next(".ship-date-context-modal").scrollTop(0);
+                setTimeout(() => {
+                    $(this).next(".ship-date-context-modal").addClass("active");
+                }, 1);
+            };
+        }
+    });
+    $(document).on("click", function (e) {
+        if (!e.target.closest(".ship-date-btn")) {
+            $(".ship-date-context-modal").removeClass("active");
+            setTimeout(() => {
+                $(".ship-date-context-modal").css("display", "none");
+            }, 150);
+        };
+    });
+});
 
 $(document).ready(() => {
     const shipmentSearch = $("#shipment-search");
@@ -311,7 +311,6 @@ $(document).ready(() => {
     });
 });
 
-
 // filter side modal
 $("#filter_btn").on("click", function () {
     $("#filter_modal_container").css("display", "flex");
@@ -351,14 +350,15 @@ $(".side-modal-body").scroll(function () {
 //     });
 // });
 
-// function setParentWidth() {
-//     var parent = $('.action-menu');
-//     var totalWidth = parent.children().get().reduce(function (acc, child) {
-//       return acc + $(child).outerWidth(true);
-//     }, 0);
+// action menu width config
+function setParentWidth() {
+    var parent = $('.action-menu');
+    var totalWidth = parent.children().get().reduce(function (acc, child) {
+      return acc + $(child).outerWidth(true);
+    }, 0);
   
-//     parent.width(totalWidth);
-//   }
+    parent.width(totalWidth);
+  }
   
-//   // Call the function on page load
-//   setParentWidth();
+  // Call the function on page load
+  setParentWidth();
