@@ -156,26 +156,28 @@ $(document).ready(() => {
     });
 });
 
-// context menus
+// context menus (incl purple context menu btns)
 $(document).ready(() => {
-    $(".context-menu-btn", ".context-menu-btn-p").on("click", function (e) {
-        if (e.target.closest(".context-menu-btn", ".context-menu-btn-p")) {
-            if ($(this).next(".context-menu-modal").hasClass("active")) {
-                $(this).next(".context-menu-modal").removeClass("active");
+    $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
+        if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+            var modal = $(this).next(".context-menu-modal");
+            if (modal.hasClass("active")) {
+                modal.removeClass("active");
                 setTimeout(() => {
-                    $(this).next(".context-menu-modal").css("display", "none");
+                    modal.css("display", "none");
                 }, 150);
             } else {
                 $(".context-menu-modal").removeClass("active");
-                $(this).next(".context-menu-modal").css("display", "block");
+                modal.css("display", "block");
                 setTimeout(() => {
-                    $(this).next(".context-menu-modal").addClass("active");
+                    modal.addClass("active");
                 }, 1);
             };
         }
     });
+
     $(document).on("click", function (e) {
-        if (!e.target.closest(".context-menu-btn", ".context-menu-btn-p")) {
+        if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
             $(".context-menu-modal").removeClass("active");
             setTimeout(() => {
                 $(".context-menu-modal").css("display", "none");
@@ -183,6 +185,7 @@ $(document).ready(() => {
         }
     });
 });
+
 
 // trigger cancel shipment modal
 $("#cancel_shipment_btn").on("click", () => {
