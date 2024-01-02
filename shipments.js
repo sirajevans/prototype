@@ -158,8 +158,8 @@ $(document).ready(() => {
 
 // context menus
 $(document).ready(() => {
-    $(".context-menu-btn").on("click", function (e) {
-        if (e.target.closest(".context-menu-btn")) {
+    $(".context-menu-btn", ".context-menu-btn-p").on("click", function (e) {
+        if (e.target.closest(".context-menu-btn", ".context-menu-btn-p")) {
             if ($(this).next(".context-menu-modal").hasClass("active")) {
                 $(this).next(".context-menu-modal").removeClass("active");
                 setTimeout(() => {
@@ -175,7 +175,7 @@ $(document).ready(() => {
         }
     });
     $(document).on("click", function (e) {
-        if (!e.target.closest(".context-menu-btn")) {
+        if (!e.target.closest(".context-menu-btn", ".context-menu-btn-p")) {
             $(".context-menu-modal").removeClass("active");
             setTimeout(() => {
                 $(".context-menu-modal").css("display", "none");
