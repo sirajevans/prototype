@@ -312,21 +312,21 @@ $(document).ready(() => {
 });
 
 
-// // filter side modal
-// $("#filter_btn").on("click", function () {
-//     $("#filter_modal_container").css("display", "flex");
-//     setTimeout(() => {
-//         $("#filter_modal_container").addClass("side-modal-container-active");
-//         $("#filter_side_modal").addClass("side-modal-active");
-//     }, 1);
-// });
+// filter side modal
+$("#filter_btn").on("click", function () {
+    $("#filter_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#filter_modal_container").addClass("side-modal-container-active");
+        $("#filter_side_modal").addClass("side-modal-active");
+    }, 1);
+});
 
-// // toggle accordions on accordion-header click
-// $('.accordion-header').on('click', function () {
-//     $(this).parent().toggleClass('open');
-//     $(this).find('.accordion-arrow').toggleClass('active');
-//     $(this).siblings('.accordion-body').toggleClass('active');
-// });
+// toggle accordions on accordion-header click
+$('.accordion-header').on('click', function () {
+    $(this).parent().toggleClass('open');
+    $(this).find('.accordion-arrow').toggleClass('active');
+    $(this).siblings('.accordion-body').toggleClass('active');
+});
 
 // // side menu shadow
 // $(".side-modal-body").scroll(function () {
