@@ -69,43 +69,43 @@ $("#import_btn").on("click", function () {
 // $("#edit_shipment_btn").on("click", showEditCenterModal);
 // $(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
 
-// // center modal tabs
-// const tabs = document.querySelectorAll(".modal-tab");
-// const tabContent = document.querySelectorAll(".modal-tab-content");
-// let tabNo = 0;
-// let contentNo = 0;
-// tabs.forEach((tab) => {
-//     tab.dataset.id = tabNo;
-//     tabNo++;
-//     tab.addEventListener("click", function () {
-//         tabs.forEach((tab) => {
-//             tab.classList.remove("active");
-//         });
-//         this.classList.add("active");
-//         tabContent.forEach((content) => {
-//             content.scrollTop = 0;
-//             content.classList.add("hidden");
-//             if (content.dataset.id === tab.dataset.id) {
-//                 content.classList.remove("hidden");
-//             }
-//         });
-//     });
-// });
+// center modal tabs
+const tabs = document.querySelectorAll(".modal-tab");
+const tabContent = document.querySelectorAll(".modal-tab-content");
+let tabNo = 0;
+let contentNo = 0;
+tabs.forEach((tab) => {
+    tab.dataset.id = tabNo;
+    tabNo++;
+    tab.addEventListener("click", function () {
+        tabs.forEach((tab) => {
+            tab.classList.remove("active");
+        });
+        this.classList.add("active");
+        tabContent.forEach((content) => {
+            content.scrollTop = 0;
+            content.classList.add("hidden");
+            if (content.dataset.id === tab.dataset.id) {
+                content.classList.remove("hidden");
+            }
+        });
+    });
+});
 
-// tabContent.forEach((content) => {
-//     content.dataset.id = contentNo;
-//     contentNo++;
-// });
+tabContent.forEach((content) => {
+    content.dataset.id = contentNo;
+    contentNo++;
+});
 
-// // scroll x divider
-// $(".table-contents").scroll(function () {
-//     var scroll = $(".table-contents").scrollLeft();
-//     if (scroll > 0) {
-//         $(".table-cell-waybill-col").addClass("active");
-//     } else {
-//         $(".table-cell-waybill-col").removeClass("active");
-//     }
-// });
+// scroll x divider
+$(".table-contents").scroll(function () {
+    var scroll = $(".table-contents").scrollLeft();
+    if (scroll > 0) {
+        $(".table-cell-waybill-col").addClass("active");
+    } else {
+        $(".table-cell-waybill-col").removeClass("active");
+    }
+});
 
 // // btn loader
 // const BtnLoader = (e) => {
