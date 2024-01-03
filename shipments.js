@@ -30,44 +30,44 @@ $("#import_btn").on("click", function () {
     }, 1);
 });
 
-// // edit label center modal
-// function showEditCenterModal() {
-//     $("#edit_modal_container").css("display", "flex");
-//     $("#shipment_title").removeClass("edit-shipment-title-input-active");
-//     $(".center-modal-body").scrollTop(0);
-//     $("#s_modal").css("display", "flex");
-//     setTimeout(() => {
-//         $("#edit_modal_container").addClass("center-modal-container-active");
-//         $("#edit_center_modal").addClass("center-modal-active");
-//     }, 1);
-//     setTimeout(() => {
-//         $("#s_modal").fadeOut(100);
-//         $("#shipment_title").addClass("edit-shipment-title-input-active");
-//     }, 800);
-// }
+// edit label center modal
+function showEditCenterModal() {
+    $("#edit_modal_container").css("display", "flex");
+    $("#shipment_title").removeClass("edit-shipment-title-input-active");
+    $(".center-modal-body").scrollTop(0);
+    $("#s_modal").css("display", "flex");
+    setTimeout(() => {
+        $("#edit_modal_container").addClass("center-modal-container-active");
+        $("#edit_center_modal").addClass("center-modal-active");
+    }, 1);
+    setTimeout(() => {
+        $("#s_modal").fadeOut(100);
+        $("#shipment_title").addClass("edit-shipment-title-input-active");
+    }, 800);
+}
 
-// // purchase label center modal
-// function showPurchaseCenterModal() {
-//     $("#purchase_modal_container").css("display", "flex");
-//     setTimeout(() => {
-//         $("#purchase_modal_container").addClass("center-modal-container-active");
-//         $("#purchase_center_modal").addClass("center-modal-active");
-//     }, 1);
-// }
+// purchase label center modal
+function showPurchaseCenterModal() {
+    $("#purchase_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#purchase_modal_container").addClass("center-modal-container-active");
+        $("#purchase_center_modal").addClass("center-modal-active");
+    }, 1);
+}
 
-// function hideAllCenterModal(e) {
-//     if (e.target == this) {
-//         $(".center-modal-container").removeClass("center-modal-container-active");
-//         $(".center-modal").removeClass("center-modal-active");
-//         setTimeout(() => {
-//             $(".center-modal-container").css("display", "none");
-//         }, 120);
-//     }
-// }
-// // trigger modals
-// $("#purchase_label_btn").on("click", showPurchaseCenterModal);
-// $("#edit_shipment_btn").on("click", showEditCenterModal);
-// $(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
+function hideAllCenterModal(e) {
+    if (e.target == this) {
+        $(".center-modal-container").removeClass("center-modal-container-active");
+        $(".center-modal").removeClass("center-modal-active");
+        setTimeout(() => {
+            $(".center-modal-container").css("display", "none");
+        }, 120);
+    }
+}
+// trigger modals
+$("#purchase_label_btn").on("click", showPurchaseCenterModal);
+$("#edit_shipment_btn").on("click", showEditCenterModal);
+$(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
 
 // center modal tabs
 const tabs = document.querySelectorAll(".modal-tab");
