@@ -107,14 +107,14 @@ $(".table-contents").scroll(function () {
     }
 });
 
-// // btn loader
-// const BtnLoader = (e) => {
-//     if (e.target !== this) {
-//         $("#purchase_labels").addClass("btn-p-loading");
-//         $("#purchase_labels_loader").addClass("btn-p-loader-active");
-//     }
-// };
-// $("#purchase_labels").on("click", BtnLoader);
+// btn loader
+const BtnLoader = (e) => {
+    if (e.target !== this) {
+        $("#purchase_labels").addClass("btn-p-loading");
+        $("#purchase_labels_loader").addClass("btn-p-loader-active");
+    }
+};
+$("#purchase_labels").on("click", BtnLoader);
 
 // // list context menu
 // $(document).ready(() => {
