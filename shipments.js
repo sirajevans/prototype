@@ -348,16 +348,4 @@ $(document).ready(function () {
         $('.action-menu').css("display", "flex");
         $('.action-menu').toggleClass('active');
     });
-});
-
-// // action menu width config
-// function setParentWidth() {
-//     var parent = $('.action-menu');
-//     var totalWidth = parent.children().get().reduce(function (acc, child) {
-//       return acc + $(child).outerWidth(true);
-//     }, 0);
-  
-//     parent.width(totalWidth);
-//   }
-//   // Call the function on page load
-//   setParentWidth();
+})
