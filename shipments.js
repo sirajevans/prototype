@@ -116,72 +116,110 @@ const BtnLoader = (e) => {
 };
 $("#purchase_labels").on("click", BtnLoader);
 
-// list context menu
+// // list context menu
+// $(document).ready(() => {
+//     $(".shipment-row-context-btn").on("click", function (e) {
+//         if (e.target.closest(".shipment-row-context-btn")) {
+//             if ($(this).next(".context-menu-modal").hasClass("active")) {
+//                 $(this).next(".context-menu-modal").removeClass("active");
+//                 $(".table-cell").removeClass("active");
+//                 $(".shipment-row-btn").removeClass("active");
+//                 $(".shipment-row-context-btn").removeClass("active");
+//                 setTimeout(() => {
+//                     $(this).next(".context-menu-modal").css("display", "none");
+//                 }, 150);
+//             } else {
+//                 $(".context-menu-modal").removeClass("active");
+//                 $(".table-cell").removeClass("active");
+//                 $(".shipment-row-btn").removeClass("active");
+//                 $(".shipment-row-context-btn").removeClass("active");
+//                 $(this).next(".context-menu-modal").css("display", "block");
+//                 $(this).closest(".table-cell").addClass("active");
+//                 $(this).siblings(".shipment-row-btn").addClass("active");
+//                 $(this).addClass("active");
+//                 setTimeout(() => {
+//                     $(this).next(".context-menu-modal").addClass("active");
+//                 }, 1);
+//             }
+//         }
+//     });
+//     $(document).on("click", function (e) {
+//         if (!e.target.closest(".shipment-row-context-btn, .context-menu-btn")) {
+//             $(".context-menu-modal").removeClass("active");
+//             $(".table-cell").removeClass("active");
+//             $(".shipment-row-btn").removeClass("active");
+//             $(".shipment-row-context-btn").removeClass("active");
+//             setTimeout(() => {
+//                 $(".context-menu-modal").css("display", "none");
+//             }, 150);
+//         }
+//     });
+// });
+
+// // context menus (including purple context menu btns)
+// $(document).ready(() => {
+//     $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
+//         if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+//             var modal = $(this).next(".context-menu-modal");
+//             if (modal.hasClass("active")) {
+//                 modal.removeClass("active");
+//                 setTimeout(() => {
+//                     modal.css("display", "none");
+//                 }, 150);
+//             } else {
+//                 $(".context-menu-modal").removeClass("active");
+//                 modal.css("display", "block");
+//                 setTimeout(() => {
+//                     modal.addClass("active");
+//                 }, 1);
+//             };
+//         }
+//     });
+
+//     $(document).on("click", function (e) {
+//         if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+//             $(".context-menu-modal").removeClass("active");
+//             setTimeout(() => {
+//                 $(".context-menu-modal").css("display", "none");
+//             }, 150);
+//         }
+//     });
+// });
+
+// combined context handling
 $(document).ready(() => {
+    // Context menu for shipment rows
     $(".shipment-row-context-btn").on("click", function (e) {
-        if (e.target.closest(".shipment-row-context-btn")) {
-            if ($(this).next(".context-menu-modal").hasClass("active")) {
-                $(this).next(".context-menu-modal").removeClass("active");
-                $(".table-cell").removeClass("active");
-                $(".shipment-row-btn").removeClass("active");
-                $(".shipment-row-context-btn").removeClass("active");
-                setTimeout(() => {
-                    $(this).next(".context-menu-modal").css("display", "none");
-                }, 150);
-            } else {
-                $(".context-menu-modal").removeClass("active");
-                $(".table-cell").removeClass("active");
-                $(".shipment-row-btn").removeClass("active");
-                $(".shipment-row-context-btn").removeClass("active");
-                $(this).next(".context-menu-modal").css("display", "block");
-                $(this).closest(".table-cell").addClass("active");
-                $(this).siblings(".shipment-row-btn").addClass("active");
-                $(this).addClass("active");
-                setTimeout(() => {
-                    $(this).next(".context-menu-modal").addClass("active");
-                }, 1);
-            }
-        }
-    });
-    $(document).on("click", function (e) {
-        if (!e.target.closest(".shipment-row-context-btn, .context-menu-btn")) {
-            $(".context-menu-modal").removeClass("active");
-            $(".table-cell").removeClass("active");
-            $(".shipment-row-btn").removeClass("active");
-            $(".shipment-row-context-btn").removeClass("active");
-            setTimeout(() => {
-                $(".context-menu-modal").css("display", "none");
-            }, 150);
-        }
-    });
-});
+        var modal = $(this).next(".context-menu-modal");
 
-// context menus (including purple context menu btns)
-$(document).ready(() => {
+        $(".context-menu-modal").not(modal).removeClass("active").hide();
+
+        if (modal.hasClass("active")) {
+            modal.removeClass("active");
+        } else {
+            $(".context-menu-modal").removeClass("active");
+            modal.show().addClass("active");
+        }
+
+        $(this).closest(".table-cell").add(".shipment-row-btn, .shipment-row-context-btn").toggleClass("active", modal.hasClass("active"));
+    });
+
+    // Context menu for other buttons
     $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
-        if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
-            var modal = $(this).next(".context-menu-modal");
-            if (modal.hasClass("active")) {
-                modal.removeClass("active");
-                setTimeout(() => {
-                    modal.css("display", "none");
-                }, 150);
-            } else {
-                $(".context-menu-modal").removeClass("active");
-                modal.css("display", "block");
-                setTimeout(() => {
-                    modal.addClass("active");
-                }, 1);
-            };
+        var modal = $(this).next(".context-menu-modal");
+        if (modal.hasClass("active")) {
+            modal.removeClass("active").hide();
+        } else {
+            $(".context-menu-modal").removeClass("active").hide();
+            modal.show().addClass("active");
         }
     });
 
+    // Close context menus on outside click
     $(document).on("click", function (e) {
-        if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
-            $(".context-menu-modal").removeClass("active");
-            setTimeout(() => {
-                $(".context-menu-modal").css("display", "none");
-            }, 150);
+        if (!e.target.closest(".shipment-row-context-btn, .context-menu-btn, .context-menu-btn-p")) {
+            $(".context-menu-modal").removeClass("active").hide();
+            $(".table-cell, .shipment-row-btn, .shipment-row-context-btn").removeClass("active");
         }
     });
 });
