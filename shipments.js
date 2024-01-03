@@ -344,6 +344,7 @@ $("#download_export_btn").on("click", downloadExportLoader);
 
 // action menu
 $(document).ready(function () {
+    setParentWidth();
     $('.checkbox-placeholder').click(function () {
         $('.action-menu').css("display", "flex");
         $('.action-menu').toggleClass('active');
@@ -359,6 +360,5 @@ function setParentWidth() {
   
     parent.width(totalWidth);
   }
-  
   // Call the function on page load
   setParentWidth();
