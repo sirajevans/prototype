@@ -187,43 +187,43 @@ $(document).ready(() => {
 });
 
 
-// // trigger cancel shipment modal
-// $("#cancel_shipment_btn").on("click", () => {
-//     $("#cancel_modal_container").css("display", "flex");
-//     setTimeout(() => {
-//         $("#cancel_modal_container").addClass("center-modal-container-active");
-//         $("#cancel_center_modal").addClass("center-modal-active");
-//     }, 1);
-// });
+// trigger cancel shipment modal
+$("#cancel_shipment_btn").on("click", () => {
+    $("#cancel_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#cancel_modal_container").addClass("center-modal-container-active");
+        $("#cancel_center_modal").addClass("center-modal-active");
+    }, 1);
+});
 
-// // trigger delete shipment modal
-// $("#delete_shipment_btn").on("click", () => {
-//     $("#delete_modal_container").css("display", "flex");
-//     setTimeout(() => {
-//         $("#delete_modal_container").addClass("center-modal-container-active");
-//         $("#delete_center_modal").addClass("center-modal-active");
-//     }, 1);
-// });
+// trigger delete shipment modal
+$("#delete_shipment_btn").on("click", () => {
+    $("#delete_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#delete_modal_container").addClass("center-modal-container-active");
+        $("#delete_center_modal").addClass("center-modal-active");
+    }, 1);
+});
 
-// // trigger export shipment modal
-// $("#export_shipment_btn").on("click", () => {
-//     $("#export_modal_container").css("display", "flex");
-//     setTimeout(() => {
-//         $("#export_modal_container").addClass("center-modal-container-active");
-//         $("#export_center_modal").addClass("center-modal-active");
-//     }, 1);
-// });
+// trigger export shipment modal
+$("#export_shipment_btn").on("click", () => {
+    $("#export_modal_container").css("display", "flex");
+    setTimeout(() => {
+        $("#export_modal_container").addClass("center-modal-container-active");
+        $("#export_center_modal").addClass("center-modal-active");
+    }, 1);
+});
 
-// // hide all modals
-// $(".close-modal-btn, .center-modal-container").on("click", function (e) {
-//     if (e.target == this) {
-//         $(".center-modal-container").removeClass("center-modal-container-active");
-//         $(".center-modal").removeClass("center-modal-active");
-//         setTimeout(() => {
-//             $(".center-modal-container").css("display", "none");
-//         }, 120);
-//     }
-// });
+// hide all modals
+$(".close-modal-btn, .center-modal-container").on("click", function (e) {
+    if (e.target == this) {
+        $(".center-modal-container").removeClass("center-modal-container-active");
+        $(".center-modal").removeClass("center-modal-active");
+        setTimeout(() => {
+            $(".center-modal-container").css("display", "none");
+        }, 120);
+    }
+});
 
 // hide all modals
 $(".side-modal-container").on("click", function (e) {
