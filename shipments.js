@@ -156,6 +156,31 @@ $("#purchase_labels").on("click", BtnLoader);
 //     });
 // });
 
+// list context menu
+$(document).ready(() => {
+    $(".shipment-row-context-btn").on("click", function (e) {
+        var modal = $(this).next(".context-menu-modal");
+
+        $(".context-menu-modal").not(modal).removeClass("active").hide();
+
+        if (modal.hasClass("active")) {
+            modal.removeClass("active");
+        } else {
+            $(".context-menu-modal").removeClass("active");
+            modal.show().addClass("active");
+        }
+
+        $(this).closest(".table-cell").add(".shipment-row-btn, .shipment-row-context-btn").toggleClass("active", modal.hasClass("active"));
+    });
+
+    $(document).on("click", function (e) {
+        if (!$(e.target).closest(".shipment-row-context-btn, .context-menu-btn").length) {
+            $(".context-menu-modal").removeClass("active").hide();
+            $(".table-cell, .shipment-row-btn, .shipment-row-context-btn").removeClass("active");
+        }
+    });
+});
+
 // context menus (including purple context menu btns)
 $(document).ready(() => {
     $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
