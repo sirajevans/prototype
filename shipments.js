@@ -116,67 +116,42 @@ const BtnLoader = (e) => {
 };
 $("#purchase_labels").on("click", BtnLoader);
 
-// // list context menu
-// $(document).ready(() => {
-//     $(".shipment-row-context-btn").on("click", function (e) {
-//         if (e.target.closest(".shipment-row-context-btn")) {
-//             if ($(this).next(".context-menu-modal").hasClass("active")) {
-//                 $(this).next(".context-menu-modal").removeClass("active");
-//                 $(".table-cell").removeClass("active");
-//                 $(".shipment-row-btn").removeClass("active");
-//                 $(".shipment-row-context-btn").removeClass("active");
-//                 setTimeout(() => {
-//                     $(this).next(".context-menu-modal").css("display", "none");
-//                 }, 150);
-//             } else {
-//                 $(".context-menu-modal").removeClass("active");
-//                 $(".table-cell").removeClass("active");
-//                 $(".shipment-row-btn").removeClass("active");
-//                 $(".shipment-row-context-btn").removeClass("active");
-//                 $(this).next(".context-menu-modal").css("display", "block");
-//                 $(this).closest(".table-cell").addClass("active");
-//                 $(this).siblings(".shipment-row-btn").addClass("active");
-//                 $(this).addClass("active");
-//                 setTimeout(() => {
-//                     $(this).next(".context-menu-modal").addClass("active");
-//                 }, 1);
-//             }
-//         }
-//     });
-//     $(document).on("click", function (e) {
-//         if (!e.target.closest(".shipment-row-context-btn, .context-menu-btn")) {
-//             $(".context-menu-modal").removeClass("active");
-//             $(".table-cell").removeClass("active");
-//             $(".shipment-row-btn").removeClass("active");
-//             $(".shipment-row-context-btn").removeClass("active");
-//             setTimeout(() => {
-//                 $(".context-menu-modal").css("display", "none");
-//             }, 150);
-//         }
-//     });
-// });
-
 // list context menu
 $(document).ready(() => {
     $(".shipment-row-context-btn").on("click", function (e) {
-        var modal = $(this).next(".context-menu-modal");
-
-        $(".context-menu-modal").not(modal).removeClass("active").hide();
-
-        if (modal.hasClass("active")) {
-            modal.removeClass("active");
-        } else {
-            $(".context-menu-modal").removeClass("active");
-            modal.show().addClass("active");
+        if (e.target.closest(".shipment-row-context-btn")) {
+            if ($(this).next(".context-menu-modal").hasClass("active")) {
+                $(this).next(".context-menu-modal").removeClass("active");
+                $(".table-cell").removeClass("active");
+                $(".shipment-row-btn").removeClass("active");
+                $(".shipment-row-context-btn").removeClass("active");
+                setTimeout(() => {
+                    $(this).next(".context-menu-modal").css("display", "none");
+                }, 150);
+            } else {
+                $(".context-menu-modal").removeClass("active");
+                $(".table-cell").removeClass("active");
+                $(".shipment-row-btn").removeClass("active");
+                $(".shipment-row-context-btn").removeClass("active");
+                $(this).next(".context-menu-modal").css("display", "block");
+                $(this).closest(".table-cell").addClass("active");
+                $(this).siblings(".shipment-row-btn").addClass("active");
+                $(this).addClass("active");
+                setTimeout(() => {
+                    $(this).next(".context-menu-modal").addClass("active");
+                }, 1);
+            }
         }
-
-        $(this).closest(".table-cell").add(".shipment-row-btn, .shipment-row-context-btn").toggleClass("active", modal.hasClass("active"));
     });
-
     $(document).on("click", function (e) {
-        if (!$(e.target).closest(".shipment-row-context-btn, .context-menu-btn").length) {
-            $(".context-menu-modal").removeClass("active").hide();
-            $(".table-cell, .shipment-row-btn, .shipment-row-context-btn").removeClass("active");
+        if (!e.target.closest(".shipment-row-context-btn, .context-menu-btn")) {
+            $(".context-menu-modal").removeClass("active");
+            $(".table-cell").removeClass("active");
+            $(".shipment-row-btn").removeClass("active");
+            $(".shipment-row-context-btn").removeClass("active");
+            setTimeout(() => {
+                $(".context-menu-modal").css("display", "none");
+            }, 150);
         }
     });
 });
