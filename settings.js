@@ -121,7 +121,7 @@ merchantMsgIn.on('keyup', updateMsg);
 
 // center modal tabs
 const tabs = document.querySelectorAll(".table-tab");
-const tabContent = document.querySelectorAll(".branding-toolbar-content");
+const tabContent = document.querySelectorAll(".brand-toolbar-content");
 let tabNo = 0;
 let contentNo = 0;
 tabs.forEach((tab) => {
