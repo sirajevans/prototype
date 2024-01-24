@@ -100,6 +100,15 @@ $("#view_all_parcels").on("click", () => {
   }, 1);
 });
 
+// trigger tracking links modal
+$("#view_tracking_links").on("click", () => {
+  $("#tracking_modal_container").css("display", "flex");
+  setTimeout(() => {
+    $("#tracking_modal_container").addClass("center-modal-container-active");
+    $("#tracking_center_modal").addClass("center-modal-active");
+  }, 1);
+});
+
 
 // hide all modals
 $(".close-modal-btn, .center-modal-container").on("click", function(e) {
