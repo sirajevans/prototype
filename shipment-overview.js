@@ -180,20 +180,19 @@ $("#timeline_body").scroll(function () {
 
 // copy tracking link
 $(document).ready(function() {
-      // Click event for the element with id "copy_receiver_tracking"
-      $("#copy_receiver_tracking").click(function() {
-        // Select the text inside the element with id "receiver_tracking_link"
-        var textToCopy = $("#receiver_tracking_link").text();
+  $("#copy_receiver_tracking").click(function() {
+    var textToCopy = $("#receiver_tracking_link").text();
 
-        // Create a temporary input element and set its value to the text to copy
-        var tempInput = $("<input>");
-        $("body").append(tempInput);
-        tempInput.val(textToCopy).select();
+    $("<input>").val(textToCopy).appendTo("body").select();
+    document.execCommand("copy");
+    $("input").remove();
+  });
 
-        // Copy the selected text to the clipboard
-        document.execCommand("copy");
+  $("#copy_sender_tracking").click(function() {
+    var textToCopy = $("#sender_tracking_link").text();
 
-        // Remove the temporary input element
-        tempInput.remove();
-      });
-    });
+    $("<input>").val(textToCopy).appendTo("body").select();
+    document.execCommand("copy");
+    $("input").remove();
+  });
+});
