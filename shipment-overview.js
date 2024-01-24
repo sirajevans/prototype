@@ -182,7 +182,6 @@ $("#timeline_body").scroll(function () {
 $(document).ready(function() {
   $("#copy_receiver_tracking").click(function() {
     var textToCopy = $("#receiver_tracking_link").text();
-
     $("<input>").val(textToCopy).appendTo("body").select();
     document.execCommand("copy");
     $("input").remove();
@@ -190,7 +189,6 @@ $(document).ready(function() {
 
   $("#copy_sender_tracking").click(function() {
     var textToCopy = $("#sender_tracking_link").text();
-
     $("<input>").val(textToCopy).appendTo("body").select();
     document.execCommand("copy");
     $("input").remove();
