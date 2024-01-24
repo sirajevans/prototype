@@ -26,6 +26,14 @@ $(document).keydown(function(e) {
     setTimeout(() => {
       $("#s_card").fadeOut(100);
     }, 800);
+  } else if (e.key && e.key.toLowerCase() == "t") {
+    $("#view_tracking_links").on("click", () => {
+      $("#tracking_modal_container").css("display", "flex");
+      setTimeout(() => {
+        $("#tracking_modal_container").addClass("center-modal-container-active");
+        $("#tracking_center_modal").addClass("center-modal-active");
+      }, 1);
+    });
   }
 });
 
