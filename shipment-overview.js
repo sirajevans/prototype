@@ -177,3 +177,19 @@ $("#timeline_body").scroll(function () {
   var scroll = $(this).scrollTop();
   $(".card-sticky-header").toggleClass("card-sticky-header-active", scroll > 0);
 });
+
+// copy tracking link
+$("#copy_receiver_tracking").click(function() {
+// Select the text inside the element with id "receiver_tracking_link"
+var textToCopy = $("#receiver_tracking_link").text();
+
+// Create a temporary input element and set its value to the text to copy
+var tempInput = $("<input>");
+$("body").append(tempInput);
+tempInput.val(textToCopy).select();
+
+// Copy the selected text to the clipboard
+document.execCommand("copy");
+
+// Remove the temporary input element
+tempInput.remove();
