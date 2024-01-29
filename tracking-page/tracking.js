@@ -2,10 +2,10 @@ function activateLiveTrackingButton() {
   $(".live-tracking-toast").addClass("active");
 }
 
-// Function to wait for 8 seconds and then activate the button
-$(document).ready(function() {
-  setTimeout(activateLiveTrackingButton, 8000); // 8 seconds (8,000 milliseconds)
-});
+// Function to wait for 8 seconds and then show the live tracking button
+// $(document).ready(function() {
+//   setTimeout(activateLiveTrackingButton, 8000); // 8 seconds (8,000 milliseconds)
+// });
 
 // context menus
 $(document).ready(function () {
