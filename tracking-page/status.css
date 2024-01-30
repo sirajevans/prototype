@@ -1,0 +1,412 @@
+body, a {
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", "Segoe UI", Roboto, sans-serif !important;
+  }
+  
+  img, a {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+  
+  .li-heading>a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #recipient-email {
+    text-transform: lowercase;
+  }
+  
+  /* spinner loader animation */
+  .s-loader {
+    -webkit-animation-name: spin;
+    -moz-animation-name: spin;
+    -ms-animation-name: spin;
+    animation-name: spin;
+    -webkit-animation-duration: 800ms;
+    -moz-animation-duration: 800ms;
+    -ms-animation-duration: 800ms;
+    animation-duration: 800ms;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  
+  @-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+  }
+  
+  @-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+  }
+  
+  @-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* WebGl styling */
+  #gradient-canvas {
+    --gradient-color-1: #741FFE; 
+    --gradient-color-2: #4100AC;
+    --gradient-color-3: #6D31FF;
+    --gradient-color-4: #DBDAF1;
+  }
+  
+  /* dm variables */
+  :root {
+    --bg-color: #111114;
+    --bg-color-active: #1f1d25;
+    --white-100: #ffffff;
+    --paragraph-color: #8d8a9e;
+    --grey-200: 0 0 0 1px #353439;
+    --grey-300: 0 0 0 1px #252429;
+  }
+  
+  /* Adaptive dark mode */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--bg-color) !important;
+    }
+  
+    .s-container {
+      background-color: var(--bg-color) !important;
+    }
+  
+    .s-loader {
+      border-top: 3px solid #7642f4 !important;
+      border-right: 3px solid #1f1d25 !important;
+      border-bottom: 3px solid #1f1d25 !important;
+      border-left: 3px solid #1f1d25 !important;
+    }
+  
+    /* Styling for desktop devices */
+    @media screen and (min-width: 990px) {
+      .btn:hover,
+      .shop-btn:hover,
+      .share-link-btn:hover,
+      .feedback-btn:hover,
+      .close-modal-btn:hover,
+      .context-menu-btn:hover,
+      .context-menu-modal-li:hover {
+        background-color: var(--bg-color-active) !important;
+        /* box-shadow: var(--grey-200) !important; */
+      }
+    }
+  
+    /* Styling for mobile devices */
+    @media screen and (max-width: 990px) {
+  
+      .content {
+        border: none !important;
+      }
+  
+      .btn:active,
+      .shop-btn:active,
+      .share-link-btn:active,
+      .feedback-btn:active,
+      .close-modal-btn:active,
+      .open-map-btn:active,
+      .context-menu-btn:active,
+      .context-menu-modal-li:active {
+        background-color: var(--bg-color-active) !important;
+        box-shadow: var(--grey-200) !important;
+      }
+  
+      .help-li:active {
+        background-color: var(--bg-color-active) !important;
+      }
+  
+      .help-modal-icon {
+        filter: invert(100%) saturate(0%) !important;
+      }
+  
+      .help-modal-overlay {
+        background-color: rgb(255 255 255 / 10%) !important;
+      }
+    }
+  
+    .content,
+    .support-container,
+    .center-modal {
+      border-color: var(--grey-300) !important;
+      background-color: var(--bg-color) !important;
+    }
+  
+    .merchant-logo-w {
+      border-color: var(--bg-color) !important;
+    }
+  
+    .merchant-msg {
+      color: var(--paragraph-color) !important;
+    }
+  
+    .share-link-btn {
+      background-color: transparent !important;
+      box-shadow: var(--grey-300) !important;
+      color: var(--white-100) !important;
+    }
+  
+    .shop-btn,
+    .context-menu-btn {
+      box-shadow: var(--grey-300) !important;
+      color: var(--white-100) !important;
+    }
+  
+    .swiper-pagination {
+      border-color: var(--grey-300) !important;
+    }
+  
+    .swiper-pagination-bullet {
+      box-shadow: var(--grey-300) !important;
+      color: var(--white-100) !important;
+      box-shadow: none;
+    }
+  
+    .swiper-pagination-bullet-active {
+      background-color: var(--bg-color-active) !important;
+      box-shadow: var(--grey-200) !important;
+      color: var(--white-100) !important;
+    }
+  
+    /* Set hover only for iOS devices */
+    @supports (-webkit-touch-callout: none) {
+      .swiper-pagination-bullet:hover {
+        background-color: var(--bg-color-active) !important;
+      }
+    }
+  
+    .swiper-pagination-bullet:active {
+      background-color: var(--bg-color-active) !important;
+    }
+  
+    .merchant-name,
+    .heading,
+    .li-heading,
+    .modal-li-heading,
+    .context-menu-modal-li,
+    .call-carrier {
+      color: var(--white-100) !important;
+    }
+  
+    .subheading,
+    .li-paragraph,
+    .footer-paragraph,
+    .footer-link,
+    .modal-li-paragraph {
+      color: var(--paragraph-color) !important;
+    }
+  
+    .share-link-icon,
+    .shop-icon,
+    .btn-icon,
+    .delivery-status-icon,
+    .shipment-details-icon,
+    .details-icon,
+    .open-map-icon,
+    .modal-icon,
+    .context-btn-icon,
+    .parcel-icon {
+      filter: invert(100%) saturate(0%) !important;
+    }
+  
+    .status-icon {
+      filter: invert(100%) saturate(0%) brightness(240%) !important;
+    }
+  
+    .status-progress-bar.current {
+      filter: invert(100%) saturate(0%) brightness(280%) !important
+    }
+  
+    .status-progress-bar {
+      filter: invert(100%) saturate(0%) brightness(200%) !important;
+    }
+  
+    .status-time {
+      color: var(--paragraph-color) !important;
+    }
+  
+    .btn,
+    .close-modal-btn {
+      background-color: transparent !important;
+      box-shadow: var(--grey-300) !important;
+      color: var(--white-100) !important;
+    }
+  
+    .open-map-container {
+      background-image: url(https://uploads-ssl.webflow.com/61f56d4aeb7c687be815e168/62b8dd228c56f54e850e87d9_map-dark.svg) !important;
+    }
+  
+    .open-map-btn {
+      background: var(--bg-color) !important;
+      color: var(--white-100) !important;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+    }
+  
+    .footer-container {
+      border-color: var(--grey-300) !important;
+      background-color: var(--bg-color) !important;
+    }
+  
+    .help-modal-btn {
+      box-shadow: 1px solid var(--grey-300) !important;
+    }
+  
+    .help-modal, .modal {
+      background-color: var(--bg-color) !important;
+    }
+  
+    .overlay {
+      background-color: rgb(255 255 255 / 10%) !important;
+    }
+  
+    .modal-tab {
+      opacity: 0.2 !important;
+    }
+  
+    .modal-h, 
+    .modal-item-h,
+    .help-modal-h {
+      color: var(--white-100) !important;
+    }
+  
+    .modal-p,
+    .modal-item-p,
+    .help-modal-p {
+      color: var(--paragraph-color) !important;
+    }
+  
+    .overflow-fade-t {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#11111400),to(var(--bg-color))) !important;
+      background-image: linear-gradient(180deg,#11111400,var(--bg-color)) !important;
+    }
+  
+    .overflow-fade-b {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#11111400),to(var(--bg-color))) !important;
+      background-image: linear-gradient(180deg,#11111400,var(--bg-color)) !important;
+    }
+  
+    .order-number-container {
+      filter: invert(100%) saturate(0%) !important;
+    }
+  
+    .h-divider {
+      background-color: var(--grey-300) !important; 
+    }
+  
+    .parcel-icon {
+      filter: invert(90%) saturate(80%) hue-rotate(180deg) !important;
+    }
+  
+    .copy-icon {
+      opacity: 0.25 !important;
+    }
+  
+    .copy-toast {
+      background-color: var(--bg-color) !important;
+      color: var(--white-100) !important;
+    }
+  
+    .open-web-icon {
+      opacity: 0.25 !important;
+    }
+  
+    .no-shipment-item-ph {
+      background-color: var(--bg-color-active) !important;
+      color: var(--paragraph-color) !important;
+    }
+  
+    .center-modal-footer {
+      border-color: var(--grey-300) !important;
+    }
+  
+    .carrier-container, 
+    .parcels-container, 
+    .call-carrier, 
+    .context-menu-modal {
+      background-color: var(--bg-color) !important;
+      box-shadow: var(--grey-200) !important;
+    }
+  }
+  
+  /* Adaptable swiper content */
+  .swiper-container {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .swiper-slide {
+    background: transparent;
+    height: auto;
+  }
+  
+  .swiper-container .swiper-pagination-bullet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-pagination-bullet {
+    color: #170b33;
+    font-weight: 500;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 1 !important;
+  }
+  
+  /* Set hover only for iOS devices */
+  @supports (-webkit-touch-callout: none) {
+    .swiper-pagination-bullet:hover {
+      background-color: #f4f4fa;
+    }
+  }
+  
+  .swiper-pagination-bullet:active {
+    background-color: #f4f4fa;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #f4f4fa;
+    box-shadow: 0 0 0 1px #deddf2;
+  }
+  
+  /* Hide active mark */
+  .active-mark {
+    display: none;
+  }
+  
+  /* Hide scrollbar on orders element */
+  .shipment-overflow::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .shipment-overflow {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
