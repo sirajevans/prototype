@@ -242,3 +242,46 @@ $(document).ready(function () {
     // });
   };
 });
+
+// ad carousel code:
+document.addEventListener("DOMContentLoaded", function() {
+  let index = 0;
+  const slides = document.querySelectorAll(".ad-slides > div");
+  const timerBars = document.querySelector(".carousel-bars");
+  const totalSlides = slides.length;
+  const interval = 8000; // Change image every 8 seconds
+
+  function showSlide() {
+    slides.forEach(slide => slide.style.display = "none");
+    slides[index].style.display = "block";
+    startTimer();
+  }
+
+  function nextSlide() {
+    index = (index + 1) % totalSlides;
+    showSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide();
+  }
+
+  function startTimer() {
+    timerBars.innerHTML = ""; // Clear existing timer bars
+    for (let i = 0; i < totalSlides; i++) {
+      const timerBar = document.createElement("div");
+      timerBar.classList.add("timer-bar");
+      timerBars.appendChild(timerBar);
+    }
+    const currentTimerBar = timerBars.children[index];
+    currentTimerBar.style.animation = `timer ${interval}ms linear forwards`;
+  }
+
+  document.querySelector(".carousel-prev").addEventListener("click", prevSlide);
+  document.querySelector(".carousel-next").addEventListener("click", nextSlide);
+
+  setInterval(nextSlide, interval);
+
+  showSlide(); // Show initial slide
+});
