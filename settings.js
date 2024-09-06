@@ -86,7 +86,7 @@ $("#auto_topup_btn").on("click", function () {
   }, 1);
 });
 
-$("#eft_btn").on("click", showEftModal());
+$("#eft_btn").on("click", showEftModal);
 
 // key shortcuts
 $(document).keydown(function (e) {
