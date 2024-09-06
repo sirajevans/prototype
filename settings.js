@@ -48,32 +48,34 @@ try {
   console.error("", error)
 }
 
-// add card modal
-$("#add_card_btn").on("click", function () {
-  $("#add_card_modal_container").css("display", "flex");
-  setTimeout(() => {
-    $("#add_card_modal_container").addClass("center-modal-container-active");
-    $("#add_card_center_modal").addClass("center-modal-active");
-  }, 1);
-});
+// // add card modal
+// $("#add_card_btn").on("click", function () {
+//   $("#add_card_modal_container").css("display", "flex");
+//   setTimeout(() => {
+//     $("#add_card_modal_container").addClass("center-modal-container-active");
+//     $("#add_card_center_modal").addClass("center-modal-active");
+//   }, 1);
+// });
 
 // eft modal
-$("#eft_btn").on("click", function () {
-  $("#eft_modal_container").css("display", "flex");
-  setTimeout(() => {
-    $("#eft_modal_container").addClass("center-modal-container-active");
-    $("#eft_center_modal").addClass("center-modal-active");
-  }, 1);
-});
+function eftModal() {
+  $("#eft_btn").on("click", function () {
+    $("#eft_modal_container").css("display", "flex");
+    setTimeout(() => {
+      $("#eft_modal_container").addClass("center-modal-container-active");
+      $("#eft_center_modal").addClass("center-modal-active");
+    }, 1);
+  });
+}
 
-// card modal
-$("#card_btn").on("click", function () {
-  $("#card_modal_container").css("display", "flex");
-  setTimeout(() => {
-    $("#card_modal_container").addClass("center-modal-container-active");
-    $("#card_center_modal").addClass("center-modal-active");
-  }, 1);
-});
+// // card modal
+// $("#card_btn").on("click", function () {
+//   $("#card_modal_container").css("display", "flex");
+//   setTimeout(() => {
+//     $("#card_modal_container").addClass("center-modal-container-active");
+//     $("#card_center_modal").addClass("center-modal-active");
+//   }, 1);
+// });
 
 // auto topup modal
 $("#auto_topup_btn").on("click", function () {
@@ -84,7 +86,14 @@ $("#auto_topup_btn").on("click", function () {
   }, 1);
 });
 
-
+// key shortcuts
+$(document).keydown(function (e) {
+  if ($(":input").is(":focus")) {
+      return; //abort key shortcuts
+  } else if (e.key && e.key.toLowerCase() == "i") {
+      eftModal();
+  } 
+});
 
 // NOTIFICATIONS
 
