@@ -58,13 +58,15 @@ try {
 // });
 
 // eft modal
-$("#eft_btn").on("click", function () {
-  $("#eft_modal_container").css("display", "flex");
-  setTimeout(() => {
-    $("#eft_modal_container").addClass("center-modal-container-active");
-    $("#eft_center_modal").addClass("center-modal-active");
-  }, 1);
-});
+function showEftModal() {
+  $("#eft_btn").on("click", function () {
+    $("#eft_modal_container").css("display", "flex");
+    setTimeout(() => {
+      $("#eft_modal_container").addClass("center-modal-container-active");
+      $("#eft_center_modal").addClass("center-modal-active");
+    }, 1);
+  });
+}
 
 // // card modal
 // $("#card_btn").on("click", function () {
@@ -83,17 +85,17 @@ $("#auto_topup_btn").on("click", function () {
     $("#auto_topup_center_modal").addClass("center-modal-active");
   }, 1);
 });
+
+$("#eft_btn").on("click", showEftModal());
+
 // key shortcuts
 $(document).keydown(function (e) {
   if ($(":input").is(":focus")) {
       return; //abort key shortcuts
-  } else if (e.key && e.key.toLowerCase() == "i") {
-      eftModal();
-  } else if (e.key && e.key.toLowerCase() == "l") {
-      showPurchaseCenterModal();
+  } else if (e.key && e.key.toLowerCase() == "m") {
+      showEftModal();
   }
 });
-
 
 
 // NOTIFICATIONS
