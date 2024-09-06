@@ -59,14 +59,12 @@ try {
 
 // eft modal
 function showEftModal() {
-  $("#eft_btn").on("click", function () {
     $("#eft_modal_container").css("display", "flex");
     setTimeout(() => {
       $("#eft_modal_container").addClass("center-modal-container-active");
       $("#eft_center_modal").addClass("center-modal-active");
     }, 1);
-  });
-}
+  };
 
 // // card modal
 // $("#card_btn").on("click", function () {
