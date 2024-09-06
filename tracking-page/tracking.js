@@ -1,12 +1,3 @@
-function activateLiveTrackingButton() {
-  $(".live-tracking-toast").addClass("active");
-}
-
-// Function to wait for 8 seconds and then show the live tracking button
-// $(document).ready(function() {
-//   setTimeout(activateLiveTrackingButton, 8000); // 8 seconds (8,000 milliseconds)
-// });
-
 // context menus
 $(document).ready(function () {
   $(".context-menu-btn").on("click", function (e) {
@@ -218,27 +209,113 @@ $(document).ready(function () {
         }, 200);
       }
     });
-
-    // // help modal
-    // $(".help-modal-btn").on("click", function () {
-    //   $(".help-modal-container").css("display", "flex");
-    //   $('.body').addClass("no-scroll")
-    //   setTimeout(() => {
-    //     $(".help-modal-container").addClass("active");
-    //     $(".help-modal").addClass("active");
-    //   }, 1);
-    // })
-
-    // // close help modal
-    // $(".help-modal-container").on("click", function (e) {
-    //   if (e.target == this) {
-    //     $(".help-modal-container").removeClass("active");
-    //     $(".help-modal").removeClass("active");
-    //     $('.body').removeClass("no-scroll")
-    //     setTimeout(() => {
-    //       $(".help-modal-container").css("display", "none");
-    //     }, 120);
-    //   }
-    // });
   };
 });
+
+
+// interactive ad code
+$(document).ready(function () {
+
+  class SlideShow {
+    constructor(slideDuration) {
+      this.slideDuration = slideDuration
+      this.nextButtonSelector = ".next"
+      this.prevButtonSelector = ".prev"
+      this.slideSelector = ".ad-slide"
+      this.slideElements = $(this.slideSelector)
+      this.slideCount = Array.from(this.slideElements).length
+      this.slideIsPaused = false
+
+      $(".bars").html(Array(this.slideCount).fill('<div class="time-bar"><div class="time-bar-fill"></div></div>').join(""))
+      this.progressBars = $(".time-bar-fill");
+      this.currentIndex = 0
+      this.interval = null
+
+      this.registerEventHandlers()
+    }
+
+    showSlide = () => {
+      /**
+       * Show the current slide
+       *  - Resets all progress bars after the current slide to 0 (not viewed)
+       *  - Resets all progress bars before the current slide to 100% (viewed)
+       *  - Animates the progress bar from 0 to 100 for the configured slide duration
+       *  - To prevent race conditions between the slide hide/display toggle and progress
+       *    bar animation, add a buffer of about 10 or more milliseconds so the browsers can
+       *    complete any pending/queued animations.
+       */
+      this.slideElements.hide()
+      this.slideElements.eq(this.currentIndex).show()
+      this.progressBars.slice(0, this.currentIndex).stop().width("100%")
+      this.progressBars.slice(this.currentIndex).stop().width("0%")
+
+      clearInterval(this.interval)
+      this.animateProgressBar(0, this.slideDuration)
+      this.interval = setInterval(this.nextSlide, this.slideDuration + 10)
+    }
+
+    nextSlide = () => {
+      /* Navigate to the previous slide */
+      clearInterval(this.interval)
+      this.currentIndex = (this.currentIndex + 1) % this.slideCount
+      this.showSlide()
+    }
+
+    prevSlide = () => {
+      /* Navigate to the previous slide if we're not on the first slide */
+      clearInterval(this.interval)
+      if (this.currentIndex == 0) {
+        this.currentIndex = 0
+      } else {
+        this.currentIndex = (this.currentIndex - 1 + this.slideCount) % this.slideCount
+      }
+      this.showSlide()
+    }
+
+    pause = () => {
+      this.slideIsPaused = true
+
+      /* Stop the darn thing, let me read it... :) */
+      let currentProgressBar = this.progressBars.eq(this.currentIndex)
+      clearInterval(this.interval)
+      currentProgressBar.stop()
+    }
+
+    resume = () => {
+      this.slideIsPaused = false
+
+      /* Start a few milliseconds before where you left off for a better continuation.*/
+      let currentProgressBar = this.progressBars.eq(this.currentIndex)
+      let currentProgress = currentProgressBar.width() * 1
+      let timeElapsed = (currentProgress / 100.0 * this.slideDuration)
+      let timeRemaining = this.slideDuration - timeElapsed
+      this.animateProgressBar(currentProgress, timeRemaining)
+      this.interval = setInterval(this.nextSlide, timeRemaining + 10)
+    }
+
+    animateProgressBar = (start, duration) => {
+      /* Animate the progress bar from a given percentage `start` to 100% in `duration` milliseconds */
+      let currentProgressBar = this.progressBars.eq(this.currentIndex)
+      currentProgressBar.stop().width(`${start}%`).animate({ "width": "100%" }, duration, "linear")
+    }
+
+    start = () => this.showSlide()
+
+    registerEventHandlers = () => {
+      /**
+       * Bind event handlers for any clickable elements
+       *  > Prev   - Left Panel
+       *  > Next   - Right Panel
+       *  > Pause  - Click the slide
+       *  > Resume - Click the slide again
+       */
+      $(this.nextButtonSelector).on("click", this.nextSlide);
+      $(this.prevButtonSelector).on("click", this.prevSlide);
+      $(this.slideSelector).on("touchstart", this.pause)
+      $(this.slideSelector).on("touchend", this.resume)
+    }
+  }
+
+  let slideShow = new SlideShow(3000)
+  slideShow.start()
+})

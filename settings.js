@@ -147,6 +147,88 @@ tabContent.forEach((content) => {
     contentNo++;
 });
 
+// ad carousel
+$(document).ready(function () {
+
+  class SlideShow {
+    constructor(slideDuration) {
+      this.slideDuration = slideDuration
+      this.nextButtonSelector = ".next"
+      this.prevButtonSelector = ".prev"
+      this.slideSelector = ".ad-slide"
+      this.slideElements = $(this.slideSelector)
+      this.slideCount = Array.from(this.slideElements).length
+      this.slideIsPaused = false
+
+      $(".bars").html(Array(this.slideCount).fill('<div class="time-bar"><div class="time-bar-fill"></div></div>').join(""))
+      this.progressBars = $(".time-bar-fill");
+      this.currentIndex = 0
+      this.interval = null
+
+      this.registerEventHandlers()
+    }
+
+    showSlide = () => {
+      this.slideElements.hide()
+      this.slideElements.eq(this.currentIndex).show()
+      this.progressBars.slice(0, this.currentIndex).stop().width("100%")
+      this.progressBars.slice(this.currentIndex).stop().width("0%")
+
+      clearInterval(this.interval)
+      this.animateProgressBar(0, this.slideDuration)
+      this.interval = setInterval(this.nextSlide, this.slideDuration + 10)
+    }
+
+    nextSlide = () => {
+      clearInterval(this.interval)
+      this.currentIndex = (this.currentIndex + 1) % this.slideCount
+      this.showSlide()
+    }
+
+    prevSlide = () => {
+      clearInterval(this.interval)
+      if (this.currentIndex == 0) {
+        this.currentIndex = 0
+      } else {
+        this.currentIndex = (this.currentIndex - 1 + this.slideCount) % this.slideCount
+      }
+      this.showSlide()
+    }
+
+    pause = () => {
+      this.slideIsPaused = true
+      let currentProgressBar = this.progressBars.eq(this.currentIndex)
+      clearInterval(this.interval)
+      currentProgressBar.stop()
+    }
+
+    resume = () => {
+      this.slideIsPaused = false
+      let currentProgressBar = this.progressBars.eq(this.currentIndex)
+      let currentProgress = currentProgressBar.width() * 1
+      let timeElapsed = (currentProgress / 100.0 * this.slideDuration)
+      let timeRemaining = this.slideDuration - timeElapsed
+      this.animateProgressBar(currentProgress, timeRemaining)
+      this.interval = setInterval(this.nextSlide, timeRemaining + 10)
+    }
+
+    animateProgressBar = (start, duration) => {
+      let currentProgressBar = this.progressBars.eq(this.currentIndex)
+      currentProgressBar.stop().width(`${start}%`).animate({ "width": "100%" }, duration, "linear")
+    }
+
+    start = () => this.showSlide()
+    registerEventHandlers = () => {
+      $(this.nextButtonSelector).on("click", this.nextSlide);
+      $(this.prevButtonSelector).on("click", this.prevSlide);
+      $(this.slideSelector).on("touchstart", this.pause)
+      $(this.slideSelector).on("touchend", this.resume)
+    }
+  }
+  let slideShow = new SlideShow(3000)
+  slideShow.start()
+})
+
 
 // ACCESSIBILITY
 // add shortcut modal
@@ -345,111 +427,32 @@ function hideAllCenterModal(e) {
 }
 $(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
 
-// context menus
-$(document).ready(function () {
-  $(".context-menu-btn").on("click", function (e) {
-    const contextMenuModal = $(this).next(".context-menu-modal");
-
-    if (e.target.closest(".context-menu-btn")) {
-      if (contextMenuModal.hasClass("active")) {
-        contextMenuModal.removeClass("active");
-        setTimeout(() => contextMenuModal.css("display", "none"), 150);
-      } else {
-        $(".context-menu-modal").removeClass("active");
-        contextMenuModal.css("display", "block");
-        setTimeout(() => contextMenuModal.addClass("active"), 1);
+// context menus (including purple context menu btns)
+$(document).ready(() => {
+  $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
+      if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+          var modal = $(this).next(".context-menu-modal");
+          if (modal.hasClass("active")) {
+              modal.removeClass("active");
+              setTimeout(() => {
+                  modal.css("display", "none");
+              }, 150);
+          } else {
+              $(".context-menu-modal").removeClass("active");
+              modal.css("display", "block");
+              setTimeout(() => {
+                  modal.addClass("active");
+              }, 1);
+          };
       }
-    }
   });
 
   $(document).on("click", function (e) {
-    const contextMenuModal = $(".context-menu-modal");
-
-    if (!e.target.closest(".context-menu-btn")) {
-      contextMenuModal.removeClass("active");
-      setTimeout(() => contextMenuModal.css("display", "none"), 150);
-    }
+      if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+          $(".context-menu-modal").removeClass("active");
+          setTimeout(() => {
+              $(".context-menu-modal").css("display", "none");
+          }, 150);
+      }
   });
 });
-
-// ad carousel
-$(document).ready(function () {
-
-  class SlideShow {
-    constructor(slideDuration) {
-      this.slideDuration = slideDuration
-      this.nextButtonSelector = ".next"
-      this.prevButtonSelector = ".prev"
-      this.slideSelector = ".ad-slide"
-      this.slideElements = $(this.slideSelector)
-      this.slideCount = Array.from(this.slideElements).length
-      this.slideIsPaused = false
-
-      $(".bars").html(Array(this.slideCount).fill('<div class="time-bar"><div class="time-bar-fill"></div></div>').join(""))
-      this.progressBars = $(".time-bar-fill");
-      this.currentIndex = 0
-      this.interval = null
-
-      this.registerEventHandlers()
-    }
-
-    showSlide = () => {
-      this.slideElements.hide()
-      this.slideElements.eq(this.currentIndex).show()
-      this.progressBars.slice(0, this.currentIndex).stop().width("100%")
-      this.progressBars.slice(this.currentIndex).stop().width("0%")
-
-      clearInterval(this.interval)
-      this.animateProgressBar(0, this.slideDuration)
-      this.interval = setInterval(this.nextSlide, this.slideDuration + 10)
-    }
-
-    nextSlide = () => {
-      clearInterval(this.interval)
-      this.currentIndex = (this.currentIndex + 1) % this.slideCount
-      this.showSlide()
-    }
-
-    prevSlide = () => {
-      clearInterval(this.interval)
-      if (this.currentIndex == 0) {
-        this.currentIndex = 0
-      } else {
-        this.currentIndex = (this.currentIndex - 1 + this.slideCount) % this.slideCount
-      }
-      this.showSlide()
-    }
-
-    pause = () => {
-      this.slideIsPaused = true
-      let currentProgressBar = this.progressBars.eq(this.currentIndex)
-      clearInterval(this.interval)
-      currentProgressBar.stop()
-    }
-
-    resume = () => {
-      this.slideIsPaused = false
-      let currentProgressBar = this.progressBars.eq(this.currentIndex)
-      let currentProgress = currentProgressBar.width() * 1
-      let timeElapsed = (currentProgress / 100.0 * this.slideDuration)
-      let timeRemaining = this.slideDuration - timeElapsed
-      this.animateProgressBar(currentProgress, timeRemaining)
-      this.interval = setInterval(this.nextSlide, timeRemaining + 10)
-    }
-
-    animateProgressBar = (start, duration) => {
-      let currentProgressBar = this.progressBars.eq(this.currentIndex)
-      currentProgressBar.stop().width(`${start}%`).animate({ "width": "100%" }, duration, "linear")
-    }
-
-    start = () => this.showSlide()
-    registerEventHandlers = () => {
-      $(this.nextButtonSelector).on("click", this.nextSlide);
-      $(this.prevButtonSelector).on("click", this.prevSlide);
-      $(this.slideSelector).on("touchstart", this.pause)
-      $(this.slideSelector).on("touchend", this.resume)
-    }
-  }
-  let slideShow = new SlideShow(3000)
-  slideShow.start()
-})
