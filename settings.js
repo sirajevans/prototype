@@ -66,23 +66,23 @@ function showEftModal() {
     }, 1);
   };
 
-// // card modal
-// $("#card_btn").on("click", function () {
-//   $("#card_modal_container").css("display", "flex");
-//   setTimeout(() => {
-//     $("#card_modal_container").addClass("center-modal-container-active");
-//     $("#card_center_modal").addClass("center-modal-active");
-//   }, 1);
-// });
-
-// auto topup modal
-$("#auto_topup_btn").on("click", function () {
-  $("#auto_topup_modal_container").css("display", "flex");
+// card modal
+$("#card_btn").on("click", function () {
+  $("#card_modal_container").css("display", "flex");
   setTimeout(() => {
-    $("#auto_topup_modal_container").addClass("center-modal-container-active");
-    $("#auto_topup_center_modal").addClass("center-modal-active");
+    $("#card_modal_container").addClass("center-modal-container-active");
+    $("#card_center_modal").addClass("center-modal-active");
   }, 1);
 });
+
+// // auto topup modal
+// $("#auto_topup_btn").on("click", function () {
+//   $("#auto_topup_modal_container").css("display", "flex");
+//   setTimeout(() => {
+//     $("#auto_topup_modal_container").addClass("center-modal-container-active");
+//     $("#auto_topup_center_modal").addClass("center-modal-active");
+//   }, 1);
+// });
 
 $("#eft_btn").on("click", showEftModal);
 
