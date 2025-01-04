@@ -2497,18 +2497,6 @@ img.address-type-btn-icon {
     border-color: transparent;
 }
 
-.status-bar-content {
-    position: static;
-    display: flex;
-    height: 45px;
-    padding: 10px 15px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 1px 15px 0 rgb(23 11 51 / 15%);
-}
-
 .more-action-main-container {
     display: flex;
     align-items: center;
