@@ -1102,18 +1102,6 @@ a.ui-button:active,
     border-radius: 0 !important;
 }
 
-#js-notification-wrapper {
-    z-index: 999;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin: 200px 10px 0;
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
 .toast-container {
     position: absolute;
     min-width: 260px;
