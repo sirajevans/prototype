@@ -1,731 +1,681 @@
-/* ======= Login + register background styling ======= */
-/* Login & register background container */
+/* ======= Login + Register Background Styling ======= */
 .login-bkg-container {
-    position: fixed;
-    left: -100px;
-    right: -100px;
-    top: -250px;
-    bottom: 0;
-    z-index: 0;
-    transform: rotate(-12deg);
-  }
-  /* Login & register background color + position */
-  .login-gray-bkg {
-    position: absolute;
-    top: -1000px;
-    left: -100px;
-    right: -100px;
-    transform-origin: 0 50%;
-    height: 1698px;
-    background-color: #f4f5fa;
-  }
-  /* Login & register slanted line graphics */
-  .login-right-streak {
-    position: absolute;
-    top: 1658px;
-    right: -50px;
-    left: calc(55% + 430px);
-    height: 40px;
-    background-color: #7642f4;
-    border-radius: 50px;
-  }
-  /* Login & register slanted line graphics */
-  .login-left-streak {
-    position: absolute;
-    top: 1698px;
-    left: -50px;
-    right: calc(65% + 405px);
-    height: 40px;
-    background-color: #7642f4;
-    border-radius: 50px;
-  }
-  /* Login & register slanted line graphics */
-  .login-left-streak-outline {
-    position: absolute;
-    top: 1678px;
-    left: calc(48% - 700px);
-    right: calc(50% + 540px);
-    width: 230px;
-    height: 40px;
-    background-color: transparent;
-    border-radius: 50px;
-    border: 1px solid #170b33;
-  }
-  
-  /* ======= Tooltip styling ======= */
-  /* Set tooltip transition properties and original state to hidden */
-  .tooltip {
-    visibility: hidden;
-    transition-timing-function: ease;
-    transition: 50ms;
-    transition-delay: 50ms;
-    opacity: 0;
-  }
-  /* Set transition delay for original address tooltip*/
-  .tooltip.order-original-address-descriptor {
-    transition-delay: 250ms;
-  }
-  /* Display tooltip on mouse hover */
-  .more-info:hover .tooltip,
-  .waypoint-status-container:hover .tooltip,
-  .data-valid-container:hover .tooltip,
-  .data-validation-container:hover .tooltip,
-  .order-original-address-container:hover .tooltip,
-  .form-id-container:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  /* ======= Arrow hover animation applied on '.primary-btn' ======= */
-  /* Set transition speed for both parts of the arrow */
-  .btn-hover-arrow-1,
-  .btn-hover-arrow-2 {
-    transition: ease 100ms;
-  }
-  .primary-btn:hover .btn-hover-arrow-1~.btn-hover-arrow-2 {
-    opacity: 1;
-  }
-  .primary-btn:hover .btn-hover-arrow-1 {
-    margin-left: 5px;
-    opacity: 1;
-  }
-  .primary-btn:hover .btn-hover-arrow-2 {
-    margin-left: -11px;
-    height: 11px;
-    opacity: 1;
-  }
-  
-  /* ======= Arrow hover animation applied on 'waypoints list item' ======= */
-  /* Animate .waypoint-arrow from opacity 0 to 1 */
-  .waypoint-arrow {
-    visibility: hidden;
-  }
-  .waypoint-clickable-container:hover .waypoint-arrow {
-    visibility: visible;
-  }
-  
-  /* ======= calendar css ========= */
-  .calendarContentContainer {
-    width: 100%;
-  }
-  .calendarMonth {
-    border-spacing: 0;
-    border-collapse: separate !important;
-  }
-  .calendarMonth td {
-    color: #170b33;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 15px;
-    width: 58px !important;
-    height: 40px !important;
-    box-sizing: border-box;
-    position: relative;
-    padding-top: 12px;
-    user-select: none;
-  }
-  .calendarMonth th {
-    text-align: center !important;
-  }
-  .calendarMonth {
-    color: #54556d;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 10px 5px;
-    word-break: normal;
-    text-transform: uppercase;
-    user-select: none;
-    border-collapse: separate !important;
-  }
-  .calendarMonthName {
-    color: #170b33;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 600;
-    padding: 5px 5px 15px 5px;
-    word-break: normal;
-    text-transform: none;
-    user-select: none;
-  }
-  .calendarNextBtn {
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    padding: 5px 5px 15px 5px;
-  }
-  .calendarNextBtn:hover {
-    opacity: .7;
-  }
-  .calendarNextIcon {
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
-  }
-  .calendarPrevBtn {
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    padding: 5px 5px 15px 5px;
-  }
-  .calendarPrevBtn:hover {
-    opacity: .7;
-  }
-  .calendarPrevIcon {
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
-    transform: rotateZ(180deg);
-    -webkit-transform: rotateZ(180deg);
-  }
-  .calendarMonth .calendarDate {
-    text-align: center;
-    vertical-align: top;
-    background: #ffffff;
-    cursor: pointer;
-    border-radius: 40px !important;
-  }
-  .calendarMonth .calendarDate:hover {
-    background: #f4f4fa;
-  }
-  .calendarMonth .calendarDate:active {
-    background: #f0f0f7;
-  }
-  .calendarMonth .calendarDateSelected {
-    background: #7642f4;
-    color: #ffffff;
-  }
-  .calendarMonth .calendarDateSelected:hover {
-    background: #5327be;
-  }
-  .calendarMonth .rangeStartDate {
-    border-radius: 40px 0px 0px 40px !important;
-    background: #7642f4 !important;
-    color: #ffffff;
-  }
-  .calendarMonth .rangeEndDate {
-    border-radius: 0px 40px 40px 0px !important;
-    background: #7642f4 !important;
-    color: #ffffff;
-  }
-  .calendarMonth .inDateRange {
-    border-radius: 0px 0px 0px 0px !important;
-    background: #7642f4 !important;
-    color: #ffffff !important;
-  }
-  
-  /* ======= Custom checkbox styling ======= */
-  .checkbox-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    font-weight: 400;
-    font-size: 14px;
-    color: #54536F;
-    line-height: 14px;
-    cursor: pointer;
-    margin-bottom: 0px;
-    height: 16px;
-  }
-  
-  .checkbox-container.nested {
-    margin-left: 14px;
-  }
-  
-  .checkbox-container:active > .checkmark {
-    box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
-      0 1px 3px 0 rgba(23, 11, 51, 0.15);
-  }
-  
-  .checkbox-container input[type="checkbox"] {
-    opacity: 0;
-    margin-right: 10px;
-    height: 16px;
-    width: 16px;
-  }
-  
-  .checkmark {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 16px;
-    height: 16px;
-    background: #FFFFFF;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #deddf2, 0 0 transparent, 0 2px 5px rgba(69,64,82,.08);
-    transition: ease 100ms;
-  }
-  
-  .checkmark:active {
-    box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
-      0 1px 3px 0 rgba(23, 11, 51, 0.15);
-  }
-  
-  .checkbox-container input[type="checkbox"]:checked + .checkmark {
-    background-color: #723EF2;
-    box-shadow: 0 0 0 1px #6128EB;
-  }
-  
-  .checkbox-container input[type="checkbox"]:checked + .checkmark svg {
-    display: none;
-  }
-  
-  .checkbox-container .checkmark svg {
-    display: none;
-    position: absolute;
-    top: 0px;
-    left: 2px;
-    width: 12px;
-    height: 12px;
-  }
-  
-  .checkbox-container .checkbox-container-li {
-    margin-top: 14px;
-  }
-  
-  @keyframes fullView {
-    100% {
+  position: fixed;
+  left: -100px;
+  right: -100px;
+  top: -250px;
+  bottom: 0;
+  z-index: 0;
+  transform: rotate(-12deg);
+}
+
+.login-gray-bkg {
+  position: absolute;
+  top: -1000px;
+  left: -100px;
+  right: -100px;
+  transform-origin: 0 50%;
+  height: 1698px;
+  background-color: #f4f5fa;
+}
+
+.login-right-streak,
+.login-left-streak,
+.login-left-streak-outline {
+  position: absolute;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.login-right-streak {
+  top: 1658px;
+  right: -50px;
+  left: calc(55% + 430px);
+  background-color: #7642f4;
+}
+
+.login-left-streak {
+  top: 1698px;
+  left: -50px;
+  right: calc(65% + 405px);
+  background-color: #7642f4;
+}
+
+.login-left-streak-outline {
+  top: 1678px;
+  left: calc(48% - 700px);
+  right: calc(50% + 540px);
+  width: 230px;
+  background-color: transparent;
+  border: 1px solid #170b33;
+}
+
+/* ======= Tooltip Styling ======= */
+.tooltip {
+  visibility: hidden;
+  transition: opacity 50ms ease 50ms;
+  opacity: 0;
+}
+
+.tooltip.order-original-address-descriptor {
+  transition-delay: 250ms;
+}
+
+.more-info:hover .tooltip,
+.waypoint-status-container:hover .tooltip,
+.data-valid-container:hover .tooltip,
+.data-validation-container:hover .tooltip,
+.order-original-address-container:hover .tooltip,
+.form-id-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ======= Arrow Hover Animation ======= */
+.btn-hover-arrow-1,
+.btn-hover-arrow-2 {
+  transition: ease 100ms;
+}
+
+.primary-btn:hover .btn-hover-arrow-1~.btn-hover-arrow-2 {
+  opacity: 1;
+}
+
+.primary-btn:hover .btn-hover-arrow-1 {
+  margin-left: 5px;
+  opacity: 1;
+}
+
+.primary-btn:hover .btn-hover-arrow-2 {
+  margin-left: -11px;
+  height: 11px;
+  opacity: 1;
+}
+
+/* ======= Waypoint Arrow Animation ======= */
+.waypoint-arrow {
+  visibility: hidden;
+}
+
+.waypoint-clickable-container:hover .waypoint-arrow {
+  visibility: visible;
+}
+
+/* ======= Calendar CSS ======= */
+.calendarContentContainer {
+  width: 100%;
+}
+
+.calendarMonth {
+  border-spacing: 0;
+  border-collapse: separate !important;
+  color: #54556d;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 5px;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.calendarMonth td {
+  color: #170b33;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  width: 58px !important;
+  height: 40px !important;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 12px;
+  user-select: none;
+}
+
+.calendarMonth th {
+  text-align: center !important;
+}
+
+.calendarMonthName {
+  color: #170b33;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  padding: 5px 5px 15px 5px;
+  text-transform: none;
+  user-select: none;
+}
+
+.calendarNextBtn,
+.calendarPrevBtn {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  padding: 5px 5px 15px 5px;
+}
+
+.calendarNextBtn:hover,
+.calendarPrevBtn:hover {
+  opacity: .7;
+}
+
+.calendarNextIcon,
+.calendarPrevIcon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.calendarPrevIcon {
+  transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+}
+
+.calendarMonth .calendarDate {
+  text-align: center;
+  vertical-align: top;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 40px !important;
+}
+
+.calendarMonth .calendarDate:hover {
+  background: #f4f4fa;
+}
+
+.calendarMonth .calendarDate:active {
+  background: #f0f0f7;
+}
+
+.calendarMonth .calendarDateSelected {
+  background: #7642f4;
+  color: #ffffff;
+}
+
+.calendarMonth .calendarDateSelected:hover {
+  background: #5327be;
+}
+
+.calendarMonth .rangeStartDate,
+.calendarMonth .rangeEndDate,
+.calendarMonth .inDateRange {
+  background: #7642f4 !important;
+  color: #ffffff;
+}
+
+.calendarMonth .rangeStartDate {
+  border-radius: 40px 0 0 40px !important;
+}
+
+.calendarMonth .rangeEndDate {
+  border-radius: 0 40px 40px 0 !important;
+}
+
+.calendarMonth .inDateRange {
+  border-radius: 0 !important;
+}
+
+/* ======= Custom Checkbox Styling ======= */
+.checkbox-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  color: #54536F;
+  line-height: 14px;
+  cursor: pointer;
+  margin-bottom: 0;
+  height: 16px;
+}
+
+.checkbox-container.nested {
+  margin-left: 14px;
+}
+
+.checkbox-container:active > .checkmark {
+  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1), 0 1px 3px 0 rgba(23, 11, 51, 0.15);
+}
+
+.checkbox-container input[type="checkbox"] {
+  opacity: 0;
+  margin-right: 10px;
+  height: 16px;
+  width: 16px;
+}
+
+.checkmark {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #deddf2, 0 0 transparent, 0 2px 5px rgba(69,64,82,.08);
+  transition: ease 100ms;
+}
+
+.checkmark:active {
+  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1), 0 1px 3px 0 rgba(23, 11, 51, 0.15);
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+  background-color: #723EF2;
+  box-shadow: 0 0 0 1px #6128EB;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark svg,
+.checkbox-container .checkmark svg {
+  display: none;
+}
+
+.checkbox-container .checkmark svg {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+}
+
+.checkbox-container .checkbox-container-li {
+  margin-top: 14px;
+}
+
+@keyframes fullView {
+  100% {
       width: 100%;
-    }
   }
-  @keyframes shimmer {
-    0% {
-      background-position: -1000px 0;
-    }
-  
-    100% {
-      background-position: 1000px 0;
-    }
-  }
-  
-  /* ======= Custom radio button styling ======= */
-  /* The container */
-  .radio-btn-container {
-    display: block;
-    position: relative;
-    margin-bottom: 10px !important;
-    padding-left: 25px;
-    color: #54536F;
-    font-size: 14px;
-    font-weight: 400;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  /* Hide the browser's default radio button */
-  .radio-btn-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    width: 0px;
-    height: 0px;
-  }
-  /* Create a custom radio button */
-  .radio-checkmark {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 18px;
-    background-color: #fff;
-    box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #deddf2, 0 0 transparent, 0 2px 5px rgba(69,64,82,.08);
-    transition: ease 100ms;
-  }
-  /* Style the inner radio dot */
-  .radio-btn-container .radio-checkmark:after {
-    top: 5px;
-    left: 5px;
-    width: 5px;
-    height: 5px;
-    border-radius: 100%;
-    background: white;
-  }
-  /* On mouse-over, add a grey background color */
-  .radio-btn-container:hover input ~ .radio-checkmark {
-    background-color: #f4f4fa;
-  }
-  /* When the radio btn is pressed, add a dropshadow */
-  .radio-checkmark:active {
-    box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
-      0 1px 3px 0 rgba(23, 11, 51, 0.15);
-  }
-  /* When the radio button is checked, add a blue background */
-  .radio-btn-container input:checked ~ .radio-checkmark {
-    background-color: #7642f4;
-    box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #6128EB, 0 0 transparent, 0 2px 5px rgba(69,64,82,.08);
-  }
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .radio-checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  /* Show the indicator (dot/circle) when checked */
-  .radio-btn-container input:checked ~ .radio-checkmark:after {
-    display: block;
-  }
-  
-  /* ======= Centered radio button styling (partial match suggestions) ======= */
-  .radio-btn-container-1 {
-    display: block;
-    position: relative;
-    padding-left: 40px;
-    padding-top: 12px;
-    margin-bottom: 0px;
-    padding-bottom: 12px;
-    color: #170b33;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  /* Hide the browser's default radio button */
-  .radio-btn-container-1 input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    width: 0px;
-    height: 0px;
-  }
-  /* Create a custom radio button */
-  .radio-checkmark-centered {
-    position: absolute;
-    top: 24px;
-    left: 12px;
-    width: 14px;
-    height: 14px;
-    border: 1px solid #deddf2;
-    border-radius: 18px;
-    background-color: #fff;
-    box-shadow: 0 1px 4px 0 rgb(23 11 51 / 8%);
-    transition: ease 100ms;
-  }
-  /* Style the inner radio dot */
-  .radio-btn-container-1 .radio-checkmark-centered:after {
-    top: 3px;
-    left: 3px;
-    width: 6px;
-    height: 6px;
-    border-radius: 100%;
-    background: white;
-  }
-  /* On mouse-over, add a grey background color */
-  .radio-btn-container-1:hover input ~ .radio-checkmark-centered {
-    background-color: #f4f4fa;
-  }
-  /* When the radio btn is pressed, add a dropshadow */
-  .radio-checkmark-centered:active {
-    box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
-      0 1px 3px 0 rgba(23, 11, 51, 0.15);
-  }
-  /* When the radio button is checked, add a blue background */
-  .radio-btn-container-1 input:checked ~ .radio-checkmark-centered {
-    background-color: #7642f4;
-    border: 1px solid #6c39e5;
-  }
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .radio-checkmark-centered:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  /* Show the indicator (dot/circle) when checked */
-  .radio-btn-container-1 input:checked ~ .radio-checkmark-centered:after {
-    display: block;
-  }
-  
-  /* ======= List search input field ======= */
-  .order-search-input { 
-    width: 100%;
-    height: 32px;
-    color: #170b33;
-    text-align: left;
-    cursor: text;
-    background-color: #fff;
-    border: 1px solid #deddf2;
-    border-radius: 8px;
-    margin-top: 0px;
-    padding: 8px 10px 9px 35px;
-    font-size: .875rem;
-    font-weight: 400;
-    transition: all .3s cubic-bezier(.45,0,.15,1);
-    box-shadow: 0 0 #deddf2;
-    background-image: url(https://uploads-ssl.webflow.com/5fda6f586fdb5a2f2cc5696a/6140bab9e8efb0697d9fbde7_Search-Icon.svg);
-    background-position: 10px;
-    background-repeat: no-repeat,no-repeat;
-    background-size: 12px;
-  }
-  .order-search-input:focus{
-    outline: none;
-    border: 1px solid #5d90ee;
-    box-shadow: #92b4f5 0px 0px 0px 3px;
-  }
-  /* ===== Activate side menu on hover styling ===== */
-  .activate-menu-on-hover {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: auto;
-    bottom: 0;
-    z-index: 1001;
-    width: 2px;
-  }
-  
-  /* ====== List table styling ==== */
-  .table-overflow-container {
-    overflow-y: auto;
-    max-height: 80vh;
-  }
-  .table-content {
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-    text-align: left;
-    color: #170b33;
-  }
-  .table-overflow-container .table-content th:after {
-    content:"";
-    border-bottom: 1px solid rgb(222, 221, 242, 0.5);
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    bottom: -1px;
-  }
-  .table-content thead th {
-    position: sticky; 
-    top: 0;
-    background: white;
-    padding: 12px 20px 12px 20px;
-    color: #1a1b25;
-    text-transform: uppercase;
-    font-size: .6875rem;
-    font-weight: 500;
-  }
-   .table-content thead th:first-child {
-    position: sticky;
-    left: 0;
-    background: white;
-    z-index: 1;
-    max-width: 35px;
-    padding-right: 0px;
-  }
-  .table-content tbody td:first-child {
-    position: sticky;
-    left: 0;
-    background: white;
-    max-width: 35px;
-    padding-right: 35px;
-  }
-  .table-second-column {
-    position: sticky;
-    left: 58px;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 90%, rgba(255,255,255,0%) 100%);
-  }
-  .table-content tbody td {
-    padding: 12px 20px 12px 20px;
-    font-size: 0.875rem;
-    font-weight: 400;
-    color: #1a1b25;
-    white-space: nowrap;
-  }
-  th {
-    text-align: left;
-  }
-  .clickable-row {
-    border-top: 1px solid #f0f0f7;
-    cursor: pointer;
-  }
-  .clickable-row:hover {
-    background-color: #f7f7fc;
-  }
-  .clickable-row:hover .table-second-column {
-    background: linear-gradient(90deg, rgba(244,244,250,1) 90%, rgba(255,255,255,0%) 100%);
-  }
-  .clickable-row:hover .list-item-checkbox{
-    background-color: #f7f7fc;
-  }
-  .list-address {
-    padding: 12px 15px 12px 20px;
-    font-size: 0.875rem;
-    font-weight: 400;
-    color: #1a1b25;
-    text-align: left;
-    max-width: 70ch !important;
-    white-space: nowrap;   /* prevent text from going to 2nd line */
-    overflow: hidden;
-    text-overflow: ellipsis; 
-  }
-  .text-length-20ch {
-    max-width: 20ch !important;
-  }
-  .overflow-table-container {
-    max-height: calc(100vh - 25px)
-  }
-  /* class for when checkbox is selected, set background color */
-  .selected { 
-    background-color: #f4f3fea1;
-  }
-  .orders-alert-list-icon {
-    width: 12px;
-    height: 12px;
-    margin-top: -2px;
-    margin-right: 5px;
-  }
-  .text-align-right {
-    text-align: right;
-  }
-  .table-content thead th.table-second-column {
-    padding: 12px 20px 12px 0px;
-    min-width: 85px;
-    z-index: 2;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 90%, rgba(255,255,255,0%) 100%);
-  }
-  .table-content tbody td.table-second-column {
-    padding: 12px 20px 12px 0px;
-    white-space: nowrap;
-  }
-  /* Merged orders column styling */
-  .merged-orders-column {
-    padding: 0px !important;
-    width: 10px !important;  
-  }
-  /* styling for shimmer row*/
-  .shimmer-row {
-    border-top: 1px solid rgb(222, 221, 242, 0.5);
-  }
-  
-  /* ====== Plan route overview ====== */
-  /* optimise settings btn css*/
-  .optimise-settings-btn { 
-    display: none;
-  }
-  .delivery-overview-btn-section:hover + .optimise-settings-btn {
-    display: block !important;
-  }
-  .optimise-settings-btn:hover {
-    display: block !important;
-  }
-  
-  /* ====== Most overview pages ====== */
-  /* Delivery status bar container flex styling */ 
-  .delivery-status-bar-container {
-    width: calc(100% - 490px);
-  }
-  
-  /* ====== settings ====== */
-  
-  .settings-card-li:hover .context-menu-btn {
-    box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #deddf2, 0 2px 5px rgba(69,64,82,.08);
-  }
-  
-  .eye-closed::before {
-    content: url('../images/eye-placeholder.png');
-  }
-  .eye-open::before {
-    content: url('../images/eye-placeholder.png');
-  }
-  
-  /* ====== shipment requirements ======*/
-  /* New shimmer fallback */
-  .text-sm-fallback, .carrier-logo-fallback, .carrier-o-logo-fallback {
-    background-size: 600px 44px !important;
-    background: rgb(91,97,110,.05);
-    background-image: linear-gradient(90deg,rgb(91,97,110,.05) 0,rgb(91,97,110,0) 25%,rgb(91,97,110,.1) 50%,rgb(91,97,110,0) 75%,rgb(91,97,110,.05)100%);
-    background-repeat: no-repeat;
-    animation-name: shimmer-fallback;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-  }
-  @keyframes shimmer-fallback {
+}
+
+@keyframes shimmer {
   0% {
-    background-position: -600px 0;
+      background-position: -1000px 0;
+  }
+  100% {
+      background-position: 1000px 0;
+  }
+}
+
+/* ======= Custom Radio Button Styling ======= */
+.radio-btn-container,
+.radio-btn-container-1 {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 10px !important;
+}
+
+.radio-btn-container {
+  padding-left: 25px;
+  color: #54536F;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.radio-btn-container-1 {
+  padding-left: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #170b33;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.radio-btn-container input,
+.radio-btn-container-1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+.radio-checkmark,
+.radio-checkmark-centered {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #deddf2, 0 0 transparent, 0 2px 5px rgba(69,64,82,.08);
+  transition: ease 100ms;
+}
+
+.radio-checkmark-centered {
+  top: 24px;
+  left: 12px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #deddf2;
+}
+
+.radio-btn-container .radio-checkmark:after,
+.radio-btn-container-1 .radio-checkmark-centered:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: white;
+}
+
+.radio-btn-container:hover input ~ .radio-checkmark,
+.radio-btn-container-1:hover input ~ .radio-checkmark-centered {
+  background-color: #f4f4fa;
+}
+
+.radio-checkmark:active,
+.radio-checkmark-centered:active {
+  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1), 0 1px 3px 0 rgba(23, 11, 51, 0.15);
+}
+
+.radio-btn-container input:checked ~ .radio-checkmark,
+.radio-btn-container-1 input:checked ~ .radio-checkmark-centered {
+  background-color: #7642f4;
+  box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #6128EB, 0 0 transparent, 0 2px 5px rgba(69,64,82,.08);
+}
+
+.radio-btn-container-1 input:checked ~ .radio-checkmark-centered {
+  border: 1px solid #6c39e5;
+}
+
+.radio-btn-container input:checked ~ .radio-checkmark:after,
+.radio-btn-container-1 input:checked ~ .radio-checkmark-centered:after {
+  display: block;
+}
+
+/* ======= List Search Input Field ======= */
+.order-search-input {
+  width: 100%;
+  height: 32px;
+  color: #170b33;
+  text-align: left;
+  cursor: text;
+  background-color: #fff;
+  border: 1px solid #deddf2;
+  border-radius: 8px;
+  padding: 8px 10px 9px 35px;
+  font-size: .875rem;
+  font-weight: 400;
+  transition: all .3s cubic-bezier(.45,0,.15,1);
+  box-shadow: 0 0 #deddf2;
+  background-image: url(https://uploads-ssl.webflow.com/5fda6f586fdb5a2f2cc5696a/6140bab9e8efb0697d9fbde7_Search-Icon.svg);
+  background-position: 10px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+}
+
+.order-search-input:focus {
+  outline: none;
+  border: 1px solid #5d90ee;
+  box-shadow: #92b4f5 0px 0px 0px 3px;
+}
+
+/* ===== Activate Side Menu on Hover Styling ===== */
+.activate-menu-on-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1001;
+  width: 2px;
+}
+
+/* ====== List Table Styling ==== */
+.table-overflow-container {
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.table-content {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  color: #170b33;
+}
+
+.table-overflow-container .table-content th:after {
+  content: "";
+  border-bottom: 1px solid rgb(222, 221, 242, 0.5);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+
+.table-content thead th {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 12px 20px;
+  color: #1a1b25;
+  text-transform: uppercase;
+  font-size: .6875rem;
+  font-weight: 500;
+}
+
+.table-content thead th:first-child,
+.table-content tbody td:first-child {
+  position: sticky;
+  left: 0;
+  background: white;
+  max-width: 35px;
+  padding-right: 35px;
+}
+
+.table-second-column {
+  position: sticky;
+  left: 58px;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 90%, rgba(255,255,255,0%) 100%);
+}
+
+.table-content tbody td {
+  padding: 12px 20px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #1a1b25;
+  white-space: nowrap;
+}
+
+th {
+  text-align: left;
+}
+
+.clickable-row {
+  border-top: 1px solid #f0f0f7;
+  cursor: pointer;
+}
+
+.clickable-row:hover {
+  background-color: #f7f7fc;
+}
+
+.clickable-row:hover .table-second-column {
+  background: linear-gradient(90deg, rgba(244,244,250,1) 90%, rgba(255,255,255,0%) 100%);
+}
+
+.clickable-row:hover .list-item-checkbox {
+  background-color: #f7f7fc;
+}
+
+.list-address {
+  padding: 12px 15px 12px 20px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #1a1b25;
+  text-align: left;
+  max-width: 70ch !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-length-20ch {
+  max-width: 20ch !important;
+}
+
+.overflow-table-container {
+  max-height: calc(100vh - 25px);
+}
+
+.selected {
+  background-color: #f4f3fea1;
+}
+
+.orders-alert-list-icon {
+  width: 12px;
+  height: 12px;
+  margin-top: -2px;
+  margin-right: 5px;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.table-content thead th.table-second-column {
+  padding: 12px 20px 12px 0;
+  min-width: 85px;
+  z-index: 2;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 90%, rgba(255,255,255,0%) 100%);
+}
+
+.table-content tbody td.table-second-column {
+  padding: 12px 20px 12px 0;
+  white-space: nowrap;
+}
+
+.merged-orders-column {
+  padding: 0 !important;
+  width: 10px !important;
+}
+
+.shimmer-row {
+  border-top: 1px solid rgb(222, 221, 242, 0.5);
+}
+
+/* ====== Plan Route Overview ====== */
+.optimise-settings-btn {
+  display: none;
+}
+
+.delivery-overview-btn-section:hover + .optimise-settings-btn,
+.optimise-settings-btn:hover {
+  display: block !important;
+}
+
+/* ====== Most Overview Pages ====== */
+.delivery-status-bar-container {
+  width: calc(100% - 490px);
+}
+
+/* ====== Settings ====== */
+.settings-card-li:hover .context-menu-btn {
+  box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #deddf2, 0 2px 5px rgba(69,64,82,.08);
+}
+
+.eye-closed::before,
+.eye-open::before {
+  content: url('../images/eye-placeholder.png');
+}
+
+/* ====== Shipment Requirements ====== */
+.text-sm-fallback,
+.carrier-logo-fallback,
+.carrier-o-logo-fallback {
+  background-size: 600px 44px !important;
+  background: rgb(91,97,110,.05);
+  background-image: linear-gradient(90deg, rgb(91,97,110,.05) 0, rgb(91,97,110,0) 25%, rgb(91,97,110,.1) 50%, rgb(91,97,110,0) 75%, rgb(91,97,110,.05) 100%);
+  background-repeat: no-repeat;
+  animation: shimmer-fallback 4s linear infinite forwards;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes shimmer-fallback {
+  0% {
+      background-position: -600px 0;
   }
   100% {
       background-position: 600px 0;
   }
+}
+
+/* Spinner Loader Animation */
+.s-loader,
+.btn-p-spinner {
+  animation: spin 600ms linear infinite;
+}
+
+@-ms-keyframes spin {
+  from {
+      -ms-transform: rotate(0deg);
   }
-  
-  /* spinner loader animation */
-  .s-loader, .btn-p-spinner {
-    -webkit-animation-name: spin;
-    -moz-animation-name: spin;
-    -ms-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-duration: 600ms;
-    -moz-animation-duration: 600ms;
-    -ms-animation-duration: 600ms;
-    animation-duration: 600ms;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -ms-animation-timing-function: linear;
-    animation-timing-function: linear;
+  to {
+      -ms-transform: rotate(360deg);
   }
-  @-ms-keyframes spin {
-    from { -ms-transform: rotate(0deg); }
-    to { -ms-transform: rotate(360deg); }
-  }
-  
-  .truncate {
-    display: inline-block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .truncate-width-100 {
-    width: calc(100%);
-  }
-  .carrier-col {
-    width: calc(100% - 60px);
-  }
-  .listing-badge-tooltip {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .1s linear, visibility 0s .1s linear, transform .1s cubic-bezier(.77, 0, .175, 1);
-  }
-  .listing-badge:hover ~ .listing-badge-tooltip,
-  .text-sm-grey.label-critical-error:hover ~ .listing-badge-tooltip {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    transition: opacity .08s 0.2s linear, visibility 0s 0.2s linear, transform .08s 0.2s cubic-bezier(.77, 0, .175, .08);
-  }
-  .table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-btn {
-    opacity: 1;
-    z-index: 2;
-  }
-  .table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-context-btn {
-    opacity: 1;
-    z-index: 2;
-  }
-  .table-row:hover > .table-cell-waybill-col {
-    background-color: #f7f7fc;
-  }
-  .table-row:hover > .table-cell.action-btn-container {
-    background-image: -webkit-gradient(linear,left top,right top,color-stop(80%,hsla(0,0%,100%,0)),color-stop(85%,#f7f7fc));
-    background-image: linear-gradient(90deg,hsla(0,0%,100%,0) 80%,#f7f7fc 85%);
-  }
-  .items-per-page {
-    background-position: 40px 50%;
-  }
-  .purchase-modal-card-select {
-    background-position: 65px 50%;
-  }
+}
+
+.truncate {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.truncate-width-100 {
+  width: calc(100%);
+}
+
+.carrier-col {
+  width: calc(100% - 60px);
+}
+
+.listing-badge-tooltip {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .1s linear, visibility 0s .1s linear, transform .1s cubic-bezier(.77, 0, .175, 1);
+}
+
+.listing-badge:hover ~ .listing-badge-tooltip,
+.text-sm-grey.label-critical-error:hover ~ .listing-badge-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: opacity .08s 0.2s linear, visibility 0s 0.2s linear, transform .08s 0.2s cubic-bezier(.77, 0, .175, .08);
+}
+
+.table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-btn,
+.table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-context-btn {
+  opacity: 1;
+  z-index: 2;
+}
+
+.table-row:hover > .table-cell-waybill-col {
+  background-color: #f7f7fc;
+}
+
+.table-row:hover > .table-cell.action-btn-container {
+  background-image: linear-gradient(90deg, hsla(0,0%,100%,0) 80%, #f7f7fc 85%);
+}
+
+.items-per-page {
+  background-position: 40px 50%;
+}
+
+.purchase-modal-card-select {
+  background-position: 65px 50%;
+}
