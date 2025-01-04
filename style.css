@@ -3217,3 +3217,22 @@ img.address-type-btn-icon {
 #filter_side_modal .accordion.open {
     max-height: 1040px;
 }
+
+.menu-toggle-fill {
+    transform-origin: 2.57861px center;
+    transform: scaleX(1);
+    transition: transform 0.80s ease-in-out;
+}
+.menu-toggle.closed .menu-toggle-fill {
+    transform: scaleX(0);
+}
+.menu-item.w--current::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 5%;
+    width: 3px;
+    height: 90%;
+    background-color: #7642F4; 
+    border-radius: 0 3px 3px 0;
+}
