@@ -3075,10 +3075,6 @@ img.address-type-btn-icon {
     text-transform: capitalize;
 }
 
-.overflow-container.active-card {
-    height: calc(100% - 79px);
-}
-
 .settings-card-heading._w-440 {
     width: 440px;
 }
