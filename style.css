@@ -3221,7 +3221,7 @@ img.address-type-btn-icon {
 .menu-toggle-fill {
     transform-origin: 2.57861px center;
     transform: scaleX(1);
-    transition: transform 0.80s ease-in-out;
+    transition: transform 0.08s ease-in-out;
 }
 .menu-toggle.closed .menu-toggle-fill {
     transform: scaleX(0);
