@@ -1649,11 +1649,6 @@ button.applyBtn.btn.btn-sm.btn-primary {
     white-space: nowrap;
 }
 
-.side-menu {
-    overflow-y: hidden;
-    position: fixed;
-}
-
 .login-bkg-container {
     position: fixed;
     left: -100px;
