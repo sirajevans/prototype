@@ -1,7 +1,7 @@
 /* Dark theme styles */
 @media (prefers-color-scheme: dark) {
     .grey-200 {
-      background-color: 080808 !important;
+      background-color: #080808 !important;
       color: white;
     }
 
