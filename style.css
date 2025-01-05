@@ -32,10 +32,12 @@ a, a:focus, a:hover {
 }
 
 img, a {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
     user-drag: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-}
+}  
 
 form i {
     margin-left: -35px;
@@ -3180,6 +3182,14 @@ img.address-type-btn-icon {
 
 .brand-preview {
     position: relative;
+}
+
+.brand-content-preview,
+.ui-slider-handle {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;	  
 }
 
 #filter_side_modal .accordion.open {
