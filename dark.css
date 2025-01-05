@@ -11,6 +11,9 @@
     .menu-company-name, .menu-item {
         color: white !important;
     }
+    .menu-item.w--current {
+        background-color: #1e2025a5 !important;
+    }
     .menu-item-icon {
         filter: invert(1) saturate(0) !important;
     }
