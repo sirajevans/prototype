@@ -1,0 +1,11 @@
+/* Dark theme styles */
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: 080808 !important;
+      color: white;
+    }
+    .menu-item {
+        color: white !important;
+    }
+  }
+  
