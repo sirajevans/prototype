@@ -13,5 +13,11 @@
     .menu-item {
         color: white !important;
     }
+    .menu-item-icon {
+        filter: invert(1) saturate(0) !important;
+    }
+    .side-menu-category {
+        color: #949496 !important;
+    }
   }
   
