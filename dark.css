@@ -29,6 +29,9 @@
     }
 
     /* table styling */
+    .table-tabs, .table-search {
+        background-color: #1E2025 !important;
+    }
     .table-tab.active {
         background-color: #1E2025 !important;
         color: white !important;
@@ -48,6 +51,10 @@
     .table-cell-waybill-col {
         background-color: #0F1011 !important;
     }
+    .table-pagination {
+        background-color: #0F1011 !important;
+        border-top: 1px solid #1A1C21 !important;
+    }
 
     /* form styling */
     .form-input {
@@ -58,4 +65,3 @@
         border: 1px solid #2C2E33 !important;
     }
   }
-  
