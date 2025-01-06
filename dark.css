@@ -1,7 +1,7 @@
 :root {
     --body-color: #080808;
     --card-color: #0F1011;
-    --border-color: # 2C2E33;
+    --border-color: #2C2E33;
 }
 
 /* Dark theme styles */
@@ -97,10 +97,9 @@
     /* form styling */
     .form-input {
         color: white !important;
-        text-align: left;
-        cursor: text;
-        background-color: transparent !important;
-        border: 1px solid var(--border-color) !important;
+        background-color: lch(8.3 1.867 272) !important;
+        border: 0.5px solid lch(13.98 4.707 272) !important;
+        box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important;
     }
 
     /* text styling */
@@ -131,4 +130,9 @@
         background-color: var(--card-color);
         box-shadow: 0 0 0 1px var(--border-color);
     }
-  }
+    .nd-waypoint-container {
+        background-color: lch(8.3 1.867 272) !important;
+        border: 0.5px solid lch(13.98 4.707 272) !important;
+        box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important;
+    }
+}
