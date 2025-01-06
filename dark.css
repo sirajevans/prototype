@@ -108,7 +108,7 @@
     }
 
     /* text styling */
-    .text-display-xl, .text-display-l, .text-m, .text-sm {
+    .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm {
         color: white !important;
     }
     .text-sm-light-grey {
