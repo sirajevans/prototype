@@ -21,11 +21,11 @@
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
     }
-    .btn-w, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn {
+    .btn-w, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn, .nav-back-arrow {
         color: white !important;
         background-color: lch(8.3 1.867 272) !important;
         border: 1px solid lch(18.24 4.707 272) !important;
-        box-shadow: none !important;
+        box-shadow: 0 0 0 0 transparent !important;
     }
     .btn-w .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon {
         filter: invert(1) saturate(0) !important;
