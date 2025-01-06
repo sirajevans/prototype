@@ -23,14 +23,15 @@
     }
     .btn-w, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn {
         color: white !important;
-        background-color: #353540 !important;
-        box-shadow: 0 0 0 1px #484859 !important;
+        background-color: lch(8.3 1.867 272) !important;
+        border: 1px solid lch(18.24 4.707 272) !important;
+        box-shadow: none !important;
     }
     .btn-w .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon {
         filter: invert(1) saturate(0) !important;
     }
     .btn-v-divider {
-        background-color: var(--border-color) !important;
+        background-color: #18171b !important;
     }
 
     /* menu styling */
