@@ -1,17 +1,22 @@
+:root {
+    --body-color: #080808;
+    --card-color: #0F1011; 
+}
+
 /* Dark theme styles */
 @media (prefers-color-scheme: dark) {
     .grey-200 {
-      background-color: #080808 !important;
+      background-color: var(--body-color) !important;
       color: white;
     }
     .main-card {
-        background-color: #1e1e23 !important;
+        background-color: var(--card-color) !important;
     }
     .main-card-footer {
-        background-color: #1e1e23 !important;
+        background-color: var(--card-color) !important;
     }
     .card {
-        background-color: #1e1e23 !important;
+        background-color: var(--card-color) !important;
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
     }
     .btn-w, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn {
@@ -51,7 +56,7 @@
 
     /* table styling */
     .table-tabs, .table-search {
-        background-color: #0F1011 !important;
+        background-color: var(--card-color) !important;
     }
     .table-tab {
         color: #949496 !important;
@@ -65,7 +70,7 @@
         color: white !important;
     }
     .table-header {
-        background-color: #0F1011 !important;
+        background-color: var(--card-color) !important;
     }
     .table-header.shipments {
         border-bottom: 1px solid #1A1C21 !important;
@@ -77,13 +82,13 @@
         background-color: #1e202578 !important;
     }
     .table-cell-waybill-col {
-        background-color: #0F1011 !important;
+        background-color: var(--card-color) !important;
     }
     .table-cell.action-btn-container {
-        background-image: linear-gradient(90deg, #0f101100 86%, #0F1011 91%) !important;
+        background-image: linear-gradient(90deg, var(--card-color)00 86%, var(--card-color) 91%) !important;
     }
     .table-pagination {
-        background-color: #0F1011 !important;
+        background-color: var(--card-color) !important;
         border-top: 1px solid #1A1C21 !important;
     }
 
@@ -121,7 +126,7 @@
         border-top: 1px solid #2C2E33 !important;
     }
     .card-banner {
-        background-color: #0F1011;
+        background-color: var(--card-color);
         box-shadow: 0 0 0 1px #2C2E33;
     }
   }
