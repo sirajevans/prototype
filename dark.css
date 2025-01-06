@@ -13,6 +13,9 @@
         background-color: #353540 !important;
         box-shadow: 0 0 0 1px #484859 !important;
     }
+    .btn-w .btn-icon-left {
+        filter: invert(1) saturate(0) !important;
+    }
     .btn-v-divider {
         background-color: #2C2E33 !important;
     }
