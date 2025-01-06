@@ -13,7 +13,7 @@
         background-color: #353540 !important;
         box-shadow: 0 0 0 1px #484859 !important;
     }
-    .btn-w .btn-icon-left {
+    .btn-w .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon {
         filter: invert(1) saturate(0) !important;
     }
     .btn-v-divider {
