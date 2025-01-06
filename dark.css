@@ -30,10 +30,10 @@
 
     /* table styling */
     .table-tabs, .table-search {
-        background-color: #1E2025 !important;
+        background-color: #0F1011 !important;
     }
     .table-tab.active {
-        background-color: #1E2025 !important;
+        background-color: #0F1011 !important;
         color: white !important;
     }
     .table-header {
@@ -51,6 +51,9 @@
     .table-cell-waybill-col {
         background-color: #0F1011 !important;
     }
+    .table-cell.action-btn-container {
+        background-image: linear-gradient(90deg, #0F1011 86%, #0F1011 91%);
+    }
     .table-pagination {
         background-color: #0F1011 !important;
         border-top: 1px solid #1A1C21 !important;
@@ -63,5 +66,13 @@
         cursor: text;
         background-color: transparent !important;
         border: 1px solid #2C2E33 !important;
+    }
+
+    /* text styling */
+    .text-sm {
+        color: white !important;
+    }
+    .text-sm-light-grey {
+        color: #949496 !important;
     }
   }
