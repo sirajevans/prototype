@@ -13,6 +13,8 @@
         background-color: #1E2025 !important;
         box-shadow: inset 0 1px #fff, inset 0 -14px 18px -20px #f8f8fa, 0 1px 1px #2C2E33, 0 0 0 .5px #bebcd9, 0 0 #0000, 0 2px 5px #45405214 !important;
     }
+
+    /* menu styling */
     .menu-company-name, .menu-item {
         color: white !important;
     }
@@ -25,6 +27,8 @@
     .side-menu-category {
         color: #949496 !important;
     }
+
+    /* table styling */
     .table-tab.active {
         background-color: #1E2025 !important;
         color: white !important;
@@ -35,11 +39,23 @@
     .table-header.shipments {
         border-bottom: 1px solid #1A1C21 !important;
     }
+    .table-row.shipments {
+        border-bottom: 1px solid #1A1C21 !important;
+    }
     .table-row.shipments:hover {
         background-color: #1E2025 !important;
     }
     .table-cell-waybill-col {
         background-color: #0F1011 !important;
+    }
+
+    /* form styling */
+    .form-input {
+        color: white !important;
+        text-align: left;
+        cursor: text;
+        background-color: transparent !important;
+        border: 1px solid #2C2E33 !important;
     }
   }
   
