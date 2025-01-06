@@ -24,6 +24,9 @@
     .menu-item.w--current {
         background-color: #151619 !important;
     }
+    .menu-item.w--current .menu-item-icon {
+        color: #7642F4 !important;
+    }
     .menu-item-icon {
         color: #949496 !important;
     }
