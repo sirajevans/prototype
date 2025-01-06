@@ -7,6 +7,9 @@
     .main-card {
         background-color: #0F1011 !important;
     }
+    .main-card-footer {
+        background-color: #0F1011 !important;
+    }
     .card {
         background-color: #0F1011 !important;
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
