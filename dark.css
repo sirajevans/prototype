@@ -1,6 +1,7 @@
 :root {
     --body-color: #080808;
-    --card-color: #0F1011; 
+    --card-color: #0F1011;
+    --border-color: # 2C2E33;
 }
 
 /* Dark theme styles */
@@ -13,6 +14,7 @@
         background-color: var(--card-color) !important;
     }
     .main-card-footer {
+        border-top: 1px solid var(--border-color) !important;
         background-color: var(--card-color) !important;
     }
     .card {
@@ -28,7 +30,7 @@
         filter: invert(1) saturate(0) !important;
     }
     .btn-v-divider {
-        background-color: #2C2E33 !important;
+        background-color: var(--border-color) !important;
     }
 
     /* menu styling */
@@ -85,7 +87,7 @@
         background-color: var(--card-color) !important;
     }
     .table-cell.action-btn-container {
-        background-image: linear-gradient(90deg, var(--card-color)00 86%, var(--card-color) 91%) !important;
+        background-image: linear-gradient(90deg, #0F101100 86%, var(--card-color) 91%) !important;
     }
     .table-pagination {
         background-color: var(--card-color) !important;
@@ -98,7 +100,7 @@
         text-align: left;
         cursor: text;
         background-color: transparent !important;
-        border: 1px solid #2C2E33 !important;
+        border: 1px solid var(--border-color) !important;
     }
 
     /* text styling */
@@ -120,13 +122,13 @@
         background-color: transparent !important;
     }
     .box-shadow-100 {
-        box-shadow: 0 1px 1px #170b3314, 0 0 0 1px #2C2E33, 0 0 #0000, 0 2px 5px #45405214 !important;
+        box-shadow: 0 1px 1px #170b3314, 0 0 0 1px var(--border-color), 0 0 #0000, 0 2px 5px #45405214 !important;
     }
     .full-width-divider {
-        border-top: 1px solid #2C2E33 !important;
+        border-top: 1px solid var(--border-color) !important;
     }
     .card-banner {
         background-color: var(--card-color);
-        box-shadow: 0 0 0 1px #2C2E33;
+        box-shadow: 0 0 0 1px var(--border-color);
     }
   }
