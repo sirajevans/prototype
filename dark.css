@@ -14,7 +14,7 @@
         background-color: #0F1011 !important;
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
     }
-    .btn-w, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w {
+    .btn-w, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn {
         color: white !important;
         background-color: #353540 !important;
         box-shadow: 0 0 0 1px #484859 !important;
@@ -116,5 +116,12 @@
     }
     .box-shadow-100 {
         box-shadow: 0 1px 1px #170b3314, 0 0 0 1px #2C2E33, 0 0 #0000, 0 2px 5px #45405214 !important;
+    }
+    .full-width-divider {
+        border-top: 1px solid #2C2E33 !important;
+    }
+    .card-banner {
+        background-color: #0F1011;
+        box-shadow: 0 0 0 1px #2C2E33;
     }
   }
