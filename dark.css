@@ -18,8 +18,11 @@
     .menu-company-name, .menu-item {
         color: white !important;
     }
+    .menu-item:hover {
+        background-color: #151619 !important;
+    }
     .menu-item.w--current {
-        background-color: #1e2025a5 !important;
+        background-color: #151619 !important;
     }
     .menu-item-icon {
         color: #949496 !important;
@@ -32,8 +35,15 @@
     .table-tabs, .table-search {
         background-color: #0F1011 !important;
     }
+    .table-tab {
+        color: #949496 !important;
+    }
+    .table-tab:hover {
+        background-color: #1E2025 !important;
+        color: white !important;
+    }
     .table-tab.active {
-        background-color: #0F1011 !important;
+        background-color: #1E2025 !important;
         color: white !important;
     }
     .table-header {
