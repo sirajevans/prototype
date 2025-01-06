@@ -94,7 +94,7 @@
     }
 
     /* text styling */
-    .text-sm {
+    .text-display-xl, .text-m, .text-sm {
         color: white !important;
     }
     .text-sm-light-grey {
@@ -102,6 +102,9 @@
     }
     .t-header-text {
         color: #949496 !important;
+    }
+    .form-label {
+        color: white !important;
     }
 
     /* miscellaneous styling */
