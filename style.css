@@ -3214,3 +3214,7 @@ img.address-type-btn-icon {
     background-color: #7642F4;
     border-radius: 0 3px 3px 0;
 }
+
+.menu-item.w--current .menu-item-icon {
+    color: #7642F4 !important;
+}
