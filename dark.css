@@ -20,7 +20,20 @@
     .side-menu-category {
         color: #949496 !important;
     }
+    .table-tab.active {
+        background-color: #1E2025 !important;
+        color: white !important;
+    }
     .table-header {
+        background-color: #0F1011 !important;
+    }
+    .table-header.shipments {
+        border-bottom: 1px solid #1A1C21 !important;
+    }
+    .table-row.shipments:hover {
+        background-color: #1E2025 !important;
+    }
+    .table-cell-waybill-col {
         background-color: #0F1011 !important;
     }
   }
