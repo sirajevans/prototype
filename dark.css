@@ -65,7 +65,7 @@
         background-color: #0F1011 !important;
     }
     .table-cell.action-btn-container {
-        background-image: linear-gradient(90deg, #0F1011 86%, #0F1011 91%);
+        background-image: linear-gradient(90deg, #0f101100 86%, #0F1011 91%) !important;
     }
     .table-pagination {
         background-color: #0F1011 !important;
