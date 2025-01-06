@@ -21,13 +21,16 @@
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
     }
-    .btn-w, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn, .nav-back-arrow {
+    .card-grey {
+        background-color: lch(4.8 0.7 272) !important;
+    }
+    .btn-w, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn, .nav-back-arrow {
         color: white !important;
         background-color: lch(8.3 1.867 272) !important;
-        border: 1px solid lch(18.24 4.707 272) !important;
-        box-shadow: 0 0 0 0 transparent !important;
+        border: 0.5px solid lch(13.98 4.707 272) !important;
+        box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important;
     }
-    .btn-w .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon {
+    .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon {
         filter: invert(1) saturate(0) !important;
     }
     .btn-v-divider {
@@ -100,11 +103,11 @@
         color: white !important;
         background-color: lch(8.3 1.867 272) !important;
         border: 0.5px solid lch(13.98 4.707 272) !important;
-        box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important;
+        box-shadow: lch(0 0 0 / 0.0) 0px 0px 0px 0px !important;
     }
 
     /* text styling */
-    .text-display-xl, .text-m, .text-sm {
+    .text-display-xl, .text-display-l, .text-m, .text-sm {
         color: white !important;
     }
     .text-sm-light-grey {
