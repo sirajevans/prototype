@@ -44,6 +44,9 @@
     }
 
     /* menu styling */
+    .menu-company-profile {
+        background-color: #17181a !important;
+    }
     .menu-company-name, .menu-item {
         color: white !important;
     }
