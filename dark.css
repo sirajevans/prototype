@@ -174,4 +174,8 @@
     .context-menu-modal-li {
         color: white !important;
     }
+    .key-shortcut-w {
+        color: #ffffff !important;
+        background-color: #1e202578 !important;
+    }
 }
