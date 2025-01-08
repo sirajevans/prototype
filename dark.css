@@ -99,10 +99,10 @@
         border-bottom: 1px solid #1A1C21 !important;
     }
     .table-row.shipments:hover {
-        background-color: #1e202578 !important;
+        background-color: #16171a !important;
     }
     .table-row:hover > .table-cell-waybill-col {
-        background-color: #1e202578 !important;
+        background-color: #16171a !important;
     }
     .table-cell-waybill-col {
         background-color: var(--card-color) !important;
@@ -176,13 +176,13 @@
         box-shadow: 0 0 0 1px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
     }
     .context-menu-modal-li:hover {
-        background-color: #1e202578 !important;
+        background-color: #16171a !important;
     }
     .context-menu-modal-li {
         color: white !important;
     }
     .key-shortcut-w {
         color: #ffffff !important;
-        background-color: #1e202578 !important;
+        background-color: #16171a !important;
     }
 }
