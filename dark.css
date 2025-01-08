@@ -41,6 +41,11 @@
         background-color: #18171b !important;
     }
 
+    /* nav styling */
+    .menu-toggle {
+        color: #949496 !important;
+    }
+
     /* menu styling */
     .menu-company-name, .menu-item {
         color: white !important;
@@ -64,6 +69,7 @@
     .side-menu-category {
         color: #949496 !important;
     }
+
 
     /* table styling */
     .table-tabs, .table-search {
@@ -151,3 +157,5 @@
         color: white !important;
     }
 }
+
+/* #C0C0C0 */
