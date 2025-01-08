@@ -82,11 +82,11 @@
         color: #949496 !important;
     }
     .table-tab:hover {
-        background-color: #1E2025 !important;
+        background-color: #16171a !important;
         color: white !important;
     }
     .table-tab.active {
-        background-color: #1E2025 !important;
+        background-color: #16171a !important;
         color: white !important;
     }
     .table-header {
@@ -183,9 +183,14 @@
     }
     .key-shortcut-w {
         color: #ffffff !important;
-        background-color: #17181b !important;
+        background-color: #2d2b32 !important;
     }
     .carrier-l-logo, .address-type-btn-icon {
         filter: invert(1) saturate(0) !important;
+    }
+    .listing-search-suggestions {
+        background-color: lch(8.3 1.867 272) !important;
+        border: 0.5px solid lch(13.98 4.707 272) !important;
+        box-shadow: lch(0 0 0 / 0.0) 0px 0px 0px 0px !important;
     }
 }
