@@ -25,9 +25,6 @@
         background-color: lch(4.8 0.7 272) !important;
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
     }
-    .side-modal {
-        background-color: var(--card-color) !important;
-    }
     .btn-w, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn, .nav-back-arrow, .close-modal-btn {
         color: white !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -154,6 +151,21 @@
         border-color: var(--border-color) !important;
     }
     .accordion-header {
+        color: white !important;
+    }
+    .accordion-arrow {
+        filter: invert(1) saturate(0) !important;
+    }
+    .side-modal {
+        background-color: var(--card-color) !important;
+    }
+    .side-modal-footer {
+        border-top: var(--border-color) !important;
+    }
+    .context-menu-modal {
+        background-color: var(--card-color) !important;
+    }
+    .context-menu-modal-li {
         color: white !important;
     }
 }
