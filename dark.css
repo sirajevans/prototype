@@ -42,8 +42,8 @@
     .menu-toggle {
         color: #949496 !important;
     }
-    .menu-toggle:hover {
-        color: #1e1e20 !important;
+    .menu-toggle:hover, .nav-prev:hover, .nav-next:hover {
+        background-color: #1e1e20 !important;
     }
 
     /* menu styling */
