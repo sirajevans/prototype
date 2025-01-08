@@ -42,6 +42,9 @@
     .menu-toggle {
         color: #949496 !important;
     }
+    .menu-toggle:hover {
+        color: #1e1e20 !important;
+    }
 
     /* menu styling */
     .menu-company-profile {
