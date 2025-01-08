@@ -97,6 +97,9 @@
     .table-row.shipments:hover {
         background-color: #1e202578 !important;
     }
+    .table-row:hover > .table-cell-waybill-col {
+        background-color: #1e202578 !important;
+    }
     .table-cell-waybill-col {
         background-color: var(--card-color) !important;
     }
