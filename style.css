@@ -1698,23 +1698,13 @@ button.applyBtn.btn.btn-sm.btn-primary {
     outline: none;
 }
 
-.forgot-password-link {
-    font-weight: 400;
-    font-size: 14px;
-    color: #7642f4;
-    letter-spacing: -0.2px;
-    margin-left: auto;
-    text-decoration: none;
-    outline: none;
-}
-
 .forgot-password-link:hover {
     color: #170b33;
 }
 
 .focus-effect:focus {
     outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.28);
+    border: 1px solid #5d90ee;
     box-shadow: #e4e4e4 0px 0px 0px 3px;
 }
 
