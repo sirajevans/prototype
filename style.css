@@ -1714,7 +1714,7 @@ button.applyBtn.btn.btn-sm.btn-primary {
 
 .focus-effect:focus {
     outline: none;
-    border: 1px solid #5d90ee;
+    border: 1px solid rgba(0, 0, 0, 0.28);
     box-shadow: #e4e4e4 0px 0px 0px 3px;
 }
 
