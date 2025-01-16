@@ -142,6 +142,9 @@
     .forgot-password-link:hover, .login-footer-link:hover {
         color: #9494969f !important;
     }
+    .copyright-text {
+        color: #949496 !important;
+    }
 
     /* miscellaneous styling */
     .login-register-form-layout {
