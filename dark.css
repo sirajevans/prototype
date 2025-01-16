@@ -144,6 +144,9 @@
     }
 
     /* miscellaneous styling */
+    .login-register-form-layout {
+        border-bottom: 1px solid var(--border-color) !important;
+    }
     .checkbox-placeholder {
         background-color: transparent !important;
     }
