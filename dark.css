@@ -124,7 +124,7 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
+    .login-footer-text, .login-heading, .register-feature-h, .register-feature-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
         color: white !important;
     }
     .text-sm-light-grey {
@@ -148,7 +148,7 @@
 
     /* miscellaneous styling */
     .login-register-form-layout {
-        border-bottom: 1px solid var(--border-color) !important;
+        border-bottom: 1px solid #2c2e3369 !important;
     }
     .checkbox-placeholder {
         background-color: transparent !important;
