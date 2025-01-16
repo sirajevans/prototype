@@ -6,7 +6,7 @@
 
 /* Dark theme styles */
 @media (prefers-color-scheme: dark) {
-    .grey-100, .grey-200 {
+    .grey-100, .grey-200, .settings-section {
       background-color: var(--body-color) !important;
       color: white;
     }
@@ -17,15 +17,15 @@
         border-top: 1px solid var(--border-color) !important;
         background-color: var(--card-color) !important;
     }
-    .card, .login-card {
+    .card, .login-card, .settings-content-container {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
     }
-    .card-grey {
+    .card-grey, .settings-card {
         background-color: lch(4.8 0.7 272) !important;
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
     }
-    .btn-w, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn, .nav-back-arrow, .close-modal-btn {
+    .btn-w, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn, .nav-back-arrow, .close-modal-btn, .pod-btn {
         color: white !important;
         background-color: lch(8.3 1.867 272) !important;
         border: 0.5px solid lch(13.98 4.707 272) !important;
@@ -124,9 +124,11 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .register-feature-h, .description-text, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
+    .login-footer-text, .login-heading, .register-feature-h, .description-text, .settings-heading, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
         color: white !important;
     }
+
+    
     .register-feature-p {
         color: #949496 !important
     }
