@@ -142,7 +142,7 @@
     .forgot-password-link:hover, .login-footer-link:hover {
         color: #9494969f !important;
     }
-    .copyright-text {
+    .copyright-text, .copyright-spacer {
         color: #949496 !important;
     }
 
