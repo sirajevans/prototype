@@ -124,7 +124,7 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .register-feature-h, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
+    .login-footer-text, .login-heading, .register-feature-h, .description-text, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
         color: white !important;
     }
     .register-feature-p {
@@ -139,10 +139,10 @@
     .form-label {
         color: white !important;
     }
-    .forgot-password-link, .login-footer-link {
+    .forgot-password-link, .login-footer-link, .chat-with-support-btn {
         color: #949496 !important;
     }
-    .forgot-password-link:hover, .login-footer-link:hover {
+    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover {
         color: #9494969f !important;
     }
     .copyright-text, .copyright-spacer, .register-copyright-text {
