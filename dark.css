@@ -124,7 +124,7 @@
     }
 
     /* text styling */
-    .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
+    .login-footer-text, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
         color: white !important;
     }
     .text-sm-light-grey {
@@ -135,6 +135,12 @@
     }
     .form-label {
         color: white !important;
+    }
+    .forgot-password-link {
+        color: #949496 !important;
+    }
+    .forgot-password-link:hover {
+        color: #949496 !important;
     }
 
     /* miscellaneous styling */
