@@ -150,11 +150,15 @@
     }
 
     /* miscellaneous styling */
+    .focus-effect:focus {
+        box-shadow: #e4e4e4 0px 0px 0px 3px !important;
+    }
+
     .login-register-form-layout {
         border-bottom: 1px solid #2c2e3369 !important;
     }
     .settings-content-divider {
-        color: #2c2e3369 !important;
+        background-color: #2c2e3369 !important;
     }
     .checkbox-placeholder {
         background-color: transparent !important;
