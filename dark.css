@@ -6,7 +6,7 @@
 
 /* Dark theme styles */
 @media (prefers-color-scheme: dark) {
-    .grey-200 {
+    .grey-100, .grey-200 {
       background-color: var(--body-color) !important;
       color: white;
     }
