@@ -116,7 +116,7 @@
     }
 
     /* form styling */
-    .form-input {
+    .form-input, .form-verification-input {
         color: white !important;
         background-color: lch(8.3 1.867 272) !important;
         border: 0.5px solid lch(13.98 4.707 272) !important;
