@@ -136,11 +136,11 @@
     .form-label {
         color: white !important;
     }
-    .forgot-password-link {
+    .forgot-password-link, .login-footer-link {
         color: #949496 !important;
     }
-    .forgot-password-link:hover {
-        color: #949496 !important;
+    .forgot-password-link:hover, .login-footer-link:hover {
+        color: #9494969f !important;
     }
 
     /* miscellaneous styling */
