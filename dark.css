@@ -22,7 +22,7 @@
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
     }
     .card-grey, .settings-card {
-        background-color: lch(4.8 0.7 272) !important;
+        background-color: #101012 !important;
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
     }
     .btn-w, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .address-type-btn, .nav-back-arrow, .close-modal-btn, .pod-btn {
@@ -148,12 +148,11 @@
     .copyright-text, .copyright-spacer, .register-copyright-text {
         color: #949496 !important;
     }
-
+    
     /* miscellaneous styling */
     .focus-effect:focus {
-        box-shadow: #e4e4e4 0px 0px 0px 3px !important;
+        box-shadow: #17171a 0px 0px 0px 3px !important;
     }
-
     .login-register-form-layout {
         border-bottom: 1px solid #2c2e3369 !important;
     }
