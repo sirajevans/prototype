@@ -124,7 +124,7 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .register-feature-h, .register-copyright-text, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
+    .login-footer-text, .login-heading, .register-feature-h, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
         color: white !important;
     }
     .register-feature-p {
@@ -145,16 +145,13 @@
     .forgot-password-link:hover, .login-footer-link:hover {
         color: #9494969f !important;
     }
-    .copyright-text, .copyright-spacer {
+    .copyright-text, .copyright-spacer, .register-copyright-text {
         color: #949496 !important;
     }
 
     /* miscellaneous styling */
     .login-register-form-layout {
         border-bottom: 1px solid #2c2e3369 !important;
-    }
-    .register-feature-check {
-        filter: hue-rotate(479deg) saturate(2) !important;
     }
     .checkbox-placeholder {
         background-color: transparent !important;
