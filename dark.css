@@ -124,8 +124,11 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .register-feature-h, .register-feature-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
+    .login-footer-text, .login-heading, .register-feature-h, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
         color: white !important;
+    }
+    .register-feature-p {
+        color: #949496 !important
     }
     .text-sm-light-grey {
         color: #949496 !important;
@@ -149,6 +152,9 @@
     /* miscellaneous styling */
     .login-register-form-layout {
         border-bottom: 1px solid #2c2e3369 !important;
+    }
+    .register-feature-check {
+        filter: hue-rotate(479deg) saturate(2) !important;
     }
     .checkbox-placeholder {
         background-color: transparent !important;
