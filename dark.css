@@ -225,4 +225,7 @@
     .settings-card-li {
         border-bottom: 1px solid var(--border-color) !important;
     }
+    .settings-card-li:last-child {
+        border-color: transparent !important;
+    }
 }
