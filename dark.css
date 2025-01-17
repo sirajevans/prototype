@@ -222,4 +222,7 @@
         color: white !important;
         background-color: #2d2b32 !important;
     }
+    .settings-card-li {
+        border-bottom: 1px solid var(--border-color) !important;
+    }
 }
