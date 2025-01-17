@@ -39,10 +39,10 @@
     }
 
     /* nav styling */
-    .menu-toggle, .nav-prev, .nav-next {
+    .menu-toggle, .nav-prev, .nav-next, .nav-refresh {
         color: #949496 !important;
     }
-    .menu-toggle:hover, .nav-prev:hover, .nav-next:hover {
+    .menu-toggle:hover, .nav-prev:hover, .nav-next:hover, .nav-refresh:hover {
         color: white !important;
         background-color: #151619 !important;
     }
