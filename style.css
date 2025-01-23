@@ -2,8 +2,6 @@ html, body {
     overflow: hidden;
     height: 100%;
     -webkit-font-smoothing: antialiased;
-    touch-action: manipulation;
-    -webkit-text-size-adjust: none;
 }
 
 input, textarea {
