@@ -248,7 +248,7 @@
         color: white !important;
     }
     .center-modal {
-        background-color: white !important;
+        background-color: var(--card-color) !important;
     }
     .pod-item-img {
         filter: invert(1) !important;
