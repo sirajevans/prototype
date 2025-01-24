@@ -116,8 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Check if application is native or not
-if (window.todesktop) {
-  document.querySelector(".macos-app-spacer").style.display = "block";
-} else {
-  document.querySelector(".macos-app-spacer").style.display = "none";
-}
+// if (window.todesktop) {
+//   document.querySelector(".macos-app-spacer").style.display = "block";
+// } else {
+//   document.querySelector(".macos-app-spacer").style.display = "none";
+// }
