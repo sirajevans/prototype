@@ -25,7 +25,7 @@
         background-color: #101012 !important;
         box-shadow: 0 0 0 1px #26282D,0 1px 2px #0000000a,0 2px 4px #0000000a;
     }
-    .btn-w, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .settings-placeholder-btn, .address-type-btn, .nav-back-arrow, .close-modal-btn, .pod-btn {
+    .btn-w, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .settings-placeholder-btn, .address-type-btn.address-type-selected, .nav-back-arrow, .close-modal-btn, .pod-btn {
         color: white !important;
         background-color: lch(8.3 1.867 272) !important;
         border: 0.5px solid lch(13.98 4.707 272) !important;
