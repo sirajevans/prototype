@@ -1634,7 +1634,7 @@ button.applyBtn.btn.btn-sm.btn-primary {
     background-color: white;
 }
 
-.side-popup, .side-menu, .orders-action-bar-container {
+.side-popup, .orders-action-bar-container {
     transition: 0.25s cubic-bezier(0.45, 0, 0.15, 1) 0s;
 }
 
