@@ -46,8 +46,9 @@
         color: white !important;
         background-color: #151619 !important;
     }
-
-    /* menu styling */
+    .side-menu {
+        background-color: var(--body-color) !important;
+    }
     .menu-company-profile {
         background-color: #17181a !important;
     }
