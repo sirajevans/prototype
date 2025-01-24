@@ -241,4 +241,7 @@
         background-color: #222225 !important;
         color: white !important;
     }
+    .address-type-container {
+        background-color: var(--body-color) !important;
+    }
 }
