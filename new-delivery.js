@@ -9,11 +9,11 @@ let greetingtext = document.getElementById('greeting-text');
 let greetingTimeOfDay = new Date();
 window.addEventListener('load', function getDate() {
     if (greetingTimeOfDay.getHours() >= 4 && greetingTimeOfDay.getHours() < 12) {
-        greetingtext.innerHTML = 'Good morning, ';
+        greetingtext.innerHTML = 'Good morning, Siraj';
     } else if (greetingTimeOfDay.getHours() >= 12 && greetingTimeOfDay.getHours() < 18) {
-        greetingtext.innerHTML = 'Good afternoon, ';
+        greetingtext.innerHTML = 'Good afternoon, Siraj';
     } else if (greetingTimeOfDay.getHours() >= 18 && greetingTimeOfDay.getHours() < 23) {
-        greetingtext.innerHTML = 'Good evening, ';
+        greetingtext.innerHTML = 'Good evening, Siraj';
     } else {
         greetingtext.innerHTML = 'Hey there night owl';
     }
