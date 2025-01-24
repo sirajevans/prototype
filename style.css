@@ -60,6 +60,13 @@ select {
     border-radius: 8px;
 }
 
+svg {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
 .primary-btn, .cancel-btn, .list-action-btn, .list-action-btn-purple, .settings-btn-w,
 .address-type-btn, .menu-item, .side-menu-item, .nav-header, .filter-btn-content,
 .menu-user-name, .menu-company-name, .btn-w, .btn-p, .btn-g, .context-menu-btn,
