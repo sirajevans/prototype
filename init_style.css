@@ -679,20 +679,3 @@ th {
 .purchase-modal-card-select {
   background-position: 65px 50%;
 }
-
-.side-menu {
-  visibility: hidden;
-}
-
-.side-menu.initialized {
-  visibility: visible;
-  transition: width 0.3s ease-in-out;
-}
-
-.side-menu-initial-closed .side-menu,
-.side-menu-initial-closed .main-content,
-.side-menu-initial-closed .menu-company-name,
-.side-menu-initial-closed .menu-item-text,
-.side-menu-initial-closed .side-menu-category {
-  /* Your closed state styles */
-}
