@@ -7,14 +7,13 @@ $(document).ready(() => {
 // Greeting js
 let greetingtext = document.getElementById('greeting-text');
 let greetingTimeOfDay = new Date();
-let userGreetingName = document.querySelector('.nav-profile-container').innerHTML;
 window.addEventListener('load', function getDate() {
     if (greetingTimeOfDay.getHours() >= 4 && greetingTimeOfDay.getHours() < 12) {
-        greetingtext.innerHTML = 'Good morning, ' + userGreetingName;
+        greetingtext.innerHTML = 'Good morning, ';
     } else if (greetingTimeOfDay.getHours() >= 12 && greetingTimeOfDay.getHours() < 18) {
-        greetingtext.innerHTML = 'Good afternoon, ' + userGreetingName;
+        greetingtext.innerHTML = 'Good afternoon, ';
     } else if (greetingTimeOfDay.getHours() >= 18 && greetingTimeOfDay.getHours() < 23) {
-        greetingtext.innerHTML = 'Good evening, ' + userGreetingName;
+        greetingtext.innerHTML = 'Good evening, ';
     } else {
         greetingtext.innerHTML = 'Hey there night owl';
     }
