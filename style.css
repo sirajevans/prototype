@@ -2575,8 +2575,8 @@ img.address-type-btn-icon {
 }
 
 #rates_card {
-    height: calc(100vh - 138px);
-}
+    height: calc(100vh - 164px);
+  }
 
 .rates-li input[type="radio"] {
     position: absolute;
