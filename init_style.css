@@ -679,3 +679,80 @@ th {
 .purchase-modal-card-select {
   background-position: 65px 50%;
 }
+
+/* styles from confirm page */
+  /* spinner loader animation */
+  /* .s-loader, .btn-p-spinner {
+    -webkit-animation-name: spin;
+    -moz-animation-name: spin;
+    -ms-animation-name: spin;
+    animation-name: spin;
+    -webkit-animation-duration: 600ms;
+    -moz-animation-duration: 600ms;
+    -ms-animation-duration: 600ms;
+    animation-duration: 600ms;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  @-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+  }
+  @-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .rates-container:hover .rates-eta, 
+  .rates-container:hover .rates-size {
+  	opacity: 0;
+  }
+  
+  .rates-container:hover .rates-eta-1, 
+  .rates-container:hover .rates-size-1 {
+  	opacity: 1;
+    transition-delay: 100ms;
+  }
+  
+  .rates-icon-fallback, .rates-m-fallback, .rates-sm-fallback {
+    background-size: 600px 44px !important;
+    background: rgb(91,97,110,.05);
+    background-image: linear-gradient(90deg,rgb(91,97,110,.05) 0,rgb(91,97,110,0) 25%,rgb(91,97,110,.1) 50%,rgb(91,97,110,0) 75%,rgb(91,97,110,.05)100%);
+    background-repeat: no-repeat;
+    animation-name: shimmer-fallback;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @keyframes shimmer-fallback {
+    0% {
+      background-position: -600px 0;
+    }
+
+    100% {
+      background-position: 600px 0;
+    }
+  }
+  
+  .card-content::-webkit-scrollbar {
+    display: none;
+  } */
