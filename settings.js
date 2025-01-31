@@ -67,7 +67,7 @@ function showEftModal() {
   };
 
 // manual eft modal
-function showManualEftModal() {
+function showEftModal() {
   $("#eft_modal_container").css("display", "flex");
   setTimeout(() => {
     $("#eft_modal_container").addClass("center-modal-container-active");
@@ -76,7 +76,7 @@ function showManualEftModal() {
 };
 
 // instant eft modal
-function showEftModal() {
+function showManualEftModal() {
   $("#instant_eft_modal_container").css("display", "flex");
   setTimeout(() => {
     $("#instant_eft_modal_container").addClass("center-modal-container-active");
