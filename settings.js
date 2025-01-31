@@ -59,40 +59,33 @@ try {
 
 // eft modal
 function showEftModal() {
-    $("#eft_modal_container").css("display", "flex");
-    setTimeout(() => {
-      $("#eft_modal_container").addClass("center-modal-container-active");
-      $("#eft_center_modal").addClass("center-modal-active");
-    }, 1);
-  };
+  $("#eft_modal_container").css("display", "flex");
+  setTimeout(() => {
+    $("#eft_modal_container").addClass("center-modal-container-active");
+    $("#eft_center_modal").addClass("center-modal-active");
+  }, 1);
+}
 
-// manual eft modal
+// instant eft modal 
 function showInstantEftModal() {
   $("#instant_eft_modal_container").css("display", "flex");
   setTimeout(() => {
     $("#instant_eft_modal_container").addClass("center-modal-container-active");
     $("#instant_eft_center_modal").addClass("center-modal-active");
   }, 1);
-};
+}
 
 // card modal
-$("#card_btn").on("click", function () {
+function showCardModal() {
   $("#card_modal_container").css("display", "flex");
   setTimeout(() => {
     $("#card_modal_container").addClass("center-modal-container-active");
     $("#card_center_modal").addClass("center-modal-active");
   }, 1);
-});
+}
 
-// // auto topup modal
-// $("#auto_topup_btn").on("click", function () {
-//   $("#auto_topup_modal_container").css("display", "flex");
-//   setTimeout(() => {
-//     $("#auto_topup_modal_container").addClass("center-modal-container-active");
-//     $("#auto_topup_center_modal").addClass("center-modal-active");
-//   }, 1);
-// });
-
+// button click handlers
+$("#card_btn").on("click", showCardModal);
 $("#eft_btn").on("click", showEftModal);
 $("#instant_eft_btn").on("click", showInstantEftModal);
 
@@ -103,8 +96,10 @@ $(document).keydown(function (e) {
   } else if (e.key && e.key.toLowerCase() == "m") {
       showEftModal();
   } else if (e.key && e.key.toLowerCase() == "i") {
-    showManualEftModal();
-} 
+      showInstantEftModal();
+  } else if (e.key && e.key.toLowerCase() == "c") {
+      showCardModal();
+  }
 });
 
 
