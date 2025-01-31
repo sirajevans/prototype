@@ -66,6 +66,25 @@ function showEftModal() {
     }, 1);
   };
 
+// manual eft modal
+function showManualEftModal() {
+  $("#eft_modal_container").css("display", "flex");
+  setTimeout(() => {
+    $("#eft_modal_container").addClass("center-modal-container-active");
+    $("#eft_center_modal").addClass("center-modal-active");
+  }, 1);
+};
+
+// instant eft modal
+function showEftModal() {
+  $("#instant_eft_modal_container").css("display", "flex");
+  setTimeout(() => {
+    $("#instant_eft_modal_container").addClass("center-modal-container-active");
+    $("#instant_eft_center_modal").addClass("center-modal-active");
+  }, 1);
+};
+
+
 // card modal
 $("#card_btn").on("click", function () {
   $("#card_modal_container").css("display", "flex");
@@ -85,6 +104,7 @@ $("#card_btn").on("click", function () {
 // });
 
 $("#eft_btn").on("click", showEftModal);
+$("#instant_eft_btn").on("click", showEftModal);
 
 // key shortcuts
 $(document).keydown(function (e) {
@@ -92,7 +112,9 @@ $(document).keydown(function (e) {
       return; //abort key shortcuts
   } else if (e.key && e.key.toLowerCase() == "m") {
       showEftModal();
-  }
+  } else if (e.key && e.key.toLowerCase() == "i") {
+    showManualEftModal();
+} 
 });
 
 
