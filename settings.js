@@ -70,11 +70,10 @@ function showEftModal() {
 function showInstantEftModal() {
   $("#instant_eft_modal_container").css("display", "flex");
   setTimeout(() => {
-    $("instant_#eft_modal_container").addClass("center-modal-container-active");
-    $("instant_#eft_center_modal").addClass("center-modal-active");
+    $("#instant_eft_modal_container").addClass("center-modal-container-active");
+    $("#instant_eft_center_modal").addClass("center-modal-active");
   }, 1);
 };
-
 
 // card modal
 $("#card_btn").on("click", function () {
