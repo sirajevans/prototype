@@ -1,59 +1,9 @@
-/* ======= Login + Register Background Styling ======= */
-.login-bkg-container {
-  position: fixed;
-  left: -100px;
-  right: -100px;
-  top: -250px;
-  bottom: 0;
-  z-index: 0;
-  transform: rotate(-12deg);
-}
-
-.login-gray-bkg {
-  position: absolute;
-  top: -1000px;
-  left: -100px;
-  right: -100px;
-  transform-origin: 0 50%;
-  height: 1698px;
-  background-color: #f4f5fa;
-}
-
-.login-right-streak,
-.login-left-streak,
-.login-left-streak-outline {
-  position: absolute;
-  height: 40px;
-  border-radius: 50px;
-}
-
-.login-right-streak {
-  top: 1658px;
-  right: -50px;
-  left: calc(55% + 430px);
-  background-color: #7642f4;
-}
-
-.login-left-streak {
-  top: 1698px;
-  left: -50px;
-  right: calc(65% + 405px);
-  background-color: #7642f4;
-}
-
-.login-left-streak-outline {
-  top: 1678px;
-  left: calc(48% - 700px);
-  right: calc(50% + 540px);
-  width: 230px;
-  background-color: transparent;
-  border: 1px solid #170b33;
-}
-
-/* ======= Tooltip Styling ======= */
+/* ======= Tooltip styling ======= */
 .tooltip {
   visibility: hidden;
-  transition: opacity 50ms ease 50ms;
+  transition-timing-function: ease;
+  transition: 50ms;
+  transition-delay: 50ms;
   opacity: 0;
 }
 
@@ -71,7 +21,7 @@
   opacity: 1;
 }
 
-/* ======= Arrow Hover Animation ======= */
+/* ======= Arrow hover animations ======= */
 .btn-hover-arrow-1,
 .btn-hover-arrow-2 {
   transition: ease 100ms;
@@ -92,7 +42,7 @@
   opacity: 1;
 }
 
-/* ======= Waypoint Arrow Animation ======= */
+/* Waypoint arrow animation */
 .waypoint-arrow {
   visibility: hidden;
 }
@@ -101,20 +51,9 @@
   visibility: visible;
 }
 
-/* ======= Calendar CSS ======= */
+/* ======= Calendar styling ======= */
 .calendarContentContainer {
   width: 100%;
-}
-
-.calendarMonth {
-  border-spacing: 0;
-  border-collapse: separate !important;
-  color: #54556d;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 10px 5px;
-  text-transform: uppercase;
-  user-select: none;
 }
 
 .calendarMonth td {
@@ -134,12 +73,24 @@
   text-align: center !important;
 }
 
+.calendarMonth {
+  color: #54556d;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 5px;
+  word-break: normal;
+  text-transform: uppercase;
+  user-select: none;
+  border-collapse: separate !important;
+}
+
 .calendarMonthName {
   color: #170b33;
   font-size: 20px;
   line-height: 20px;
   font-weight: 600;
   padding: 5px 5px 15px 5px;
+  word-break: normal;
   text-transform: none;
   user-select: none;
 }
@@ -194,26 +145,25 @@
   background: #5327be;
 }
 
-.calendarMonth .rangeStartDate,
-.calendarMonth .rangeEndDate,
-.calendarMonth .inDateRange {
+.calendarMonth .rangeStartDate {
+  border-radius: 40px 0px 0px 40px !important;
   background: #7642f4 !important;
   color: #ffffff;
 }
 
-.calendarMonth .rangeStartDate {
-  border-radius: 40px 0 0 40px !important;
-}
-
 .calendarMonth .rangeEndDate {
-  border-radius: 0 40px 40px 0 !important;
+  border-radius: 0px 40px 40px 0px !important;
+  background: #7642f4 !important;
+  color: #ffffff;
 }
 
 .calendarMonth .inDateRange {
-  border-radius: 0 !important;
+  border-radius: 0px !important;
+  background: #7642f4 !important;
+  color: #ffffff !important;
 }
 
-/* ======= Custom Checkbox Styling ======= */
+/* ======= Custom checkbox styling ======= */
 .checkbox-container {
   position: relative;
   display: flex;
@@ -223,7 +173,7 @@
   color: #54536F;
   line-height: 14px;
   cursor: pointer;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   height: 16px;
 }
 
@@ -232,7 +182,8 @@
 }
 
 .checkbox-container:active > .checkmark {
-  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1), 0 1px 3px 0 rgba(23, 11, 51, 0.15);
+  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
+    0 1px 3px 0 rgba(23, 11, 51, 0.15);
 }
 
 .checkbox-container input[type="checkbox"] {
@@ -258,7 +209,8 @@
 }
 
 .checkmark:active {
-  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1), 0 1px 3px 0 rgba(23, 11, 51, 0.15);
+  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
+    0 1px 3px 0 rgba(23, 11, 51, 0.15);
 }
 
 .checkbox-container input[type="checkbox"]:checked + .checkmark {
@@ -266,14 +218,14 @@
   box-shadow: 0 0 0 1px #6128EB;
 }
 
-.checkbox-container input[type="checkbox"]:checked + .checkmark svg,
-.checkbox-container .checkmark svg {
+.checkbox-container input[type="checkbox"]:checked + .checkmark svg {
   display: none;
 }
 
 .checkbox-container .checkmark svg {
+  display: none;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 2px;
   width: 12px;
   height: 12px;
@@ -283,62 +235,28 @@
   margin-top: 14px;
 }
 
-@keyframes fullView {
-  100% {
-      width: 100%;
-  }
-}
-
-@keyframes shimmer {
-  0% {
-      background-position: -1000px 0;
-  }
-  100% {
-      background-position: 1000px 0;
-  }
-}
-
-/* ======= Custom Radio Button Styling ======= */
-.radio-btn-container,
-.radio-btn-container-1 {
+/* ======= Custom radio button styling ======= */
+.radio-btn-container {
   display: block;
   position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   margin-bottom: 10px !important;
-}
-
-.radio-btn-container {
   padding-left: 25px;
   color: #54536F;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
+  user-select: none;
 }
 
-.radio-btn-container-1 {
-  padding-left: 40px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  color: #170b33;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 0;
-}
-
-.radio-btn-container input,
-.radio-btn-container-1 input {
+.radio-btn-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  width: 0;
-  height: 0;
+  width: 0px;
+  height: 0px;
 }
 
-.radio-checkmark,
-.radio-checkmark-centered {
+.radio-checkmark {
   position: absolute;
   top: 2px;
   left: 0;
@@ -350,19 +268,7 @@
   transition: ease 100ms;
 }
 
-.radio-checkmark-centered {
-  top: 24px;
-  left: 12px;
-  width: 14px;
-  height: 14px;
-  border: 1px solid #deddf2;
-}
-
-.radio-btn-container .radio-checkmark:after,
-.radio-btn-container-1 .radio-checkmark-centered:after {
-  content: "";
-  position: absolute;
-  display: none;
+.radio-btn-container .radio-checkmark:after {
   top: 5px;
   left: 5px;
   width: 5px;
@@ -371,32 +277,100 @@
   background: white;
 }
 
-.radio-btn-container:hover input ~ .radio-checkmark,
-.radio-btn-container-1:hover input ~ .radio-checkmark-centered {
+.radio-btn-container:hover input ~ .radio-checkmark {
   background-color: #f4f4fa;
 }
 
-.radio-checkmark:active,
-.radio-checkmark-centered:active {
-  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1), 0 1px 3px 0 rgba(23, 11, 51, 0.15);
+.radio-checkmark:active {
+  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
+    0 1px 3px 0 rgba(23, 11, 51, 0.15);
 }
 
-.radio-btn-container input:checked ~ .radio-checkmark,
-.radio-btn-container-1 input:checked ~ .radio-checkmark-centered {
+.radio-btn-container input:checked ~ .radio-checkmark {
   background-color: #7642f4;
   box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #6128EB, 0 0 transparent, 0 2px 5px rgba(69,64,82,.08);
 }
 
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-btn-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+/* Centered radio button styling */
+.radio-btn-container-1 {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  padding-top: 12px;
+  margin-bottom: 0px;
+  padding-bottom: 12px;
+  color: #170b33;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-btn-container-1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0px;
+  height: 0px;
+}
+
+.radio-checkmark-centered {
+  position: absolute;
+  top: 24px;
+  left: 12px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #deddf2;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px 0 rgb(23 11 51 / 8%);
+  transition: ease 100ms;
+}
+
+.radio-btn-container-1 .radio-checkmark-centered:after {
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: white;
+}
+
+.radio-btn-container-1:hover input ~ .radio-checkmark-centered {
+  background-color: #f4f4fa;
+}
+
+.radio-checkmark-centered:active {
+  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
+    0 1px 3px 0 rgba(23, 11, 51, 0.15);
+}
+
 .radio-btn-container-1 input:checked ~ .radio-checkmark-centered {
+  background-color: #7642f4;
   border: 1px solid #6c39e5;
 }
 
-.radio-btn-container input:checked ~ .radio-checkmark:after,
+.radio-checkmark-centered:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
 .radio-btn-container-1 input:checked ~ .radio-checkmark-centered:after {
   display: block;
 }
 
-/* ======= List Search Input Field ======= */
+/* ======= List search input field ======= */
 .order-search-input {
   width: 100%;
   height: 32px;
@@ -406,6 +380,7 @@
   background-color: #fff;
   border: 1px solid #deddf2;
   border-radius: 8px;
+  margin-top: 0px;
   padding: 8px 10px 9px 35px;
   font-size: .875rem;
   font-weight: 400;
@@ -423,17 +398,18 @@
   box-shadow: #92b4f5 0px 0px 0px 3px;
 }
 
-/* ===== Activate Side Menu on Hover Styling ===== */
+/* ======= Side menu activation ======= */
 .activate-menu-on-hover {
   position: absolute;
   left: 0;
   top: 0;
+  right: auto;
   bottom: 0;
   z-index: 1001;
   width: 2px;
 }
 
-/* ====== List Table Styling ==== */
+/* ======= List table styling ======= */
 .table-overflow-container {
   overflow-y: auto;
   max-height: 80vh;
@@ -448,10 +424,10 @@
 
 .table-overflow-container .table-content th:after {
   content: "";
-  border-bottom: 1px solid rgb(222, 221, 242, 0.5);
+  border-bottom: 1px solid rgba(222, 221, 242, 0.5);
   width: 100%;
   position: absolute;
-  left: 0;
+  left: 0px;
   bottom: -1px;
 }
 
@@ -466,7 +442,15 @@
   font-weight: 500;
 }
 
-.table-content thead th:first-child,
+.table-content thead th:first-child {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 1;
+  max-width: 35px;
+  padding-right: 0px;
+}
+
 .table-content tbody td:first-child {
   position: sticky;
   left: 0;
@@ -546,58 +530,64 @@ th {
 }
 
 .table-content thead th.table-second-column {
-  padding: 12px 20px 12px 0;
+  padding: 12px 20px 12px 0px;
   min-width: 85px;
   z-index: 2;
   background: linear-gradient(90deg, rgba(255,255,255,1) 90%, rgba(255,255,255,0%) 100%);
 }
 
 .table-content tbody td.table-second-column {
-  padding: 12px 20px 12px 0;
+  padding: 12px 20px 12px 0px;
   white-space: nowrap;
 }
 
 .merged-orders-column {
-  padding: 0 !important;
+  padding: 0px !important;
   width: 10px !important;
 }
 
 .shimmer-row {
-  border-top: 1px solid rgb(222, 221, 242, 0.5);
+  border-top: 1px solid rgba(222, 221, 242, 0.5);
 }
 
-/* ====== Plan Route Overview ====== */
+/* ======= Plan route overview ======= */
 .optimise-settings-btn {
   display: none;
 }
 
-.delivery-overview-btn-section:hover + .optimise-settings-btn,
+.delivery-overview-btn-section:hover + .optimise-settings-btn {
+  display: block !important;
+}
+
 .optimise-settings-btn:hover {
   display: block !important;
 }
 
-/* ====== Most Overview Pages ====== */
+/* ======= Delivery status bar ======= */
 .delivery-status-bar-container {
   width: calc(100% - 490px);
 }
 
-/* ====== Settings ====== */
+/* ======= Settings ======= */
 .settings-card-li:hover .context-menu-btn {
   box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #deddf2, 0 2px 5px rgba(69,64,82,.08);
 }
 
-.eye-closed::before,
+.eye-closed::before {
+  content: url('../images/eye-placeholder.png');
+}
+
 .eye-open::before {
   content: url('../images/eye-placeholder.png');
 }
 
-/* ====== Shipment Requirements ====== */
+/* ======= Shipment requirements ======= */
 .text-sm-fallback,
 .carrier-logo-fallback,
 .carrier-o-logo-fallback {
   background-size: 600px 44px !important;
-  background: rgb(91,97,110,.05);
-  background-image: linear-gradient(90deg, rgb(91,97,110,.05) 0, rgb(91,97,110,0) 25%, rgb(91,97,110,.1) 50%, rgb(91,97,110,0) 75%, rgb(91,97,110,.05) 100%);
+  background: rgba(91,97,110,.05);
+  background-image: linear-gradient(90deg, rgba(91,97,110,.05) 0, rgba(91,97,110,0) 25%, rgba(91,97,110,.1) 50%, rgba(91,97,110,0) 75%, rgba(91,97,110,.05) 100%);
   background-repeat: no-repeat;
   animation: shimmer-fallback 4s linear infinite forwards;
   display: inline-block;
@@ -605,30 +595,48 @@ th {
   overflow: hidden;
 }
 
+/* ======= Animations ======= */
 @keyframes shimmer-fallback {
   0% {
-      background-position: -600px 0;
+    background-position: -600px 0;
   }
   100% {
-      background-position: 600px 0;
+    background-position: 600px 0;
   }
 }
 
-/* Spinner Loader Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fullView {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* ======= Spinner loader ======= */
 .s-loader,
-.btn-p-spinner {
+.btn-p-spinner,
+.btn-w-spinner {
   animation: spin 600ms linear infinite;
 }
 
-@-ms-keyframes spin {
-  from {
-      -ms-transform: rotate(0deg);
-  }
-  to {
-      -ms-transform: rotate(360deg);
-  }
-}
-
+/* ======= Utility classes ======= */
 .truncate {
   display: inline-block;
   text-overflow: ellipsis;
@@ -637,372 +645,94 @@ th {
 }
 
 .truncate-width-100 {
-  width: calc(100%);
+  width: 100%;
 }
 
 .carrier-col {
   width: calc(100% - 60px);
 }
 
-.listing-badge-tooltip {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .1s linear, visibility 0s .1s linear, transform .1s cubic-bezier(.77, 0, .175, 1);
-}
-
-.listing-badge:hover ~ .listing-badge-tooltip,
-.text-sm-grey.label-critical-error:hover ~ .listing-badge-tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  transition: opacity .08s 0.2s linear, visibility 0s 0.2s linear, transform .08s 0.2s cubic-bezier(.77, 0, .175, .08);
-}
-
-.table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-btn,
-.table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-context-btn {
-  opacity: 1;
-  z-index: 2;
-}
-
-.table-row:hover > .table-cell-waybill-col {
-  background-color: #f7f7fc;
-}
-
-.table-row:hover > .table-cell.action-btn-container {
-  background-image: linear-gradient(90deg, hsla(0,0%,100%,0) 80%, #f7f7fc 85%);
-}
-
-.items-per-page {
-  background-position: 40px 50%;
-}
-
-.purchase-modal-card-select {
-  background-position: 65px 50%;
-}
-
-.hint:hover .hint-text {
-  opacity: 1;
-  transform: translateY(0px)scale(1)
-}
-
-/* styles from confirm page */
-  /* spinner loader animation */
-  /* .s-loader, .btn-p-spinner {
-    -webkit-animation-name: spin;
-    -moz-animation-name: spin;
-    -ms-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-duration: 600ms;
-    -moz-animation-duration: 600ms;
-    -ms-animation-duration: 600ms;
-    animation-duration: 600ms;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -ms-animation-timing-function: linear;
-    animation-timing-function: linear;
-  }
-  @-ms-keyframes spin {
-    from { -ms-transform: rotate(0deg); }
-    to { -ms-transform: rotate(360deg); }
-  }
-  @-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
-  }
-  @-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
-  }
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
-  .rates-container:hover .rates-eta, 
-  .rates-container:hover .rates-size {
-  	opacity: 0;
-  }
-  
-  .rates-container:hover .rates-eta-1, 
-  .rates-container:hover .rates-size-1 {
-  	opacity: 1;
-    transition-delay: 100ms;
-  }
-  
-  .rates-icon-fallback, .rates-m-fallback, .rates-sm-fallback {
-    background-size: 600px 44px !important;
-    background: rgb(91,97,110,.05);
-    background-image: linear-gradient(90deg,rgb(91,97,110,.05) 0,rgb(91,97,110,0) 25%,rgb(91,97,110,.1) 50%,rgb(91,97,110,0) 75%,rgb(91,97,110,.05)100%);
-    background-repeat: no-repeat;
-    animation-name: shimmer-fallback;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-  }
-
-  @keyframes shimmer-fallback {
-    0% {
-      background-position: -600px 0;
-    }
-
-    100% {
-      background-position: 600px 0;
-    }
-  }
-  
-  .card-content::-webkit-scrollbar {
-    display: none;
-  } */
-
-
-  /* css from orders webflow page*/
-
-/* .text-sm-fallback, .carrier-logo-fallback {
-		background-size: 600px 44px !important;
-    background: rgb(91,97,110,.05);
-    background-image: linear-gradient(90deg,rgb(91,97,110,.05) 0,rgb(91,97,110,0) 25%,rgb(91,97,110,.1) 50%,rgb(91,97,110,0) 75%,rgb(91,97,110,.05)100%);
-    background-repeat: no-repeat;
-    animation-name: shimmer-fallback;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-}
-
-@keyframes shimmer-fallback {
-  0% {
-    background-position: -600px 0;
-  }
-  100% {
-      background-position: 600px 0;
-  }
-}
-
-
-  .s-loader, .btn-p-spinner {
-    -webkit-animation-name: spin;
-    -moz-animation-name: spin;
-    -ms-animation-name: spin;
-    animation-name: spin;
-    -webkit-animation-duration: 600ms;
-    -moz-animation-duration: 600ms;
-    -ms-animation-duration: 600ms;
-    animation-duration: 600ms;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -ms-animation-timing-function: linear;
-    animation-timing-function: linear;
-  }
-  @-ms-keyframes spin {
-    from { -ms-transform: rotate(0deg); }
-    to { -ms-transform: rotate(360deg); }
-  }
-  @-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
-  }
-  @-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
-  }
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  .truncate {
-    display: inline-block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .truncate-width-100 {
-    width: calc(100%);
-  }
-  .carrier-col {
-    width: calc(100% - 60px);
-  }
-  .listing-badge-tooltip {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .1s linear, visibility 0s .1s linear, transform .1s cubic-bezier(.77, 0, .175, 1);
-  }
-  .listing-badge:hover ~ .listing-badge-tooltip,
-  .text-sm-grey.label-critical-error:hover ~ .listing-badge-tooltip {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    transition: opacity .08s 0.2s linear, visibility 0s 0.2s linear, transform .08s 0.2s cubic-bezier(.77, 0, .175, .08);
-  }
-  .table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-btn {
-    opacity: 1;
-    z-index: 2;
-  }
-  .table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-context-btn {
-    opacity: 1;
-    z-index: 2;
-  }
-  .table-row:hover > .table-cell-waybill-col {
-    background-color: #f7f7fc;
-  }
-  .table-row:hover > .table-cell.action-btn-container {
-    background-image: -webkit-gradient(linear,left top,right top,color-stop(80%,hsla(0,0%,100%,0)),color-stop(85%,#f7f7fc));
-    background-image: linear-gradient(90deg,hsla(0,0%,100%,0) 80%,#f7f7fc 85%);
-  }
-
-  select {
-  	-moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    position: relative;
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-    cursor: pointer;
-    height: 100%;
-    padding: 0px 24px 0px 9px;
-    background-image: url('https://uploads-ssl.webflow.com/5fda6f586fdb5a2f2cc5696a/62d3ffb47fcc9cc7e4974216_more-actions-icon.svg');
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    border-radius: 8px;
-  }
-  
-  .items-per-page {
-    background-position: 40px 50%;
-  }
-  
-  .purchase-modal-card-select {
-    background-position: 65px 50%;
-  }
-
-	.accordion {
-  	user-select: none;
-  }
-  
-  .action-menu {
-  display: inline-flex;
-} */
-
-
-/* css from shipments html --------------
-
-.text-sm-fallback, .carrier-logo-fallback {
-		background-size: 600px 44px !important;
-    background: rgb(91,97,110,.05);
-    background-image: linear-gradient(90deg,rgb(91,97,110,.05) 0,rgb(91,97,110,0) 25%,rgb(91,97,110,.1) 50%,rgb(91,97,110,0) 75%,rgb(91,97,110,.05)100%);
-    background-repeat: no-repeat;
-    animation-name: shimmer-fallback;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-}
-@keyframes shimmer-fallback {
-  0% {
-    background-position: -600px 0;
-  }
-  100% {
-      background-position: 600px 0;
-  }
-}
-.s-loader, .btn-p-spinner {
-  -webkit-animation-name: spin;
-  -moz-animation-name: spin;
-  -ms-animation-name: spin;
-  animation-name: spin;
-  -webkit-animation-duration: 600ms;
-  -moz-animation-duration: 600ms;
-  -ms-animation-duration: 600ms;
-  animation-duration: 600ms;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -ms-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-@-ms-keyframes spin {
-  from { -ms-transform: rotate(0deg); }
-  to { -ms-transform: rotate(360deg); }
-}
-@-moz-keyframes spin {
-  from { -moz-transform: rotate(0deg); }
-  to { -moz-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-  from { -webkit-transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.truncate {
+/* ======= Toggle switch ======= */
+.switch-wrapper {
+  position: relative;
   display: inline-block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  width: 48px;
+  height: 24px;
+  margin-left: auto;
 }
-.truncate-width-100 {
-  width: calc(100%);
-}
-.carrier-col {
-  width: calc(100% - 60px);
-}
-.listing-badge-tooltip {
+
+.switch-wrapper input {
   opacity: 0;
-  visibility: hidden;
-  transition: opacity .1s linear, visibility 0s .1s linear, transform .1s cubic-bezier(.77, 0, .175, 1);
+  width: 0;
+  height: 0;
 }
-.listing-badge:hover ~ .listing-badge-tooltip,
-.text-sm-grey.label-critical-error:hover ~ .listing-badge-tooltip {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  transition: opacity .08s 0.2s linear, visibility 0s 0.2s linear, transform .08s 0.2s cubic-bezier(.77, 0, .175, .08);
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e8eaf3;
+  border: 1px solid #d1d5e0;
+  transition: .1s;
+  border-radius: 34px;
 }
-.table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-btn {
-  opacity: 1;
-  z-index: 2;
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  background-color: white;
+  transition: .1s;
+  border-radius: 50%;
 }
-.table-row:hover > :last-child > .table-cell-content > .flex > .shipment-row-context-btn {
-  opacity: 1;
-  z-index: 2;
+
+input:checked + .toggle {
+  background-color: #7642f4;
+  border: 1px solid #7642f4;
 }
-.table-row:hover > .table-cell-waybill-col {
-  background-color: #f7f7fc;
+
+input:checked + .toggle:before {
+  transform: translateX(23.8px);
 }
-.table-row:hover > .table-cell.action-btn-container {
-  background-image: -webkit-gradient(linear,left top,right top,color-stop(80%,hsla(0,0%,100%,0)),color-stop(85%,#f7f7fc));
-  background-image: linear-gradient(90deg,hsla(0,0%,100%,0) 80%,#f7f7fc 85%);
+
+/* ======= Delivery summary ======= */
+.delivery-summary-text {
+  display: none;
 }
+
+.delivery-summary-container:hover .delivery-summary-display-text {
+  display: none;
+}
+
+.delivery-summary-container:hover .delivery-summary-text {
+  display: block;
+}
+
+/* ======= Export options ======= */
+.export-options-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.export-options-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ======= Select styling ======= */
 select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
   position: relative;
   outline: 0;
@@ -1016,222 +746,24 @@ select {
   background-size: 14px 14px;
   border-radius: 8px;
 }
+
 .items-per-page {
   background-position: 40px 50%;
 }
+
 .purchase-modal-card-select {
   background-position: 65px 50%;
 }
+
+/* ======= Misc ======= */
 .accordion {
   user-select: none;
 }
+
 .action-menu {
-display: inline-flex;
+  display: inline-flex;
 }
 
---------------- css from shipment overview ------------
-
-.s-loader, .btn-w-spinner {
-  -webkit-animation-name: spin;
-  -moz-animation-name: spin;
-  -ms-animation-name: spin;
-  animation-name: spin;
-  -webkit-animation-duration: 800ms;
-  -moz-animation-duration: 800ms;
-  -ms-animation-duration: 800ms;
-  animation-duration: 800ms;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -ms-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-@-ms-keyframes spin {
-  from { -ms-transform: rotate(0deg); }
-  to { -ms-transform: rotate(360deg); }
-}
-@-moz-keyframes spin {
-  from { -moz-transform: rotate(0deg); }
-  to { -moz-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-  from { -webkit-transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.listing-badge-tooltip {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .1s linear, visibility 0s .1s linear, transform .1s cubic-bezier(.77, 0, .175, 1);
-}
-.listing-badge:hover ~ .listing-badge-tooltip {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  transition: opacity .08s 0.2s linear, visibility 0s 0.2s linear, transform .08s 0.2s cubic-bezier(.77, 0, .175, .08);
-}
-
-.text-sm-fallback, .carrier-o-logo-fallback {
-		background-size: 600px 44px !important;
-    background: rgb(91,97,110,.05);
-    background-image: linear-gradient(90deg,rgb(91,97,110,.05) 0,rgb(91,97,110,0) 25%,rgb(91,97,110,.1) 50%,rgb(91,97,110,0) 75%,rgb(91,97,110,.05)100%);
-    background-repeat: no-repeat;
-    animation-name: shimmer-fallback;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-}
-@keyframes shimmer-fallback {
-  0% {
-    background-position: -600px 0;
-  }
-  100% {
-      background-position: 600px 0;
-  }
-}
-
---------- css from edit delivery overview -------------
-
-.switch-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 48px;
-  height: 24px;
-  margin-left: auto;
-}
-.switch-wrapper input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.toggle {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #e8eaf3;
-  border: 1px solid #d1d5e0;
-  -webkit-transition: .1s;
-  transition: .1s;
-}
-.toggle:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  background-color: white;
-  -webkit-transition: .1s;
-  transition: .1s;
-}
-input:checked + .toggle {
-  background-color: #7642f4;
-  border: 1px solid #7642f4;
-}
-input:checked + .toggle:before {
-  -webkit-transform: translateX(23.8px);
-  -ms-transform: translateX(23.8px);
-  transform: translateX(23.8px);
-}
-.toggle {
-  border-radius: 34px;
-}
-.toggle:before {
-  border-radius: 50%;
-}
-
-.delivery-summary-text {
-	display: none;
-}
-.delivery-summary-container:hover .delivery-summary-display-text {
-	display: none;
-}
-.delivery-summary-container:hover .delivery-summary-text {
-	display: block;
-}
-.optimise-settings-btn {
-	display: none;
-}
-.delivery-overview-btn-section:hover + .optimise-settings-btn {
-	display: block !important;
-}
-.optimise-settings-btn:hover {
-	display: block !important;
-}
-
--------- css from index.html -----------
-
-The container
-.export-options-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-Hide the browser's default checkbox
-.export-options-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-Create a custom checkbox
-.radio-checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-On mouse-over, add a grey background color
-.export-options-container:hover input ~ .radio-checkmark {
-  background-color: #ccc;
-}
-When the checkbox is checked, add a blue background
-.export-options-container input:checked ~ .radio-checkmark {
-  background-color: #2196F3;
-}
-Create the checkmark/indicator (hidden when not checked)
-.radio-checkmark:after {
-  content: "";
-  position: absolute;
+.card-content::-webkit-scrollbar {
   display: none;
 }
-Show the checkmark when checked
-.export-options-container input:checked ~ .radio-checkmark:after {
-  display: block;
-}
-Style the checkmark/indicator
-.export-options-container .radio-checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-*/
