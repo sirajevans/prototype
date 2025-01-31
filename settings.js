@@ -67,20 +67,11 @@ function showEftModal() {
   };
 
 // manual eft modal
-function showEftModal() {
-  $("#eft_modal_container").css("display", "flex");
-  setTimeout(() => {
-    $("#eft_modal_container").addClass("center-modal-container-active");
-    $("#eft_center_modal").addClass("center-modal-active");
-  }, 1);
-};
-
-// instant eft modal
-function showManualEftModal() {
+function showInstantEftModal() {
   $("#instant_eft_modal_container").css("display", "flex");
   setTimeout(() => {
-    $("#instant_eft_modal_container").addClass("center-modal-container-active");
-    $("#instant_eft_center_modal").addClass("center-modal-active");
+    $("instant_#eft_modal_container").addClass("center-modal-container-active");
+    $("instant_#eft_center_modal").addClass("center-modal-active");
   }, 1);
 };
 
@@ -104,7 +95,7 @@ $("#card_btn").on("click", function () {
 // });
 
 $("#eft_btn").on("click", showEftModal);
-$("#instant_eft_btn").on("click", showEftModal);
+$("#instant_eft_btn").on("click", showInstantEftModal);
 
 // key shortcuts
 $(document).keydown(function (e) {
