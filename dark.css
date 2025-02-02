@@ -143,7 +143,7 @@
     .form-label {
         color: white !important;
     }
-    .forgot-password-link, .login-footer-link, .chat-with-support-btn {
+    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text {
         color: #949496 !important;
     }
     .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover {
