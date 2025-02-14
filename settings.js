@@ -342,6 +342,15 @@ $("#add_tags_btn").on("click", function () {
 });
 
 // INTEGRATIONS
+// add webhook modal
+$("#add_webhook_btn").on("click", function () {
+  $("#add_webhook_modal_container").css("display", "flex");
+  setTimeout(() => {
+    $("#add_webhook_modal_container").addClass("center-modal-container-active");
+    $("#add_webhook_center_modal").addClass("center-modal-active");
+  }, 1);
+});
+
 // selector drop down menu
 const selectBtn = $("#auth_selector");
 const selectBtnText = $("#auth_type");
