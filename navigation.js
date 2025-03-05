@@ -121,3 +121,18 @@ document.addEventListener("DOMContentLoaded", () => {
 // } else {
 //   document.querySelector(".macos-app-spacer").style.display = "none";
 // }
+
+// Add a single event listener to the parent menu container
+document.querySelector('.side-menu-body').addEventListener('click', function(e) {
+  // Check if a menu item was clicked
+  const menuItem = e.target.closest('.menu-item');
+  if (menuItem && !menuItem.classList.contains('w--current')) {
+    // Remove w--current class from all menu items
+    document.querySelectorAll('.menu-item.w--current').forEach(activeItem => {
+      activeItem.classList.remove('w--current');
+    });
+    
+    // Add w--current class to the clicked item
+    menuItem.classList.add('w--current');
+      }
+});
