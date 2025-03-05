@@ -3196,7 +3196,7 @@ html, body {
     -webkit-user-select: none;
   }
 
-.gradient-button::before {
+.gradient-btn::before {
   content: "";
   position: absolute;
   top: 0%;
@@ -3211,7 +3211,7 @@ html, body {
   animation: blob1 var(--blob1-duration, 6s) infinite;
 }
 
-.gradient-button::after {
+.gradient-btn::after {
   content: "";
   position: absolute;
   top: -0%;

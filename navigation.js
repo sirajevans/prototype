@@ -139,7 +139,7 @@ document.querySelector('.side-menu-body').addEventListener('click', function(e) 
 
 // test gradient button
 document.addEventListener('DOMContentLoaded', () => {
-  const button = document.querySelector('.gradient-button');
+  const button = document.querySelector('.gradient-btn');
   
   function randomizeAnimation() {
     const blob1Duration = 5 + Math.random() * 5;
