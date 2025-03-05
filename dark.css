@@ -33,7 +33,7 @@
         background-color: #101012 !important;
         box-shadow: 0 0 0 0.5px #26282D;
     }
-    .btn-w, .btn-g, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .settings-placeholder-btn, .address-type-btn.address-type-selected, .nav-back-arrow, .close-modal-btn, .pod-btn, .add-pod-item {
+    .btn-w, .btn-g, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .settings-placeholder-btn, .address-type-btn.address-type-selected, .nav-back-arrow, .close-modal-btn, .pod-btn, .add-pod-item, .map-btn {
         color: var(--white-100) !important;
         background-color: lch(8.3 1.867 272) !important;
         border: 0.5px solid lch(13.98 4.707 272) !important;
@@ -208,7 +208,7 @@
     .accordion-header {
         color: var(--white-100) !important;
     }
-    .accordion-arrow {
+    .accordion-arrow, .nav-back-arrow > img, .map-btn > img {
         filter: invert(1) saturate(0) !important;
     }
     .side-modal {
