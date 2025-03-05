@@ -1703,12 +1703,6 @@ html, body {
     color: #170b33;
   }
   
-  .focus-effect:focus {
-    outline: none;
-    border: 1px solid #5d90ee;
-    box-shadow: #92b4f5 0px 0px 0px 3px;
-  }
-  
   .form-address-input {
     padding-left: 35px;
   }
