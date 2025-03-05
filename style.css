@@ -3182,7 +3182,7 @@ html, body {
   }
   
   .menu-item.w--current .menu-item-icon {
-    color: #7642F4 !important;
+    color: #7642F4;
   }
   
   .menu-item:hover > .menu-item-icon {
