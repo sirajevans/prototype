@@ -14,7 +14,6 @@
     input:-webkit-autofill:active {
         -webkit-text-fill-color: var(--white-100) !important;
     }
-
     body, .grey-100, .grey-200, .settings-section {
       background-color: var(--body-color) !important;
       color: var(--white-100);
@@ -71,7 +70,7 @@
         background-color: #151619 !important;
     }
     .menu-item.w--current .menu-item-icon {
-        color: #7642F4 !important;
+        color: var(--white-100) !important;
     }
     .menu-item-icon {
         color: #949496 !important;
