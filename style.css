@@ -3155,10 +3155,10 @@ html, body {
   
   .brand-content-preview,
   .ui-slider-handle {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;	  
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;	  
   }
   
   #filter_side_modal .accordion.open {
@@ -3170,9 +3170,11 @@ html, body {
     transform: scaleX(1);
     transition: transform 0.08s ease-in-out;
   }
+
   .menu-toggle.closed .menu-toggle-fill {
     transform: scaleX(0);
   }
+
   .menu-item.w--current::before {
     content: '';
     position: absolute;
@@ -3191,6 +3193,10 @@ html, body {
   .menu-item:hover > .menu-item-icon {
     color: #1a1a1a;
   }
+
+  .menu-item:hover > .menu-item-tooltip {
+    opacity: 1;
+  }
   
   .menu-toggle {
     -webkit-tap-highlight-color: transparent;
@@ -3198,4 +3204,3 @@ html, body {
     user-select: none;
     -webkit-user-select: none;
   }
-  
