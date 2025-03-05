@@ -66,6 +66,9 @@
     .menu-item:hover {
         background-color: #151619 !important;
     }
+    .menu-item:hover > .menu-item-icon {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
     .menu-item.w--current {
         background-color: #151619 !important;
     }
