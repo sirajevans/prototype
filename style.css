@@ -3194,10 +3194,6 @@ html, body {
   .menu-item:hover > .menu-item-icon {
     color: #1a1a1a;
   }
-
-  .menu-item:hover > .menu-item-tooltip {
-    opacity: 1;
-  }
   
   .menu-toggle {
     -webkit-tap-highlight-color: transparent;

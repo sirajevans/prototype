@@ -5,14 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const elementsToToggle = document.querySelectorAll(
     ".side-menu, .main-content, .menu-company-name, .menu-item-text, .side-menu-category"
   );
-  const tooltips = document.querySelectorAll(".menu-item-tooltip");
-
-  // Function to update tooltips visibility
-  function updateTooltips(isClosed) {
-    tooltips.forEach(tooltip => {
-      tooltip.style.display = isClosed ? "flex" : "";
-    });
-  }
 
   // Check stored state
   const isMenuClosed = localStorage.getItem("sideMenuClosed") === "true";
@@ -23,9 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     elementsToToggle.forEach((element) => {
       element.classList.add("side-menu-closed");
     });
-    updateTooltips(true);
-  } else {
-    updateTooltips(false);
   }
 
   // Show menu after state is applied
@@ -38,14 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Menu toggle functionality
   menuToggle.addEventListener("click", () => {
     menuToggle.classList.toggle("closed");
-    const isClosed = menuToggle.classList.contains("closed");
 
     elementsToToggle.forEach((element) => {
       element.classList.toggle("side-menu-closed");
     });
 
-    updateTooltips(isClosed);
-    localStorage.setItem("sideMenuClosed", isClosed);
+    localStorage.setItem(
+      "sideMenuClosed",
+      menuToggle.classList.contains("closed")
+    );
   });
 
   // Close menu when clicking outside (for mobile)
@@ -64,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       elementsToToggle.forEach((element) => {
         element.classList.add("side-menu-closed");
       });
-      updateTooltips(true);
+
       localStorage.setItem("sideMenuClosed", "true");
     }
   };
@@ -84,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
           elementsToToggle.forEach((element) => {
             element.classList.remove("side-menu-closed");
           });
-          updateTooltips(false);
           localStorage.setItem("sideMenuClosed", "false");
         }
       }, 250);
@@ -134,21 +123,16 @@ document.addEventListener("DOMContentLoaded", () => {
 // }
 
 // Add a single event listener to the parent menu container
-document.addEventListener("DOMContentLoaded", () => {
-  const sideMenuBody = document.querySelector('.side-menu-body');
-  if (sideMenuBody) {
-    sideMenuBody.addEventListener('click', function(e) {
-      // Check if a menu item was clicked
-      const menuItem = e.target.closest('.menu-item');
-      if (menuItem && !menuItem.classList.contains('w--current')) {
-        // Remove w--current class from all menu items
-        document.querySelectorAll('.menu-item.w--current').forEach(activeItem => {
-          activeItem.classList.remove('w--current');
-        });
-        
-        // Add w--current class to the clicked item
-        menuItem.classList.add('w--current');
-      }
+document.querySelector('.side-menu-body').addEventListener('click', function(e) {
+  // Check if a menu item was clicked
+  const menuItem = e.target.closest('.menu-item');
+  if (menuItem && !menuItem.classList.contains('w--current')) {
+    // Remove w--current class from all menu items
+    document.querySelectorAll('.menu-item.w--current').forEach(activeItem => {
+      activeItem.classList.remove('w--current');
     });
-  }
+    
+    // Add w--current class to the clicked item
+    menuItem.classList.add('w--current');
+      }
 });
