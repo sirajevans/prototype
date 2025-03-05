@@ -188,7 +188,7 @@
         box-shadow: 0 1px 1px #170b3314, 0 0 0 1px var(--border-color), 0 0 #0000, 0 2px 5px #45405214 !important;
     }
     .full-width-divider {
-        border-top: 1px solid var(--border-color) !important;
+        border-top: 0.5px solid var(--border-color) !important;
     }
     .side-menu-divider {
         background-color: #2c2e334a !important;
@@ -269,7 +269,6 @@
     }
     .pod-item-img {
         filter: invert(1), saturate(0) !important;
-        
     }
     .gmaps-embed.new-delivery-map {
         box-shadow: 0 0 0 1px #414349, 0 0 0 5px var(--card-color) !important;
