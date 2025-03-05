@@ -283,4 +283,7 @@
     .multi-drop-btn {
         border-color: var(--border-color) !important;
     }
+    .multi-drop-btn:hover {
+        background-color: transparent !important;
+    }
 }
