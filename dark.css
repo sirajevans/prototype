@@ -60,7 +60,7 @@
     .menu-company-profile {
         background-color: #17181a !important;
     }
-    .menu-company-name, .menu-item, .address-type-btn {
+    .menu-company-name, .menu-item {
         color: var(--white-100) !important;
     }
     .menu-item:hover {
@@ -273,5 +273,8 @@
     }
     .gmaps-embed.new-delivery-map {
         box-shadow: 0 0 0 1px #414349, 0 0 0 5px var(--card-color) !important;
+    }
+    .address-type-btn {
+        color: rgba(255, 255, 255, 0.65) !important
     }
 }

@@ -136,19 +136,3 @@ document.querySelector('.side-menu-body').addEventListener('click', function(e) 
     menuItem.classList.add('w--current');
       }
 });
-
-// test gradient button
-document.addEventListener('DOMContentLoaded', () => {
-  const button = document.querySelector('.gradient-btn');
-  
-  function randomizeAnimation() {
-    const blob1Duration = 5 + Math.random() * 5;
-    const blob2Duration = 5 + Math.random() * 5;
-    
-    button.style.setProperty('--blob1-duration', `${blob1Duration}s`);
-    button.style.setProperty('--blob2-duration', `${blob2Duration}s`);
-  }
-  
-  randomizeAnimation();
-  setInterval(randomizeAnimation, 8000);
-});
