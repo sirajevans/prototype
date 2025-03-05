@@ -178,6 +178,9 @@
     .login-register-form-layout {
         border-bottom: 1px solid #2c2e3369 !important;
     }
+    .user-profile {
+        background-color: var(--card-color) !important;
+    }
     .settings-content-divider {
         background-color: #2c2e3369 !important;
     }
@@ -280,6 +283,7 @@
         box-shadow: 0 1px 1px #170b3326, 0 2px 5px #45405226, inset 0 0 0 1px #f9f9f924 !important;
     }
     .multi-drop-btn {
+        color: white !important;
         border-color: var(--border-color) !important;
     }
     .multi-drop-btn:hover {
