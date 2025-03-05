@@ -67,7 +67,7 @@
         background-color: #151619 !important;
     }
     .menu-item:hover > .menu-item-icon {
-        color: rgba(255, 255, 255, 0.8) !important;
+        color: rgba(255, 255, 255, 0.85) !important;
     }
     .menu-item.w--current {
         background-color: #151619 !important;
@@ -272,6 +272,6 @@
         
     }
     .gmaps-embed.new-delivery-map {
-        box-shadow: 0 0 0 5px var(--card-color) !important;
+        box-shadow: 0 0 0 0.5px #26282D, 0 0 0 5px var(--card-color) !important;
     }
 }
