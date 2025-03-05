@@ -2,68 +2,31 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const sideMenu = document.querySelector(".side-menu");
-  const mainContent = document.querySelector(".main-content");
-  const initialServerState = @json(Cache::get('sideMenuClosed', false));
   const elementsToToggle = document.querySelectorAll(
     ".side-menu, .main-content, .menu-company-name, .menu-item-text, .side-menu-category"
   );
   const tooltips = document.querySelectorAll(".menu-item-tooltip");
 
-  // Function to apply sidebar state
-  function applySidebarState(state) {
-    requestAnimationFrame(() => {
-      elementsToToggle.forEach(element => {
-        if (state === "closed") {
-          element.classList.add("side-menu-closed");
-          if (menuToggle) menuToggle.classList.add("closed");
-          
-          // Show tooltips when menu is closed
-          tooltips.forEach(tooltip => {
-            tooltip.style.display = "flex";
-          });
-        } else {
-          element.classList.remove("side-menu-closed");
-          if (menuToggle) menuToggle.classList.remove("closed");
-          
-          // Hide tooltips when menu is open
-          tooltips.forEach(tooltip => {
-            tooltip.style.display = "";  // Reset to default (or you can use "none")
-          });
-        }
-      });
+  // Function to update tooltips visibility
+  function updateTooltips(isClosed) {
+    tooltips.forEach(tooltip => {
+      tooltip.style.display = isClosed ? "flex" : "";
     });
   }
 
-  // Check multiple storage locations in order of precedence
-  function getSidebarState() {
-    const sessionState = sessionStorage.getItem("sideMenuClosed");
-    const localState = localStorage.getItem("sideMenuClosed");
-    
-    // First check session storage
-    if (sessionState !== null) {
-      return sessionState;
-    }
-    // Then check local storage
-    if (localState !== null) {
-      return localState;
-    }
-    // Finally use server-side state
-    return initialServerState ? "closed" : "open";
-  }
+  // Check stored state
+  const isMenuClosed = localStorage.getItem("sideMenuClosed") === "true";
 
-  // Save state to all storage locations
-  function saveSidebarState(state) {
-    sessionStorage.setItem("sideMenuClosed", state);
-    localStorage.setItem("sideMenuClosed", state);
-    if (typeof Livewire !== 'undefined') {
-      Livewire.emit("toggleSidebar"); // This will update Laravel's cache
-    }
+  // Apply stored state
+  if (isMenuClosed) {
+    menuToggle.classList.add("closed");
+    elementsToToggle.forEach((element) => {
+      element.classList.add("side-menu-closed");
+    });
+    updateTooltips(true);
+  } else {
+    updateTooltips(false);
   }
-
-  // Initialize sidebar state
-  const savedState = getSidebarState();
-  document.documentElement.style.setProperty('--initial-sidebar-state', savedState === "closed" ? "closed" : "open");
-  applySidebarState(savedState);
 
   // Show menu after state is applied
   requestAnimationFrame(() => {
@@ -73,17 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Menu toggle functionality
-  function handleSidebarToggle() {
-    const isClosed = sideMenu.classList.contains("side-menu-closed");
-    const newState = isClosed ? "open" : "closed";
-    
-    applySidebarState(newState);
-    saveSidebarState(newState);
-  }
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("closed");
+    const isClosed = menuToggle.classList.contains("closed");
 
-  if (menuToggle) {
-    menuToggle.addEventListener("click", handleSidebarToggle);
-  }
+    elementsToToggle.forEach((element) => {
+      element.classList.toggle("side-menu-closed");
+    });
+
+    updateTooltips(isClosed);
+    localStorage.setItem("sideMenuClosed", isClosed);
+  });
 
   // Close menu when clicking outside (for mobile)
   const closeMenu = (event) => {
@@ -97,8 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
       !target.classList.contains("menu-toggle");
 
     if (isMenuOpen && isClickOutside) {
-      applySidebarState("closed");
-      saveSidebarState("closed");
+      menuToggle.classList.add("closed");
+      elementsToToggle.forEach((element) => {
+        element.classList.add("side-menu-closed");
+      });
+      updateTooltips(true);
+      localStorage.setItem("sideMenuClosed", "true");
     }
   };
 
@@ -113,43 +80,17 @@ document.addEventListener("DOMContentLoaded", () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
         if (window.innerWidth > 760) {
-          applySidebarState("open");
-          saveSidebarState("open");
+          menuToggle.classList.remove("closed");
+          elementsToToggle.forEach((element) => {
+            element.classList.remove("side-menu-closed");
+          });
+          updateTooltips(false);
+          localStorage.setItem("sideMenuClosed", "false");
         }
       }, 250);
     },
     { passive: true }
   );
-
-  // Listen for Livewire event
-  window.addEventListener("menuToggled", function (event) {
-    const newState = event.detail.state ? "closed" : "open";
-    applySidebarState(newState);
-    saveSidebarState(newState);
-  });
-
-  // Handle Turbo.js navigation
-  document.addEventListener("turbo:load", function () {
-    const currentState = getSidebarState();
-    applySidebarState(currentState);
-  });
-
-  // Ensure consistent state after all resources are loaded
-  window.addEventListener("load", function() {
-    const finalState = getSidebarState();
-    applySidebarState(finalState);
-  });
-
-  // Listen for Livewire page updates
-  if (typeof Livewire !== 'undefined') {
-    document.addEventListener("livewire:load", function () {
-      Livewire.on("menuToggled", (event) => {
-        const newState = event.state ? "closed" : "open";
-        applySidebarState(newState);
-        saveSidebarState(newState);
-      });
-    });
-  }
 });
 
 // Refresh button
@@ -194,9 +135,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Add a single event listener to the parent menu container
 document.addEventListener("DOMContentLoaded", () => {
-  const menuContainer = document.querySelector('.side-menu-body');
-  if (menuContainer) {
-    menuContainer.addEventListener('click', function(e) {
+  const sideMenuBody = document.querySelector('.side-menu-body');
+  if (sideMenuBody) {
+    sideMenuBody.addEventListener('click', function(e) {
       // Check if a menu item was clicked
       const menuItem = e.target.closest('.menu-item');
       if (menuItem && !menuItem.classList.contains('w--current')) {
