@@ -60,7 +60,7 @@
     .menu-company-profile {
         background-color: #17181a !important;
     }
-    .menu-company-name, .menu-item {
+    .menu-company-name, .menu-item, .address-type-btn {
         color: var(--white-100) !important;
     }
     .menu-item:hover {
@@ -191,7 +191,7 @@
         border-top: 1px solid var(--border-color) !important;
     }
     .side-menu-divider {
-        background-color: #2c2e33ae !important;
+        background-color: #2c2e334a !important;
     }
     .card-banner, .carrier-rates-listing-banner {
         background-color: var(--card-color) !important;
@@ -272,6 +272,6 @@
         
     }
     .gmaps-embed.new-delivery-map {
-        box-shadow: 0 0 0 0.5px #26282D, 0 0 0 5px var(--card-color) !important;
+        box-shadow: 0 0 0 1px #414349, 0 0 0 5px var(--card-color) !important;
     }
 }
