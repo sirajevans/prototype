@@ -6,7 +6,7 @@ html, body {
   }
   
   input, textarea {
-    caret-color: #7642f4;
+    caret-color: #5f3df6;
     outline: none;
   }
   
@@ -76,7 +76,7 @@ html, body {
   #clear-dropoff {
     float: right;
     cursor: pointer;
-    color: #7642f4;
+    color: #5f3df6;
   }
   
   #clear-dropoff:hover {
@@ -303,7 +303,7 @@ html, body {
     height: 10px;
     margin-left: 10px;
     border-radius: 10px;
-    background-color: #7642f4;
+    background-color: #5f3df6;
   }
   
   .zone-driver {
@@ -348,7 +348,7 @@ html, body {
   }
   
   .inpt-custom-tag-selection:checked > .lbl-custom-tag-selection {
-    background-color: #7642f4;
+    background-color: #5f3df6;
     color: #fff;
   }
   
@@ -789,7 +789,7 @@ html, body {
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    background-color: #7642f4;
+    background-color: #5f3df6;
     transition: box-shadow 0.2s cubic-bezier(0.45, 0, 0.15, 1);
     text-decoration: none;
     cursor: pointer;
@@ -933,7 +933,7 @@ html, body {
   }
   
   .time-slider-draggable-tab:active {
-    border-color: #7642f4;
+    border-color: #5f3df6;
     box-shadow: 0 2px 5px 0 rgba(23, 11, 51, 0.15);
   }
   
@@ -972,7 +972,7 @@ html, body {
   a.ui-button:active,
   .ui-button:active,
   .ui-button.ui-state-active:hover {
-    border: 1px solid #7642f4 !important;
+    border: 1px solid #5f3df6 !important;
     box-shadow: 0 1px 4px 2px rgba(23, 11, 51, 0.15);
   }
   
@@ -984,7 +984,7 @@ html, body {
   }
   
   .slider-bar.ui-slider-horizontal .ui-slider-handle:focus {
-    border: 1px solid #7642f4 !important;
+    border: 1px solid #5f3df6 !important;
     cursor: grabbing;
   }
   
@@ -1081,7 +1081,7 @@ html, body {
   }
   
   .calendarMonth .calendarDateSelected {
-    background: #7642f4;
+    background: #5f3df6;
     color: #ffffff;
   }
   
@@ -1090,7 +1090,7 @@ html, body {
   }
   
   .calendarMonth .rangeStartDate, .calendarMonth .rangeEndDate, .calendarMonth .inDateRange {
-    background: #7642f4 !important;
+    background: #5f3df6 !important;
     color: #ffffff;
   }
   
@@ -1268,7 +1268,7 @@ html, body {
   
   .daterangepicker td.active,
   .daterangepicker td.active:hover {
-    background: #7642f4;
+    background: #5f3df6;
     color: #ffffff;
     border-radius: 40px !important;
   }
@@ -1279,19 +1279,19 @@ html, body {
   
   .daterangepicker td.in-range {
     border-radius: 0 !important;
-    background: #7642f4 !important;
+    background: #5f3df6 !important;
     color: #ffffff !important;
   }
   
   .daterangepicker td.start-date {
     border-radius: 40px 0 0 40px !important;
-    background: #7642f4 !important;
+    background: #5f3df6 !important;
     color: #ffffff;
   }
   
   .daterangepicker td.end-date {
     border-radius: 0 40px 40px 0 !important;
-    background: #7642f4 !important;
+    background: #5f3df6 !important;
     color: #ffffff;
   }
   
@@ -1321,7 +1321,7 @@ html, body {
     height: 32px;
     color: #fff;
     cursor: pointer;
-    background-color: #7642f4;
+    background-color: #5f3df6;
     border-radius: 8px;
     justify-content: center;
     align-items: center;
@@ -1432,29 +1432,29 @@ html, body {
   .datepicker table tr td.active.highlighted:active,
   .datepicker table tr td.active:active {
     color: #fff;
-    background-color: #7642f4 !important;
-    border-color: #7642f4 !important;
+    background-color: #5f3df6 !important;
+    border-color: #5f3df6 !important;
     border-radius: 40px !important;
   }
   
   .datepicker table tr td.today {
     color: #fff;
-    background-color: #7642f4 !important;
-    border-color: #7642f4 !important;
+    background-color: #5f3df6 !important;
+    border-color: #5f3df6 !important;
     border-radius: 40px !important;
   }
   
   .datepicker table tr td.today:hover {
     color: #fff;
-    background-color: #7642f4 !important;
-    border-color: #7642f4 !important;
+    background-color: #5f3df6 !important;
+    border-color: #5f3df6 !important;
     border-radius: 40px !important;
   }
   
   .datepicker table tr td.day:hover,
   .datepicker table tr td.focused {
     color: #fff;
-    background: #7642f4;
+    background: #5f3df6;
     cursor: pointer;
     border-radius: 40px !important;
   }
@@ -1671,14 +1671,14 @@ html, body {
     top: 1658px;
     right: -50px;
     left: calc(55% + 430px);
-    background-color: #7642f4;
+    background-color: #5f3df6;
   }
   
   .login-left-streak {
     top: 1698px;
     left: -50px;
     right: calc(65% + 405px);
-    background-color: #7642f4;
+    background-color: #5f3df6;
   }
   
   .login-left-streak-outline {
@@ -2020,8 +2020,8 @@ html, body {
   }
   
   input:checked + .toggle {
-    background-color: #7642f4;
-    border: 1px solid #7642f4;
+    background-color: #5f3df6;
+    border: 1px solid #5f3df6;
   }
   
   input:checked + .toggle:before {
@@ -2107,7 +2107,7 @@ html, body {
   }
   
   .select-vehicle-container.checked {
-    border: 1px solid #7642f4;
+    border: 1px solid #5f3df6;
   }
   
   .select-vehicle-container .vehicle-class-radio {
@@ -2264,7 +2264,7 @@ html, body {
   
   .icalendar__today, .scheduled_cal_today {
     color: #fff !important;
-    background: #7642f4 !important;
+    background: #5f3df6 !important;
     border-radius: 40px;
   }
   
@@ -2277,7 +2277,7 @@ html, body {
   .icalendar__days .clicked,
   .scheduled_calendar_tbody .clicked {
     color: #fff !important;
-    background: #7642f4 !important;
+    background: #5f3df6 !important;
     border-radius: 40px;
   }
   
@@ -2580,7 +2580,7 @@ html, body {
   }
   
   .rates-li input[type="radio"]:checked + .rates-container {
-    box-shadow: 0 1px 1px 0 transparent, 0 0 0 1px #7642f4, 0 0 0 0 transparent,
+    box-shadow: 0 1px 1px 0 transparent, 0 0 0 1px #5f3df6, 0 0 0 0 transparent,
         0 2px 5px 0 transparent;
     background-color: #f4f3fea1;
   }
@@ -2749,10 +2749,10 @@ html, body {
   }
   
   .btn-purple-cofirm {
-    background-color: #7642f4 !important;
+    background-color: #5f3df6 !important;
     margin-bottom: 10px;
     color: #fff;
-    border-color: #7642f4;
+    border-color: #5f3df6;
   }
   
   .ship-label-time .text-sm-grey {
@@ -3177,16 +3177,16 @@ html, body {
     top: 5%;
     width: 2px;
     height: 90%;
-    background-color: #7642F4;
+    background-color: #5f3df6;
     border-radius: 0 3px 3px 0;
   }
   
   .menu-item.w--current .menu-item-icon {
-    color: #7642F4;
+    color: #5f3df6;
   }
 
   .menu-item.w--current:hover > .menu-item-icon {
-    color: #7642F4;
+    color: #5f3df6;
   }
   
   .menu-item:hover > .menu-item-icon {
