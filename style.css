@@ -22,6 +22,10 @@ html, body {
     -webkit-appearance: none;
     margin: 0;
   }
+
+  input::placeholder {
+    color: #e8e8e8;
+  }
   
   input[type="number"] {
     -moz-appearance: textfield;
