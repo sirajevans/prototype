@@ -291,4 +291,7 @@
     .multi-drop-btn:hover {
         background-color: transparent !important;
     }
+    .ambient-light-overlay {
+        background-color: var(--body-color) !important;
+    }
 }
