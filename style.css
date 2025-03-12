@@ -66,14 +66,7 @@
     background-size: 14px 14px;
     border-radius: 8px;
   }
-  
-  .primary-btn, .cancel-btn, .list-action-btn, .list-action-btn-purple, .settings-btn-w,
-  .address-type-btn, .menu-item, .side-menu-item, .nav-header, .filter-btn-content,
-  .menu-user-name, .menu-company-name, .btn-w, .btn-p, .btn-g, .context-menu-btn,
-  .table-tab, .modal-tab {
-    user-select: none;
-    -webkit-touch-callout: none;
-  }
+
   
   ::-webkit-scrollbar {
     display: none;
@@ -87,10 +80,6 @@
   
   #clear-dropoff:hover {
     opacity: 80%;
-  }
-  
-  .cancel-btn, .primary-btn {
-    outline: none;
   }
   
   .select-vehicle-fleet-driver-img {
@@ -1650,7 +1639,7 @@
   .ambient-light-1 {
     background: radial-gradient(68% 68% at 55% 30%, rgba(224, 218, 235, 0.08) 0, rgba(141, 120, 165, 2%) 50%, rgba(115, 115, 115, 0) 80%);
   }
-  
+
   .ambient-light-2 {
     background: radial-gradient(50% 50% at 50% 50%, rgba(225, 213, 255, 0.06) 0, rgba(81, 57, 143, 0.02) 80%, rgba(0, 0, 0, 0) 100%);
   }
@@ -3219,7 +3208,7 @@
     -webkit-user-select: none;
   }
 
-  .gradient-btn::before {
+  .primary-btn::before {
     content: "";
     position: absolute;
     top: 0%;
@@ -3234,7 +3223,7 @@
     animation: blob1 15s ease-in-out infinite;
   }
   
-  .gradient-btn::after {
+  .primary-btn::after {
     content: "";
     position: absolute;
     top: -0%;
