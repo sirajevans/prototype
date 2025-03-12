@@ -160,10 +160,10 @@
         color: #949496 !important;
     }
     .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text {
-        color: #949496 !important;
+        color: #ffffff20 !important;
     }
     .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover {
-        color: #9494969f !important;
+        color: #ffffff4a !important;
     }
     .copyright-text, .copyright-spacer, .register-copyright-text {
         color: #ffffff20 !important;
