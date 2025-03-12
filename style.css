@@ -3268,13 +3268,13 @@
   }
 
   @keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% { opacity: 0; filter: blur(10px);}
+    100% { opacity: 1; filter: blur(0px);}
   }
 
   @keyframes fade-out {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% { opacity: 1; filter: blur(0px);}
+    100% { opacity: 0; filter: blur(10px); }
   }
 
   @keyframes light-in {
