@@ -3272,7 +3272,10 @@
     100% { opacity: 1; filter: blur(0px); }
   }
 
-
+  @keyframes fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
 
   /* animation-name: reveal;
   animation-duration: .8s;
