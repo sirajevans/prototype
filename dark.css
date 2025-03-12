@@ -13,10 +13,9 @@
     input:-webkit-autofill:focus, 
     input:-webkit-autofill:active {
         -webkit-box-shadow: 0 0 0 30px var(--card-color) inset !important;
-        -webkit-text-fill-color: var(--text-color) !important;
+        -webkit-text-fill-color: var(--white-100) !important;
         transition: background-color 5000s ease-in-out 0s;
         background-color: var(--card-color) !important;
-        caret-color: var(--text-color);
     }
     body, .grey-100, .grey-200, .settings-section {
       background-color: var(--body-color) !important;
