@@ -3257,3 +3257,16 @@
     0% { opacity: 0; transform: translateY(20%); filter: blur(10px); }
     100% { opacity: 1; transform: translateY(0%); filter: blur(0px); }
   }
+
+  @keyframes fade-in {
+    0% { opacity: 0; filter: blur(10px); }
+    100% { opacity: 1; filter: blur(0px); }
+  }
+
+
+
+  /* animation-name: reveal;
+  animation-duration: .8s;
+  animation-delay: calc(var(--i)* 50ms);
+  animation-timing-function: ease-out;
+  animation-fill-mode: both; */
