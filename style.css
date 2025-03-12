@@ -3278,8 +3278,8 @@
   }
 
   @keyframes light-in {
-    0% { left: -100%; top: -100% }
-    100% { left: 0%; top: 0% }
+    0% { opacity: 0; left: -100%; top: -100%; }
+    100% { opacity: 1; left: 0%; top: 0%; }
   }
 
   /* animation-name: reveal;
