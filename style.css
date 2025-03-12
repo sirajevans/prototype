@@ -1615,10 +1615,6 @@
     width: 2px;
   }
   
-  .cancel-btn, .primary-btn {
-    outline: none;
-  }
-  
   .cancel-btn {
     background-color: white;
   }
