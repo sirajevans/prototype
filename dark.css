@@ -5,7 +5,6 @@
     --white-100: #ffffff;
     --white-200: #ffffffc4;
 }
-
 /* Dark theme styles */
 @media (prefers-color-scheme: dark) {
     input:-webkit-autofill, 
