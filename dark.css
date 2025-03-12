@@ -168,6 +168,9 @@
     .copyright-text, .copyright-spacer, .register-copyright-text {
         color: #ffffff20 !important;
     }
+    .copyright-text:hover {
+        color: #ffffff4a !important;
+    }
     .rates-label, .rates-sla, .rates-eta, .rates-eta-1, .path-link {
         color: #949496 !important;
     }
