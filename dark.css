@@ -8,11 +8,11 @@
 
 /* Dark theme styles */
 @media (prefers-color-scheme: dark) {
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus,
+    input:-webkit-autofill, 
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
     input:-webkit-autofill:active {
-        -webkit-text-fill-color: var(--white-100) !important;
+        -webkit-box-shadow: 0 0 0 30px transparent inset !important;
     }
     body, .grey-100, .grey-200, .settings-section {
       background-color: var(--body-color) !important;
