@@ -1646,7 +1646,20 @@
     overflow-y: hidden;
     white-space: nowrap;
   }
+
+  .ambient-light-1 {
+    background: radial-gradient(68% 68% at 55% 30%, rgba(224, 218, 235, 0.08) 0, rgba(141, 120, 165, 2%) 50%, rgba(115, 115, 115, 0) 80%);
+  }
   
+  .ambient-light-2 {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(225, 213, 255, 0.06) 0, rgba(81, 57, 143, 0.02) 80%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .ambient-light-3 {
+    background: radial-gradient(68% 68% at 55% 30%, rgba(224, 218, 235, 0.02) 0, rgba(132, 41, 246, 0.02) 50%, rgba(115, 115, 115, 0) 80%),
+      radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.06) 0, rgba(115, 115, 115, 0.02) 80%, rgba(0, 0, 0, 0) 100%);
+  }
+
   .login-bkg-container {
     position: fixed;
     left: -100px;
