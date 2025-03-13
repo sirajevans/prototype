@@ -133,8 +133,8 @@
     .form-input, .form-verification-input {
         color: var(--white-100) !important;
         background-color: lch(8.3 1.867 272) !important;
-        border: 0.5px solid lch(13.98 4.707 272) !important;
-        box-shadow: lch(0 0 0 / 0.0) 0px 0px 0px 0px !important;
+        border: 0px solid lch(13.98 4.707 272) !important;
+        box-shadow: lch(13.98 4.707 272) 0px 0px 0px 0.7px !important;
     }
 
     /* text styling */
