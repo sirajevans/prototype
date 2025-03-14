@@ -42,7 +42,10 @@
         border: 0.7px solid lch(13.98 4.707 272) !important;
         box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important;
     }
-    .btn-w:hover, .address-type-btn:hover {
+    .pod-btn:hover {
+        background-color: hsl(224 7% 14% / 1) !important;
+    }
+    .address-type-btn:hover {
         background-color: #17181a !important;
         opacity: 1 !important;
     }
