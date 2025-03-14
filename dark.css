@@ -40,7 +40,7 @@
         border: 0.5px solid lch(13.98 4.707 272) !important;
         box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important;
     }
-    .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon {
+    .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img {
         filter: invert(1) saturate(0) !important;
     }
     .btn-v-divider {
@@ -216,7 +216,8 @@
     .accordion-header, .shortcut-item-text {
         color: var(--white-100) !important;
     }
-    .accordion-arrow, .nav-back-arrow > img, .map-btn > img {
+    .accordion-arrow, .nav-back-arrow > img, .map-btn > img,
+    .pod-btn > img {
         filter: invert(1) saturate(0) !important;
     }
     .side-modal {
