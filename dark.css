@@ -222,15 +222,15 @@
     .side-modal-footer {
         border-top: var(--border-color) !important;
     }
-    .context-menu-modal {
+    .context-menu-modal, .shortcut-suggestions {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 1px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
     }
+    .context-menu-modal-li, .shortcut-suggestions {
+        color: var(--white-100) !important;
+    }
     .context-menu-modal-li:hover {
         background-color: #16171a !important;
-    }
-    .context-menu-modal-li {
-        color: var(--white-100) !important;
     }
     .key-shortcut-w {
         color: #ffffff !important;
