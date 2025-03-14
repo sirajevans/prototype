@@ -132,7 +132,6 @@
     .form-input, .form-verification-input {
         color: var(--white-100) !important;
         background-color: lch(8.3 1.867 272) !important;
-        border: 0px solid lch(13.98 4.707 272) !important;
         box-shadow: lch(13.98 4.707 272) 0px 0px 0px 0.7px !important;
     }
 
@@ -176,7 +175,7 @@
 
     /* miscellaneous styling */
     .focus-effect:focus {
-        box-shadow: #19191c 0px 0px 0px 3px, #333438 0px 0px 0px 0.7px !important;
+        box-shadow: #19191c 0px 0px 0px 3px, lch(13.98 4.707 272) 0px 0px 0px 0.7px !important;
     }
     .login-register-form-layout {
         border-bottom: 1px solid #2c2e3369 !important;
