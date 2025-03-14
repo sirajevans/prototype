@@ -43,7 +43,10 @@
         box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important;
     }
     .pod-btn:hover {
-        background-color: hsl(224 7% 14% / 1) !important;
+        background-color: hsl(224 7% 12% / 1) !important;
+    }
+    .pod-btn:active {
+        background-color: hsl(224 7% 10% / 1) !important;
     }
     .address-type-btn:hover {
         background-color: #17181a !important;
