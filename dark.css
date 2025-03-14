@@ -134,6 +134,12 @@
         background-color: lch(8.3 1.867 272) !important;
         box-shadow: lch(13.98 4.707 272) 0px 0px 0px 0.7px !important;
     }
+    .form-input:hover {
+        box-shadow: hsl(224 12% 20% / 1) 0px 0px 0px 0.7px !important;
+    }
+    .form-input:focus {
+        box-shadow: lch(13.98 4.707 272) 0px 0px 0px 0.7px, #1d1d21 0px 0px 0px 2px !important;
+    }
 
     /* text styling */
     .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
@@ -174,9 +180,6 @@
     }
 
     /* miscellaneous styling */
-    .focus-effect:focus {
-        box-shadow: lch(13.98 4.707 272) 0px 0px 0px 0.7px, #1d1d21 0px 0px 0px 3px !important;
-    }
     .login-register-form-layout {
         border-bottom: 1px solid #36383f69 !important;
     }
