@@ -14,7 +14,6 @@
         -webkit-box-shadow: 0 0 0 30px lch(8.3 1.867 272) inset, lch(13.98 4.707 272) 0px 0px 0px 0.7px !important;
         -webkit-text-fill-color: var(--white-100) !important;
         transition: background-color 5000s ease-in-out 0s;
-        border: 0px solid lch(13.98 4.707 272) !important;
     }
     body, .grey-100, .grey-200, .settings-section {
       background-color: var(--body-color) !important;
@@ -176,10 +175,9 @@
     }
 
     /* miscellaneous styling */
-    /* .focus-effect:focus {
-        box-shadow: #19191c 0px 0px 0px 3px !important;
-        border-color: #333438 !important;
-    } */
+    .focus-effect:focus {
+        box-shadow: #19191c 0px 0px 0px 3px, #333438 0px 0px 0px 0.7px !important;
+    }
     .login-register-form-layout {
         border-bottom: 1px solid #2c2e3369 !important;
     }
