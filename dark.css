@@ -210,7 +210,7 @@
     .accordion {
         border-color: var(--border-color) !important;
     }
-    .accordion-header {
+    .accordion-header, .shortcut-item-text {
         color: var(--white-100) !important;
     }
     .accordion-arrow, .nav-back-arrow > img, .map-btn > img {
@@ -229,7 +229,7 @@
     .context-menu-modal-li, .shortcut-suggestions {
         color: var(--white-100) !important;
     }
-    .context-menu-modal-li:hover {
+    .context-menu-modal-li:hover, .shortcut-suggestions:hover {
         background-color: #16171a !important;
     }
     .key-shortcut-w {
