@@ -28,7 +28,7 @@
     }
     .card, .login-card, .settings-content-container {
         background-color: var(--card-color) !important;
-        box-shadow: 0 0 0 0.5px #26282D;
+        box-shadow: 0 0 0 0.7px #26282D;
     }
     .card-grey, .settings-card {
         background-color: #101012 !important;
