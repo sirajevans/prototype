@@ -11,10 +11,11 @@
     input:-webkit-autofill:hover, 
     input:-webkit-autofill:focus, 
     input:-webkit-autofill:active {
-        -webkit-box-shadow: 0 0 0 30px var(--card-color) inset !important;
+        -webkit-box-shadow: 0 0 0 30px var(--card-color) inset, lch(13.98 4.707 272) 0px 0px 0px 0.7px !important;
         -webkit-text-fill-color: var(--white-100) !important;
         transition: background-color 5000s ease-in-out 0s;
-        background-color: var(--card-color) !important;
+        background-color: lch(8.3 1.867 272) !important;
+        border: 0px solid lch(13.98 4.707 272) !important;
     }
     body, .grey-100, .grey-200, .settings-section {
       background-color: var(--body-color) !important;
