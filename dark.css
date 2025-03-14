@@ -293,7 +293,7 @@
         border-color: var(--border-color) !important;
     }
     .multi-drop-btn:hover {
-        background-color: hsla(0, 0%, 100%, 0.05) !important;
+        background-color: hsla(0, 0%, 100%, 0.04) !important;
     }
     .multi-drop-btn:active {
         background-color: hsla(0, 0%, 100%, 0.03) !important;
