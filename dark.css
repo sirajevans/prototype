@@ -176,10 +176,10 @@
     }
 
     /* miscellaneous styling */
-    .focus-effect:focus {
+    /* .focus-effect:focus {
         box-shadow: #19191c 0px 0px 0px 3px !important;
         border-color: #333438 !important;
-    }
+    } */
     .login-register-form-layout {
         border-bottom: 1px solid #2c2e3369 !important;
     }
