@@ -229,7 +229,10 @@
     .context-menu-modal-li, .shortcut-suggestions {
         color: var(--white-100) !important;
     }
-    .context-menu-modal-li:hover, .shortcut-suggestions:hover {
+    .context-menu-modal-li:hover {
+        background-color: #16171a !important;
+    }
+    .shortcut-suggestions:hover {
         background-color: #16171a !important;
     }
     .key-shortcut-w {
