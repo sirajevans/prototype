@@ -4,6 +4,8 @@
     --border-color: #2C2E33;
     --white-100: #ffffff;
     --white-200: #ffffffc4;
+    --hover: #ffffff;
+    --pressed: #ffffff;
 }
 /* Dark theme styles */
 @media (prefers-color-scheme: dark) {
@@ -39,6 +41,10 @@
         background-color: lch(8.3 1.867 272) !important;
         border: 0.7px solid lch(13.98 4.707 272) !important;
         box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important;
+    }
+    .btn-w:hover, .address-type-btn:hover {
+        background-color: #17181a !important;
+        opacity: 1 !important;
     }
     .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img {
         filter: invert(1) saturate(0) !important;
