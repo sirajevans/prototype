@@ -193,7 +193,7 @@
         background-color: transparent !important;
     }
     .box-shadow-100 {
-        box-shadow: 0 1px 1px #170b3314, 0 0 0 1px var(--border-color), 0 0 #0000, 0 2px 5px #45405214 !important;
+        box-shadow: 0 1px 1px #170b3314, 0 0 0 0.7px var(--border-color), 0 0 #0000, 0 2px 5px #45405214 !important;
     }
     .full-width-divider {
         border-top: 0.5px solid var(--border-color) !important;
@@ -203,7 +203,7 @@
     }
     .card-banner, .carrier-rates-listing-banner {
         background-color: var(--card-color) !important;
-        box-shadow: 0 0 0 1px var(--border-color) !important;
+        box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
     .nd-waypoint-container, .rates-container {
         background-color: lch(8.3 1.867 272) !important;
