@@ -138,7 +138,7 @@
         box-shadow: hsl(224 12% 20% / 1) 0px 0px 0px 0.7px !important;
     }
     .form-input:focus {
-        box-shadow: lch(13.98 4.707 272) 0px 0px 0px 0.7px, #1d1d21 0px 0px 0px 2px !important;
+        box-shadow: hsl(227, 12%, 24%) 0px 0px 0px 0.7px, #1d1d21 0px 0px 0px 2px !important;
     }
 
     /* text styling */
