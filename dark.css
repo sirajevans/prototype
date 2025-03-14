@@ -175,7 +175,7 @@
 
     /* miscellaneous styling */
     .focus-effect:focus {
-        box-shadow: lch(13.98 4.707 272) 0px 0px 0px 0.7px, #19191c 0px 0px 0px 3px !important;
+        box-shadow: lch(13.98 4.707 272) 0px 0px 0px 0.7px, #18181b 0px 0px 0px 3px !important;
     }
     .login-register-form-layout {
         border-bottom: 1px solid #2c2e3369 !important;
