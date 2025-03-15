@@ -38,12 +38,9 @@
     }
     .btn-w, .btn-g, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .settings-placeholder-btn, .address-type-btn.address-type-selected, .nav-back-arrow, .close-modal-btn, .pod-btn, .add-pod-item, .map-btn {
         color: var(--white-100) !important;
-        /* background-color: lch(8.3 1.867 272) !important;
-        border: 0.7px solid lch(13.98 4.707 272) !important;
-        box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important; */
+        border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
-        box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
-    
+        box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .pod-btn:hover, .add-pod-item:hover {
         background-color: var(--hover) !important;
@@ -153,7 +150,7 @@
         box-shadow: hsl(224 12% 20% / 1) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .form-input:focus {
-        box-shadow: hsl(224 12% 20% / 1) 0px 0px 0px 0.7px, hsl(0deg 0% 100% / 4%) 0px 0px 0px 2px !important;
+        box-shadow: hsl(224 12% 20% / 1) 0px 0px 0px 0.7px, hsl(0deg 0% 100% / 4%) 0px 0px 0px 2.7px !important;
     }
 
     /* text styling */
