@@ -4,8 +4,8 @@
     --border-color: #2C2E33;
     --white-100: #ffffff;
     --white-200: #ffffffc4;
-    --hover: #ffffff;
-    --pressed: #ffffff;
+    --hover: hsl(224 7% 12% / 1);
+    --pressed: hsl(224 7% 10% / 1);
 }
 /* Dark theme styles */
 @media (prefers-color-scheme: dark) {
@@ -38,19 +38,22 @@
     }
     .btn-w, .btn-g, .context-menu-btn, .shipment-row-btn, .shipment-row-context-btn, .settings-btn-w, .settings-placeholder-btn, .address-type-btn.address-type-selected, .nav-back-arrow, .close-modal-btn, .pod-btn, .add-pod-item, .map-btn {
         color: var(--white-100) !important;
-        background-color: lch(8.3 1.867 272) !important;
+        /* background-color: lch(8.3 1.867 272) !important;
         border: 0.7px solid lch(13.98 4.707 272) !important;
-        box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important;
+        box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important; */
+        background-color: lch(8.3 1.867 272) !important;
+        box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+    
     }
-    .pod-btn:hover {
-        background-color: hsl(224 7% 12% / 1) !important;
+    .pod-btn:hover, .add-pod-item:hover {
+        background-color: var(--hover) !important;
     }
-    .pod-btn:active {
-        background-color: hsl(224 7% 10% / 1) !important;
+    .pod-btn:active, .add-pod-item:active {
+        background-color: var(--pressed) !important;
     }
     .address-type-btn:hover {
         background-color: #17181a !important;
-        opacity: 1 !important;
+        color: rgba(255, 255, 255, 1) !important;
     }
     .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img {
         filter: invert(1) saturate(0) !important;
