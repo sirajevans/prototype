@@ -271,7 +271,9 @@
     .accordion-arrow, .nav-back-arrow > img, 
     .map-btn > img,
     .pod-btn > img,
-    .context-menu-btn > img {
+    .pod-item-img,
+    .context-menu-btn > img,
+    #fleet_btn > img {
         filter: invert(1) saturate(0) !important;
     }
     .side-modal {
@@ -294,7 +296,7 @@
         color: #ffffff !important;
         background-color: #2d2b32 !important;
     }
-    .carrier-l-logo, .address-type-btn-icon {
+    .carrier-l-logo, .rates-icon, .address-type-btn-icon {
         filter: invert(1) saturate(0) !important;
     }
     .listing-search-suggestions {
@@ -329,9 +331,6 @@
     }
     .center-modal {
         background-color: var(--card-color) !important;
-    }
-    .pod-item-img {
-        filter: invert(1), saturate(0) !important;
     }
     .gmaps-embed.new-delivery-map {
         box-shadow: 0 0 0 1px #414349, 0 0 0 5px var(--card-color) !important;
