@@ -183,7 +183,7 @@
     .table-cell.action-btn-container {
         background-image: linear-gradient(90deg, #0F101100 86%, var(--card-color) 91%) !important;
     }
-    .table-pagination, .center-modal-footer {
+    .table-pagination {
         background-color: var(--card-color) !important;
         border-top: 1px solid #1A1C21 !important;
     }
@@ -337,6 +337,11 @@
     }
     .center-modal {
         background-color: var(--modal-card-color) !important;
+        box-shadow: 0 0 0 0.7px hsl(223.93deg 7.77% 24.02%), #00000026 0px 4px 40px,  #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
+    }
+    .center-modal-footer {
+        background-color: var(--modal-card-color) !important;
+        border-top: 1px solid hsl(223.93deg 7.77% 24.02%) !important;
     }
     .gmaps-embed.new-delivery-map {
         box-shadow: 0 0 0 1px #414349, 0 0 0 5px var(--card-color) !important;
