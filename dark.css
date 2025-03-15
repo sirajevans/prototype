@@ -5,7 +5,7 @@
     --white-100: #ffffff;
     --white-200: #ffffffc4;
     --hover: hsl(224 7% 11% / 1);
-    --pressed: hsl(224 7% 10% / 1);
+    --pressed: hsl(224 7% 9% / 1);
 }
 /* Dark theme styles */
 @media (prefers-color-scheme: dark) {
@@ -48,7 +48,9 @@
     .close-modal-btn,
     .pod-btn,
     .add-pod-item,
-    .map-btn {       
+    .map-btn,
+    .nd-waypoint-container,
+    .rates-container {       
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -67,7 +69,9 @@
     .close-modal-btn:hover,
     .pod-btn:hover,
     .add-pod-item:hover,
-    .map-btn:hover {
+    .map-btn:hover,
+    .nd-waypoint-container:hover,
+    .rates-container:hover {
         background-color: var(--hover) !important;
     }
 
@@ -83,7 +87,9 @@
     .close-modal-btn:active,
     .pod-btn:active,
     .add-pod-item:active,
-    .map-btn:active {
+    .map-btn:active,
+    .nd-waypoint-container:active,
+    .rates-container:active {
         background-color: var(--pressed) !important;
     }
     .address-type-btn:hover {
@@ -254,11 +260,6 @@
     .card-banner, .carrier-rates-listing-banner {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color) !important;
-    }
-    .nd-waypoint-container, .rates-container {
-        background-color: lch(8.3 1.867 272) !important;
-        border: 0.5px solid lch(13.98 4.707 272) !important;
-        box-shadow: lch(0 0 0 / 0.06) 0px 4px 4px -1px, lch(0 0 0 / 0.12) 0px 1px 1px 0px !important;
     }
     .accordion {
         border-color: var(--border-color) !important;
