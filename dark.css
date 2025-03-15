@@ -257,7 +257,7 @@
     .side-menu-divider {
         background-color: #2c2e334a !important;
     }
-    .card-banner, .carrier-rates-listing-banner {
+    .card-banner, .carrier-rates-listing-banner, .notice-banner-grey {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
