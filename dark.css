@@ -288,6 +288,9 @@
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
     }
+    .center-modal-container {
+        background-color: hsl(224.56deg 4.79% 6.56% / 45%) !important;
+    }
     .context-menu-modal-li, .shortcut-suggestions {
         color: var(--white-100) !important;
     }
