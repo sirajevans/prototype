@@ -219,10 +219,10 @@
     .form-label {
         color: #949496 !important;
     }
-    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text {
+    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link {
         color: #949496 !important;
     }
-    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover {
+    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover {
         color: #ffffff !important;
     }
     .copyright-text, .copyright-spacer, .register-copyright-text {
