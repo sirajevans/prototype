@@ -2,6 +2,7 @@
     --body-color: #090909;
     /* --body-color: #080808; */
     --card-color: #101012;
+    --modal-card-color: hsl(224.34deg 5.68% 11.6%);
     /* --card-color: #0F1011; */
     --border-color: #2C2E33;
     --white-100: #ffffff;
@@ -288,9 +289,6 @@
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
     }
-    .center-modal-container {
-        background-color: hsl(224.56deg 4.79% 6.56% / 45%) !important;
-    }
     .context-menu-modal-li, .shortcut-suggestions {
         color: var(--white-100) !important;
     }
@@ -334,8 +332,11 @@
         background-color: #222225 !important;
         color: var(--white-100) !important;
     }
+    .center-modal-container {
+        background-color: hsl(224.56deg 4.79% 6.56% / 45%) !important;
+    }
     .center-modal {
-        background-color: var(--card-color) !important;
+        background-color: var(--modal-card-color) !important;
     }
     .gmaps-embed.new-delivery-map {
         box-shadow: 0 0 0 1px #414349, 0 0 0 5px var(--card-color) !important;
