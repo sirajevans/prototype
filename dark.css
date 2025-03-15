@@ -23,7 +23,6 @@
     body, .grey-100, .grey-200, .settings-section {
       background-color: var(--body-color) !important;
       color: var(--white-100) !important;
-      caret-color: var(--white-100) !important;
     }
     .main-card {
         background-color: var(--card-color) !important;
@@ -193,6 +192,7 @@
         color: var(--white-100) !important;
         background-color: lch(8.3 1.867 272) !important;
         box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+        caret-color: var(--white-100) !important;    
     }
     .form-input:hover {
         box-shadow: hsl(224 12% 20% / 1) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
