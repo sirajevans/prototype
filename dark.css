@@ -336,12 +336,12 @@
         background-color: hsl(224.56deg 4.79% 6.56% / 45%) !important;
     }
     .center-modal {
-        background-color: var(--modal-card-color) !important;
-        box-shadow: 0 0 0 0.7px hsl(223.93deg 7.77% 24.02%), #00000026 0px 4px 40px,  #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
+        background-color: var(--card-color) !important;
+        box-shadow: 0 0 0 0.7px var(--border-color), #00000026 0px 4px 40px,  #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
     }
     .center-modal-footer {
-        background-color: var(--modal-card-color) !important;
-        border-top: 1px solid hsl(223.93deg 7.77% 24.02%) !important;
+        background-color: var(--card-color) !important;
+        border-top: 1px solid var(--border-color) !important;
     }
     .gmaps-embed.new-delivery-map {
         box-shadow: 0 0 0 1px #414349, 0 0 0 5px var(--card-color) !important;
