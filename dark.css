@@ -267,8 +267,10 @@
     .accordion-header, .shortcut-item-text {
         color: var(--white-100) !important;
     }
-    .accordion-arrow, .nav-back-arrow > img, .map-btn > img,
-    .pod-btn > img {
+    .accordion-arrow, .nav-back-arrow > img, 
+    .map-btn > img,
+    .pod-btn > img,
+    .context-menu-btn > img {
         filter: invert(1) saturate(0) !important;
     }
     .side-modal {
