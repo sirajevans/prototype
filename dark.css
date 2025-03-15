@@ -1,5 +1,6 @@
 :root {
-    --body-color: #080808;
+    --body-color: hsl(224.56deg 4.79% 6.56%);
+    /* --body-color: #080808; */
     --card-color: #0F1011;
     --border-color: #2C2E33;
     --white-100: #ffffff;
