@@ -21,7 +21,8 @@
     }
     body, .grey-100, .grey-200, .settings-section {
       background-color: var(--body-color) !important;
-      color: var(--white-100);
+      color: var(--white-100) !important;
+      caret-color: var(--white-100) !important;
     }
     .main-card {
         background-color: var(--card-color) !important;
