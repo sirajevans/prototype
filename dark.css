@@ -140,7 +140,7 @@
     }
     .menu-item-count {
         background: #9b95c31a !important;
-        color: #54536F !important;
+        color: #949496 !important;
     }
     .side-menu-category {
         color: #949496 !important;
@@ -333,11 +333,11 @@
         color: var(--white-100) !important;
     }
     .center-modal-container {
-        background-color: hsl(224.56deg 4.79% 6.56% / 45%) !important;
+        background-color: hsl(224.56deg 4.79% 6.56% / 50%) !important;
     }
     .center-modal {
         background-color: var(--card-color) !important;
-        box-shadow: 0 0 0 0.7px var(--border-color), #00000026 0px 4px 40px,  #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
+        box-shadow: 0 0 0 0.7px var(--border-color), #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
     }
     .center-modal-footer {
         background-color: var(--card-color) !important;
@@ -365,4 +365,5 @@
     .ambient-light-overlay {
         background-color: var(--body-color) !important;
     }
+
 }
