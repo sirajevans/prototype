@@ -333,7 +333,7 @@
         color: var(--white-100) !important;
     }
     .center-modal-container {
-        background-color: hsl(224.56deg 5% 12% / 50%) !important;
+        background-color: hsl(0deg 0% 0% / 60%) !important;
     }
     .center-modal {
         background-color: var(--card-color) !important;
