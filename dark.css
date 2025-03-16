@@ -1,6 +1,7 @@
 :root {
     --body-color: #090909;
-    --card-color: #101012;
+    --card-color: hsl(240, 6%, 9%);
+    --card-grey-color: #101012;
     --modal-card-color: hsl(224.34deg 5.68% 11.6%);
     --border-color: hsl(223, 8%, 13%);
     --white-100: #ffffff;
@@ -34,7 +35,7 @@
         box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
     .card-grey, .settings-card {
-        background-color: hsl(240 6% 6% / 1) !important;
+        background-color: var(--card-grey-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
     .btn-w,
