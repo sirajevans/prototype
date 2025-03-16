@@ -33,11 +33,11 @@
     }
     .card, .login-card, .settings-content-container {
         background-color: var(--card-color) !important;
-        box-shadow: 0 0 0 0.7px #26282D;
+        box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
     .card-grey, .settings-card {
         background-color: #101012 !important;
-        box-shadow: 0 0 0 0.7px #26282D;
+        box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
     .btn-w,
     .btn-g,
