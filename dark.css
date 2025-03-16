@@ -191,6 +191,9 @@
         background-color: var(--card-color) !important;
         border-top: 1px solid #1A1C21 !important;
     }
+    .table-cell-waybill-col.active {
+        border-right-color: var(--border-color) !important;
+    }
 
     /* form styling */
     .form-input, .form-verification-input {
@@ -207,7 +210,7 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500 {
+    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500, h1 {
         color: var(--white-100) !important;
     }
     .description-text {
