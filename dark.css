@@ -1,10 +1,8 @@
 :root {
     --body-color: #090909;
-    /* --body-color: #080808; */
     --card-color: #101012;
     --modal-card-color: hsl(224.34deg 5.68% 11.6%);
-    /* --border-color: #2C2E33; */
-    --border-color: #26282D;
+    --border-color: hsl(223, 8%, 13%);
     --white-100: #ffffff;
     --white-200: #ffffffc4;
     --hover: hsl(224 7% 11% / 1);
