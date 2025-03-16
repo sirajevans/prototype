@@ -41,6 +41,7 @@
     }
     .btn-w,
     .btn-g,
+    .context-menu-btn.with-text,
     .shipment-row-btn,
     .shipment-row-context-btn,
     .settings-btn-w,
@@ -60,6 +61,7 @@
     }
     .btn-w:hover,
     .btn-g:hover,
+    .context-menu-btn.with-text:hover,
     .shipment-row-btn:hover,
     .shipment-row-context-btn:hover,
     .settings-btn-w:hover,
@@ -76,6 +78,7 @@
     }
     .btn-w:active,
     .btn-g:active,
+    .context-menu-btn.with-text:active,
     .context-menu-btn:active,
     .shipment-row-btn:active,
     .shipment-row-context-btn:active,
@@ -232,7 +235,7 @@
     .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link {
         color: #949496 !important;
     }
-    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover {
+    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover, .path-link:hover {
         color: #ffffff !important;
         text-decoration: none !important;
     }
