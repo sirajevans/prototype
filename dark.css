@@ -228,6 +228,7 @@
     }
     .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover {
         color: #ffffff !important;
+        text-decoration: none !important;
     }
     .copyright-text, .copyright-spacer, .register-copyright-text {
         color: #ffffff20 !important;
