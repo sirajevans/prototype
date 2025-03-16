@@ -3,7 +3,7 @@
     /* --body-color: #080808; */
     --card-color: #101012;
     --modal-card-color: hsl(224.34deg 5.68% 11.6%);
-    /* --card-color: #0F1011; */
+    --card-color: #0F1011;
     --border-color: #2C2E33;
     --white-100: #ffffff;
     --white-200: #ffffffc4;
@@ -226,7 +226,7 @@
     .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link {
         color: #949496 !important;
     }
-    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover {
+    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover, .path-link:hover {
         color: #ffffff !important;
         text-decoration: none !important;
     }
@@ -236,7 +236,7 @@
     .copyright-text:hover {
         color: #ffffff4a !important;
     }
-    .rates-label, .rates-sla, .rates-eta, .rates-eta-1, .path-link {
+    .rates-label, .rates-sla, .rates-eta, .rates-eta-1 {
         color: #949496 !important;
     }
 
@@ -297,7 +297,7 @@
         background-color: #16171a !important;
     }
     .context-menu-modal-divider {
-        background-color: var(--border-color) !important;
+        background-color: hsl(223, 7%, 19%, 75%) !important;
     }
     .key-shortcut-w {
         color: #ffffff !important;
@@ -369,5 +369,7 @@
     .ambient-light-overlay {
         background-color: var(--body-color) !important;
     }
-
+    .shipment-map {
+        background-color: var(--hover) !important;
+    }
 }
