@@ -227,7 +227,7 @@
     .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link {
         color: #949496 !important;
     }
-    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover, .path-link:hover {
+    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover {
         color: #ffffff !important;
         text-decoration: none !important;
     }
@@ -237,7 +237,7 @@
     .copyright-text:hover {
         color: #ffffff4a !important;
     }
-    .rates-label, .rates-sla, .rates-eta, .rates-eta-1 {
+    .rates-label, .rates-sla, .rates-eta, .rates-eta-1, .path-link {
         color: #949496 !important;
     }
 
