@@ -30,11 +30,11 @@
         border-top: 1px solid var(--border-color) !important;
         background-color: var(--card-color) !important;
     }
-    .card, .login-card, .settings-content-container {
+    .card, .login-card, .settings-card {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
-    .card-grey, .settings-card {
+    .card-grey, .settings-content-container {
         background-color: var(--card-grey-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
