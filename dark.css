@@ -122,9 +122,6 @@
         color: var(--white-100) !important;
         background-color: #151619 !important;
     }
-    .side-menu {
-        background-color: var(--body-color) !important;
-    }
     .menu-company-profile {
         background-color: #17181a !important;
     }
