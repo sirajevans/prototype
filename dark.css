@@ -276,7 +276,7 @@
     .pod-btn > img,
     .pod-item-img,
     .context-menu-btn > img,
-    #fleet_btn > img {
+    #fleet_btn .a-right {
         filter: invert(1) saturate(0) !important;
     }
     .side-modal {
