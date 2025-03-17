@@ -396,7 +396,9 @@
         background-color: #2d2b32 !important;
     }
     .listing-badge-tooltip {
-        background-color: var(--card-color) !important;
+        border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
+        background-color: lch(8.3 1.867 272) !important;
+        box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .settings-card-li {
         border-bottom: 1px solid var(--border-color) !important;
