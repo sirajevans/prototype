@@ -262,24 +262,21 @@
     .listing-badge.approved {
         filter: invert(1) hue-rotate(198deg) !important;
         background-color: #b8f6cc !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+        color: hsl(0deg 0% 0% / 100%) !important;
     }
     .listing-badge.paid {
         filter: invert(1) brightness(1.5) saturate(0) !important;
         color: hsl(0deg 0% 0% / 80%) !important;
     }
-    /* .listing-badge.collecting {
-        background-color: #f5eaff82 !important;
-        color: hsla(0, 0%, 100%, 0.8) !important;
+    .listing-badge.collecting {
+        filter: invert(1) hue-rotate(180deg) brightness(1.5) !important;
     }
     .listing-badge.collected {
-        background-color: #f5eaff82 !important;
-        color: hsla(0, 0%, 100%, 0.8) !important;
+        filter: invert(1) hue-rotate(180deg) brightness(1.5) !important;
     }
     .listing-badge.failed {
-        background-color: #ffdbd782 !important;
-        color: hsla(0, 0%, 100%, 0.8) !important;
-    } */
+        filter: invert(1) hue-rotate(172deg) brightness(1.3) !important;
+    }
 
 
     /* miscellaneous styling */
