@@ -474,6 +474,6 @@
         box-shadow: 0 1px 1px rgba(23, 11, 51, .08), 0 0 0 1px var(--border-color), 0 0 transparent, 0 2px 5px rgba(69, 64, 82, .08) !important;
     }
     .ship-label {
-        box-shadow: 0px 0px 0px 0.7px ;
+        box-shadow: 0px 0px 0px 0.7px var(--border-color) !important;
     }
 }
