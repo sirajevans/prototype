@@ -225,7 +225,7 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500, .download-link, h1 {
+    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-l, .text-m, .text-sm, .text-sm-500, .download-link, h1 {
         color: var(--white-100) !important;
     }
     .description-text {
@@ -369,7 +369,7 @@
     .list-btn-icon {
         filter: invert(1) saturate(0) !important;
     }
-    .context-menu-modal, .shortcut-suggestions {
+    .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
     }
