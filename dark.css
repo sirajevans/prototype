@@ -251,6 +251,25 @@
         color: #949496 !important;
     }
 
+    /* listing badges */
+    .listing-badge {
+        background-color: #edeef72b !important;
+    }
+    .listing-badge.requested {
+        color: #ffffff !important;
+    }
+    .listing-badge.pending {
+        background-color: #fef0c833 !important;
+        color: #ffffff !important;
+    }
+    .listing-badge.approved {
+        filter: invert(1) hue-rotate(198deg);
+    }
+    .listing-badge.paid {
+        color: #ffffff !important;
+    }
+
+
     /* miscellaneous styling */
     .login-register-form-layout {
         border-bottom: 1px solid #36383f69 !important;
