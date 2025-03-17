@@ -436,7 +436,6 @@
   top: 0;
   background: white;
   padding: 12px 20px;
-  color: #1a1b25;
   text-transform: uppercase;
   font-size: .6875rem;
   font-weight: 500;
@@ -469,7 +468,6 @@
   padding: 12px 20px;
   font-size: 0.875rem;
   font-weight: 400;
-  color: #1a1b25;
   white-space: nowrap;
 }
 
