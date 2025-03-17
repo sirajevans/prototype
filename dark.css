@@ -213,7 +213,7 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500, h1 {
+    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500, .download-link, h1 {
         color: var(--white-100) !important;
     }
     .description-text {
@@ -222,7 +222,7 @@
     .register-feature-p {
         color: #949496 !important
     }
-    .text-sm-grey, .settings-paragraph, .checkbox-container {
+    .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container {
         color: #949496 !important;
     }
     .text-sm-light-grey {
