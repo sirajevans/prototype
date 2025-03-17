@@ -2653,6 +2653,10 @@
     }
   }
   
+  #s_card {
+    
+  }
+
   #type_btn #outbound.btn-icon-left {
     background-image: url("../images/outbound-icon-v2.svg");
   }

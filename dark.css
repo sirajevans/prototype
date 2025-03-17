@@ -188,10 +188,10 @@
         border-bottom: 1px solid #1A1C21 !important;
     }
     .table-row.shipments:hover {
-        background-color: hsl(225deg 8% 5%) !important
+        background-color: hsl(225deg 8% 5%) !important;
     }
     .table-row:hover > .table-cell-waybill-col {
-        background-color: hsl(225deg 8% 5%) !important
+        background-color: hsl(225deg 8% 5%) !important;
     }
     .table-cell-waybill-col {
         background-color: var(--card-color) !important;
@@ -208,6 +208,20 @@
     }
     .table-cell-waybill-col.active {
         border-right-color: var(--border-color) !important;
+    }
+
+    /* old orders table styling */
+    .table-content thead th:first-child {
+        background: var(--card-color) !important;
+    }
+    .table-content thead th.table-second-column {
+        background: linear-gradient(90deg, var(--card-color) 90%, rgba(255, 255, 255, 0%) 100%) !important;
+    }
+    .clickable-row {
+        border-top: 1px solid var(--border-color) !important;
+    }
+    .clickable-row:hover {
+        background-color: hsl(225deg 8% 5%) !important;
     }
 
     /* form styling */
