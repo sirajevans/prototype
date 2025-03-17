@@ -275,7 +275,7 @@
         filter: invert(1) hue-rotate(180deg) brightness(1.5) !important;
     }
     .listing-badge.failed {
-        filter: invert(1) hue-rotate(172deg) brightness(1.3) !important;
+        filter: invert(1) hue-rotate(185deg) brightness(1.3) !important;
     }
     .listing-badge.in-transit {
         filter: invert(1) hue-rotate(172deg) brightness(1.3) !important;
@@ -289,7 +289,7 @@
         color: hsl(0deg 0% 0% / 80%) !important;
     }
     .listing-badge.attempted {
-        filter: invert(1) hue-rotate(172deg) brightness(1.3) !important;
+        filter: invert(1) hue-rotate(185deg) brightness(1.3) !important;
     }
     .listing-badge.returning {
         filter: invert(1) brightness(1.5) saturate(0) !important;
