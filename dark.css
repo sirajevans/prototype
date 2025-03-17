@@ -179,7 +179,7 @@
         background-color: hsl(225deg 8% 8% / 80%) !important
     }
     .table-row:hover > .table-cell-waybill-col {
-        background-color: hsl(225deg 8% 8% / 80%) !important
+        background-color: hsl(225deg 8% 8%) !important
     }
     .table-cell-waybill-col {
         background-color: var(--card-color) !important;
