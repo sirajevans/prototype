@@ -53,7 +53,8 @@
     .map-btn,
     .nd-waypoint-container,
     .rates-container,
-    .wallet-balance {       
+    .wallet-balance,
+    .collection-date-btn {       
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -74,7 +75,8 @@
     .map-btn:hover,
     .nd-waypoint-container:hover,
     .rates-container:hover,
-    .wallet-balance:hover {
+    .wallet-balance:hover,
+    .collection-date-btn:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -93,7 +95,8 @@
     .map-btn:active,
     .nd-waypoint-container:active,
     .rates-container:active,
-    .wallet-balance:active {
+    .wallet-balance:active,
+    .collection-date-btn:active {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn {
@@ -469,5 +472,8 @@
     .checkmark {
         background-color: transparent !important;
         box-shadow: 0 1px 1px rgba(23, 11, 51, .08), 0 0 0 1px var(--border-color), 0 0 transparent, 0 2px 5px rgba(69, 64, 82, .08) !important;
+    }
+    .ship-label {
+        box-shadow: 0px 0px 0px 0.7px ;
     }
 }
