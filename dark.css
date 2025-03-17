@@ -277,7 +277,46 @@
     .listing-badge.failed {
         filter: invert(1) hue-rotate(172deg) brightness(1.3) !important;
     }
+    .listing-badge.in-transit {
+        filter: invert(1) hue-rotate(172deg) brightness(1.3) !important;
+    }
+    .listing-badge.delivering {
+        filter: invert(1) brightness(1.5) saturate(0) !important;
+        color: hsl(0deg 0% 0% / 80%) !important;
+    }
 
+    .listing-badge.delivered {
+        filter: invert(1) brightness(1.5) saturate(0) !important;
+        color: hsl(0deg 0% 0% / 80%) !important;
+    }
+
+    .listing-badge.attempted {
+        filter: invert(1) hue-rotate(172deg) brightness(1.3) !important;
+    }
+    .listing-badge.returning {
+        filter: invert(1) brightness(1.5) saturate(0) !important;
+        color: hsl(0deg 0% 0% / 80%) !important;
+    }
+    .listing-badge.returned {
+        filter: invert(1) brightness(1.5) saturate(0) !important;
+        color: hsl(0deg 0% 0% / 80%) !important;
+    }
+    .listing-badge.cancelled {
+        filter: invert(1) brightness(1.5) saturate(0) !important;
+        color: hsl(0deg 0% 0% / 80%) !important;
+    }
+    .listing-badge.refunded {
+        filter: invert(1) brightness(1.5) saturate(0) !important;
+        color: hsl(0deg 0% 0% / 80%) !important;
+    }
+    .listing-badge.exception {
+        filter: invert(1) brightness(1.5) saturate(0) !important;
+        color: hsl(0deg 0% 0% / 80%) !important;
+    }
+    .listing-badge.outbound, .listing-badge.inbound, .listing-badge.return, .listing-badge.transfer {
+        filter: invert(1) brightness(1.5) saturate(0) !important;
+        color: hsl(0deg 0% 0% / 80%) !important;
+    }
 
     /* miscellaneous styling */
     .login-register-form-layout {
