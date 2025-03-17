@@ -211,6 +211,9 @@
     }
 
     /* old orders table styling */
+    .table-content {
+        color: var(--white-100) !important;
+    }
     .table-content thead th:first-child {
         background: var(--card-color) !important;
     }
