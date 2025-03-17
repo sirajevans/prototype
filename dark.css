@@ -224,7 +224,7 @@
         background-color: var(--card-color) !important;
     }
     .table-second-column {
-        background: linear-gradient(90deg, var(--card-color) 90%, rgba(255, 255, 255, 0%) 100%);
+        background: linear-gradient(90deg, var(--card-color) 90%, rgba(255, 255, 255, 0%) 100%) !important;
     }
     .clickable-row {
         border-top: 1px solid var(--border-color) !important;
