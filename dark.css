@@ -214,11 +214,14 @@
     .table-content {
         color: var(--white-100) !important;
     }
-    .table-content thead th:first-child {
+    .table-content thead th:first-child, .table-content tbody td:first-child {
         background: var(--card-color) !important;
     }
     .table-content thead th.table-second-column {
         background: linear-gradient(90deg, var(--card-color) 90%, rgba(255, 255, 255, 0%) 100%) !important;
+    }
+    .table-content thead th {
+        background-color: var(--card-color) !important;
     }
     .clickable-row {
         border-top: 1px solid var(--border-color) !important;
