@@ -152,7 +152,7 @@
     }
 
     /* table styling */
-    .table-tabs, .table-search {
+    .table-tabs, .table-search, .order-search-input {
         background-color: var(--card-color) !important;
     }
     .table-tab {
