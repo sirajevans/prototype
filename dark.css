@@ -252,10 +252,8 @@
     }
 
     /* listing badges */
-    .listing-badge {
-        background-color: #edeef72b !important;
-    }
     .listing-badge.requested {
+        background-color: #edeef72b !important;
         color: #ffffff !important;
     }
     .listing-badge.pending {
@@ -263,7 +261,8 @@
         color: #ffffff !important;
     }
     .listing-badge.approved {
-        filter: invert(1) hue-rotate(198deg);
+        background-color: #b8f6cc !important;
+        filter: invert(1) hue-rotate(198deg) !important;
     }
     .listing-badge.paid {
         color: #ffffff !important;
