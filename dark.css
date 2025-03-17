@@ -418,7 +418,7 @@
         background-color: #222225 !important;
         color: var(--white-100) !important;
     }
-    .center-modal-container {
+    .center-modal-container, .side-modal-container  {
         background-color: hsl(0deg 0% 0% / 60%) !important;
     }
     .center-modal {
