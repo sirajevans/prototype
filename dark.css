@@ -52,7 +52,8 @@
     .add-pod-item,
     .map-btn,
     .nd-waypoint-container,
-    .rates-container {       
+    .rates-container,
+    .wallet-balance {       
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -72,7 +73,8 @@
     .add-pod-item:hover,
     .map-btn:hover,
     .nd-waypoint-container:hover,
-    .rates-container:hover {
+    .rates-container:hover,
+    .wallet-balance:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -90,7 +92,8 @@
     .add-pod-item:active,
     .map-btn:active,
     .nd-waypoint-container:active,
-    .rates-container:active {
+    .rates-container:active,
+    .wallet-balance:active {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn {
