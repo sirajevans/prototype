@@ -448,4 +448,7 @@
     .shipment-map {
         background-color: var(--hover) !important;
     }
+    .btn-v-divider {
+        background-color: var(--border-color) !important;
+    }
 }
