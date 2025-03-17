@@ -357,12 +357,6 @@
     .list-btn-icon {
         filter: invert(1) saturate(0) !important;
     }
-    .side-modal {
-        background-color: var(--card-color) !important;
-    }
-    .side-modal-footer {
-        border-top: var(--border-color) !important;
-    }
     .context-menu-modal, .shortcut-suggestions {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
@@ -421,11 +415,11 @@
     .center-modal-container, .side-modal-container  {
         background-color: hsl(0deg 0% 0% / 60%) !important;
     }
-    .center-modal {
+    .center-modal, .side-modal {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
     }
-    .center-modal-footer {
+    .center-modal-footer, .side-modal-footer {
         background-color: var(--card-color) !important;
         border-top: 1px solid var(--border-color) !important;
     }
