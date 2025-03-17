@@ -367,6 +367,12 @@
     .context-menu-modal-li:hover, .shortcut-item:hover {
         background-color: #16171a !important;
     }
+    .context-menu-modal-li.critical {
+        color: #fa1e49 !important;
+    }
+    .context-menu-modal-li.critical:hover {
+        background: #fa1e490f !important;
+    }
     .context-menu-modal-divider {
         background-color: hsl(223, 7%, 19%, 75%) !important;
     }
