@@ -254,18 +254,32 @@
     /* listing badges */
     .listing-badge.requested {
         background-color: #edeef72b !important;
-        color: #ffffff !important;
+        color: hsla(0, 0%, 100%, 0.8) !important;
     }
     .listing-badge.pending {
         background-color: #fef0c833 !important;
-        color: #ffffff !important;
+        color: hsla(0, 0%, 100%, 0.8) !important;
     }
     .listing-badge.approved {
-        background-color: #b8f6cc !important;
         filter: invert(1) hue-rotate(198deg) !important;
+        background-color: #b8f6cc !important;
+        color: hsla(0, 0%, 100%, 0.8) !important;
     }
     .listing-badge.paid {
-        color: #ffffff !important;
+        background-color: #edeef72b !important;
+        color: hsla(0, 0%, 100%, 0.8) !important;
+    }
+    .listing-badge.collecting {
+        background-color: #f5eaff82 !important;
+        color: hsla(0, 0%, 100%, 0.8) !important;
+    }
+    .listing-badge.collected {
+        background-color: #f5eaff82 !important;
+        color: hsla(0, 0%, 100%, 0.8) !important;
+    }
+    .listing-badge.failed {
+        background-color: #ffdbd782 !important;
+        color: hsla(0, 0%, 100%, 0.8) !important;
     }
 
 
