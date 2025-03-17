@@ -176,10 +176,10 @@
         border-bottom: 1px solid #1A1C21 !important;
     }
     .table-row.shipments:hover {
-        background-color: hsl(225deg 8% 8% / 80%) !important
+        background-color: hsl(225deg 8% 5%) !important
     }
     .table-row:hover > .table-cell-waybill-col {
-        background-color: hsl(225deg 8% 8%) !important
+        background-color: hsl(225deg 8% 5%) !important
     }
     .table-cell-waybill-col {
         background-color: var(--card-color) !important;
