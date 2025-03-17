@@ -213,7 +213,7 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500, h1 {
+    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-m, .text-sm, .text-sm-500, h1, .checkbox-container {
         color: var(--white-100) !important;
     }
     .description-text {
@@ -450,5 +450,9 @@
     }
     .btn-v-divider {
         background-color: var(--border-color) !important;
+    }
+    .checkmark {
+        background-color: transparent !important;
+        box-shadow: 0 1px 1px rgba(23, 11, 51, .08), 0 0 0 1px var(--border-color), 0 0 transparent, 0 2px 5px rgba(69, 64, 82, .08) !important;
     }
 }
