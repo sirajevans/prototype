@@ -434,6 +434,7 @@
         background-color: hsl(0deg 0% 0% / 60%) !important;
     }
     .center-modal, .side-modal {
+        border: none !important;
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
     }
