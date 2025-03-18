@@ -2553,7 +2553,7 @@
   }
   
   .shipment-loader {
-    min-height: 50vh;
+    min-height: calc(100vh - 200px);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2654,7 +2654,7 @@
   }
   
   #s_card {
-    
+
   }
 
   #type_btn #outbound.btn-icon-left {

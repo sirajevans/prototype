@@ -54,7 +54,8 @@
     .nd-waypoint-container,
     .rates-container,
     .wallet-balance,
-    .collection-date-btn {       
+    .collection-date-btn,
+    .delivery-overview-btn-section {       
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -76,7 +77,8 @@
     .nd-waypoint-container:hover,
     .rates-container:hover,
     .wallet-balance:hover,
-    .collection-date-btn:hover {
+    .collection-date-btn:hover,
+    .delivery-overview-btn-section:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -96,7 +98,8 @@
     .nd-waypoint-container:active,
     .rates-container:active,
     .wallet-balance:active,
-    .collection-date-btn:active {
+    .collection-date-btn:active,
+    .delivery-overview-btn-section:hover {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn {
@@ -257,7 +260,7 @@
     .register-feature-p {
         color: #949496 !important
     }
-    .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container {
+    .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .list-item-p {
         color: #949496 !important;
     }
     .text-sm-light-grey {
