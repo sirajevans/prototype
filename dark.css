@@ -276,10 +276,7 @@
     .description-text, .list-item-p, .delivery-timeline-p, .timeline-eta-complete {
         color: var(--white-200) !important;
     }
-    .register-feature-p {
-        color: #949496 !important
-    }
-    .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container {
+    .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text {
         color: #949496 !important;
     }
     .text-sm-light-grey {
