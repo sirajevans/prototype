@@ -271,7 +271,8 @@
     .register-feature-p, .text-sm-grey, 
     .settings-paragraph, .settings-card-subheading, 
     .checkbox-container, .delivery-summary-display-text, 
-    .delivery-summary-text, .pod-details {
+    .delivery-summary-text, .pod-details, 
+    .order-original-address-text {
         color: #949496 !important;
     }
     .text-sm-light-grey {
