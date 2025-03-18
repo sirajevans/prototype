@@ -394,7 +394,7 @@
     .btn-icon-left,
     .sp-upload-content,
     .sp-remove-content,
-    .sp-swiper-btn-l {
+    .sp-btn-l-icon {
         filter: invert(1) saturate(0) !important;
     }
     .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu {
