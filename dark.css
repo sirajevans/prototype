@@ -389,7 +389,8 @@
     .list-icon,
     .settings-cc-icon,
     .btn-icon-left,
-    .sp-upload-content {
+    .sp-upload-content,
+    .sp-remove-content {
         filter: invert(1) saturate(0) !important;
     }
     .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu {
