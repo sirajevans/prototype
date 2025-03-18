@@ -538,4 +538,7 @@
     .gradient-right {
         background-image: linear-gradient(90deg, #fff0, hsl(224.29deg 6.59% 9.78%));
     }
+    .s-loader {
+        filter: invert(1) brightness(2) saturate(0) !important;
+    }
 }
