@@ -55,7 +55,8 @@
     .rates-container,
     .wallet-balance,
     .collection-date-btn,
-    .delivery-overview-btn-section {       
+    .delivery-overview-btn-section,
+    .fullwidth-btn {       
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -78,7 +79,8 @@
     .rates-container:hover,
     .wallet-balance:hover,
     .collection-date-btn:hover,
-    .delivery-overview-btn-section:hover {
+    .delivery-overview-btn-section:hover,
+    .fullwidth-btn:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -99,7 +101,8 @@
     .rates-container:active,
     .wallet-balance:active,
     .collection-date-btn:active,
-    .delivery-overview-btn-section:hover {
+    .delivery-overview-btn-section:active,
+    .fullwidth-btn:active {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn {
@@ -116,11 +119,8 @@
         background-color: #17181a !important;
         color: rgba(255, 255, 255, 1) !important;
     }
-    .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img {
+    .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img, .delivery-overview-btn-icon {
         filter: invert(1) saturate(0) !important;
-    }
-    .btn-v-divider {
-        background-color: #18171b !important;
     }
 
     /* nav styling */
@@ -371,7 +371,7 @@
         box-shadow: 0 1px 1px #170b3314, 0 0 0 0.7px var(--border-color), 0 0 #0000, 0 2px 5px #45405214 !important;
     }
     .full-width-divider {
-        border-top: 0.5px solid var(--border-color) !important;
+        border-top: 0.7px solid var(--border-color) !important;
     }
     .side-menu-divider {
         background-color: #2c2e334a !important;
@@ -464,7 +464,7 @@
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
     }
-    .center-modal-footer, .side-modal-footer {
+    .center-modal-footer, .side-modal-footer, .card-footer-section {
         background-color: var(--card-color) !important;
         border-top: 1px solid var(--border-color) !important;
     }
@@ -497,7 +497,7 @@
     .shipment-map {
         background-color: var(--hover) !important;
     }
-    .btn-v-divider {
+    .btn-v-divider, .horizontal-divider {
         background-color: var(--border-color) !important;
     }
     .checkmark {
