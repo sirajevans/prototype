@@ -363,7 +363,7 @@
     .box-shadow-100 {
         box-shadow: 0 1px 1px #170b3314, 0 0 0 0.7px var(--border-color), 0 0 #0000, 0 2px 5px #45405214 !important;
     }
-    .full-width-divider, .brand-grid-content {
+    .full-width-divider, .brand-grid-content, .status-preview-content {
         border-top: 0.7px solid var(--border-color) !important;
     }
     .side-menu-divider {
@@ -525,5 +525,9 @@
     .brand-preview,
     .sp-wrapper {
         filter: invert(1) !important;
+    }
+    .sp-header,
+    .sp-body {
+        background-color: var(--card-color) !important;
     }
 }
