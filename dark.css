@@ -529,4 +529,7 @@
     .timeline-tick-img {
         filter: invert(1) saturate(0) brightness(2) !important;
     }
+    .overview-driver-img {
+        border-color: var(--card-color) !important;
+    }
 }
