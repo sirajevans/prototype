@@ -121,6 +121,7 @@
     .address-type-btn:hover {
         background-color: #17181a !important;
         color: rgba(255, 255, 255, 1) !important;
+        box-shadow: 0px 0px 0px 0.7px #17181a !important;
     }
     .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img, .delivery-overview-btn-icon {
         filter: invert(1) saturate(0) !important;
