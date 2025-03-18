@@ -530,7 +530,8 @@
         filter: invert(1) !important;
     }
     .sp-header,
-    .sp-body {
+    .sp-body,
+    .status-preview-content {
         background-color: var(--card-color) !important;
     }
 }
