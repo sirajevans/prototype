@@ -56,7 +56,10 @@
     .collection-date-btn,
     .delivery-overview-btn-section,
     .delivery-timeline-container,       
-    .fullwidth-btn { 
+    .fullwidth-btn,
+    .sp-swiper-btn-r,
+    .sp-swiper-btn-l,
+    .sp-shop-btn { 
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
