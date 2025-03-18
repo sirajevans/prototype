@@ -254,16 +254,16 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-l, .text-m, .text-sm, .text-sm-500, .download-link, h1 {
+    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-l, .text-m, .text-sm, .text-sm-500, .download-link, .delivery-timeline-h1 ,h1 {
         color: var(--white-100) !important;
     }
-    .description-text {
+    .description-text, .list-item-p, .delivery-timeline-p {
         color: var(--white-200) !important;
     }
     .register-feature-p {
         color: #949496 !important
     }
-    .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .list-item-p {
+    .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container {
         color: #949496 !important;
     }
     .text-sm-light-grey {
@@ -509,5 +509,8 @@
     }
     .ship-label {
         box-shadow: 0px 0px 0px 0.7px var(--border-color) !important;
+    }
+    .timeline-tick-img {
+        filter: invert(1) saturate(0) brightness(2) !important;
     }
 }
