@@ -254,40 +254,16 @@
     }
 
     /* text styling */
-    h1, .login-footer-text, .login-heading, 
-    .register-feature-h, .settings-heading, 
-    .settings-subheading, .settings-card-heading, 
-    .settings-card-p, .text-display-xxl, 
-    .text-display-xl, .text-display-l, 
-    .text-l, .text-m, 
-    .text-sm, .text-sm-500, 
-    .download-link, .delivery-timeline-h1,
-    .list-item-h1 {
-        color: var(--white-100) !important;
+    h1, .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-l, .text-m, .text-sm, .text-sm-500, .download-link, .delivery-timeline-h1, .list-item-h1 { 
+        color: var(--white-100) !important; 
     }
     .description-text, .list-item-p, .delivery-timeline-p, .timeline-eta-complete {
         color: var(--white-200) !important;
     }
-    .register-feature-p, .text-sm-grey, 
-    .settings-paragraph, .settings-card-subheading, 
-    .checkbox-container, .delivery-summary-display-text, 
-    .delivery-summary-text, .pod-details, 
-    .order-original-address-text {
+    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link, .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text, .pod-details, .order-original-address-text, #clear-dropoff, .text-sm-light-grey, .t-header-text, .form-label { 
         color: #949496 !important;
     }
-    .text-sm-light-grey {
-        color: #949496 !important;
-    }
-    .t-header-text {
-        color: #949496 !important;
-    }
-    .form-label {
-        color: #949496 !important;
-    }
-    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link {
-        color: #949496 !important;
-    }
-    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover, .path-link:hover {
+    .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover, .path-link:hover, #clear-dropoff:hover {
         color: #ffffff !important;
         text-decoration: none !important;
     }
