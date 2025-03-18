@@ -373,7 +373,7 @@
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
-    .accordion, .share-link-flex-container, .status-preview-content {
+    .accordion, .share-link-flex-container, .status-preview-content, .sp-logo {
         border-color: var(--border-color) !important;
     }
     .accordion-header, .shortcut-item-text {
