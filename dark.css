@@ -59,7 +59,8 @@
     .fullwidth-btn,
     .sp-swiper-btn-r,
     .sp-swiper-btn-l,
-    .sp-shop-btn { 
+    .sp-shop-btn,
+    .list-action-btn { 
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -84,7 +85,8 @@
     .collection-date-btn:hover,
     .delivery-overview-btn-section:hover,
     .delivery-timeline-container:hover,
-    .fullwidth-btn:hover {
+    .fullwidth-btn:hover,
+    .list-action-btn:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -107,7 +109,8 @@
     .collection-date-btn:active,
     .delivery-overview-btn-section:active,
     .delivery-timeline-container:active,
-    .fullwidth-btn:active {
+    .fullwidth-btn:active,
+    .list-action-btn:active {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn, .more-action-btn {
@@ -456,7 +459,7 @@
     .center-modal-container, .side-modal-container, .overlay  {
         background-color: hsl(0deg 0% 0% / 60%) !important;
     }
-    .center-modal, .side-modal, .side-popup {
+    .center-modal, .side-modal, .side-popup, .popup-shimmer {
         border: none !important;
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
