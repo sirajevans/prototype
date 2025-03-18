@@ -405,7 +405,8 @@
     #fleet_btn .a-right,
     .list-btn-icon,
     .copy-link-btn,
-    .list-icon {
+    .list-icon,
+    .settings-cc-icon {
         filter: invert(1) saturate(0) !important;
     }
     .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu {
@@ -456,10 +457,6 @@
     }
     .settings-card-li:last-child {
         border-color: transparent !important;
-    }
-    .settings-cc-icon {
-        box-shadow: 0 0 0 1px var(--border-color) !important;
-        background-color: var(--body-color) !important;
     }
     .input-preset {
         background-color: #28282b !important;
