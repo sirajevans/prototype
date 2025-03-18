@@ -56,7 +56,8 @@
     .wallet-balance,
     .collection-date-btn,
     .delivery-overview-btn-section,
-    .fullwidth-btn {       
+    .delivery-timeline-container,       
+    .fullwidth-btn { 
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -80,6 +81,7 @@
     .wallet-balance:hover,
     .collection-date-btn:hover,
     .delivery-overview-btn-section:hover,
+    .delivery-timeline-container:hover,
     .fullwidth-btn:hover {
         background-color: var(--hover) !important;
     }
@@ -102,6 +104,7 @@
     .wallet-balance:active,
     .collection-date-btn:active,
     .delivery-overview-btn-section:active,
+    .delivery-timeline-container:active,
     .fullwidth-btn:active {
         background-color: var(--pressed) !important;
     }
