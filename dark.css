@@ -254,10 +254,26 @@
     }
 
     /* text styling */
-    .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-l, .text-m, .text-sm, .text-sm-500, .download-link, .delivery-timeline-h1 ,h1 {
+    h1,
+    .login-footer-text, 
+    .login-heading, 
+    .register-feature-h, 
+    .settings-heading, 
+    .settings-subheading, 
+    .settings-card-heading, 
+    .settings-card-p, 
+    .text-display-xxl, 
+    .text-display-xl, 
+    .text-display-l, 
+    .text-l, 
+    .text-m, 
+    .text-sm, 
+    .text-sm-500, 
+    .download-link, 
+    .delivery-timeline-h1 {
         color: var(--white-100) !important;
     }
-    .description-text, .list-item-p, .delivery-timeline-p {
+    .description-text, .list-item-p, .delivery-timeline-p, .timeline-eta-complete {
         color: var(--white-200) !important;
     }
     .register-feature-p {
