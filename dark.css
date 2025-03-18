@@ -526,10 +526,16 @@
     .overview-driver-img {
         border-color: var(--card-color) !important;
     }
-    .eta-status-banner {
+    .eta-status-banner, .order-address-container {
         color: var(--white-100) !important;
-        background-color: lch(8.3 1.867 272) !important;
+        background-color: hsl(224.29deg 6.59% 9.78%) !important;
         box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
         caret-color: var(--white-100) !important; 
+    }
+    .gradient-left {
+        background-image: linear-gradient(90deg, hsl(224.29deg 6.59% 9.78%), #fff0);
+    }
+    .gradient-right {
+        background-image: linear-gradient(90deg, #fff0, hsl(224.29deg 6.59% 9.78%));
     }
 }
