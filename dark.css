@@ -45,7 +45,6 @@
     .shipment-row-context-btn,
     .settings-btn-w,
     .settings-placeholder-btn,
-    .address-type-btn.address-type-selected,
     .nav-back-arrow,
     .close-modal-btn,
     .pod-btn,
@@ -122,6 +121,11 @@
         background-color: #17181a !important;
         color: rgba(255, 255, 255, 1) !important;
         box-shadow: 0px 0px 0px 0.7px #17181a !important;
+    }
+    .address-type-btn.address-type-selected {
+        color: var(--white-100) !important;
+        background-color: lch(8.3 1.867 272) !important;
+        box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img, .delivery-overview-btn-icon {
         filter: invert(1) saturate(0) !important;
