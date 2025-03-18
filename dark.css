@@ -408,7 +408,8 @@
     .pod-item-img,
     .context-menu-btn > img,
     #fleet_btn .a-right,
-    .list-btn-icon {
+    .list-btn-icon,
+    .copy-link-btn {
         filter: invert(1) saturate(0) !important;
     }
     .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu {
@@ -475,7 +476,7 @@
     .center-modal-container, .side-modal-container  {
         background-color: hsl(0deg 0% 0% / 60%) !important;
     }
-    .center-modal, .side-modal {
+    .center-modal, .side-modal, .side-popup {
         border: none !important;
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
@@ -528,5 +529,11 @@
     }
     .overview-driver-img {
         border-color: var(--card-color) !important;
+    }
+    .eta-status-banner {
+        color: var(--white-100) !important;
+        background-color: lch(8.3 1.867 272) !important;
+        box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+        caret-color: var(--white-100) !important; 
     }
 }
