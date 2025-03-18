@@ -3238,6 +3238,14 @@
     animation: blob2 18s ease-in-out infinite;
   }
 
+  #greeting-text {
+    animation-name: reveal;
+    animation-duration: 500ms;
+    animation-delay: 80ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+
   @keyframes blob1 {
     0%, 100% { opacity: 0.2; transform: scale(0.7) translateX(-15%) translateY(-20%); }
     10% { opacity: 0.5; transform: scale(0.9) translateX(-5%) translateY(-10%); }
