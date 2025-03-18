@@ -3238,8 +3238,8 @@
     animation: blob2 18s ease-in-out infinite;
   }
 
-  #greeting-text {
-    animation-name: reveal;
+  #greeting-text, .menu-company-name {
+    animation-name: fade-in;
     animation-duration: 500ms;
     animation-delay: 80ms;
     animation-timing-function: ease-out;
