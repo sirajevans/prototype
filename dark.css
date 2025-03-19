@@ -535,4 +535,7 @@
     .sp-header, .sp-body, .status-preview-content {
         background-color: var(--card-color) !important;
     }
+    .toggle {
+        background-color: var(--border-color) !important;
+    }
 }
