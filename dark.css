@@ -396,7 +396,8 @@
     .settings-cc-icon,
     .sp-upload-content,
     .sp-remove-content,
-    .sp-btn-l-icon {
+    .sp-btn-l-icon,
+    .eye-closed {
         filter: invert(1) saturate(0) !important;
     }
     .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu {

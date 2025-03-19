@@ -672,7 +672,6 @@ th {
   right: 0;
   bottom: 0;
   background-color: #e8eaf3;
-  border: 1px solid #d1d5e0;
   transition: .1s;
   border-radius: 34px;
 }
@@ -680,20 +679,21 @@ th {
 .toggle:before {
   position: absolute;
   content: "";
-  height: 22px;
-  width: 22px;
+  height: 14px;
+  width: 14px;
   background-color: white;
   transition: .1s;
   border-radius: 50%;
+  top: 3px;
+  left: 3px;
 }
 
 input:checked + .toggle {
   background-color: #7642f4;
-  border: 1px solid #7642f4;
 }
 
 input:checked + .toggle:before {
-  transform: translateX(23.8px);
+  transform: translateX(13.8px);
 }
 
 /* ======= Delivery summary ======= */
