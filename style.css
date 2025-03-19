@@ -3104,7 +3104,7 @@
     box-shadow: 0px 0px 0px 0.7px rgba(0, 0, 0, 0.15);
   }
 
-  #greeting-text, .menu-company-name {
+  #greeting-text {
     animation-name: fade-in;
     animation-duration: 500ms;
     animation-delay: 80ms;
