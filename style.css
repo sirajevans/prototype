@@ -3206,9 +3206,6 @@
   .overflow-container.active-card {
     height: calc(100% - 67px);
   }
-  .sp-remove-content {
-    background-image: url('../images/remove-uploaded-file-icon.svg');
-  }
   .multi-drop-btn {
     grid-column-gap: 6px;
     grid-row-gap: 6px;
