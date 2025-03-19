@@ -386,6 +386,7 @@
     .map-btn > img,
     .pod-btn > img,
     .pod-item-img,
+    .refresh-rates-container > img,
     #fleet_btn .a-right,
     .list-btn-icon,
     .copy-link-btn,
@@ -529,7 +530,7 @@
     .brand-preview, .sp-wrapper {
         filter: invert(1) !important;
     }
-    .sp-header, .sp-body, .status-preview-content {
+    .sp-header, .sp-body, .status-preview-content, .refresh-rates {
         background-color: var(--card-color) !important;
     }
     .toggle {
