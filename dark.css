@@ -542,4 +542,7 @@
     input:checked + .toggle {
         background-color: #7642f4 !important;
     }
+    #carrier-rates > .rates-li > label.rates-container > img {
+        filter: invert(1) brightness(1.5) saturate(0);
+      }
 }
