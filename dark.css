@@ -538,4 +538,7 @@
     .toggle {
         background-color: var(--border-color) !important;
     }
+    input:checked + .toggle {
+        background-color: #7642f4 !important;
+    }
 }
