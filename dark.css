@@ -39,6 +39,7 @@
         box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
     .btn-w,
+    .btn-g,
     .context-menu-btn.with-text,
     .shipment-row-btn,
     .shipment-row-context-btn,
@@ -66,6 +67,7 @@
         box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .btn-w:hover,
+    .btn-g:hover,
     .context-menu-btn.with-text:hover,
     .shipment-row-btn:hover,
     .shipment-row-context-btn:hover,
@@ -88,6 +90,7 @@
         background-color: var(--hover) !important;
     }
     .btn-w:active,
+    .btn-g:active,
     .context-menu-btn.with-text:active,
     .context-menu-btn:active,
     .shipment-row-btn:active,
