@@ -764,3 +764,8 @@ select {
 .card-content::-webkit-scrollbar {
   display: none;
 }
+
+.hint:hover .hint-text {
+  opacity: 1;
+  transform: translateY(-5px);
+}
