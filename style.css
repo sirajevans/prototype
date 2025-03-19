@@ -3209,14 +3209,6 @@
   .sp-remove-content {
     background-image: url('../images/remove-uploaded-file-icon.svg');
   }
-  .switch-wrapper {
-    width: 43px;
-    height: 20px;
-  }
-  .toggle:before {
-    height: 18px;
-    width: 17px;
-  }
   .multi-drop-btn {
     grid-column-gap: 6px;
     grid-row-gap: 6px;
