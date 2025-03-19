@@ -391,13 +391,8 @@
   }
   
   @-moz-document url-prefix() {
-    .gm-style {
-        height: calc(100% + 30px) !important;
-    }
-  
-    .gm-style .gm-style-iw-d {
-        padding: 0 !important;
-    }
+    .gm-style { height: calc(100% + 30px) !important; }
+    .gm-style .gm-style-iw-d { padding: 0 !important; }
   }
   
   .gm-style {
@@ -558,11 +553,7 @@
   }
   
   .order-list-row:hover .table-second-column {
-    background: linear-gradient(
-        90deg,
-        rgba(244, 244, 250, 1) 90%,
-        rgba(255, 255, 255, 0%) 100%
-    );
+    background: linear-gradient(90deg, rgba(244, 244, 250, 1) 90%, rgba(255, 255, 255, 0%) 100%);
   }
   
   .order-list-row:hover .list-item-checkbox {
@@ -1101,35 +1092,6 @@
     border-radius: 0 !important;
   }
   
-  .toast-container {
-    position: absolute;
-    min-width: 260px;
-    grid-column-gap: 12px;
-    grid-row-gap: 12px;
-    opacity: 0;
-    background-color: #20212f;
-    border-radius: 8px;
-    padding: 12px 16px 12px 14px;
-    margin-bottom: 8px;
-    align-items: center;
-    display: flex;
-    bottom: 0;
-    right: 0;
-    transform: translateY(100%);
-    transition: transform 0.2s cubic-bezier(0.731, 0.13, 0.164, 1.153),
-        opacity 0.2s linear;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25), 0 0 0 1px #262733;
-  }
-  
-  .toast-container.active {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  
-  .toast-contents {
-    flex: 1;
-  }
-  
   .toast-loader-container {
     width: 280px;
     height: 3px;
@@ -1141,33 +1103,16 @@
   }
   
   @keyframes toast-pulse {
-    0% {
-        opacity: 0.3;
-    }
-  
-    33% {
-        opacity: 1;
-    }
-  
-    66% {
-        opacity: 0.3;
-    }
-  
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 0.3; }
+    33% { opacity: 1; }
+    66% { opacity: 0.3; }
+    100% { opacity: 1; }
   }
   
   .toast-loader {
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.25) 40%,
-        rgba(255, 255, 255, 1) 40%,
-        rgba(255, 255, 255, 1) 60%,
-        rgba(255, 255, 255, 0.25) 60%
-    );
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.25) 40%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0.25) 60%);
     background-size: 300% 100%;
     border-radius: 4px;
     animation: toast-loader 1s linear infinite;
@@ -1175,13 +1120,8 @@
   }
   
   @keyframes toast-loader {
-    0% {
-        background-position: 100% 50%;
-    }
-  
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   
   .drop-off-container .form-row-container.order_id,
@@ -1898,9 +1838,7 @@
   }
   
   @keyframes fullView {
-    100% {
-        width: 100%;
-    }
+    100% { width: 100%; }
   }
   
   .animate-shimmer {
@@ -1910,13 +1848,8 @@
   }
   
   @keyframes shimmer {
-    0% {
-        background-position: -1000px 0;
-    }
-  
-    100% {
-        background-position: 1000px 0;
-    }
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
   }
   
   .delivery-summary-text {
@@ -2573,14 +2506,7 @@
   .rates-icon-fallback, .rates-m-fallback, .rates-sm-fallback {
     background-size: 600px 44px !important;
     background: rgb(91, 97, 110, 0.05);
-    background-image: linear-gradient(
-        90deg,
-        rgb(91, 97, 110, 0.05) 0,
-        rgb(91, 97, 110, 0) 25%,
-        rgb(91, 97, 110, 0.1) 50%,
-        rgb(91, 97, 110, 0) 75%,
-        rgb(91, 97, 110, 0.05) 100%
-    );
+    background-image: linear-gradient(90deg, rgba(91, 97, 110, 0.05) 0, rgba(91, 97, 110, 0) 25%, rgba(91, 97, 110, 0.1) 50%, rgba(91, 97, 110, 0) 75%, rgba(91, 97, 110, 0.05) 100%);
     background-repeat: no-repeat;
     animation-name: shimmer-fallback;
     animation-duration: 4s;
@@ -2593,16 +2519,8 @@
   }
   
   @keyframes shimmer-fallback {
-    0% {
-        background-position: -600px 0;
-    }
-    100% {
-        background-position: 600px 0;
-    }
-  }
-  
-  #s_card {
-
+    0% { background-position: -600px 0; }
+    100% { background-position: 600px 0; }
   }
 
   #type_btn #outbound.btn-icon-left {
@@ -2896,12 +2814,8 @@
   }
   
   @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); }
   }
   
   #add-shortcut-popup .settings-popup .address-type-btn {
@@ -3302,10 +3216,6 @@
   .toggle:before {
     height: 18px;
     width: 17px;
-  }
-  .toast-container {
-    margin-bottom: 16px;
-    margin-right: 16px;
   }
   .multi-drop-btn {
     grid-column-gap: 6px;
