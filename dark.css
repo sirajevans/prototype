@@ -545,4 +545,8 @@
     #carrier-rates > .rates-li > label.rates-container > img {
         filter: invert(1) brightness(1.5) saturate(0);
       }
+    .rates-li input[type="radio"]:checked + .rates-container {
+        box-shadow: 0 1px 1px 0 transparent, 0 0 0 0.7px hsl(258deg 97% 57% / 60%), 0 0 0 0 transparent, 0 2px 5px 0 transparent !important;
+        background-color: hsl(258deg 37% 57% / 10%) !important;
+    }
 }

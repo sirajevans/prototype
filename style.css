@@ -2078,8 +2078,7 @@ img.address-type-btn-icon {
   height: 0;
 }
 .rates-li input[type="radio"]:checked + .rates-container {
-  box-shadow: 0 1px 1px 0 transparent, 0 0 0 1px #6727fc, 0 0 0 0 transparent,
-      0 2px 5px 0 transparent;
+  box-shadow: 0 1px 1px 0 transparent, 0 0 0 0.7px #6727fc, 0 0 0 0 transparent, 0 2px 5px 0 transparent;
   background-color: #f4f3fea1;
 }
 .rates-icon-fallback {
