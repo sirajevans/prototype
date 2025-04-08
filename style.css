@@ -63,12 +63,10 @@ select {
 #clear-dropoff {
   float: right;
   cursor: pointer;
-  color: #54536f;
-  opacity: 50%;
-  transition: opacity 80ms linear;
+  color: var(--dark-slate-blue);
 }
 #clear-dropoff:hover {
-  opacity: 100%;
+  opacity: 80%;
 }
 .select-vehicle-fleet-driver-img {
   position: relative;
@@ -124,9 +122,6 @@ select {
 .delivery-overview-btn-container .btn-cancle-overview:disabled {
   opacity: 0.7;
   cursor: not-allowed !important;
-}
-.filter-btn-content {
-  color: #170b33;
 }
 .form-textarea-container .form-textarea {
   height: 75px;
@@ -1459,39 +1454,6 @@ button.applyBtn.btn.btn-sm.btn-primary {
 label {
   margin-bottom: 0 !important;
 }
-.checkbox-container input {
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-.checkmark:active {
-  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
-      0 1px 3px 0 rgba(23, 11, 51, 0.15);
-}
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-.checkbox-container .checkmark:after {
-  left: 4.5px;
-  top: 2px;
-  width: 5px;
-  height: 8px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-.checkmark-text {
-  padding-left: 12px;
-  align-items: center;
-  font-weight: 400;
-  font-size: 14px;
-  color: #54536f;
-  line-height: 14px;
-  white-space: nowrap;
-}
 .popup-shimmer-wrapper {
   width: 0;
   animation: fullView 0.5s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1537,13 +1499,13 @@ label {
   margin-top: 15px;
   margin-bottom: 33px;
 }
-@keyframes fullView {
-  100% { width: 100%; }}
 .animate-shimmer {
   animation: shimmer 2s infinite linear;
   background: linear-gradient(to right, #e8e7f0 4%, #f5f4fb 25%, #e8e7f0 36%);
   background-size: 1000px 100%;
 }
+@keyframes fullView {
+  100% { width: 100%; }}
 @keyframes shimmer {
   0% { background-position: -1000px 0; }  100% { background-position: 1000px 0; }}
 .delivery-summary-text {
@@ -2230,16 +2192,6 @@ img.address-type-btn-icon {
   top: 10px;
   right: 10px;
 }
-.signature-pod {
-  display: block;
-  width: 100%;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-#pod_delivery_details .pod-signature .signature-pod {
-  height: 300px;
-}
 #driver-comment {
   height: auto;
   padding: 12px;
@@ -2313,9 +2265,6 @@ img.address-type-btn-icon {
   list-style: none;
   padding-left: 0;
   margin: 0;
-}
-.checkmark:has(.checkmark-text) {
-  justify-content: space-between;
 }
 #filter_modal_container .parent-child-container .checkbox-container.child {
   margin: 14px 0;
@@ -2546,6 +2495,54 @@ img.address-type-btn-icon {
 .menu-item:hover > .menu-item-icon {
   color: #1a1a1a;
 }
+.menu-item {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.menu-item-count::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #16132a0d;
+  z-index: -1;
+}
+.menu-item .menu-item-count {
+  background-image: linear-gradient(90deg,#6727fc 0%,hsl(267, 100%, 62%) 25%,#6727fc 50%,hsl(267, 100%, 62%) 75%,#6727fc 100%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: color 0.3s ease;
+}
+.menu-item:hover .menu-item-count {
+  color: transparent;
+  animation: walletGradientText 2s infinite linear;
+}
+.menu-item:hover .menu-item-count::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+  animation: walletGradientOverlay 1.5s 1 forwards;
+}
+.menu-item:not(:hover) .menu-item-count::before {
+  content: none; /* Remove the element when not hovering */
+}
+@keyframes walletGradientText {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+@keyframes walletGradientOverlay {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
 .menu-toggle {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -2690,50 +2687,6 @@ img.address-type-btn-icon {
 .position-static {
   position: static;
 }
-.menu-item-count::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #16132a0d;
-  z-index: -1;
-}
-.menu-item .menu-item-count {
-  background-image: linear-gradient(90deg,#6727fc 0%,hsl(267, 100%, 62%) 25%,#6727fc 50%,hsl(267, 100%, 62%) 75%,#6727fc 100%);
-  background-size: 200% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  transition: color 0.3s ease;
-}
-.menu-item:hover .menu-item-count {
-  color: transparent;
-  animation: walletGradientText 2s infinite linear;
-}
-.menu-item:hover .menu-item-count::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
-  z-index: 1;
-  pointer-events: none;
-  animation: walletGradientOverlay 1.5s 1 forwards;
-}
-.menu-item:not(:hover) .menu-item-count::before {
-  content: none; /* Remove the element when not hovering */
-}
-@keyframes walletGradientText {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 200% 0%; }
-}
-@keyframes walletGradientOverlay {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
 
 /* -------- init_style.css merged -------- */
 .tooltip {
@@ -2871,6 +2824,10 @@ img.address-type-btn-icon {
   background: #7642f4 !important;
   color: #ffffff !important;
 }
+.checkbox-container.nested {
+  margin-left: 14px;
+}
+/* ---- Checkmark styling start ---- */
 .checkbox-container {
   position: relative;
   display: flex;
@@ -2882,13 +2839,6 @@ img.address-type-btn-icon {
   cursor: pointer;
   margin-bottom: 0px;
   height: 16px;
-}
-.checkbox-container.nested {
-  margin-left: 14px;
-}
-.checkbox-container:active > .checkmark {
-  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
-    0 1px 3px 0 rgba(23, 11, 51, 0.15);
 }
 .checkbox-container input[type="checkbox"] {
   opacity: 0;
@@ -2907,31 +2857,35 @@ img.address-type-btn-icon {
   height: 16px;
   background: #FFFFFF;
   border-radius: 5px;
-  box-shadow: 0 1px 1px rgba(23,11,51,.08), 0 0 0 1px #deddf2, 0 0 transparent, 0 2px 5px rgba(69,64,82,.08);
-  transition: ease 100ms;
+  box-shadow: 0 1px 1px rgba(23, 11, 51, .08), 0 0 0 1px #deddf2, 0 0 transparent, 0 2px 5px rgba(69, 64, 82, .08);
+  transition: all ease 100ms;
 }
 .checkmark:active {
-  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1),
-    0 1px 3px 0 rgba(23, 11, 51, 0.15);
+  box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1), 0 1px 3px 0 rgba(23, 11, 51, 0.15);
 }
-.checkbox-container input[type="checkbox"]:checked + .checkmark {
+.checkmark img {
+  opacity: 0;
+  transition: opacity ease 100ms;
+}
+input[type="checkbox"]:checked + .checkmark {
   background-color: #723EF2;
   box-shadow: 0 0 0 1px #6128EB;
 }
-.checkbox-container input[type="checkbox"]:checked + .checkmark svg {
-  display: none;
+input[type="checkbox"]:checked + .checkmark img {
+  opacity: 1;
 }
-.checkbox-container .checkmark svg {
-  display: none;
-  position: absolute;
-  top: 0px;
-  left: 2px;
-  width: 12px;
-  height: 12px;
+.checkmark:has(.checkmark-text) {
+  justify-content: space-between;
 }
-.checkbox-container .checkbox-container-li {
-  margin-top: 14px;
+.checkmark-text {
+  padding-left: 12px;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  white-space: nowrap;
 }
+/* ---- Checkmark styling end ---- */
 .radio-btn-container {
   display: block;
   position: relative;
@@ -3125,7 +3079,6 @@ img.address-type-btn-icon {
 }
 .table-second-column {
   position: sticky;
-  left: 58px;
   background: linear-gradient(90deg, rgba(255,255,255,1) 90%, rgba(255,255,255,0%) 100%);
 }
 .table-content tbody td {

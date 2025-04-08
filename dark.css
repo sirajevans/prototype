@@ -23,10 +23,13 @@
       background-color: var(--body-color) !important;
       color: var(--white-100) !important;
     }
+    .logo {
+        filter: invert(1) saturate(0) !important;
+    }
     .main-card {
         background-color: var(--card-color) !important;
     }
-    .main-card-footer, .card-footer {
+    .main-card-footer, .card-footer, .context-filter-footer {
         border-top: 1px solid var(--border-color) !important;
         background-color: var(--card-color) !important;
     }
@@ -60,7 +63,11 @@
     .sp-swiper-btn-r,
     .sp-swiper-btn-l,
     .sp-shop-btn,
-    .list-action-btn { 
+    .list-action-btn,
+    .filter-btn-content,
+    .popup-back-arrow,
+    .popup-next-arrow,
+    .cancel-btn { 
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -86,7 +93,11 @@
     .delivery-overview-btn-section:hover,
     .delivery-timeline-container:hover,
     .fullwidth-btn:hover,
-    .list-action-btn:hover {
+    .list-action-btn:hover,
+    .filter-btn-content:hover,
+    .popup-back-arrow:hover,
+    .popup-next-arrow:hover,
+    .cancel-btn:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -110,7 +121,11 @@
     .delivery-overview-btn-section:active,
     .delivery-timeline-container:active,
     .fullwidth-btn:active,
-    .list-action-btn:active {
+    .list-action-btn:active,
+    .filter-btn-content:active,
+    .popup-back-arrow:active,
+    .popup-next-arrow:active,
+    .cancel-btn:active {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn, .more-action-btn {
@@ -133,7 +148,7 @@
         background-color: lch(8.3 1.867 272) !important;
         box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
-    .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img, .delivery-overview-btn-icon {
+    .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img, .delivery-overview-btn-icon, .parcels-multiply-icon {
         filter: invert(1) saturate(0) !important;
     }
 
@@ -167,8 +182,16 @@
         color: #949496 !important;
     }
     .menu-item-count {
-        background: #9b95c31a !important;
-        color: #949496 !important;
+        color: hsl(0deg 0% 72.86%) !important;
+    }
+    .menu-item-count::after {
+        background-color: hsl(225 9% 12% / 1) !important;
+    }
+    .menu-item:hover .menu-item-count::before {
+        background: linear-gradient(90deg, hsl(225 9% 12% / 0) 0%, hsla(230, 8%, 45%, 0.1) 50%, hsl(225 9% 12% / 0) 100%) !important;
+    }
+    .menu-item:hover .menu-item-count {
+        color: transparent !important;
     }
     .side-menu-category {
         color: #949496 !important;
@@ -226,8 +249,11 @@
     .table-cell-waybill-col.active, .brand-toolbar {
         border-right-color: var(--border-color) !important;
     }
+    .form-input.focus-effect.listing-search {
+        background-image: url('../images/search-short-key-icon-dark.svg'), url('../images/search-icon-light.svg') !important;
+    }
 
-    /* old orders table styling */
+    /* old orders styling */
     .table-content {
         color: var(--white-100) !important;
     }
@@ -243,11 +269,38 @@
     .table-second-column {
         background: linear-gradient(90deg, var(--card-color) 90%, rgba(255, 255, 255, 0%) 100%) !important;
     }
-    .clickable-row {
+    .clickable-row, .order-list-row, .shimmer-row {
         border-top: 1px solid var(--border-color) !important;
     }
     .clickable-row:hover {
         background-color: hsl(225deg 8% 5%) !important;
+    }
+    .table-overflow-container .table-content th:after {
+        border-color: var(--border-color) !important;
+    }
+    .order-list-row:hover {
+        background-color: hsl(225deg 8% 10%) !important;
+    }
+    .signature-pod {
+        filter: invert(1);
+    }
+    .animate-shimmer {
+        background-image: linear-gradient(90deg, rgba(91, 97, 110, 0.05) 0, rgba(91, 97, 110, 0) 25%, rgba(91, 97, 110, 0.1) 50%, rgba(91, 97, 110, 0) 75%, rgba(91, 97, 110, 0.05) 100%) !important;
+    }
+    .tag-item-toggle {
+        color: var(--white-100) !important;
+        background-color: #2d2b32 !important;
+    }
+    .tag-item-toggle.tag-selected {
+        background-color: var(--palpatine-purple) !important;
+    }
+    .ui-widget-content, .time-slider-bar {
+        background-color: var(--border-color) !important;
+    }
+    .slider-bar.ui-slider .ui-slider-handle {
+        border-color: var(--border-color) !important;
+        background-color: var(--card-color) !important;
+        color: var(--white-100) !important;
     }
 
     /* form styling */
@@ -271,7 +324,7 @@
     .description-text, .list-item-p, .delivery-timeline-p, .timeline-eta-complete {
         color: var(--white-200) !important;
     }
-    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link, .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text, .pod-details, .order-original-address-text, #clear-dropoff, .text-sm-light-grey, .t-header-text, .form-label, .sp-msg, .sp-subheading, .sp-li-paragraph { 
+    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link, .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text, .pod-details, .order-original-address-text, #clear-dropoff, .text-sm-light-grey, .t-header-text, .form-label, .sp-msg, .sp-subheading, .sp-li-paragraph, .pac-item { 
         color: #949496 !important;
     }
     .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover, .path-link:hover, #clear-dropoff:hover, #clear-dropoff:hover {
@@ -398,17 +451,20 @@
     .sp-upload-content,
     .sp-remove-content,
     .sp-btn-l-icon,
-    .eye-closed {
+    .eye-closed,
+    .popup-back-arrow > img,
+    .popup-next-arrow > img,
+    #scheduleOrderDate {
         filter: invert(1) saturate(0) !important;
     }
-    .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu {
+    .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu, .pac-container, .status-filter-context-menu, .context-menu-list {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
     }
-    .context-menu-modal-li, .shortcut-suggestions {
+    .context-menu-modal-li, .shortcut-suggestions, .pac-matched, .context-menu-list-item {
         color: var(--white-100) !important;
     }
-    .context-menu-modal-li:hover, .shortcut-item:hover {
+    .context-menu-modal-li:hover, .shortcut-item:hover, .pac-item:hover, .context-menu-list-item:hover {
         background-color: #16171a !important;
     }
     .context-menu-modal-li.critical {
@@ -502,10 +558,6 @@
     .btn-v-divider, .horizontal-divider {
         background-color: var(--border-color) !important;
     }
-    .checkmark {
-        background-color: transparent !important;
-        box-shadow: 0 1px 1px rgba(23, 11, 51, .08), 0 0 0 1px var(--border-color), 0 0 transparent, 0 2px 5px rgba(69, 64, 82, .08) !important;
-    }
     .ship-label, .information-container, .pod-details {
         box-shadow: 0px 0px 0px 0.7px var(--border-color) !important;
     }
@@ -546,7 +598,21 @@
         filter: invert(1) brightness(1.5) saturate(0);
       }
     .rates-li input[type="radio"]:checked + .rates-container {
-        box-shadow: 0 1px 1px 0 transparent, 0 0 0 0.7px hsl(258deg 97% 57% / 60%), 0 0 0 0 transparent, 0 2px 5px 0 transparent !important;
+        border: 0.7px solid hsl(258deg 97% 57% / 60%) !important;
         background-color: hsl(258deg 37% 57% / 10%) !important;
+    }
+    .checkmark {
+        background-color: transparent !important;
+        box-shadow: 0 1px 1px rgba(23, 11, 51, .08), 0 0 0 1px var(--border-color), 0 0 transparent, 0 2px 5px rgba(69, 64, 82, .08) !important;
+    }
+    .checkmark:active {
+        box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1), 0 1px 3px 0 rgba(23, 11, 51, 0.15) !important;
+    }
+    .checkbox-container {
+        color: #E4E2E9 !important;
+    }
+    input[type="checkbox"]:checked + .checkmark {
+        background-color: #723EF2 !important;
+        box-shadow: 0 0 0 1px #6128EB !important;
     }
 }
