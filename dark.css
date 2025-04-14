@@ -67,7 +67,8 @@
     .filter-btn-content,
     .popup-back-arrow,
     .popup-next-arrow,
-    .cancel-btn { 
+    .cancel-btn,
+    .items-per-page { 
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -97,7 +98,8 @@
     .filter-btn-content:hover,
     .popup-back-arrow:hover,
     .popup-next-arrow:hover,
-    .cancel-btn:hover {
+    .cancel-btn:hover,
+    .items-per-page:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -125,7 +127,8 @@
     .filter-btn-content:active,
     .popup-back-arrow:active,
     .popup-next-arrow:active,
-    .cancel-btn:active {
+    .cancel-btn:active,
+    .items-per-page:active {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn, .more-action-btn {
