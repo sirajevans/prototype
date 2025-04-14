@@ -128,17 +128,17 @@ select {
 }
 .edit-route-status-bar {
   position: absolute;
-  left: 61vw;
-  top: 0;
+  left: 28.5vw;
+  top: 20px;
   display: block;
-  height: 45px;
-  max-height: 45px;
-  padding: 12px 15px;
+  height: 42px;
+  padding: 8px 12px;
   align-items: center;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 1px 15px 0 rgb(23 11 51 / 15%);
   width: max-content;
+  display: flex;
 }
 .saved-edit-route-status-bar {
   left: 53vw;

@@ -26,7 +26,7 @@
     .logo {
         filter: invert(1) saturate(0) !important;
     }
-    .main-card {
+    .main-card, .loader-overlay {
         background-color: var(--card-color) !important;
     }
     .main-card-footer, .card-footer, .context-filter-footer, .main-card-footer-section {
@@ -312,7 +312,7 @@
     .ui-widget-content, .time-slider-bar {
         background-color: var(--border-color) !important;
     }
-    .slider-bar.ui-slider .ui-slider-handle {
+    .slider-bar.ui-slider .ui-slider-handle, .edit-route-status-bar {
         border-color: var(--border-color) !important;
         background-color: var(--card-color) !important;
         color: var(--white-100) !important;
