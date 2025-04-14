@@ -69,7 +69,9 @@
     .popup-next-arrow,
     .cancel-btn,
     .items-per-page,
-    .waypoint-clickable-container{ 
+    .waypoint-clickable-container, 
+    .parameters-options-container,
+    .plan-routes-list-container { 
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -101,7 +103,9 @@
     .popup-next-arrow:hover,
     .cancel-btn:hover,
     .items-per-page:hover,
-    .waypoint-clickable-container:hover {
+    .waypoint-clickable-container:hover,
+    .parameters-options-container:hover,
+    .plan-routes-list-container:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -131,7 +135,9 @@
     .popup-next-arrow:active,
     .cancel-btn:active,
     .items-per-page:active,
-    .waypoint-clickable-container:active {
+    .waypoint-clickable-container:active,
+    .parameters-options-container:active,
+    .plan-routes-list-container:active {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn, .more-action-btn {
@@ -154,7 +160,7 @@
         background-color: lch(8.3 1.867 272) !important;
         box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
-    .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img, .delivery-overview-btn-icon, .parcels-multiply-icon {
+    .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img, .delivery-overview-btn-icon, .parcels-multiply-icon, .set-optimisation-arrow {
         filter: invert(1) saturate(0) !important;
     }
 
@@ -330,7 +336,7 @@
     .description-text, .list-item-p, .delivery-timeline-p, .timeline-eta-complete, .listing-search-li {
         color: var(--white-200) !important;
     }
-    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link, .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text, .pod-details, .order-original-address-text, #clear-dropoff, .text-sm-light-grey, .t-header-text, .form-label, .sp-msg, .sp-subheading, .sp-li-paragraph, .pac-item, .listing-search-example, .waypoint-original-address { 
+    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link, .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text, .pod-details, .order-original-address-text, #clear-dropoff, .text-sm-light-grey, .t-header-text, .form-label, .sp-msg, .sp-subheading, .sp-li-paragraph, .pac-item, .listing-search-example, .waypoint-original-address, .plan-routes-waypoint-summary { 
         color: #949496 !important;
     }
     .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover, .path-link:hover, #clear-dropoff:hover, #clear-dropoff:hover {
@@ -460,17 +466,18 @@
     .eye-closed,
     .popup-back-arrow > img,
     .popup-next-arrow > img,
-    #scheduleOrderDate {
+    #scheduleOrderDate,
+    .parameters-set-delivery-time > img {
         filter: invert(1) saturate(0) !important;
     }
-    .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu, .pac-container, .status-filter-context-menu, .context-menu-list {
+    .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu, .pac-container, .pac-container-second, .status-filter-context-menu, .context-menu-list {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
     }
     .context-menu-modal-li, .shortcut-suggestions, .pac-matched, .context-menu-list-item {
         color: var(--white-100) !important;
     }
-    .context-menu-modal-li:hover, .shortcut-item:hover, .pac-item:hover, .context-menu-list-item:hover {
+    .context-menu-modal-li:hover, .shortcut-item:hover, .pac-item:hover, .context-menu-list-item:hover, .pac-li-shortcut:hover {
         background-color: #16171a !important;
     }
     .context-menu-modal-li.critical {
