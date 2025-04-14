@@ -71,7 +71,8 @@
     .items-per-page,
     .waypoint-clickable-container, 
     .parameters-options-container,
-    .plan-routes-list-container { 
+    .plan-routes-list-container,
+    .edit-route-li-container { 
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -105,7 +106,8 @@
     .items-per-page:hover,
     .waypoint-clickable-container:hover,
     .parameters-options-container:hover,
-    .plan-routes-list-container:hover {
+    .plan-routes-list-container:hover,
+    .edit-route-li-container:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -137,7 +139,8 @@
     .items-per-page:active,
     .waypoint-clickable-container:active,
     .parameters-options-container:active,
-    .plan-routes-list-container:active {
+    .plan-routes-list-container:active,
+    .edit-route-li-container:active {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn, .more-action-btn {
