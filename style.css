@@ -1682,7 +1682,6 @@ label {
   width: 14.28%;
   text-align: center;
   top: 0;
-  background: white;
   color: #54556d;
   font-size: 12px;
   font-weight: 500;
@@ -1730,7 +1729,6 @@ label {
   visibility: hidden;
 }
 .icalendar__days div {
-  color: #170b33;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: -0.2px;
@@ -1743,7 +1741,6 @@ label {
   user-select: none;
   text-align: center;
   vertical-align: top;
-  background: #ffffff;
   cursor: pointer;
 }
 .w-embed:after {
@@ -1759,12 +1756,12 @@ label {
 }
 .icalendar__days div:hover {
   background-color: #f4f4fa;
-  border-radius: 40px;
+  border-radius: 8px;
 }
 .icalendar__today, .scheduled_cal_today {
   color: #fff !important;
   background: #6727fc !important;
-  border-radius: 40px;
+  border-radius: 8px;
 }
 .icalendar__days .icalendar__today.remove-css,
 .scheduled_cal_today.remove-css {
@@ -1775,7 +1772,7 @@ label {
 .scheduled_calendar_tbody .clicked {
   color: #fff !important;
   background: #6727fc !important;
-  border-radius: 40px;
+  border-radius: 8px;
 }
 .icalendar__next-date,
 .icalendar__prev-date,

@@ -107,7 +107,8 @@
     .waypoint-clickable-container:hover,
     .parameters-options-container:hover,
     .plan-routes-list-container:hover,
-    .edit-route-li-container:hover {
+    .edit-route-li-container:hover,
+    .validation-indicator-btn:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -140,7 +141,8 @@
     .waypoint-clickable-container:active,
     .parameters-options-container:active,
     .plan-routes-list-container:active,
-    .edit-route-li-container:active {
+    .edit-route-li-container:active,
+    .validation-indicator-btn:active {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn, .more-action-btn {
@@ -630,5 +632,27 @@
     input[type="checkbox"]:checked + .checkmark {
         background-color: #723EF2 !important;
         box-shadow: 0 0 0 1px #6128EB !important;
+    }
+    .validation-indicator-container {
+        background-color: var(--card-color) !important;
+        color: var(--white-100) !important;
+        box-shadow: 0px 0px 0.7px var(--border-color) !important;
+    }
+    .validation-indicator-btn {
+        background-color: var(--card-color) !important;
+    }
+
+    /* calendar styling */
+    .icalendar__days div {
+        color: var(--white-100);
+    }
+    .icalendar__days div {
+        color: var(--white-100);
+    }
+    .icalendar__days div:hover {
+        background-color: var(--hover) !important;
+    }
+    .icalendar__days .clicked:hover {
+        background-color: var(--palpatine-purple) !important;
     }
 }
