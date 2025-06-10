@@ -72,7 +72,8 @@
     .waypoint-clickable-container, 
     .parameters-options-container,
     .plan-routes-list-container,
-    .edit-route-li-container { 
+    .edit-route-li-container,
+    .pagination-btn { 
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -108,7 +109,8 @@
     .parameters-options-container:hover,
     .plan-routes-list-container:hover,
     .edit-route-li-container:hover,
-    .validation-indicator-btn:hover {
+    .validation-indicator-btn:hover,
+    .pagination-btn:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -142,7 +144,8 @@
     .parameters-options-container:active,
     .plan-routes-list-container:active,
     .edit-route-li-container:active,
-    .validation-indicator-btn:active {
+    .validation-indicator-btn:active,
+    .pagination-btn:active {
         background-color: var(--pressed) !important;
     }
     .context-menu-btn, .more-action-btn {
@@ -154,6 +157,14 @@
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
         box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+    }
+    .context-menu-btn.split-right {
+        border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
+        background-color: lch(8.3 1.867 272) !important;
+        box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+    }
+    .context-menu-btn.split-right:hover {
+        background-color: var(--hover) !important;
     }
     .address-type-btn:hover {
         background-color: #17181a !important;
@@ -168,7 +179,7 @@
     .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img, .delivery-overview-btn-icon, .parcels-multiply-icon, .set-optimisation-arrow {
         filter: invert(1) saturate(0) !important;
     }
-
+  
     /* nav styling */
     .menu-toggle, .nav-prev, .nav-next, .nav-refresh {
         color: #949496 !important;
@@ -213,7 +224,7 @@
     .side-menu-category {
         color: #949496 !important;
     }
-
+  
     /* table styling */
     .order-search-input {
         color: var(--white-100) !important;
@@ -269,7 +280,7 @@
     .form-input.focus-effect.listing-search {
         background-image: url('../images/search-short-key-icon-dark.svg'), url('../images/search-icon-light.svg') !important;
     }
-
+  
     /* old orders styling */
     .table-content {
         color: var(--white-100) !important;
@@ -319,7 +330,7 @@
         background-color: var(--card-color) !important;
         color: var(--white-100) !important;
     }
-
+  
     /* form styling */
     .form-input, .form-verification-input, .optimisation-settings-dropdown-container {
         color: var(--white-100) !important;
@@ -333,15 +344,15 @@
     .form-input:focus, .optimisation-settings-dropdown-container:focus {
         box-shadow: 0 0 0 .7px #5287ed, 0 0 0 2.7px #5287ed52 !important;
     }
-
+  
     /* text styling */
-    h1, .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-l, .text-m, .text-sm, .text-sm-500, .download-link, .delivery-timeline-h1, .list-item-h1 { 
+    h1, .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-l, .text-m, .text-sm, .text-sm-500, .download-link, .delivery-timeline-h1, .list-item-h1, .sp-preview-btn { 
         color: var(--white-100) !important; 
     }
     .description-text, .list-item-p, .delivery-timeline-p, .timeline-eta-complete, .listing-search-li {
         color: var(--white-200) !important;
     }
-    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link, .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text, .pod-details, .order-original-address-text, #clear-dropoff, .text-sm-light-grey, .t-header-text, .form-label, .sp-msg, .sp-subheading, .sp-li-paragraph, .pac-item, .listing-search-example, .waypoint-original-address, .plan-routes-waypoint-summary, .new-delivery-info { 
+    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link, .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text, .pod-details, .order-original-address-text, #clear-dropoff, .text-sm-light-grey, .t-header-text, .form-label, .sp-msg, .sp-subheading, .sp-li-paragraph, .pac-item, .listing-search-example, .waypoint-original-address, .plan-routes-waypoint-summary, .new-delivery-info, .shipment-time, .shipment-timeline-location { 
         color: #949496 !important;
     }
     .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover, .path-link:hover, #clear-dropoff:hover, #clear-dropoff:hover {
@@ -357,7 +368,7 @@
     .rates-label, .rates-sla, .rates-eta, .rates-eta-1, .path-link {
         color: #949496 !important;
     }
-
+  
     /* listing badges */
     .listing-badge.requested {
         filter: invert(1) brightness(1.5) saturate(0) !important;
@@ -422,7 +433,7 @@
         filter: invert(1) brightness(1.5) saturate(0) !important;
         color: hsl(0deg 0% 0% / 80%) !important;
     }
-
+  
     /* miscellaneous styling */
     .login-register-form-layout {
         border-bottom: 1px solid #36383f69 !important;
@@ -455,12 +466,14 @@
     .accordion-header, .shortcut-item-text {
         color: var(--white-100) !important;
     }
+    .btn-w > img,
     .accordion-arrow, .nav-back-arrow > img, 
     .map-btn > img,
     .pod-btn > img,
     .pod-item-img,
     .refresh-rates-container > img,
     #fleet_btn .a-right,
+    .btn-icon,
     .list-btn-icon,
     .copy-link-btn,
     .list-icon,
@@ -473,9 +486,18 @@
     .popup-next-arrow > img,
     #scheduleOrderDate,
     .parameters-set-delivery-time > img,
-    .parameters-options-container > img {
+    .parameters-options-container > img,
+    .pagination-btn > img,
+    .pod-item-tick,
+    .carrier-label {
         filter: invert(1) saturate(0) !important;
     }
+  
+    .add-order-btn > img,
+    .context-menu-btn-p > img {
+        filter: invert(0) saturate(0) !important;
+    }
+  
     .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu, .pac-container, .pac-container-second, .status-filter-context-menu, .context-menu-list, .optimisation-settings-dropdown {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
@@ -549,6 +571,9 @@
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 1px var(--border-color) !important
     }
+    .center-modal-header.center-modal-header-active {
+        box-shadow: 0 0 0 1px var(--border-color) !important;
+    }
     .gmaps-embed.new-delivery-map {
         box-shadow: 0 0 0 1px #414349, 0 0 0 5px var(--card-color) !important;
     }
@@ -577,7 +602,7 @@
     .btn-v-divider, .horizontal-divider, .left-a-popup-break {
         background-color: var(--border-color) !important;
     }
-    .ship-label, .information-container, .pod-details {
+    .ship-label, .information-container, .pod-details, .box-shadow-border {
         box-shadow: 0px 0px 0px 0.7px var(--border-color) !important;
     }
     .timeline-tick-img {
@@ -586,7 +611,7 @@
     .overview-driver-img {
         border-color: var(--card-color) !important;
     }
-    .eta-status-banner, .order-address-container {
+    .eta-status-banner, .order-address-container, .pod-signature {
         color: var(--white-100) !important;
         background-color: hsl(224.29deg 6.59% 9.78%) !important;
         box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
@@ -598,7 +623,7 @@
     .gradient-right {
         background-image: linear-gradient(90deg, #fff0, hsl(224.29deg 6.59% 9.78%));
     }
-    .s-loader, .sp-status-icon, .sp-status-progress-bar {
+    .s-loader, .sp-status-icon, .sp-status-progress-bar, .progress-icon, .progress-bar {
         filter: invert(1) brightness(2) saturate(0) !important;
     }
     .brand-preview, .sp-wrapper {
@@ -606,6 +631,9 @@
     }
     .sp-header, .sp-body, .status-preview-content, .refresh-rates, .popup-shimmer {
         background-color: var(--card-color) !important;
+    }
+    .brand-preview {
+        background-color: #ffffff2b !important;
     }
     .toggle {
         background-color: var(--border-color) !important;
@@ -642,7 +670,14 @@
     .validation-indicator-btn {
         background-color: var(--card-color) !important;
     }
-
+    .file-upload-drop-area {
+        background-color: var(--card-color) !important;
+        border: 1px dashed var(--border-color) !important;
+    }
+    .s-container {
+        background-color: var(--card-color) !important;
+    }
+  
     /* calendar styling */
     .icalendar__days div {
         color: var(--white-100);
@@ -656,4 +691,68 @@
     .icalendar__days .clicked:hover {
         background-color: var(--palpatine-purple) !important;
     }
-}
+  
+    /* Additional Dark Mode Styling */
+    .address-match-container,
+    .edit-original-address-container {
+        background-color: var(--card-color) !important;
+        border-top: 1px solid var(--border-color) !important;
+    }
+  
+    .removable-tag-item {
+        background-color: var(--card-grey-color) !important;
+        color: var(--white-100) !important;
+    }
+  
+    .status-badge-container {
+        background-color: var(--card-color) !important;
+        color: var(--white-100) !important;
+    }
+  
+    .status-badge-icon {
+        background-color: var(--white-100) !important;
+    }
+  
+    .progress-icon {
+        background-color: transparent !important;
+    }
+  
+    .comment-input {
+        background-color: var(--card-color) !important;
+        color: var(--white-100) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+  
+    .timeline-attachment {
+        background-color: var(--card-color) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+  
+    .comment-at-user {
+        background-color: #2d2b32 !important;
+        color: var(--white-100) !important;
+    }
+  
+    .multi-drop-btn {
+        background-color: var(--card-color) !important;
+        color: var(--white-100) !important;
+        border: .7px dashed var(--border-color) !important;
+    }
+  
+    .multi-drop-btn:hover {
+        background-color: var(--hover) !important;
+    }
+  
+    .multi-drop-btn:active {
+        background-color: var(--pressed) !important;
+    }
+  
+    .context-menu-modal-li.ship-sticky {
+        border-bottom: 1px solid var(--border-color) !important;
+        background-color: var(--card-color) !important;
+    }
+  
+    .edit-wrapper-loader {
+        background-color: var(--card-color) !important;
+    }
+  }
