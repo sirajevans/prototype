@@ -33,7 +33,7 @@
         border-top: 1px solid var(--border-color) !important;
         background-color: var(--card-color) !important;
     }
-    .card, .login-card, .settings-card, .s-container.page, .status-page-card, .accordion-header {
+    .card, .login-card, .settings-card, .s-container.page, .status-page-card {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
@@ -465,6 +465,10 @@
     }
     .accordion-header, .shortcut-item-text {
         color: var(--white-100) !important;
+    }
+    .accordion-card {
+        background-color: var(--card-color) !important;
+        border-color: var(--border-color) !important;
     }
     .btn-w > img,
     .accordion-arrow, .nav-back-arrow > img, 
