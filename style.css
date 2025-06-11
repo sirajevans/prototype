@@ -2411,6 +2411,9 @@ img.address-type-btn-icon {
 .sp-preview-btn {
   box-shadow: unset;
   padding: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 .sp-preview-btn:hover {
   box-shadow: unset;
@@ -3288,4 +3291,13 @@ input:checked + .toggle:before {
 .hint:hover .hint-text {
   opacity: 1;
   transform: translateY(-5px);
+}
+
+@keyframes loading-text-gradient {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
