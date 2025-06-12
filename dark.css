@@ -73,7 +73,8 @@
     .parameters-options-container,
     .plan-routes-list-container,
     .edit-route-li-container,
-    .pagination-btn { 
+    .pagination-btn,
+    .full-w-context-menu-btn { 
         color: var(--white-100) !important;
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
@@ -110,7 +111,8 @@
     .plan-routes-list-container:hover,
     .edit-route-li-container:hover,
     .validation-indicator-btn:hover,
-    .pagination-btn:hover {
+    .pagination-btn:hover,
+    .full-w-context-menu-btn:hover {
         background-color: var(--hover) !important;
     }
     .btn-w:active,
@@ -145,15 +147,16 @@
     .plan-routes-list-container:active,
     .edit-route-li-container:active,
     .validation-indicator-btn:active,
-    .pagination-btn:active {
+    .pagination-btn:active,
+    .full-w-context-menu-btn:active {
         background-color: var(--pressed) !important;
     }
-    .context-menu-btn, .more-action-btn, .full-w-context-menu-btn {
+    .context-menu-btn, .more-action-btn {
         border: 0.7px solid hsla(220, 12%, 15%, 0) !important;
         background-color: transparent !important;
         box-shadow: hsl(0deg 0% 0% / 0%) 0px 0px 0px 0px !important;
     }
-    .context-menu-btn:hover, .more-action-btn:hover, .full-w-context-menu-btn:hover {
+    .context-menu-btn:hover, .more-action-btn:hover {
         border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
         background-color: lch(8.3 1.867 272) !important;
         box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
