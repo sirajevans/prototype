@@ -473,11 +473,42 @@ function hideAllCenterModal(e) {
 }
 $(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
 
-// context menus (including purple context menu btns and full width compatibility)
+// context menus (including purple context menu btns)
+$(document).ready(() => {
+  $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
+      if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+          var modal = $(this).next(".context-menu-modal");
+          if (modal.hasClass("active")) {
+              modal.removeClass("active");
+              setTimeout(() => {
+                  modal.css("display", "none");
+              }, 150);
+          } else {
+              $(".context-menu-modal").removeClass("active");
+              modal.css("display", "block");
+              setTimeout(() => {
+                  modal.addClass("active");
+              }, 1);
+          };
+      }
+  });
+
+  $(document).on("click", function (e) {
+      if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+          $(".context-menu-modal").removeClass("active");
+          setTimeout(() => {
+              $(".context-menu-modal").css("display", "none");
+          }, 150);
+      }
+  });
+});
+
+// full width selector/context menu compatibility
 $(document).ready(() => {
   // Toggle full-width context menu
   $(".full-w-context-menu-btn").on("click", function (e) {
     const menu = $(this).siblings(".full-w-context-menu");
+
     if (menu.hasClass("active")) {
       menu.removeClass("active");
       setTimeout(() => {
@@ -490,30 +521,30 @@ $(document).ready(() => {
         menu.addClass("active");
       }, 1);
     }
-    e.stopPropagation();
+
+    e.stopPropagation(); // Prevent outer click listener from closing it immediately
   });
 
-  // When user clicks a context menu option
+  // Handle item selection
   $(".full-w-context-menu .context-menu-modal-li").on("click", function () {
-    const labelText = $(this).find("div").first().text().trim(); // Gets the visible label
-    const codeValue = $(this).find("code").text().trim();        // Gets the event code
+    const labelText = $(this).find("div").first().text().trim();
+    const codeValue = $(this).find("code").text().trim();
 
-    // Replace label in the button
+    // Replace button label text
     $(this).closest(".relative").find(".full-w-context-menu-btn div").first().text(labelText);
 
-    // Hide menu
+    // Hide the menu
     const menu = $(this).closest(".full-w-context-menu");
     menu.removeClass("active");
     setTimeout(() => {
       menu.css("display", "none");
     }, 150);
 
-    // Optional: Log or store the event code
-    console.log("Selected webhook event:", codeValue);
-    // You can store it in a hidden input or variable if needed
+    // Optional: Store the selected value if needed
+    console.log("Selected event:", codeValue);
   });
 
-  // Close menus when clicking outside
+  // Close menu when clicking outside
   $(document).on("click", function (e) {
     if (!e.target.closest(".full-w-context-menu-btn")) {
       $(".full-w-context-menu").removeClass("active");
@@ -523,4 +554,3 @@ $(document).ready(() => {
     }
   });
 });
-
