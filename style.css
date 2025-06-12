@@ -3292,7 +3292,9 @@ input:checked + .toggle:before {
   opacity: 1;
   transform: translateY(-5px);
 }
-
+.loading-text-gradient {
+  background-size: 200% auto;
+}
 @keyframes loading-text-gradient {
   0% {
     background-position: 0% 0;
