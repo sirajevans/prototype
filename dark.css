@@ -466,8 +466,7 @@
     .accordion-header, .shortcut-item-text {
         color: var(--white-100) !important;
     }
-    .accordion-card {
-        background-color: var(--card-color) !important;
+    .accordion-no-border {
         border-color: var(--border-color) !important;
     }
     .btn-w > img,
