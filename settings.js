@@ -475,30 +475,63 @@ $(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
 
 // context menus (including purple context menu btns)
 $(document).ready(() => {
+  // original context menu buttons
   $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
-      if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
-          var modal = $(this).next(".context-menu-modal");
-          if (modal.hasClass("active")) {
-              modal.removeClass("active");
-              setTimeout(() => {
-                  modal.css("display", "none");
-              }, 150);
-          } else {
-              $(".context-menu-modal").removeClass("active");
-              modal.css("display", "block");
-              setTimeout(() => {
-                  modal.addClass("active");
-              }, 1);
-          };
+    if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+      var modal = $(this).next(".context-menu-modal");
+      if (modal.hasClass("active")) {
+        modal.removeClass("active");
+        setTimeout(() => {
+          modal.css("display", "none");
+        }, 150);
+      } else {
+        $(".context-menu-modal").removeClass("active").css("display", "none");
+        modal.css("display", "block");
+        setTimeout(() => {
+          modal.addClass("active");
+        }, 1);
       }
+    }
   });
 
+  // new full-width context menu trigger
+  $(".full-w-context-menu-btn").on("click", function (e) {
+    const menu = $(this).siblings(".full-w-context-menu");
+    if (menu.hasClass("active")) {
+      menu.removeClass("active");
+      setTimeout(() => {
+        menu.css("display", "none");
+      }, 150);
+    } else {
+      $(".full-w-context-menu").removeClass("active").css("display", "none");
+      menu.css("display", "block");
+      setTimeout(() => {
+        menu.addClass("active");
+      }, 1);
+    }
+    e.stopPropagation();
+  });
+
+  // handle option click inside full-width menu
+  $(".full-w-context-menu .context-menu-modal-li").on("click", function () {
+    const selectedText = $(this).text().trim();
+    $(this).closest(".relative").find(".text-sm-light-grey").text(selectedText);
+
+    // hide the context menu
+    const menu = $(this).closest(".full-w-context-menu");
+    menu.removeClass("active");
+    setTimeout(() => {
+      menu.css("display", "none");
+    }, 150);
+  });
+
+  // close all menus when clicking outside
   $(document).on("click", function (e) {
-      if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
-          $(".context-menu-modal").removeClass("active");
-          setTimeout(() => {
-              $(".context-menu-modal").css("display", "none");
-          }, 150);
-      }
+    if (!e.target.closest(".context-menu-btn, .context-menu-btn-p, .full-w-context-menu-btn")) {
+      $(".context-menu-modal, .full-w-context-menu").removeClass("active");
+      setTimeout(() => {
+        $(".context-menu-modal, .full-w-context-menu").css("display", "none");
+      }, 150);
+    }
   });
 });
