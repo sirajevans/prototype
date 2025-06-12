@@ -351,6 +351,26 @@ $("#add_webhook_btn").on("click", function () {
   }, 1);
 });
 
+// handle webhook test loading and response messages
+document.getElementById('webhook_test').addEventListener('click', function () {
+  const loading = document.getElementById('webhook-test-loading');
+  const response = document.getElementById('webhook-test-response');
+  const button = document.getElementById('webhook_test').closest('.settings-btn-p');
+
+  // Show loading, hide response, disable button
+  loading.classList.remove('display-none');
+  response.classList.add('display-none');
+  button.classList.add('btn-disabled');
+
+  // After 2 seconds, show response, re-enable button
+  setTimeout(() => {
+    loading.classList.add('display-none');
+    response.classList.remove('display-none');
+    button.classList.remove('btn-disabled');
+  }, 2000);
+});
+
+
 // selector drop down menu
 const selectBtn = $("#auth_selector");
 const selectBtnText = $("#auth_type");
