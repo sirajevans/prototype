@@ -504,7 +504,7 @@
         filter: invert(0) saturate(0) !important;
     }
   
-    .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu, .pac-container, .pac-container-second, .status-filter-context-menu, .context-menu-list, .optimisation-settings-dropdown {
+    .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu, .pac-container, .pac-container-second, .status-filter-context-menu, .context-menu-list, .optimisation-settings-dropdown, .full-w-context-menu {
         background-color: var(--card-color) !important;
         box-shadow: 0 0 0 0.7px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
     }
