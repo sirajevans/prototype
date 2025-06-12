@@ -495,7 +495,8 @@
     .parameters-options-container > img,
     .pagination-btn > img,
     .pod-item-tick,
-    .carrier-label {
+    .carrier-label,
+    .full-w-context-menu-btn > img {
         filter: invert(1) saturate(0) !important;
     }
   
