@@ -473,7 +473,7 @@ function hideAllCenterModal(e) {
 }
 $(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
 
-// context menus (including purple context menu btns)
+// context menus (including purple context menu btns)More actions
 $(document).ready(() => {
   $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
       if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
@@ -501,7 +501,6 @@ $(document).ready(() => {
           }, 150);
       }
   });
-});
 
 // full width selector/context menu compatibility
 $(document).ready(() => {
@@ -555,7 +554,7 @@ $(document).ready(() => {
   });
 });
 
-// control the monitor enabled hide and show recipients
+// control the monitor enabled feature to hide and show recipients
 (() => {
   const checkbox = document.getElementById('enable_monitoring');
   const originalPanel = document.getElementById('monitoring_recipients');
