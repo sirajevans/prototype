@@ -374,6 +374,14 @@ $("#edit_custom_headers_btn").on("click", function () {
   }, 1);
 });
 
+// edit custom headers modal
+$("#edit_monitoring_btn").on("click", function () {
+  $("#edit_monitoring_modal_container").css("display", "flex");
+  setTimeout(() => {
+    $("#edit_monitoring_modal_container").addClass("center-modal-container-active");
+    $("#edit_monitoring_center_modal").addClass("center-modal-active");
+  }, 1);
+});
 
 // handle webhook test loading and response messages
 document.getElementById('webhook_test').addEventListener('click', function () {
