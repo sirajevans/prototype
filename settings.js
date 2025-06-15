@@ -402,17 +402,19 @@ document.getElementById('webhook_test').addEventListener('click', function () {
   }, 2000);
 });
 
-// control the monitor enabled hide and show recipients (non-destructive)
+// control the monitor enabled hide and show recipients
 (() => {
   const checkbox = document.getElementById('enable_monitoring');
-  const panel = document.getElementById('monitoring_recipients');
+  const originalPanel = document.getElementById('monitoring_recipients');
   const duration = 150;
-  const parent = panel.parentNode;
-  const firstRow = parent.querySelector(".settings-card-li");
+  let panel = originalPanel;
+  let parent = panel.parentNode;
+  let nextSibling = panel.nextSibling;
 
   const computedStyle = getComputedStyle(panel);
   const originalPaddingTop = parseFloat(computedStyle.paddingTop) || 0;
   const originalPaddingBottom = parseFloat(computedStyle.paddingBottom) || 0;
+  const firstRow = parent.querySelector(".settings-card-li");
 
   function easeInOutQuart(t) {
     return t < 0.5
@@ -450,36 +452,47 @@ document.getElementById('webhook_test').addEventListener('click', function () {
   }
 
   function showPanel() {
-    firstRow?.classList.remove("last"); // <- Add last BEFORE showing
+    if (!panel) {
+      firstRow?.classList.remove("last");
 
-    panel.style.display = 'flex';
-    panel.style.visibility = 'visible';
+      panel = originalPanel.cloneNode(true);
+      panel.style.display = 'flex';
+      panel.style.visibility = 'hidden';
+      panel.style.opacity = 0;
+      panel.style.height = 'auto';
+      panel.style.paddingTop = `${originalPaddingTop}px`;
+      panel.style.paddingBottom = `${originalPaddingBottom}px`;
+      parent.insertBefore(panel, nextSibling);
 
-    const fullHeight = panel.scrollHeight;
+      requestAnimationFrame(() => {
+        const fullHeight = panel.scrollHeight;
 
-    panel.style.height = '0px';
-    panel.style.opacity = 0;
-    panel.style.paddingTop = '0px';
-    panel.style.paddingBottom = '0px';
-    panel.style.overflow = 'hidden';
+        panel.style.height = '0px';
+        panel.style.opacity = 0;
+        panel.style.paddingTop = '0px';
+        panel.style.paddingBottom = '0px';
+        panel.style.overflow = 'hidden';
+        panel.style.visibility = 'visible';
 
-    animate({
-      el: panel,
-      fromHeight: 0,
-      toHeight: fullHeight,
-      fromOpacity: 0,
-      toOpacity: 1,
-      fromPaddingTop: 0,
-      toPaddingTop: originalPaddingTop,
-      fromPaddingBottom: 0,
-      toPaddingBottom: originalPaddingBottom,
-      onEnd: () => {
-        panel.style.height = 'auto';
-        panel.style.paddingTop = `${originalPaddingTop}px`;
-        panel.style.paddingBottom = `${originalPaddingBottom}px`;
-        panel.style.overflow = '';
-      }
-    });
+        animate({
+          el: panel,
+          fromHeight: 0,
+          toHeight: fullHeight,
+          fromOpacity: 0,
+          toOpacity: 1,
+          fromPaddingTop: 0,
+          toPaddingTop: originalPaddingTop,
+          fromPaddingBottom: 0,
+          toPaddingBottom: originalPaddingBottom,
+          onEnd: () => {
+            panel.style.height = 'auto';
+            panel.style.paddingTop = `${originalPaddingTop}px`;
+            panel.style.paddingBottom = `${originalPaddingBottom}px`;
+            panel.style.overflow = '';
+          }
+        });
+      });
+    }
   }
 
   function hidePanel() {
@@ -501,13 +514,9 @@ document.getElementById('webhook_test').addEventListener('click', function () {
       fromPaddingBottom: currentPaddingBottom,
       toPaddingBottom: 0,
       onEnd: () => {
-        panel.style.display = 'none';
-        panel.style.height = '0px';
-        panel.style.opacity = 0;
-        panel.style.paddingTop = '0px';
-        panel.style.paddingBottom = '0px';
-        panel.style.overflow = '';
-        firstRow?.classList.add("last"); // <- Remove last AFTER hiding
+        panel.remove();
+        panel = null;
+        firstRow?.classList.add("last");
       }
     });
   }
@@ -519,11 +528,8 @@ document.getElementById('webhook_test').addEventListener('click', function () {
   if (checkbox.checked) {
     showPanel();
   } else {
-    panel.style.display = 'none';
-    panel.style.opacity = 0;
-    panel.style.height = '0px';
-    panel.style.paddingTop = '0px';
-    panel.style.paddingBottom = '0px';
-    firstRow?.classList.remove("last");
+    panel.remove();
+    panel = null;
+    firstRow?.classList.add("last");
   }
 })();
