@@ -426,6 +426,8 @@ document.getElementById('webhook_test').addEventListener('click', function () {
 
   function showPanel() {
     if (!panel) {
+      firstRow?.classList.remove("last");
+
       panel = originalPanel.cloneNode(true);
       panel.style.display = 'flex';
       panel.style.visibility = 'hidden';
@@ -460,7 +462,6 @@ document.getElementById('webhook_test').addEventListener('click', function () {
             panel.style.paddingTop = `${originalPaddingTop}px`;
             panel.style.paddingBottom = `${originalPaddingBottom}px`;
             panel.style.overflow = '';
-            firstRow?.classList.remove("last");
           }
         });
       });
