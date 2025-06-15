@@ -387,6 +387,7 @@ document.getElementById('webhook_test').addEventListener('click', function () {
   const computedStyle = getComputedStyle(panel);
   const originalPaddingTop = parseFloat(computedStyle.paddingTop) || 0;
   const originalPaddingBottom = parseFloat(computedStyle.paddingBottom) || 0;
+  const firstRow = parent.querySelector(".settings-card-li");
 
   function easeInOutQuart(t) {
     return t < 0.5
@@ -459,6 +460,7 @@ document.getElementById('webhook_test').addEventListener('click', function () {
             panel.style.paddingTop = `${originalPaddingTop}px`;
             panel.style.paddingBottom = `${originalPaddingBottom}px`;
             panel.style.overflow = '';
+            firstRow?.classList.remove("last");
           }
         });
       });
@@ -486,6 +488,7 @@ document.getElementById('webhook_test').addEventListener('click', function () {
       onEnd: () => {
         panel.remove();
         panel = null;
+        firstRow?.classList.add("last");
       }
     });
   }
@@ -499,5 +502,6 @@ document.getElementById('webhook_test').addEventListener('click', function () {
   } else {
     panel.remove();
     panel = null;
+    firstRow?.classList.add("last");
   }
 })();
