@@ -375,20 +375,19 @@ $("#edit_custom_headers_btn").on("click", function () {
 });
 
 // edit monitoring recipients modal
-if ($("#edit_monitoring_btn").length) {
-  $("#edit_monitoring_btn").on("click", function () {
-    const $container = $("#edit_monitoring_modal_container");
-    const $modal = $("#edit_monitoring_center_modal");
+$(document).on("click", "#edit_monitoring_btn", function () {
+  const $container = $("#edit_monitoring_modal_container");
+  const $modal = $("#edit_monitoring_center_modal");
 
-    if ($container.length && $modal.length) {
-      $container.css("display", "flex");
-      setTimeout(() => {
-        $container.addClass("center-modal-container-active");
-        $modal.addClass("center-modal-active");
-      }, 1);
-    }
-  });
-}
+  if ($container.length && $modal.length) {
+    $container.css("display", "flex");
+    setTimeout(() => {
+      $container.addClass("center-modal-container-active");
+      $modal.addClass("center-modal-active");
+    }, 1);
+  }
+});
+
 
 // handle webhook test loading and response messages
 document.getElementById('webhook_test').addEventListener('click', function () {
