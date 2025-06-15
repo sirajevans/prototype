@@ -1,3 +1,84 @@
+// GENERAL
+
+// hide all modals
+function hideAllCenterModal(e) {
+  if (e.target == this) {
+    $(".center-modal-container").removeClass("center-modal-container-active");
+    $(".center-modal").removeClass("center-modal-active");
+    setTimeout(() => {
+      $(".center-modal-container").css("display", "none");
+    }, 120);
+  }
+}
+$(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
+
+// context menus (including purple context menu btns)
+// $(document).ready(() => {
+//   $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
+//       if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+//           var modal = $(this).next(".context-menu-modal");
+//           if (modal.hasClass("active")) {
+//               modal.removeClass("active");
+//               setTimeout(() => {
+//                   modal.css("display", "none");
+//               }, 150);
+//           } else {
+//               $(".context-menu-modal").removeClass("active");
+//               modal.css("display", "block");
+//               setTimeout(() => {
+//                   modal.addClass("active");
+//               }, 1);
+//           };
+//       }
+//   });
+
+//   $(document).on("click", function (e) {
+//       if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+//           $(".context-menu-modal").removeClass("active");
+//           setTimeout(() => {
+//               $(".context-menu-modal").css("display", "none");
+//           }, 150);
+//       }
+//   });
+// });
+
+// Context Menu Logic - Robust Version
+// Hide all menus
+function hideAllContextMenus() {
+  $(".context-menu-modal").removeClass("active").hide();
+}
+
+// Open / close on button click (supports dynamic elements)
+$(document).on("click", ".context-menu-btn", function (e) {
+  e.stopPropagation(); // Prevent bubbling to window click handler
+  const $modal = $(this).next(".context-menu-modal");
+
+  // Close all other menus
+  hideAllContextMenus();
+
+  // Toggle this one
+  if ($modal.hasClass("active")) {
+    $modal.removeClass("active");
+    setTimeout(() => $modal.css("display", "none"), 150);
+  } else {
+    $modal.css("display", "block");
+    setTimeout(() => $modal.addClass("active"), 1);
+  }
+});
+
+// Close on outside click
+$(document).on("click", function (e) {
+  if (!$(e.target).closest(".context-menu-btn, .context-menu-modal").length) {
+    hideAllContextMenus();
+  }
+});
+
+// Optional: prevent closing when clicking inside menu
+$(document).on("click", ".context-menu-modal", function (e) {
+  e.stopPropagation();
+});
+
+
 // ACCOUNT
 const togglePassword = $("#togglePass");
 const password = $("#resetPass");
@@ -18,15 +99,6 @@ form.on("submit", function (e) {
 });
 
 // PAYMENTS
-
-// // add card modal
-// $("#add_card_btn").on("click", function () {
-//   $("#add_card_modal_container").css("display", "flex");
-//   setTimeout(() => {
-//     $("#add_card_modal_container").addClass("center-modal-container-active");
-//     $("#add_card_center_modal").addClass("center-modal-active");
-//   }, 1);
-// });
 
 // eft modal
 function showEftModal() {
@@ -73,9 +145,7 @@ $(document).keydown(function (e) {
   }
 });
 
-
 // NOTIFICATIONS
-
 
 // STATUS PAGE
 function countChars(obj) {
@@ -340,173 +410,3 @@ document.getElementById('webhook_test').addEventListener('click', function () {
     button.classList.remove('btn-disabled');
   }, 2000);
 });
-
-
-// selector drop down menu
-const selectBtn = $("#auth_selector");
-const selectBtnText = $("#auth_type");
-const selectMenu = $(".select-menu-modal");
-const selectMenuItem = $(".select-menu-li");
-let selectMenuStatus = false;
-
-// opening and closing function
-selectBtn.on("click", () => {
-  if (!selectMenuStatus) {
-    selectMenu.removeClass("display-none");
-    setTimeout(() => {
-      selectMenu.addClass("select-menu-active");
-    }, 1);
-    selectMenuStatus = true;
-  } else {
-    selectMenu.removeClass("select-menu-active");
-    setTimeout(() => {
-      selectMenu.addClass("display-none");
-    }, 1);
-    selectMenuStatus = false;
-  }
-});
-
-// handling the select menu options
-selectMenuItem.on("click", (option) => {
-  selectBtnText.text(option.innerText);
-  $("#auth-type").val(option.innerText);
-  selectMenu.removeClass("select-menu-active");
-  setTimeout(() => {
-    selectMenu.addClass("display-none");
-  }, 150);
-  $(".auth-types").addClass("display-none");
-  $("#auth_type_" + option.getAttribute("data-type")).removeClass("display-none");
-});
-
-// close on outside click
-$(window).on("click", (e) => {
-  if (!selectBtn.is(e.target)) {
-    selectMenu.removeClass("select-menu-active");
-    setTimeout(() => {
-      selectMenu.addClass("display-none");
-    }, 150);
-    selectMenuStatus = false;
-  }
-});
-
-// webhooks js tooltip
-const trigger = $("#endpoint_test_btn");
-let tooltip = $("#endpoint_tooltip");
-
-function showBtnTooltip() {
-  tooltip.css("display", "block");
-  setTimeout(() => {
-    tooltip.addClass("btn-tooltip-active");
-  }, 1);
-}
-
-function hideBtnTooltip() {
-  tooltip.removeClass("btn-tooltip-active");
-  setTimeout(() => {
-    tooltip.css("display", "none");
-  }, 100);
-}
-
-trigger.on("mouseover", showBtnTooltip);
-trigger.on("mouseout", hideBtnTooltip);
-
-// OTHER
-// side nav modal
-function openSideMenu() {
-  $("#side-menu").css("left", "0%");
-  $("#overlay").css({
-    transitionTimingFunction: "ease", transitionDuration: "0ms", zIndex: "1000"
-  });
-  setTimeout(() => {
-    $("#overlay").css({
-      transitionDuration: "250ms", opacity: "100%"
-    });
-  }, 10);
-}
-
-function closeSideMenu() {
-  $("#side-menu").css("left", "-370px");
-  $("#overlay").css("opacity", "0%");
-  setTimeout(() => {
-    $("#overlay").css("zIndex", "-1");
-  }, 10);
-}
-
-// hide all modals
-function hideAllCenterModal(e) {
-  if (e.target == this) {
-    $(".center-modal-container").removeClass("center-modal-container-active");
-    $(".center-modal").removeClass("center-modal-active");
-    setTimeout(() => {
-      $(".center-modal-container").css("display", "none");
-    }, 120);
-  }
-}
-$(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
-
-// context menus (including purple context menu btns)
-// $(document).ready(() => {
-//   $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
-//       if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
-//           var modal = $(this).next(".context-menu-modal");
-//           if (modal.hasClass("active")) {
-//               modal.removeClass("active");
-//               setTimeout(() => {
-//                   modal.css("display", "none");
-//               }, 150);
-//           } else {
-//               $(".context-menu-modal").removeClass("active");
-//               modal.css("display", "block");
-//               setTimeout(() => {
-//                   modal.addClass("active");
-//               }, 1);
-//           };
-//       }
-//   });
-
-//   $(document).on("click", function (e) {
-//       if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
-//           $(".context-menu-modal").removeClass("active");
-//           setTimeout(() => {
-//               $(".context-menu-modal").css("display", "none");
-//           }, 150);
-//       }
-//   });
-// });
-
-// Context Menu Logic - Robust Version
-// Hide all menus
-function hideAllContextMenus() {
-  $(".context-menu-modal").removeClass("active").hide();
-}
-
-// Open / close on button click (supports dynamic elements)
-$(document).on("click", ".context-menu-btn", function (e) {
-  e.stopPropagation(); // Prevent bubbling to window click handler
-  const $modal = $(this).next(".context-menu-modal");
-
-  // Close all other menus
-  hideAllContextMenus();
-
-  // Toggle this one
-  if ($modal.hasClass("active")) {
-    $modal.removeClass("active");
-    setTimeout(() => $modal.css("display", "none"), 150);
-  } else {
-    $modal.css("display", "block");
-    setTimeout(() => $modal.addClass("active"), 1);
-  }
-});
-
-// Close on outside click
-$(document).on("click", function (e) {
-  if (!$(e.target).closest(".context-menu-btn, .context-menu-modal").length) {
-    hideAllContextMenus();
-  }
-});
-
-// Optional: prevent closing when clicking inside menu
-$(document).on("click", ".context-menu-modal", function (e) {
-  e.stopPropagation();
-});
-
