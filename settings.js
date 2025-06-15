@@ -13,69 +13,33 @@ function hideAllCenterModal(e) {
 $(".close-modal-btn, .center-modal-container").on("click", hideAllCenterModal);
 
 // context menus (including purple context menu btns)
-// $(document).ready(() => {
-//   $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
-//       if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
-//           var modal = $(this).next(".context-menu-modal");
-//           if (modal.hasClass("active")) {
-//               modal.removeClass("active");
-//               setTimeout(() => {
-//                   modal.css("display", "none");
-//               }, 150);
-//           } else {
-//               $(".context-menu-modal").removeClass("active");
-//               modal.css("display", "block");
-//               setTimeout(() => {
-//                   modal.addClass("active");
-//               }, 1);
-//           };
-//       }
-//   });
+$(document).ready(() => {
+  $(".context-menu-btn, .context-menu-btn-p").on("click", function (e) {
+      if (e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+          var modal = $(this).next(".context-menu-modal");
+          if (modal.hasClass("active")) {
+              modal.removeClass("active");
+              setTimeout(() => {
+                  modal.css("display", "none");
+              }, 150);
+          } else {
+              $(".context-menu-modal").removeClass("active");
+              modal.css("display", "block");
+              setTimeout(() => {
+                  modal.addClass("active");
+              }, 1);
+          };
+      }
+  });
 
-//   $(document).on("click", function (e) {
-//       if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
-//           $(".context-menu-modal").removeClass("active");
-//           setTimeout(() => {
-//               $(".context-menu-modal").css("display", "none");
-//           }, 150);
-//       }
-//   });
-// });
-
-// Context Menu Logic - Robust Version
-// Hide all menus
-function hideAllContextMenus() {
-  $(".context-menu-modal").removeClass("active").hide();
-}
-
-// Open / close on button click (supports dynamic elements)
-$(document).on("click", ".context-menu-btn", function (e) {
-  e.stopPropagation(); // Prevent bubbling to window click handler
-  const $modal = $(this).next(".context-menu-modal");
-
-  // Close all other menus
-  hideAllContextMenus();
-
-  // Toggle this one
-  if ($modal.hasClass("active")) {
-    $modal.removeClass("active");
-    setTimeout(() => $modal.css("display", "none"), 150);
-  } else {
-    $modal.css("display", "block");
-    setTimeout(() => $modal.addClass("active"), 1);
-  }
-});
-
-// Close on outside click
-$(document).on("click", function (e) {
-  if (!$(e.target).closest(".context-menu-btn, .context-menu-modal").length) {
-    hideAllContextMenus();
-  }
-});
-
-// Optional: prevent closing when clicking inside menu
-$(document).on("click", ".context-menu-modal", function (e) {
-  e.stopPropagation();
+  $(document).on("click", function (e) {
+      if (!e.target.closest(".context-menu-btn, .context-menu-btn-p")) {
+          $(".context-menu-modal").removeClass("active");
+          setTimeout(() => {
+              $(".context-menu-modal").css("display", "none");
+          }, 150);
+      }
+  });
 });
 
 
