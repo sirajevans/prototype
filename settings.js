@@ -42,6 +42,58 @@ $(document).ready(() => {
   });
 });
 
+// full width selector/context menu compatibilityAdd commentMore actions
+$(document).ready(() => {
+  // Toggle full-width context menu
+  $(".full-w-context-menu-btn").on("click", function (e) {  $(".full-w-context-menu-btn").on("click", function (e) {
+    const menu = $(this).siblings(".full-w-context-menu");
+
+    if (menu.hasClass("active")) {
+      menu.removeClass("active");
+      setTimeout(() => {
+        menu.css("display", "none");
+      }, 150);
+    } else {
+      $(".full-w-context-menu").removeClass("active").css("display", "none");
+      menu.css("display", "block");
+      setTimeout(() => {
+        menu.addClass("active");
+      }, 1);
+    }
+
+    e.stopPropagation(); // Prevent outer click listener from closing it immediately
+  });
+
+  // Handle item selection
+  $(".full-w-context-menu .context-menu-modal-li").on("click", function () {
+    const labelText = $(this).find("div").first().text().trim();
+    const codeValue = $(this).find("code").text().trim();
+
+    // Replace button label text
+    $(this).closest(".relative").find(".full-w-context-menu-btn div").first().text(labelText);    $(this).closest(".relative").find(".full-w-context-menu-btn div").first().text(labelText);
+
+    // Hide the menu
+    const menu = $(this).closest(".full-w-context-menu");
+    menu.removeClass("active");
+    setTimeout(() => {
+      menu.css("display", "none");
+    }, 150);
+
+    // Optional: Store the selected value if needed
+    console.log("Selected event:", codeValue);
+  });
+
+  // Close menu when clicking outside
+  $(document).on("click", function (e) {
+    if (!e.target.closest(".full-w-context-menu-btn")) {    if (!e.target.closest(".full-w-context-menu-btn")) {
+      $(".full-w-context-menu").removeClass("active");
+      setTimeout(() => {
+        $(".full-w-context-menu").css("display", "none");
+      }, 150);
+    }
+  });
+});
+
 
 // ACCOUNT
 const togglePassword = $("#togglePass");
