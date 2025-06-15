@@ -379,7 +379,7 @@ document.getElementById('webhook_test').addEventListener('click', function () {
 (() => {
   const checkbox = document.getElementById('enable_monitoring');
   const originalPanel = document.getElementById('monitoring_recipients');
-  const duration = 300;
+  const duration = 150;
   let panel = originalPanel;
   let parent = panel.parentNode;
   let nextSibling = panel.nextSibling;
