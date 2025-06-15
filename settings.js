@@ -18,35 +18,6 @@ form.on("submit", function (e) {
 });
 
 // PAYMENTS
-// card stacking
-let cards = document.getElementsByClassName("payment-card")
-for (let i = 0; i < cards.length; i++) {
-  let card = cards[i]
-  let leftPositioning = i * 20
-  card.style.left = `${leftPositioning}px`
-}
-// predetermine how many cards are in the stack
-let length = cards.length
-/* Define key variables for configs etc
- * let cardStackIndent = style.getPropertyValue(--card-stack-indent) */
-let cardStackIndent = 10;
-let cardStackPadding = 30;
-let defaultCardWidth = 165;
-// Dynamically set the indentation for each card in the stack 
-for (let index = 0; index < length; index++) {
-  cards[index].style.left = `${index * cardStackIndent}px`;
-}
-try {
-  let numberOfCards = length > 1 ? length - 1 : 1;
-  let cardWidth = cards ? cards[0].offsetWidth : defaultCardWidth;
-  let cardStackWidth = cardWidth + (cardStackIndent * numberOfCards)
-  let addPaymentWrapper = document.getElementsByClassName("add-payment-wrapper")[0]
-  addPaymentWrapper.style.setProperty("position", "sticky");
-  addPaymentWrapper.style.setProperty("left", `${cardStackWidth + cardStackPadding}px`);
-  addPaymentWrapper.style.setProperty("width", `calc(100% - ${cardStackWidth + cardStackPadding - cardStackIndent}px)`);
-} catch (error) {
-  console.error("", error)
-}
 
 // // add card modal
 // $("#add_card_btn").on("click", function () {
