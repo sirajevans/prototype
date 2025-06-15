@@ -375,7 +375,7 @@ $("#edit_custom_headers_btn").on("click", function () {
 });
 
 // edit monitoring recipients modal
-$(document).on("click", "#edit_monitoring_btn", function () {
+$(".settings-card").on("click", "#edit_monitoring_btn", function () {
   const $container = $("#edit_monitoring_modal_container");
   const $modal = $("#edit_monitoring_center_modal");
 
