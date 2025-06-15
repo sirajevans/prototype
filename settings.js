@@ -398,6 +398,16 @@ $(".settings-card").on("click", "#edit_monitoring_btn", function () {
   }
 });
 
+// delete webhook modal
+$("#delete_webhook_btn").on("click", () => {
+  $("#delete_webhook_modal_container").css("display", "flex");
+  setTimeout(() => {
+      $("#delete_webhook_modal_container").addClass("center-modal-container-active");
+      $("#delete_webhook_center_modal").addClass("center-modal-active");
+  }, 1);
+});
+
+
 
 // handle webhook test loading and response messages
 document.getElementById('webhook_test').addEventListener('click', function () {
