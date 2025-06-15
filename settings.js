@@ -501,6 +501,7 @@ $(document).ready(() => {
           }, 150);
       }
   });
+});
 
 // full width selector/context menu compatibility
 $(document).ready(() => {
