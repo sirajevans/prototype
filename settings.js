@@ -450,7 +450,7 @@ document.getElementById('webhook_test').addEventListener('click', function () {
   }
 
   function showPanel() {
-    firstRow?.classList.add("last"); // <- Add last BEFORE showing
+    firstRow?.classList.remove("last"); // <- Add last BEFORE showing
 
     panel.style.display = 'flex';
     panel.style.visibility = 'visible';
@@ -507,7 +507,7 @@ document.getElementById('webhook_test').addEventListener('click', function () {
         panel.style.paddingTop = '0px';
         panel.style.paddingBottom = '0px';
         panel.style.overflow = '';
-        firstRow?.classList.remove("last"); // <- Remove last AFTER hiding
+        firstRow?.classList.add("last"); // <- Remove last AFTER hiding
       }
     });
   }
