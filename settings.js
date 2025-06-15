@@ -356,6 +356,16 @@ $("#add_webhook_btn").on("click", function () {
   }, 1);
 });
 
+
+// edit webhook modal
+$("#edit_webhook_btn").on("click", function () {
+  $("#edit_webhook_modal_container").css("display", "flex");
+  setTimeout(() => {
+    $("#edit_webhook_modal_container").addClass("center-modal-container-active");
+    $("#edit_webhook_center_modal").addClass("center-modal-active");
+  }, 1);
+});
+
 // edit webhook auth modal
 $("#edit_auth_btn").on("click", function () {
   $("#edit_auth_modal_container").css("display", "flex");
