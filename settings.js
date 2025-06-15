@@ -374,3 +374,130 @@ document.getElementById('webhook_test').addEventListener('click', function () {
     button.classList.remove('btn-disabled');
   }, 2000);
 });
+
+// control the monitor enabled hide and show recipients
+(() => {
+  const checkbox = document.getElementById('enable_monitoring');
+  const originalPanel = document.getElementById('monitoring_recipients');
+  const duration = 300;
+  let panel = originalPanel;
+  let parent = panel.parentNode;
+  let nextSibling = panel.nextSibling;
+
+  const computedStyle = getComputedStyle(panel);
+  const originalPaddingTop = parseFloat(computedStyle.paddingTop) || 0;
+  const originalPaddingBottom = parseFloat(computedStyle.paddingBottom) || 0;
+
+  function easeInOutQuart(t) {
+    return t < 0.5
+      ? 8 * t * t * t * t
+      : 1 - Math.pow(-2 * t + 2, 4) / 2;
+  }
+
+  function animate({ el, fromHeight, toHeight, fromOpacity, toOpacity, fromPaddingTop, toPaddingTop, fromPaddingBottom, toPaddingBottom, onEnd }) {
+    const start = performance.now();
+
+    function frame(time) {
+      let progress = (time - start) / duration;
+      if (progress > 1) progress = 1;
+
+      const eased = easeInOutQuart(progress);
+
+      const currentHeight = fromHeight + (toHeight - fromHeight) * eased;
+      const currentOpacity = fromOpacity + (toOpacity - fromOpacity) * eased;
+      const currentPaddingTop = fromPaddingTop + (toPaddingTop - fromPaddingTop) * eased;
+      const currentPaddingBottom = fromPaddingBottom + (toPaddingBottom - fromPaddingBottom) * eased;
+
+      el.style.height = `${currentHeight}px`;
+      el.style.opacity = currentOpacity;
+      el.style.paddingTop = `${currentPaddingTop}px`;
+      el.style.paddingBottom = `${currentPaddingBottom}px`;
+
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        onEnd?.();
+      }
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  function showPanel() {
+    if (!panel) {
+      panel = originalPanel.cloneNode(true);
+      panel.style.display = 'flex';
+      panel.style.visibility = 'hidden';
+      panel.style.opacity = 0;
+      panel.style.height = 'auto';
+      panel.style.paddingTop = `${originalPaddingTop}px`;
+      panel.style.paddingBottom = `${originalPaddingBottom}px`;
+      parent.insertBefore(panel, nextSibling);
+
+      requestAnimationFrame(() => {
+        const fullHeight = panel.scrollHeight;
+
+        panel.style.height = '0px';
+        panel.style.opacity = 0;
+        panel.style.paddingTop = '0px';
+        panel.style.paddingBottom = '0px';
+        panel.style.overflow = 'hidden';
+        panel.style.visibility = 'visible';
+
+        animate({
+          el: panel,
+          fromHeight: 0,
+          toHeight: fullHeight,
+          fromOpacity: 0,
+          toOpacity: 1,
+          fromPaddingTop: 0,
+          toPaddingTop: originalPaddingTop,
+          fromPaddingBottom: 0,
+          toPaddingBottom: originalPaddingBottom,
+          onEnd: () => {
+            panel.style.height = 'auto';
+            panel.style.paddingTop = `${originalPaddingTop}px`;
+            panel.style.paddingBottom = `${originalPaddingBottom}px`;
+            panel.style.overflow = '';
+          }
+        });
+      });
+    }
+  }
+
+  function hidePanel() {
+    const currentHeight = panel.scrollHeight;
+    const currentPaddingTop = parseFloat(getComputedStyle(panel).paddingTop) || 0;
+    const currentPaddingBottom = parseFloat(getComputedStyle(panel).paddingBottom) || 0;
+
+    panel.style.height = `${currentHeight}px`;
+    panel.style.overflow = 'hidden';
+
+    animate({
+      el: panel,
+      fromHeight: currentHeight,
+      toHeight: 0,
+      fromOpacity: 1,
+      toOpacity: 0,
+      fromPaddingTop: currentPaddingTop,
+      toPaddingTop: 0,
+      fromPaddingBottom: currentPaddingBottom,
+      toPaddingBottom: 0,
+      onEnd: () => {
+        panel.remove();
+        panel = null;
+      }
+    });
+  }
+
+  checkbox.addEventListener('change', () => {
+    checkbox.checked ? showPanel() : hidePanel();
+  });
+
+  if (checkbox.checked) {
+    showPanel();
+  } else {
+    panel.remove();
+    panel = null;
+  }
+})();
