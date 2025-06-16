@@ -42,57 +42,56 @@ $(document).ready(() => {
   });
 });
 
-// full width selector/context menu compatibilityAdd commentMore actions
+// full-width selector / context-menu
 $(document).ready(() => {
-  // Toggle full-width context menu
-  $(".full-w-context-menu-btn").on("click", function (e) {  $(".full-w-context-menu-btn").on("click", function (e) {
-    const menu = $(this).siblings(".full-w-context-menu");
 
-    if (menu.hasClass("active")) {
-      menu.removeClass("active");
-      setTimeout(() => {
-        menu.css("display", "none");
-      }, 150);
+  // ───────────── Toggle menu ─────────────
+  $(".full-w-context-menu-btn").on("click", function (e) {
+    const $menu = $(this).siblings(".full-w-context-menu");
+
+    if ($menu.hasClass("active")) {
+      // closing
+      $menu.removeClass("active");
+      setTimeout(() => $menu.hide(), 150);
     } else {
-      $(".full-w-context-menu").removeClass("active").css("display", "none");
-      menu.css("display", "block");
-      setTimeout(() => {
-        menu.addClass("active");
-      }, 1);
+      // open this one / close others
+      $(".full-w-context-menu").removeClass("active").hide();
+      $menu.show();                       // display:block
+      setTimeout(() => $menu.addClass("active"), 1);
     }
 
-    e.stopPropagation(); // Prevent outer click listener from closing it immediately
+    e.stopPropagation(); // keep outside click handler from firing
   });
 
-  // Handle item selection
-  $(".full-w-context-menu .context-menu-modal-li").on("click", function () {
-    const labelText = $(this).find("div").first().text().trim();
-    const codeValue = $(this).find("code").text().trim();
+  // ───────────── Item selection ─────────────
+  $(document).on("click", ".full-w-context-menu .context-menu-modal-li", function () {
+    const labelText = $(this).find("div").first().text().trim();   // visible text
+    const codeValue = $(this).find("code").text().trim();          // value
 
-    // Replace button label text
-    $(this).closest(".relative").find(".full-w-context-menu-btn div").first().text(labelText);    $(this).closest(".relative").find(".full-w-context-menu-btn div").first().text(labelText);
+    // Put label on the button
+    $(this)
+      .closest(".relative")
+      .find(".full-w-context-menu-btn div")
+      .first()
+      .text(labelText);
 
-    // Hide the menu
-    const menu = $(this).closest(".full-w-context-menu");
-    menu.removeClass("active");
-    setTimeout(() => {
-      menu.css("display", "none");
-    }, 150);
+    // Close menu
+    const $menu = $(this).closest(".full-w-context-menu");
+    $menu.removeClass("active");
+    setTimeout(() => $menu.hide(), 150);
 
-    // Optional: Store the selected value if needed
+    // (Optional) do something with the value
     console.log("Selected event:", codeValue);
   });
 
-  // Close menu when clicking outside
+  // ───────────── Outside click closes menus ─────────────
   $(document).on("click", function (e) {
-    if (!e.target.closest(".full-w-context-menu-btn")) {    if (!e.target.closest(".full-w-context-menu-btn")) {
-      $(".full-w-context-menu").removeClass("active");
-      setTimeout(() => {
-        $(".full-w-context-menu").css("display", "none");
-      }, 150);
+    if (!$(e.target).closest(".full-w-context-menu-btn, .full-w-context-menu").length) {
+      $(".full-w-context-menu").removeClass("active").hide();
     }
   });
 });
+
 
 
 // ACCOUNT
