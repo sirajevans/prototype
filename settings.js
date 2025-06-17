@@ -449,6 +449,15 @@ $(".settings-card").on("click", "#edit_monitoring_btn", function () {
   }
 });
 
+// view webhook details modal
+$("#webhook_event_btn").on("click", function () {
+  $("#webhook_event_modal_container").css("display", "flex");
+  setTimeout(() => {
+    $("#webhook_event_modal_container").addClass("center-modal-container-active");
+    $("#webhook_event_center_modal").addClass("center-modal-active");
+  }, 1);
+});
+
 // delete webhook modal
 $("#delete_webhook_btn").on("click", () => {
   $("#delete_webhook_modal_container").css("display", "flex");
