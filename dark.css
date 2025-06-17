@@ -15,34 +15,37 @@
     input:-webkit-autofill:hover, 
     input:-webkit-autofill:focus, 
     input:-webkit-autofill:active {
-        -webkit-box-shadow: 0 0 0 30px lch(8.3 1.867 272) inset, lch(13.98 4.707 272) 0px 0px 0px 0.7px !important;
-        -webkit-text-fill-color: var(--white-100) !important;
-        transition: background-color 5000s ease-in-out 0s !important;
+      -webkit-box-shadow: 0 0 0 30px lch(8.3 1.867 272) inset, lch(13.98 4.707 272) 0px 0px 0px 0.7px !important;
+      -webkit-text-fill-color: var(--white-100) !important;
+      transition: background-color 5000s ease-in-out 0s !important;
     }
     input::placeholder {
-        color: #ffffff2e !important;
-      }
+      color: #ffffff2e !important;
+    }
     body, .grey-100, .grey-200, .settings-section {
-      background-color: var(--body-color) !important;
-      color: var(--white-100) !important;
+    background-color: var(--body-color) !important;
+    color: var(--white-100) !important;
+    }
+    a {
+      color: inherit !important;
     }
     .logo {
-        filter: invert(1) saturate(0) !important;
+      filter: invert(1) saturate(0) !important;
     }
     .main-card, .loader-overlay {
-        background-color: var(--card-color) !important;
+      background-color: var(--card-color) !important;
     }
     .main-card-footer, .card-footer, .context-filter-footer, .main-card-footer-section {
-        border-top: 1px solid var(--border-color) !important;
-        background-color: var(--card-color) !important;
+      border-top: 1px solid var(--border-color) !important;
+      background-color: var(--card-color) !important;
     }
     .card, .login-card, .settings-card, .s-container.page, .status-page-card {
-        background-color: var(--card-color) !important;
-        box-shadow: 0 0 0 0.7px var(--border-color) !important;
+      background-color: var(--card-color) !important;
+      box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
     .card-grey, .settings-content-container {
-        background-color: var(--card-grey-color) !important;
-        box-shadow: 0 0 0 0.7px var(--border-color) !important;
+      background-color: var(--card-grey-color) !important;
+      box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
     .btn-w,
     .btn-g,
@@ -79,10 +82,10 @@
     .pagination-btn,
     .full-w-context-menu-btn,
     .input-row-btn { 
-        color: var(--white-100) !important;
-        border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
-        background-color: lch(8.3 1.867 272) !important;
-        box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+      color: var(--white-100) !important;
+      border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
+      background-color: lch(8.3 1.867 272) !important;
+      box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .btn-w:hover,
     .btn-g:hover,
@@ -118,7 +121,7 @@
     .pagination-btn:hover,
     .full-w-context-menu-btn:hover,
     .input-row-btn:hover {
-        background-color: var(--hover) !important;
+      background-color: var(--hover) !important;
     }
     .btn-w:active,
     .btn-g:active,
@@ -155,328 +158,328 @@
     .pagination-btn:active,
     .full-w-context-menu-btn:active,
     .input-row-btn:active {
-        background-color: var(--pressed) !important;
+      background-color: var(--pressed) !important;
     }
     .context-menu-btn, .more-action-btn {
-        border: 0.7px solid hsla(220, 12%, 15%, 0) !important;
-        background-color: transparent !important;
-        box-shadow: hsl(0deg 0% 0% / 0%) 0px 0px 0px 0px !important;
+      border: 0.7px solid hsla(220, 12%, 15%, 0) !important;
+      background-color: transparent !important;
+      box-shadow: hsl(0deg 0% 0% / 0%) 0px 0px 0px 0px !important;
     }
     .context-menu-btn:hover, .more-action-btn:hover {
-        border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
-        background-color: lch(8.3 1.867 272) !important;
-        box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+      border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
+      background-color: lch(8.3 1.867 272) !important;
+      box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .context-menu-btn.split-right {
-        border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
-        background-color: lch(8.3 1.867 272) !important;
-        box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+      border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
+      background-color: lch(8.3 1.867 272) !important;
+      box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .context-menu-btn.split-right:hover {
-        background-color: var(--hover) !important;
+      background-color: var(--hover) !important;
     }
     .address-type-btn:hover {
-        background-color: #17181a !important;
-        color: rgba(255, 255, 255, 1) !important;
-        box-shadow: #17181a 0px 0px 0px 0.7px !important;
+      background-color: #17181a !important;
+      color: rgba(255, 255, 255, 1) !important;
+      box-shadow: #17181a 0px 0px 0px 0.7px !important;
     }
     .address-type-btn.address-type-selected {
-        color: var(--white-100) !important;
-        background-color: lch(8.3 1.867 272) !important;
-        box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+      color: var(--white-100) !important;
+      background-color: lch(8.3 1.867 272) !important;
+      box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .carter-logo-black, .btn-w .btn-icon-left, .context-menu-btn .btn-icon-left, .shipment-row-btn .btn-icon-left, .shipment-row-context-btn .btn-icon, .pod-item-img, .delivery-overview-btn-icon, .parcels-multiply-icon, .set-optimisation-arrow {
-        filter: invert(1) saturate(0) !important;
+      filter: invert(1) saturate(0) !important;
     }
   
     /* nav styling */
     .menu-toggle, .nav-prev, .nav-next, .nav-refresh {
-        color: #949496 !important;
+      color: #949496 !important;
     }
     .menu-toggle:hover, .nav-prev:hover, .nav-next:hover, .nav-refresh:hover {
-        color: var(--white-100) !important;
-        background-color: #151619 !important;
+      color: var(--white-100) !important;
+      background-color: #151619 !important;
     }
     .menu-company-profile {
-        background-color: #17181a !important;
+      background-color: #17181a !important;
     }
     .menu-company-name, .menu-item {
-        color: var(--white-100) !important;
+      color: var(--white-100) !important;
     }
     .menu-item:hover {
-        background-color: #151619 !important;
+      background-color: #151619 !important;
     }
     .menu-item:hover > .menu-item-icon {
-        color: rgba(255, 255, 255, 0.85) !important;
+      color: rgba(255, 255, 255, 0.85) !important;
     }
     .menu-item.w--current {
-        background-color: #151619 !important;
+      background-color: #151619 !important;
     }
     .menu-item.w--current .menu-item-icon {
-        color: var(--white-100) !important;
+      color: var(--white-100) !important;
     }
     .menu-item-icon {
-        color: #949496 !important;
+      color: #949496 !important;
     }
     .menu-item-count {
-        color: hsl(0deg 0% 72.86%) !important;
+      color: hsl(0deg 0% 72.86%) !important;
     }
     .menu-item-count::after {
-        background-color: hsl(225 9% 12% / 1) !important;
+      background-color: hsl(225 9% 12% / 1) !important;
     }
     .menu-item:hover .menu-item-count::before {
-        background: linear-gradient(90deg, hsl(225 9% 12% / 0) 0%, hsla(230, 8%, 45%, 0.1) 50%, hsl(225 9% 12% / 0) 100%) !important;
+      background: linear-gradient(90deg, hsl(225 9% 12% / 0) 0%, hsla(230, 8%, 45%, 0.1) 50%, hsl(225 9% 12% / 0) 100%) !important;
     }
     .menu-item:hover .menu-item-count {
-        color: transparent !important;
+      color: transparent !important;
     }
     .side-menu-category {
-        color: #949496 !important;
+      color: #949496 !important;
     }
   
     /* table styling */
     .order-search-input {
-        color: var(--white-100) !important;
-        background-color: lch(8.3 1.867 272) !important;
-        box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
-        caret-color: var(--white-100) !important;  
+      color: var(--white-100) !important;
+      background-color: lch(8.3 1.867 272) !important;
+      box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+      caret-color: var(--white-100) !important;  
     }
     .table-tabs, .table-search {
-        background-color: var(--card-color) !important;
+      background-color: var(--card-color) !important;
     }
     .table-tab {
-        color: #949496 !important;
+      color: #949496 !important;
     }
     .table-tab:hover {
-        background-color: #16171a !important;
-        color: var(--white-100) !important;
+      background-color: #16171a !important;
+      color: var(--white-100) !important;
     }
     .table-tab.active {
-        background-color: #16171a !important;
-        color: var(--white-100) !important;
+      background-color: #16171a !important;
+      color: var(--white-100) !important;
     }
     .table-header {
-        background-color: var(--card-color) !important;
+      background-color: var(--card-color) !important;
     }
     .table-header.shipments {
-        border-bottom: 1px solid #1A1C21 !important;
+      border-bottom: 1px solid #1A1C21 !important;
     }
     .table-row.shipments {
-        border-bottom: 1px solid #1A1C21 !important;
+      border-bottom: 1px solid #1A1C21 !important;
     }
     .table-row.shipments:hover {
-        background-color: hsl(225deg 8% 10%) !important;
+      background-color: hsl(225 8% 6% / 1) !important;
     }
     .table-row:hover > .table-cell-waybill-col {
-        background-color: hsl(225deg 8% 10%) !important;
+      background-color: hsl(225 8% 6% / 1) !important;
     }
     .table-cell-waybill-col {
-        background-color: var(--card-color) !important;
+      background-color: var(--card-color) !important;
     }
     .table-cell.action-btn-container {
-        background-image: linear-gradient(90deg, #0F101100 86%, var(--card-color) 91%) !important;
+      background-image: linear-gradient(90deg, #0F101100 86%, var(--card-color) 91%) !important;
     }
     .table-row:hover > .table-cell.action-btn-container {
-        background-image: linear-gradient(90deg, #0F101100 0%, hsl(225deg 8% 10%) 91%) !important;
+      background-image: linear-gradient(90deg, #0F101100 0%, hsl(225 8% 6% / 1) 91%) !important;
     }
     .table-pagination {
-        background-color: var(--card-color) !important;
-        border-top: 1px solid #1A1C21 !important;
+      background-color: var(--card-color) !important;
+      border-top: 1px solid #1A1C21 !important;
     }
     .table-cell-waybill-col.active, .brand-toolbar {
-        border-right-color: var(--border-color) !important;
+      border-right-color: var(--border-color) !important;
     }
     .form-input.focus-effect.listing-search {
-        background-image: url('../images/search-short-key-icon-dark.svg'), url('../images/search-icon-light.svg') !important;
+      background-image: url('../images/search-short-key-icon-dark.svg'), url('../images/search-icon-light.svg') !important;
     }
   
     /* old orders styling */
     .table-content {
-        color: var(--white-100) !important;
+      color: var(--white-100) !important;
     }
     .table-content thead th:first-child, .table-content tbody td:first-child {
-        background: var(--card-color) !important;
+      background: var(--card-color) !important;
     }
     .table-content thead th.table-second-column {
-        background: linear-gradient(90deg, var(--card-color) 90%, rgba(255, 255, 255, 0%) 100%) !important;
+      background: linear-gradient(90deg, var(--card-color) 90%, rgba(255, 255, 255, 0%) 100%) !important;
     }
     .table-content thead th {
-        background-color: var(--card-color) !important;
+      background-color: var(--card-color) !important;
     }
     .table-second-column {
-        background: linear-gradient(90deg, var(--card-color) 90%, rgba(255, 255, 255, 0%) 100%) !important;
+      background: linear-gradient(90deg, var(--card-color) 90%, rgba(255, 255, 255, 0%) 100%) !important;
     }
     .clickable-row, .order-list-row, .shimmer-row {
-        border-top: 1px solid var(--border-color) !important;
+      border-top: 1px solid var(--border-color) !important;
     }
     .clickable-row:hover {
-        background-color: hsl(225deg 8% 5%) !important;
+      background-color: hsl(225deg 8% 5%) !important;
     }
     .table-overflow-container .table-content th:after {
-        border-color: var(--border-color) !important;
+      border-color: var(--border-color) !important;
     }
     .order-list-row:hover {
-        background-color: hsl(225deg 8% 10%) !important;
+      background-color: hsl(225deg 8% 10%) !important;
     }
     .signature-pod {
-        filter: invert(1);
+      filter: invert(1);
     }
     .animate-shimmer {
-        background-image: linear-gradient(90deg, rgba(91, 97, 110, 0.05) 0, rgba(91, 97, 110, 0) 25%, rgba(91, 97, 110, 0.1) 50%, rgba(91, 97, 110, 0) 75%, rgba(91, 97, 110, 0.05) 100%) !important;
+      background-image: linear-gradient(90deg, rgba(91, 97, 110, 0.05) 0, rgba(91, 97, 110, 0) 25%, rgba(91, 97, 110, 0.1) 50%, rgba(91, 97, 110, 0) 75%, rgba(91, 97, 110, 0.05) 100%) !important;
     }
     .tag-item-toggle {
-        color: var(--white-100) !important;
-        background-color: #2d2b32 !important;
+      color: var(--white-100) !important;
+      background-color: #2d2b32 !important;
     }
     .tag-item-toggle.tag-selected {
-        background-color: var(--palpatine-purple) !important;
+      background-color: var(--palpatine-purple) !important;
     }
     .ui-widget-content, .time-slider-bar {
-        background-color: var(--border-color) !important;
+      background-color: var(--border-color) !important;
     }
     .slider-bar.ui-slider .ui-slider-handle, .edit-route-status-bar {
-        border-color: var(--border-color) !important;
-        background-color: var(--card-color) !important;
-        color: var(--white-100) !important;
+      border-color: var(--border-color) !important;
+      background-color: var(--card-color) !important;
+      color: var(--white-100) !important;
     }
   
     /* form styling */
     .form-input, .form-verification-input, .optimisation-settings-dropdown-container {
-        color: var(--white-100) !important;
-        background-color: lch(8.3 1.867 272) !important;
-        box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
-        caret-color: var(--white-100) !important;    
+      color: var(--white-100) !important;
+      background-color: lch(8.3 1.867 272) !important;
+      box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+      caret-color: var(--white-100) !important;    
     }
     .form-input:hover, .optimisation-settings-dropdown-container:hover {
-        box-shadow: hsl(224 12% 20% / 1) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+      box-shadow: hsl(224 12% 20% / 1) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .form-input:focus, .optimisation-settings-dropdown-container:focus {
-        box-shadow: 0 0 0 .7px #5287ed, 0 0 0 2.7px #5287ed52 !important;
+      box-shadow: 0 0 0 .7px #5287ed, 0 0 0 2.7px #5287ed52 !important;
     }
   
     /* text styling */
     h1, .login-footer-text, .login-heading, .register-feature-h, .settings-heading, .settings-subheading, .settings-card-heading, .settings-card-p, .text-display-xxl, .text-display-xl, .text-display-l, .text-l, .text-m, .text-sm, .text-sm-500, .download-link, .delivery-timeline-h1, .list-item-h1, .sp-preview-btn { 
-        color: var(--white-100) !important; 
+      color: var(--white-100) !important; 
     }
     .description-text, .list-item-p, .delivery-timeline-p, .timeline-eta-complete, .listing-search-li {
-        color: var(--white-200) !important;
+      color: var(--white-200) !important;
     }
     .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link, .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text, .pod-details, .order-original-address-text, #clear-dropoff, .text-sm-light-grey, .t-header-text, .form-label, .sp-msg, .sp-subheading, .sp-li-paragraph, .pac-item, .listing-search-example, .waypoint-original-address, .plan-routes-waypoint-summary, .new-delivery-info, .shipment-time, .shipment-timeline-location { 
-        color: #949496 !important;
+      color: #949496 !important;
     }
     .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover, .path-link:hover, #clear-dropoff:hover, #clear-dropoff:hover {
-        color: #ffffff !important;
-        text-decoration: none !important;
+      color: #ffffff !important;
+      text-decoration: none !important;
     }
     .copyright-text, .copyright-spacer, .register-copyright-text {
-        color: #ffffff20 !important;
+      color: #ffffff20 !important;
     }
     .copyright-text:hover {
-        color: #ffffff4a !important;
+      color: #ffffff4a !important;
     }
     .rates-label, .rates-sla, .rates-eta, .rates-eta-1, .path-link {
-        color: #949496 !important;
+      color: #949496 !important;
     }
   
     /* listing badges */
     .listing-badge.requested {
-        filter: invert(1) brightness(1.5) saturate(0) !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+      filter: invert(1) brightness(1.5) saturate(0) !important;
+      color: hsl(0deg 0% 0% / 80%) !important;
     }
     .listing-badge.pending {
-        filter: invert(1) hue-rotate(188deg) brightness(1.5) saturate(0.5) !important;
+      filter: invert(1) hue-rotate(188deg) brightness(1.5) saturate(0.5) !important;
     }
     .listing-badge.approved {
-        filter: invert(1) hue-rotate(198deg) !important;
-        background-color: #b8f6cc !important;
-        color: hsl(0deg 0% 0% / 100%) !important;
+      filter: invert(1) hue-rotate(198deg) !important;
+      background-color: #b8f6cc !important;
+      color: hsl(0deg 0% 0% / 100%) !important;
     }
     .listing-badge.paid {
-        filter: invert(1) brightness(1.5) saturate(0) !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+      filter: invert(1) brightness(1.5) saturate(0) !important;
+      color: hsl(0deg 0% 0% / 80%) !important;
     }
     .listing-badge.collecting {
-        filter: invert(1) hue-rotate(180deg) brightness(1.5) !important;
+      filter: invert(1) hue-rotate(180deg) brightness(1.5) !important;
     }
     .listing-badge.collected {
-        filter: invert(1) hue-rotate(180deg) brightness(1.5) !important;
+      filter: invert(1) hue-rotate(180deg) brightness(1.5) !important;
     }
     .listing-badge.failed {
-        filter: invert(1) hue-rotate(185deg) brightness(1.3) !important;
+      filter: invert(1) hue-rotate(185deg) brightness(1.3) !important;
     }
     .listing-badge.in-transit {
-        filter: invert(1) hue-rotate(172deg) brightness(1.3) !important;
+      filter: invert(1) hue-rotate(172deg) brightness(1.3) !important;
     }
     .listing-badge.delivering {
-        filter: invert(1) brightness(1.5) saturate(0) !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+      filter: invert(1) brightness(1.5) saturate(0) !important;
+      color: hsl(0deg 0% 0% / 80%) !important;
     }
     .listing-badge.delivered {
-        filter: invert(1) brightness(1.5) saturate(0) !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+      filter: invert(1) brightness(1.5) saturate(0) !important;
+      color: hsl(0deg 0% 0% / 80%) !important;
     }
     .listing-badge.attempted {
-        filter: invert(1) hue-rotate(185deg) brightness(1.3) !important;
+      filter: invert(1) hue-rotate(185deg) brightness(1.3) !important;
     }
     .listing-badge.returning {
-        filter: invert(1) brightness(1.5) saturate(0) !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+      filter: invert(1) brightness(1.5) saturate(0) !important;
+      color: hsl(0deg 0% 0% / 80%) !important;
     }
     .listing-badge.returned {
-        filter: invert(1) brightness(1.5) saturate(0) !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+      filter: invert(1) brightness(1.5) saturate(0) !important;
+      color: hsl(0deg 0% 0% / 80%) !important;
     }
     .listing-badge.cancelled {
-        filter: invert(1) brightness(1.5) saturate(0) !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+      filter: invert(1) brightness(1.5) saturate(0) !important;
+      color: hsl(0deg 0% 0% / 80%) !important;
     }
     .listing-badge.refunded {
-        filter: invert(1) brightness(1.5) saturate(0) !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+      filter: invert(1) brightness(1.5) saturate(0) !important;
+      color: hsl(0deg 0% 0% / 80%) !important;
     }
     .listing-badge.exception {
-        filter: invert(1) brightness(1.5) saturate(0) !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+      filter: invert(1) brightness(1.5) saturate(0) !important;
+      color: hsl(0deg 0% 0% / 80%) !important;
     }
     .listing-badge.outbound, .listing-badge.inbound, .listing-badge.return, .listing-badge.transfer {
-        filter: invert(1) brightness(1.5) saturate(0) !important;
-        color: hsl(0deg 0% 0% / 80%) !important;
+      filter: invert(1) brightness(1.5) saturate(0) !important;
+      color: hsl(0deg 0% 0% / 80%) !important;
     }
   
     /* miscellaneous styling */
     .login-register-form-layout {
-        border-bottom: 1px solid #36383f69 !important;
+      border-bottom: 1px solid #36383f69 !important;
     }
     .user-profile {
-        background-color: hsl(225 9% 14% / 1) !important;
+      background-color: hsl(225 9% 14% / 1) !important;
     }
     .settings-content-divider {
-        background-color: #2c2e3369 !important;
+      background-color: #2c2e3369 !important;
     }
     .checkbox-placeholder {
-        background-color: transparent !important;
+      background-color: transparent !important;
     }
     .box-shadow-100 {
-        box-shadow: 0 1px 1px #170b3314, 0 0 0 0.7px var(--border-color), 0 0 #0000, 0 2px 5px #45405214 !important;
+      box-shadow: 0 1px 1px #170b3314, 0 0 0 0.7px var(--border-color), 0 0 #0000, 0 2px 5px #45405214 !important;
     }
     .full-width-divider, .brand-grid-content, .sp-body {
-        border-top: 0.7px solid var(--border-color) !important;
+      border-top: 0.7px solid var(--border-color) !important;
     }
     .side-menu-divider {
-        background-color: #2c2e334a !important;
+      background-color: #2c2e334a !important;
     }
     .card-banner, .carrier-rates-listing-banner, .notice-banner-grey, .information-container, .white-banner {
-        background-color: var(--card-color) !important;
-        box-shadow: 0 0 0 0.7px var(--border-color) !important;
+      background-color: var(--card-color) !important;
+      box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
     .accordion, .share-link-flex-container, .status-preview-content, .sp-logo {
-        border-color: var(--border-color) !important;
+      border-color: var(--border-color) !important;
     }
     .accordion-header, .shortcut-item-text {
-        color: var(--white-100) !important;
+      color: var(--white-100) !important;
     }
     .accordion-no-border {
-        border-color: var(--border-color) !important;
+      border-color: var(--border-color) !important;
     }
     .btn-w > img,
     .accordion-arrow, .nav-back-arrow > img, 
@@ -490,7 +493,6 @@
     .copy-link-btn,
     .list-icon,
     .settings-cc-icon,
-    .sp-upload-content,
     .sp-remove-content,
     .sp-btn-l-icon,
     .eye-closed,
@@ -502,280 +504,298 @@
     .pagination-btn > img,
     .pod-item-tick,
     .carrier-label,
-    .full-w-context-menu-btn > img {
-        filter: invert(1) saturate(0) !important;
+    .full-w-context-menu-btn > img,
+    .pod-item-tick {
+      filter: invert(1) saturate(0) !important;
     }
   
     .add-order-btn > img,
     .context-menu-btn-p > img {
-        filter: invert(0) saturate(0) !important;
+      filter: invert(0) saturate(0) !important;
     }
   
     .context-menu-modal, .shortcut-suggestions, .context-menu-modal-top, .collection-context-menu, .pac-container, .pac-container-second, .status-filter-context-menu, .context-menu-list, .optimisation-settings-dropdown, .full-w-context-menu {
-        background-color: var(--card-color) !important;
-        box-shadow: 0 0 0 0.7px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
+      background-color: var(--card-color) !important;
+      box-shadow: 0 0 0 0.7px var(--border-color), 0 10px 15px -3px #0000001a, 0 4px 6px -4px #00000003 !important
     }
     .context-menu-modal-li, .shortcut-suggestions, .pac-matched, .context-menu-list-item, .optimisation-settings-li  {
-        color: var(--white-100) !important;
+      color: var(--white-100) !important;
     }
     .context-menu-modal-li:hover, .shortcut-item:hover, .pac-item:hover, .context-menu-list-item:hover, .pac-li-shortcut:hover, .optimisation-settings-li:hover {
-        background-color: #16171a !important;
+      background-color: #16171a !important;
     }
     .context-menu-modal-li.critical {
-        color: #fa1e49 !important;
+      color: #fa1e49 !important;
     }
     .context-menu-modal-li.critical:hover {
-        background: #fa1e490f !important;
+      background: #fa1e490f !important;
     }
     .context-menu-modal-divider {
-        background-color: hsl(223, 7%, 19%, 75%) !important;
+      background-color: hsl(223, 7%, 19%, 75%) !important;
     }
     .key-shortcut-w, .key-shortcut-w-inline {
-        color: #ffffff !important;
-        background-color: #2d2b32 !important;
+      color: #ffffff !important;
+      background-color: #2d2b32 !important;
     }
     .carrier-l-logo, .address-type-btn-icon {
-        filter: invert(1) saturate(0) !important;
+      filter: invert(1) saturate(0) !important;
     }
     .listing-search-suggestions {
-        background-color: var(--card-color) !important;
-        border: 0.5px solid lch(13.98 4.707 272) !important;
-        box-shadow: lch(0 0 0 / 0.0) 0px 0px 0px 0px !important;
+      background-color: var(--card-color) !important;
+      border: 0.5px solid lch(13.98 4.707 272) !important;
+      box-shadow: lch(0 0 0 / 0.0) 0px 0px 0px 0px !important;
     }
     .listing-search-li:hover {
-        background-color: #16171a !important;
+      background-color: #16171a !important;
     }
     .listing-search-key {
-        color: var(--white-100) !important;
-        background-color: #2d2b32 !important;
+      color: var(--white-100) !important;
+      background-color: #2d2b32 !important;
     }
     .listing-badge-tooltip {
-        border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
-        background-color: lch(8.3 1.867 272) !important;
-        box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+      border: 0.7px solid hsl(223.52deg 11.8% 14.77%) !important;
+      background-color: lch(8.3 1.867 272) !important;
+      box-shadow: hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
     }
     .settings-card-li {
-        border-bottom: 1px solid var(--border-color) !important;
+      border-bottom: 1px solid var(--border-color) !important;
     }
     .settings-card-li.last {
-        border-color: transparent !important;
+      border-color: transparent !important;
     }
     .settings-card-li:last-child {
-        border-color: transparent !important;
+      border-color: transparent !important;
     }
     .input-preset {
-        background-color: #28282b !important;
-        color: var(--white-100) !important;
+      background-color: #28282b !important;
+      color: var(--white-100) !important;
     }
     .input-preset:active {
-        background-color: #222225 !important;
-        color: var(--white-100) !important;
+      background-color: #222225 !important;
+      color: var(--white-100) !important;
     }
     .center-modal-container, .side-modal-container, .overlay  {
-        background-color: hsl(0deg 0% 0% / 60%) !important;
+      background-color: hsl(0deg 0% 0% / 60%) !important;
     }
-    .center-modal, .side-modal, .side-popup, .left-a-popup-container {
-        border: none !important;
-        background-color: var(--card-color) !important;
-        box-shadow: 0 0 0 0.7px var(--border-color), #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
+    .center-modal, .side-modal, .side-popup, .left-a-popup-container, .full-screen-popup {
+      border: none !important;
+      background-color: var(--card-color) !important;
+      box-shadow: 0 0 0 0.7px var(--border-color), #00000030 0px 3px 20px,  #00000030 0px 3px 12px,  #00000030 0px 2px 8px !important;
     }
     .center-modal-footer, .side-modal-footer, .card-footer-section {
-        background-color: var(--card-color) !important;
-        border-top: 1px solid var(--border-color) !important;
+      background-color: var(--card-color) !important;
+      border-top: 1px solid var(--border-color) !important;
     }
     .center-modal-header.border {
-        background-color: var(--card-color) !important;
-        box-shadow: 0 0 0 1px var(--border-color) !important
+      background-color: var(--card-color) !important;
+      box-shadow: 0 0 0 1px var(--border-color) !important
     }
     .center-modal-header.center-modal-header-active {
-        box-shadow: 0 0 0 1px var(--border-color) !important;
+      box-shadow: 0 0 0 1px var(--border-color) !important;
     }
     .gmaps-embed.new-delivery-map {
-        box-shadow: 0 0 0 1px #414349, 0 0 0 5px var(--card-color) !important;
+      box-shadow: 0 0 0 1px #414349, 0 0 0 5px var(--card-color) !important;
     }
     .address-type-btn {
-        color: rgba(255, 255, 255, 0.65) !important
+      color: rgba(255, 255, 255, 0.65) !important
     }
     .primary-btn, .btn-p, .settings-btn-p, .context-menu-btn-p {
-        box-shadow: 0 1px 1px #170b3326, 0 2px 5px #45405226, inset 0 0 0 1px #f9f9f924 !important;
+      box-shadow: 0 1px 1px #170b3326, 0 2px 5px #45405226, inset 0 0 0 1px #f9f9f924 !important;
     }
     .multi-drop-btn {
-        color: white !important;
-        border-color: var(--border-color) !important;
+      color: white !important;
+      border-color: var(--border-color) !important;
     }
     .multi-drop-btn:hover {
-        background-color: hsla(0, 0%, 100%, 0.04) !important;
+      background-color: hsla(0, 0%, 100%, 0.04) !important;
     }
     .multi-drop-btn:active {
-        background-color: hsla(0, 0%, 100%, 0.03) !important;
+      background-color: hsla(0, 0%, 100%, 0.03) !important;
     }
     .ambient-light-overlay {
-        background-color: var(--body-color) !important;
+      background-color: var(--body-color) !important;
     }
     .shipment-map {
-        background-color: var(--hover) !important;
+      background-color: var(--hover) !important;
     }
     .btn-v-divider, .horizontal-divider, .left-a-popup-break {
-        background-color: var(--border-color) !important;
+      background-color: var(--border-color) !important;
     }
     .ship-label, .information-container, .pod-details, .box-shadow-border {
-        box-shadow: 0px 0px 0px 0.7px var(--border-color) !important;
+      box-shadow: 0px 0px 0px 0.7px var(--border-color) !important;
     }
     .timeline-tick-img {
-        filter: invert(1) saturate(0) brightness(2) !important;
+      filter: invert(1) saturate(0) brightness(2) !important;
     }
     .overview-driver-img {
-        border-color: var(--card-color) !important;
+      border-color: var(--card-color) !important;
     }
     .eta-status-banner, .order-address-container, .pod-signature {
-        color: var(--white-100) !important;
-        background-color: hsl(224.29deg 6.59% 9.78%) !important;
-        box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
-        caret-color: var(--white-100) !important; 
+      color: var(--white-100) !important;
+      background-color: hsl(224.29deg 6.59% 9.78%) !important;
+      box-shadow: hsl(223.52deg 11.8% 14.77%) 0px 0px 0px 0.7px, hsl(0deg 0% 0% / 6%) 0px 4px 4px -1px, hsl(0deg 0% 0% / 12%) 0px 1px 1px 0px !important;
+      caret-color: var(--white-100) !important; 
     }
     .gradient-left {
-        background-image: linear-gradient(90deg, hsl(224.29deg 6.59% 9.78%), #fff0);
+      background-image: linear-gradient(90deg, hsl(224.29deg 6.59% 9.78%), #fff0);
     }
     .gradient-right {
-        background-image: linear-gradient(90deg, #fff0, hsl(224.29deg 6.59% 9.78%));
+      background-image: linear-gradient(90deg, #fff0, hsl(224.29deg 6.59% 9.78%));
     }
     .s-loader, .sp-status-icon, .sp-status-progress-bar, .progress-icon, .progress-bar {
-        filter: invert(1) brightness(2) saturate(0) !important;
+      filter: invert(1) brightness(2) saturate(0) !important;
     }
     .brand-preview, .sp-wrapper {
-        filter: invert(1) !important;
+      filter: invert(1) !important;
     }
     .sp-header, .sp-body, .status-preview-content, .refresh-rates, .popup-shimmer {
-        background-color: var(--card-color) !important;
+      background-color: var(--card-color) !important;
     }
     .brand-preview {
-        background-color: #ffffff2b !important;
+      background-color: #ffffff2b !important;
     }
     .toggle {
-        background-color: var(--border-color) !important;
+      background-color: var(--border-color) !important;
     }
     input:checked + .toggle {
-        background-color: #7642f4 !important;
+      background-color: #7642f4 !important;
     }
     #carrier-rates > .rates-li > label.rates-container > img {
-        filter: invert(1) brightness(1.5) saturate(0);
-      }
+      filter: invert(1) brightness(1.5) saturate(0);
+    }
     .rates-li input[type="radio"]:checked + .rates-container {
-        border: 0.7px solid hsl(258deg 97% 57% / 60%) !important;
-        background-color: hsl(258deg 37% 57% / 10%) !important;
+      border: 0.7px solid hsl(258deg 97% 57% / 60%) !important;
+      background-color: hsl(258deg 37% 57% / 10%) !important;
     }
     .checkmark {
-        background-color: transparent !important;
-        box-shadow: 0 1px 1px rgba(23, 11, 51, .08), 0 0 0 1px var(--border-color), 0 0 transparent, 0 2px 5px rgba(69, 64, 82, .08) !important;
+      background-color: transparent !important;
+      box-shadow: 0 1px 1px rgba(23, 11, 51, .08), 0 0 0 1px var(--border-color), 0 0 transparent, 0 2px 5px rgba(69, 64, 82, .08) !important;
     }
     .checkmark:active {
-        box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1), 0 1px 3px 0 rgba(23, 11, 51, 0.15) !important;
+      box-shadow: 0 0 0 3px rgba(118, 66, 244, 0.1), 0 1px 3px 0 rgba(23, 11, 51, 0.15) !important;
     }
     .checkbox-container {
-        color: #E4E2E9 !important;
+      color: #E4E2E9 !important;
     }
     input[type="checkbox"]:checked + .checkmark {
-        background-color: #723EF2 !important;
-        box-shadow: 0 0 0 1px #6128EB !important;
+      background-color: #723EF2 !important;
+      box-shadow: 0 0 0 1px #6128EB !important;
     }
     .validation-indicator-container {
-        background-color: var(--card-color) !important;
-        color: var(--white-100) !important;
-        box-shadow: 0px 0px 0.7px var(--border-color) !important;
+      background-color: var(--card-color) !important;
+      color: var(--white-100) !important;
+      box-shadow: 0px 0px 0.7px var(--border-color) !important;
     }
     .validation-indicator-btn {
-        background-color: var(--card-color) !important;
+      background-color: var(--card-color) !important;
     }
     .file-upload-drop-area {
-        background-color: var(--card-color) !important;
-        border: 1px dashed var(--border-color) !important;
+      background-color: var(--card-color) !important;
+      border: 1px dashed var(--border-color) !important;
     }
     .s-container {
-        background-color: var(--card-color) !important;
+      background-color: var(--card-color) !important;
     }
     .loading-text-gradient {
-        background-image: linear-gradient(90deg, #ffffff80, #ffffff 25%, #ffffff80 50%) !important;
+      background-image: linear-gradient(90deg, #ffffff80, #ffffff 25%, #ffffff80 50%) !important;
     }
-    .code-text {
-        background-color: lch(8.3 1.867 272) !important;
-        box-shadow: 0 0 0 1px var(--border-color) !important;
+    .text-code-outline {
+      background-color: lch(8.3 1.867 272) !important;
+      box-shadow: 0 0 0 1px var(--border-color) !important;
     }
-
+  
     /* calendar styling */
     .icalendar__days div {
-        color: var(--white-100);
+      color: var(--white-100);
     }
     .icalendar__days div {
-        color: var(--white-100);
+      color: var(--white-100);
     }
     .icalendar__days div:hover {
-        background-color: var(--hover) !important;
+      background-color: var(--hover) !important;
     }
     .icalendar__days .clicked:hover {
-        background-color: var(--palpatine-purple) !important;
+      background-color: var(--palpatine-purple) !important;
     }
   
     /* Additional Dark Mode Styling */
-    .address-match-container,
     .edit-original-address-container {
-        background-color: var(--card-color) !important;
-        border-top: 1px solid var(--border-color) !important;
+      background-color: var(--card-color) !important;
+      box-shadow: 0 0 0 0.7px var(--border-color) !important;
     }
-  
+    .edit-original-address {
+      color: var(--white) !important;
+    }
     .removable-tag-item {
-        background-color: var(--card-grey-color) !important;
-        color: var(--white-100) !important;
+      background-color: var(--card-grey-color) !important;
+      color: var(--white-100) !important;
     }
-  
     .status-badge-container {
-        background-color: var(--card-color) !important;
-        color: var(--white-100) !important;
+      background-color: var(--card-color) !important;
+      color: var(--white-100) !important;
     }
-  
     .status-badge-icon {
-        background-color: var(--white-100) !important;
+      background-color: var(--white-100) !important;
     }
-  
     .progress-icon {
-        background-color: transparent !important;
+      background-color: transparent !important;
     }
-  
     .comment-input {
-        background-color: var(--card-color) !important;
-        color: var(--white-100) !important;
-        border: 1px solid var(--border-color) !important;
+      background-color: var(--card-color) !important;
+      color: var(--white-100) !important;
+      border: 1px solid var(--border-color) !important;
     }
-  
     .timeline-attachment {
-        background-color: var(--card-color) !important;
-        border: 1px solid var(--border-color) !important;
+      background-color: var(--card-color) !important;
+      border: 1px solid var(--border-color) !important;
     }
-  
     .comment-at-user {
-        background-color: #2d2b32 !important;
-        color: var(--white-100) !important;
+      background-color: #2d2b32 !important;
+      color: var(--white-100) !important;
     }
-  
     .multi-drop-btn {
-        background-color: var(--card-color) !important;
-        color: var(--white-100) !important;
-        border: .7px dashed var(--border-color) !important;
+      background-color: var(--card-color) !important;
+      color: var(--white-100) !important;
+      border: .7px dashed var(--border-color) !important;
     }
-  
     .multi-drop-btn:hover {
-        background-color: var(--hover) !important;
+      background-color: var(--hover) !important;
     }
-  
     .multi-drop-btn:active {
-        background-color: var(--pressed) !important;
+      background-color: var(--pressed) !important;
     }
-  
     .context-menu-modal-li.ship-sticky {
-        border-bottom: 1px solid var(--border-color) !important;
-        background-color: var(--card-color) !important;
+      border-bottom: 1px solid var(--border-color) !important;
+      background-color: var(--card-color) !important;
     }
-  
     .edit-wrapper-loader {
-        background-color: var(--card-color) !important;
+      background-color: var(--card-color) !important;
+    }
+    .delivery-status-bar {
+      background-color: var(--card-color) !important;
+      box-shadow: 0 0 0 .7px var(--border-color), 0 1px 15px #170b3326 !important;
+    }
+    .carrier-rates-refresh-banner {
+      background-color: #ff00000d  !important;
+      box-shadow: 0 0 0 1px #ff060033  !important;
+    }
+    .edit-shipment-original-address {
+      color: var(--white) !important;
+      background-color: var(--card-color) !important;
+      box-shadow: 0 0 0 0.7px var(--border-color) !important;
+    }
+    .edit-shipment-title-input {
+      color: var(--white) !important;
+      width: 100% !important;
+    }
+    .modal-tab.active {
+      color: var(--white) !important;
+      border-bottom: 1px solid var(--white) !important;
+    }
+    .modal-tab {
+      color: #949496 !important;
+    }
+    .sp-upload-content {
+      box-shadow: inset 0 0 0 .7px var(--border-color) !important;
     }
   }
