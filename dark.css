@@ -364,7 +364,7 @@
     .description-text, .list-item-p, .delivery-timeline-p, .timeline-eta-complete, .listing-search-li {
       color: var(--white-200) !important;
     }
-    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link, .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text, .pod-details, .order-original-address-text, #clear-dropoff, .text-sm-light-grey, .t-header-text, .form-label, .sp-msg, .sp-subheading, .sp-li-paragraph, .pac-item, .listing-search-example, .waypoint-original-address, .plan-routes-waypoint-summary, .new-delivery-info, .shipment-time, .shipment-timeline-location { 
+    .forgot-password-link, .login-footer-link, .chat-with-support-btn, .purple-text, .span-link, .register-feature-p, .text-sm-grey, .settings-paragraph, .settings-card-subheading, .checkbox-container, .delivery-summary-display-text, .delivery-summary-text, .pod-details, .order-original-address-text, #clear-dropoff, .text-sm-light-grey, .t-header-text, .form-label, .sp-msg, .sp-subheading, .sp-li-paragraph, .pac-item, .listing-search-example, .waypoint-original-address, .plan-routes-waypoint-summary, .new-delivery-info, .shipment-time, .shipment-timeline-location, .text-code-sm { 
       color: #949496 !important;
     }
     .forgot-password-link:hover, .login-footer-link:hover, .chat-with-support-btn:hover, .span-link:hover, .path-link:hover, #clear-dropoff:hover, #clear-dropoff:hover {
