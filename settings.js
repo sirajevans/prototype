@@ -232,6 +232,67 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function () {
+  // Template for a new recipient row
+  function createRecipientRow() {
+    return `
+      <div class="flex col-gap-15 mb-14 a-end">
+        <div class="flex-col flex-grow">
+          <div class="form-label">Email address</div>
+          <input placeholder="user@example.com" class="form-input focus-effect">
+        </div>
+        <div class="input-row-btn" style="cursor: pointer;">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2.99707 3.00293L11.0028 11.0086" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M11.0029 3.00293L2.99723 11.0086" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </div>
+    `;
+  }
+
+  // Ensure minimum one row in Edit Recipients modal
+  function updateRecipientDeleteState() {
+    const $rows = $("#edit_monitoring_center_modal .center-modal-body .flex.col-gap-15.mb-14.a-end");
+    const $deleteBtns = $rows.find(".input-row-btn");
+
+    if ($rows.length <= 1) {
+      $deleteBtns.addClass("disabled").css({
+        "pointer-events": "none",
+        "opacity": "0.4"
+      });
+    } else {
+      $deleteBtns.removeClass("disabled").css({
+        "pointer-events": "",
+        "opacity": ""
+      });
+    }
+  }
+
+  // Add new recipient row
+  $("#edit_monitoring_center_modal .btn-w").on("click", function () {
+    const $body = $("#edit_monitoring_center_modal .center-modal-body");
+    const $newRow = $(createRecipientRow());
+    $body.append($newRow);
+
+    // Autofocus the new email input
+    setTimeout(() => {
+      $newRow.find("input").first().focus();
+      updateRecipientDeleteState();
+    }, 10);
+  });
+
+  // Remove recipient row (only if not disabled)
+  $(document).on("click", "#edit_monitoring_center_modal .input-row-btn:not(.disabled)", function () {
+    $(this).closest(".flex.col-gap-15.mb-14.a-end").remove();
+    updateRecipientDeleteState();
+  });
+
+  // Initial setup
+  updateRecipientDeleteState();
+});
+
+
 
 // ACCOUNT
 const togglePassword = $("#togglePass");
