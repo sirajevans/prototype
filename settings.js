@@ -92,6 +92,82 @@ $(document).ready(() => {
   });
 });
 
+// auth full-width selector (api key, bearer, basic, none)
+$(document).ready(function () {
+  // Toggle dropdown menu
+  $(".full-w-context-menu-btn").on("click", function (e) {
+    const $menu = $(this).siblings(".full-w-context-menu");
+
+    if ($menu.hasClass("active")) {
+      $menu.removeClass("active");
+      setTimeout(() => $menu.hide(), 150);
+    } else {
+      $(".full-w-context-menu").removeClass("active").hide();
+      $menu.show();
+      setTimeout(() => $menu.addClass("active"), 1);
+    }
+
+    e.stopPropagation();
+  });
+
+  // Handle auth type selection
+  $(document).on("click", ".full-w-context-menu .context-menu-modal-li", function () {
+    const labelText = $(this).find("div").first().text().trim();
+    const $container = $(this).closest("#authInputs");
+
+    // Update button label
+    $container.find(".full-w-context-menu-btn div").first().text(labelText);
+
+    const $valueGroup = $container.find("#authValue");
+    const $basicGroup = $container.find("#basicAuth");
+
+    const $valueInput = $valueGroup.find("input");
+    const $usernameInput = $basicGroup.find("input").eq(0);
+    const $passwordInput = $basicGroup.find("input").eq(1);
+
+    // Reset values and visibility
+    $valueInput.val("").attr("placeholder", "");
+    $usernameInput.val("").attr("placeholder", "Enter username");
+    $passwordInput.val("").attr("placeholder", "Enter password");
+
+    $valueGroup.removeClass("display-none");
+    $basicGroup.addClass("display-none");
+
+    switch (labelText.toLowerCase()) {
+      case "api key":
+        $valueInput.attr("placeholder", "Enter your API key");
+        break;
+
+      case "bearer token":
+        $valueInput.attr("placeholder", "Bearer eyJhbGciOiJIUzI1...");
+        break;
+
+      case "basic":
+        $valueGroup.addClass("display-none");
+        $basicGroup.removeClass("display-none");
+        break;
+
+      case "none":
+        $valueGroup.addClass("display-none");
+        $basicGroup.addClass("display-none");
+        break;
+    }
+
+    // Close dropdown
+    const $menu = $(this).closest(".full-w-context-menu");
+    $menu.removeClass("active");
+    setTimeout(() => $menu.hide(), 150);
+  });
+
+  // Close menu on outside click
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".full-w-context-menu-btn, .full-w-context-menu").length) {
+      $(".full-w-context-menu").removeClass("active").hide();
+    }
+  });
+});
+
+
 
 
 // ACCOUNT
