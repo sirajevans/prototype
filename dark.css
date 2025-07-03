@@ -801,20 +801,19 @@
     :not(pre) > code[class*="language-"],
     pre[class*="language-"] {
       background-color: lch(8.3 1.867 272) !important;
-      color: #ccc;
     }
     .token.punctuation {
-    color: oklch(0.92 0.004 286.32); /* : or , or {} etc. */
+    color: oklch(0.92 0.004 286.32) !important;
     }
     .token.property {
-    color: oklch(0.828 0.111 230.318); /* JSON key like "address_1" */
+    color: oklch(0.828 0.111 230.318) !important;
     }
     .token.string {
-    color: oklch(0.845 0.143 164.978); /* Value string like "101 Florida Road" */
+    color: oklch(0.845 0.143 164.978) !important;
     }
     .token.boolean,
     .token.number,
     .token.null {
-    color: oklch(0.75 0.1 120); /* optional: color for true, false, null, numbers */
+    color: oklch(0.75 0.1 120) !important;
     }
   }
