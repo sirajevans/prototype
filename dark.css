@@ -814,6 +814,6 @@
     .token.boolean,
     .token.number,
     .token.null {
-    color: oklch(0.75 0.1 120) !important;
+    color: oklch(0.92 0.004 286.32) !important;
     }
   }
