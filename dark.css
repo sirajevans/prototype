@@ -806,14 +806,14 @@
     color: oklch(0.92 0.004 286.32) !important;
     }
     .token.property {
-    color: oklch(0.828 0.111 230.318) !important;
+    color: var(--white) !important;
     }
     .token.string {
-    color: var() !important;
+    color: oklch(0.828 0.111 230.318) !important;
     }
     .token.boolean,
     .token.number,
     .token.null {
-    color: #8a76ff !important;
+    color: #0f9be2 !important;
     }
   }
