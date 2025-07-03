@@ -798,4 +798,23 @@
     .sp-upload-content {
       box-shadow: inset 0 0 0 .7px var(--border-color) !important;
     }
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+      background-color: lch(8.3 1.867 272) !important;
+      color: #ccc;
+    }
+    .token.punctuation {
+    color: oklch(0.92 0.004 286.32); /* : or , or {} etc. */
+    }
+    .token.property {
+    color: oklch(0.828 0.111 230.318); /* JSON key like "address_1" */
+    }
+    .token.string {
+    color: oklch(0.845 0.143 164.978); /* Value string like "101 Florida Road" */
+    }
+    .token.boolean,
+    .token.number,
+    .token.null {
+    color: oklch(0.75 0.1 120); /* optional: color for true, false, null, numbers */
+    }
   }
